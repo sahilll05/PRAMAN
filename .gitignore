@@ -37,6 +37,7 @@ contracts/cache/
 
 # ── Data and models (large files) ─────────────────────────────────────────────
 data/
+dataset/
 # Model checkpoints > 50MB: use HuggingFace releases, not git
 *.ckpt
 *.pt
