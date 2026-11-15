@@ -28,4 +28,5 @@ Format: `area | model/tool | task ID | date`
 - Spec is law. Change spec → bump version → log in decisions.md → update code + vectors.
 - Media never leaves the browser (web verifier).
 - Never touch mainnet without "APPROVED MAINNET" in this session.
+- Git policy: Work directly on `main` (no branches/PRs). Commit every unit of work done immediately at every step.
 - Forbidden wording: see `sahil/claims.md`.
