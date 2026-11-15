@@ -7,10 +7,11 @@ against spec/schemas/verdict.schema.json and evidence.schema.json.
 These tests run with zero ML dependencies and must pass in CI always.
 """
 
-from pathlib import Path
 import json
-import pytest
+from pathlib import Path
+
 import jsonschema
+import pytest
 
 SPEC_DIR = Path(__file__).parents[2] / "spec"
 SCHEMAS_DIR = SPEC_DIR / "schemas"

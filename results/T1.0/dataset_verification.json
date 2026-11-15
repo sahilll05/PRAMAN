@@ -1,0 +1,148 @@
+{
+  "task": "T1.0",
+  "date": "2026-11-16",
+  "cf_small": {
+    "dataset": "OwensLab/CommunityForensics-Small",
+    "samples_checked": 100,
+    "keys": [
+      "architecture",
+      "format",
+      "image_data",
+      "image_name",
+      "label",
+      "mode",
+      "model_name",
+      "nsfw_flag",
+      "prompt",
+      "real_source",
+      "resolution",
+      "split",
+      "subset"
+    ],
+    "first_sample_keys": [
+      "image_name",
+      "format",
+      "resolution",
+      "mode",
+      "image_data",
+      "model_name",
+      "nsfw_flag",
+      "prompt",
+      "real_source",
+      "subset",
+      "split",
+      "label",
+      "architecture"
+    ],
+    "label_counts": {
+      "1": 100
+    },
+    "unique_generators_count": 3,
+    "generator_distribution_sample": {
+      "alea31415/onimai-characters": 41,
+      "danbochman/ccxl": 41,
+      "lewdryuna/A-Rainier": 18
+    },
+    "image_modes": {
+      "RGB": 100
+    },
+    "resolutions_sample": {
+      "512x512": 100
+    },
+    "errors": []
+  },
+  "openfake_core": {
+    "dataset": "ComplexDataLab/OpenFake (core)",
+    "samples_checked": 100,
+    "keys": [
+      "image",
+      "image_sha256",
+      "label",
+      "model",
+      "prompt",
+      "prompt_kind",
+      "prompt_model",
+      "prompt_revision",
+      "prompt_version",
+      "release_date",
+      "row_id",
+      "type"
+    ],
+    "first_sample_keys": [
+      "image",
+      "prompt",
+      "label",
+      "model",
+      "type",
+      "release_date",
+      "row_id",
+      "image_sha256",
+      "prompt_kind",
+      "prompt_model",
+      "prompt_revision",
+      "prompt_version"
+    ],
+    "label_counts": {
+      "fake": 38,
+      "real": 62
+    },
+    "unique_generators_count": 23,
+    "generator_distribution_sample": {
+      "laion": 36,
+      "pexels": 26,
+      "sd-3.5": 8,
+      "sd-2.1": 5,
+      "flux.1-dev": 4,
+      "imagen-4.0": 2,
+      "sdxl-juggernaut": 2,
+      "sd-1.5-dreamshaper": 2,
+      "flux.2-dev": 1,
+      "sdxl-realvis-v5": 1
+    },
+    "release_dates_sample": {
+      "2021-08": 37,
+      "2024-01": 34,
+      "2023-09": 4,
+      "2023-11": 4,
+      "2020-12": 3
+    },
+    "image_modes": {
+      "RGB": 99,
+      "RGBA": 1
+    },
+    "resolutions_sample": {
+      "1024x1024": 11,
+      "768x1152": 5,
+      "1024x512": 4,
+      "512x1024": 4,
+      "4000x6000": 2
+    },
+    "errors": []
+  },
+  "hf_metadata": {
+    "OwensLab/CommunityForensics-Small": {
+      "tags": [
+        "task_categories:image-classification",
+        "license:cc-by-nc-sa-4.0",
+        "size_categories:100K<n<1M"
+      ],
+      "card_license": "cc-by-nc-sa-4.0",
+      "private": false,
+      "gated": false,
+      "author": "OwensLab",
+      "sha": "6c539a534c07917307c381f5af4053c6091b5278"
+    },
+    "ComplexDataLab/OpenFake": {
+      "tags": [
+        "task_categories:image-classification",
+        "license:cc-by-nc-4.0",
+        "size_categories:1M<n<10M"
+      ],
+      "card_license": "cc-by-nc-4.0",
+      "private": false,
+      "gated": false,
+      "author": "ComplexDataLab",
+      "sha": "00b2f0ae3f5f7684c4b00f794f4c500076a9355d"
+    }
+  }
+}
