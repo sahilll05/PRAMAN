@@ -1,0 +1,58 @@
+{
+  "_comment": "Minimal valid evidence.json for schema smoke-test. NOT from real media. specVersion 0.1.0-draft.",
+  "specVersion": "0.1.0-draft",
+  "createdAt": "2026-11-15T09:00:00Z",
+  "attester": "0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF",
+  "fileMeta": {
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "size": 123456,
+    "mime": "image/jpeg"
+  },
+  "fingerprints": {
+    "sha256Hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pHash": "deadbeefcafe0001",
+    "wmId": "0"
+  },
+  "model": {
+    "hash": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+    "uri": "https://example.com/models/clip-linear-v1.zip",
+    "name": "clip-linear-probe",
+    "version": "0.1.0"
+  },
+  "preprocHash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7",
+  "libs": {
+    "python": "3.11.0",
+    "onnxruntime": "1.18.0",
+    "pillow": "10.3.0",
+    "numpy": "1.26.4"
+  },
+  "perFrame": [
+    {
+      "idx": 0,
+      "pFake": 0.75,
+      "oodScore": 12.3,
+      "predSet": [2]
+    }
+  ],
+  "aggregate": {
+    "rule": "median_non_abstain_v1",
+    "pFake": 0.75,
+    "verdict": 2
+  },
+  "calibration": {
+    "T": 1.42,
+    "alpha": 0.1,
+    "qhat": 0.63,
+    "calSetId": "ff_plusplus_val_v1"
+  },
+  "oodGate": {
+    "metric": "mahalanobis",
+    "threshold": 45.7,
+    "percentile": 99.0
+  },
+  "runtime": {
+    "cpu": "Intel Core i7-12700H",
+    "os": "Windows 11 22H2"
+  },
+  "reproduceCommand": "uv run python -m lv_ml.runner.cli --input <file> --model-bundle <bundle.zip> --output verdict.json"
+}

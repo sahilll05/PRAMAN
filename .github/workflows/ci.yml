@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "feat/**", "fix/**", "exp/**"]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ── Python / ML ─────────────────────────────────────────────────────────────
+  python:
+    name: Python (lint + typecheck + pytest)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ml
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+      - name: Install dependencies
+        run: uv sync --extra dev
+      - name: Ruff lint
+        run: uv run ruff check src/ tests/
+      - name: Ruff format check
+        run: uv run ruff format --check src/ tests/
+      - name: Mypy
+        run: uv run mypy src/
+      - name: pytest (schema + smoke tests)
+        run: uv run pytest tests/ -v --tb=short
+
+  # ── TypeScript (chain + indexer + web) ──────────────────────────────────────
+  typescript:
+    name: TypeScript (lint + typecheck + vitest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck (all packages)
+        run: pnpm -r typecheck
+      - name: Test (all packages)
+        run: pnpm -r test
+
+  # ── Solidity / Foundry ───────────────────────────────────────────────────────
+  solidity:
+    name: Solidity (forge build + forge test)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: contracts
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.9.0
+      - name: forge build
+        run: forge build --sizes
+      - name: forge test (fuzz 1000 runs)
+        run: forge test -vvv
+      - name: Slither (static analysis)
+        # Slither is run but findings only fail CI when high/medium are unaddressed (Phase 4+)
+        continue-on-error: true
+        run: |
+          pip install slither-analyzer
+          slither . --config-file slither.config.json 2>&1 || true

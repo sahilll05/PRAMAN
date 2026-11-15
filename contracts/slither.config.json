@@ -1,0 +1,6 @@
+{
+  "filter": ["contracts"],
+  "detectors": "all",
+  "exclude_dependencies": true,
+  "exclude_informational": true
+}

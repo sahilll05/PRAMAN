@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pramana.example/spec/schemas/evidence.schema.json",
+  "title": "Evidence Bundle",
+  "description": "PRAMANA evidence bundle (spec §5). JSON file whose SHA-256 = evidenceHash. Must be canonicalized (sorted keys, UTF-8, no whitespace) before hashing.",
+  "type": "object",
+  "required": [
+    "specVersion",
+    "createdAt",
+    "attester",
+    "fileMeta",
+    "fingerprints",
+    "model",
+    "preprocHash",
+    "libs",
+    "aggregate",
+    "calibration",
+    "oodGate",
+    "runtime",
+    "reproduceCommand"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[a-z0-9-]+)?$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp."
+    },
+    "attester": {
+      "type": "string",
+      "description": "EVM address (checksummed) of the attester.",
+      "pattern": "^0x[0-9a-fA-F]{40}$"
+    },
+    "fileMeta": {
+      "type": "object",
+      "required": ["sha256", "size", "mime"],
+      "additionalProperties": false,
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "File size in bytes."
+        },
+        "mime": {
+          "type": "string",
+          "description": "MIME type, e.g. image/jpeg, video/mp4."
+        }
+      }
+    },
+    "fingerprints": {
+      "type": "object",
+      "required": ["sha256Hash", "pHash"],
+      "additionalProperties": false,
+      "properties": {
+        "sha256Hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "pHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{1,16}$"
+        },
+        "wmId": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{1,16}$",
+          "description": "Absent or '0' if no watermark."
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": ["hash", "uri", "name", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "modelHash: SHA-256 of canonical model bundle."
+        },
+        "uri": {
+          "type": "string",
+          "description": "URI where the model bundle can be fetched for re-execution."
+        },
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "preprocHash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 of preprocessing config + pinned library versions."
+    },
+    "libs": {
+      "type": "object",
+      "required": ["python", "onnxruntime", "pillow", "numpy"],
+      "additionalProperties": true,
+      "description": "Pinned library versions for re-execution.",
+      "properties": {
+        "python": { "type": "string" },
+        "onnxruntime": { "type": "string" },
+        "pillow": { "type": "string" },
+        "numpy": { "type": "string" }
+      }
+    },
+    "perFrame": {
+      "type": "array",
+      "description": "Per-frame outputs. For images: single-element array. Required for video.",
+      "items": {
+        "type": "object",
+        "required": ["idx", "pFake", "oodScore", "predSet"],
+        "additionalProperties": false,
+        "properties": {
+          "idx": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pFake": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "description": "Per-frame calibrated P(synthetic)."
+          },
+          "oodScore": {
+            "type": "number",
+            "description": "Mahalanobis distance from training distribution."
+          },
+          "predSet": {
+            "type": "array",
+            "items": { "type": "integer", "enum": [0, 1, 2] },
+            "description": "Conformal prediction set. Empty = ABSTAIN."
+          }
+        }
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "required": ["rule", "pFake", "verdict"],
+      "additionalProperties": false,
+      "properties": {
+        "rule": {
+          "type": "string",
+          "description": "Aggregation rule applied, e.g. 'median_non_abstain_v1'."
+        },
+        "pFake": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "verdict": {
+          "type": "integer",
+          "enum": [0, 1, 2],
+          "description": "0=ABSTAIN, 1=LIKELY_AUTHENTIC, 2=LIKELY_SYNTHETIC."
+        }
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "required": ["T", "alpha", "qhat", "calSetId"],
+      "additionalProperties": false,
+      "properties": {
+        "T": {
+          "type": "number",
+          "description": "Temperature-scaling temperature."
+        },
+        "alpha": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Conformal coverage target (1 - alpha)."
+        },
+        "qhat": {
+          "type": "number",
+          "description": "Conformal quantile threshold."
+        },
+        "calSetId": {
+          "type": "string",
+          "description": "Identifier for the calibration set used."
+        }
+      }
+    },
+    "oodGate": {
+      "type": "object",
+      "required": ["metric", "threshold", "percentile"],
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "type": "string",
+          "description": "OOD metric name, e.g. 'mahalanobis'."
+        },
+        "threshold": {
+          "type": "number",
+          "description": "Threshold above which ABSTAIN is triggered."
+        },
+        "percentile": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0,
+          "description": "Percentile of calibration-set OOD scores used to set threshold."
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["cpu", "os"],
+      "additionalProperties": true,
+      "properties": {
+        "cpu": { "type": "string" },
+        "os": { "type": "string" }
+      }
+    },
+    "reproduceCommand": {
+      "type": "string",
+      "description": "Shell command to reproduce this verdict from the same input file."
+    }
+  }
+}

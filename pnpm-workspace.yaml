@@ -1,0 +1,4 @@
+packages:
+  - "chain"
+  - "indexer"
+  - "web"

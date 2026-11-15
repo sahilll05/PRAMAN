@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pramana.example/spec/schemas/verdict.schema.json",
+  "title": "Verdict",
+  "description": "PRAMANA on-chain verdict payload (spec §2.1 + §5). Version 0.1.0-draft. Produced by the ML layer; consumed by the chain CLI for EAS attestation.",
+  "type": "object",
+  "required": [
+    "specVersion",
+    "evidenceHash",
+    "onChain"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specVersion": {
+      "type": "string",
+      "description": "Spec version that produced this verdict.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[a-z0-9-]+)?$",
+      "examples": ["0.1.0-draft"]
+    },
+    "evidenceHash": {
+      "type": "string",
+      "description": "SHA-256 hex of canonical evidence.json (sorted keys, UTF-8, no whitespace). No 0x prefix.",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "onChain": {
+      "type": "object",
+      "description": "Fields that map 1-to-1 to the EAS Verdict schema (spec §2.1).",
+      "required": [
+        "sha256Hash",
+        "pHash",
+        "wmId",
+        "modelHash",
+        "preprocHash",
+        "pFakeBps",
+        "verdict",
+        "evidenceHash",
+        "expirationTime"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "sha256Hash": {
+          "type": "string",
+          "description": "SHA-256 hex of raw media file bytes. No 0x prefix.",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "pHash": {
+          "type": "string",
+          "description": "Perceptual hash uint64, hex string, no 0x prefix. Computed per spec §4.",
+          "pattern": "^[0-9a-f]{1,16}$"
+        },
+        "wmId": {
+          "type": "string",
+          "description": "TrustMark watermark ID uint64 hex string. '0' if no watermark decoded.",
+          "pattern": "^[0-9a-f]{1,16}$"
+        },
+        "modelHash": {
+          "type": "string",
+          "description": "SHA-256 of canonical model bundle (ONNX + head + config). No 0x prefix.",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "preprocHash": {
+          "type": "string",
+          "description": "SHA-256 of preprocessing config + pinned library versions. No 0x prefix.",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "pFakeBps": {
+          "type": "integer",
+          "description": "Calibrated P(synthetic) * 10000 (basis points). Range 0–10000.",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "verdict": {
+          "type": "integer",
+          "description": "Verdict class: 0=ABSTAIN, 1=LIKELY_AUTHENTIC, 2=LIKELY_SYNTHETIC.",
+          "enum": [0, 1, 2]
+        },
+        "evidenceHash": {
+          "type": "string",
+          "description": "Must equal top-level evidenceHash. Redundant but required by EAS schema.",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "expirationTime": {
+          "type": "integer",
+          "description": "Unix timestamp (seconds) when this verdict expires. Must be > now and <= now + MAX_TTL. v1 default: now + 180 days.",
+          "minimum": 1
+        },
+        "refUID": {
+          "type": "string",
+          "description": "EAS UID of the previous Verdict being superseded, if any. Omit or set to '0x0000...0000' if not superseding.",
+          "pattern": "^0x[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

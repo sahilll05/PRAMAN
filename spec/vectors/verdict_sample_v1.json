@@ -1,0 +1,16 @@
+{
+  "_comment": "Minimal valid verdict.json for schema smoke-test. NOT a real verdict — no actual media was processed. specVersion 0.1.0-draft.",
+  "specVersion": "0.1.0-draft",
+  "evidenceHash": "a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7b8",
+  "onChain": {
+    "sha256Hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pHash": "deadbeefcafe0001",
+    "wmId": "0",
+    "modelHash": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+    "preprocHash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7",
+    "pFakeBps": 7500,
+    "verdict": 2,
+    "evidenceHash": "a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7b8",
+    "expirationTime": 9999999999
+  }
+}

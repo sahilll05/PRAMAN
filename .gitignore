@@ -1,0 +1,65 @@
+# ── Secrets (NEVER commit) ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+.uv/
+*.egg
+MANIFEST
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node / pnpm ───────────────────────────────────────────────────────────────
+node_modules/
+.next/
+.vercel/
+dist/
+*.tsbuildinfo
+pnpm-lock.yaml.bak
+
+# ── Foundry ───────────────────────────────────────────────────────────────────
+contracts/out/
+contracts/cache/
+# Keep lib/ committed (forge-std submodule / install)
+
+# ── Data and models (large files) ─────────────────────────────────────────────
+data/
+# Model checkpoints > 50MB: use HuggingFace releases, not git
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# ── Results (small outputs committed; large intermediates not) ────────────────
+# results/ is committed intentionally (config.json, metrics.json, env.txt, git_sha.txt)
+results/**/*.npz
+results/**/*.npy
+results/**/*.pkl
+results/**/*.h5
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.log
+*.tmp
