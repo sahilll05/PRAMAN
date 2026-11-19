@@ -1,7 +1,7 @@
 {
   "network": "anvil",
   "chainId": 31337,
-  "timestamp": "2026-11-20 00:40:53",
+  "timestamp": "2026-11-20 02:11:09",
   "contracts": {
     "MockEAS": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
     "MockSchemaRegistry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",

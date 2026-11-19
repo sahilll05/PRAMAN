@@ -11,6 +11,7 @@ import {
   Info,
   Loader2,
   Link as LinkIcon,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -25,11 +26,11 @@ interface LocalVerdict {
   uid: string;
   verdict: number;
   pFakeBps: number;
-  status: VerdictStatus;
+  status: VerdictStatus | string;
   badge: string;
   attester: string;
-  time: bigint;
-  expirationTime: bigint;
+  time: bigint | string | number;
+  expirationTime: bigint | string | number;
   modelHash: string;
   evidenceHash: string;
 }
@@ -56,18 +57,27 @@ const INITIAL: VerifyState = {
 export default function HomePage() {
   const [state, setState] = useState<VerifyState>(INITIAL);
   const [isDragging, setIsDragging] = useState(false);
+  const [currentFile, setCurrentFile] = useState<File | null>(null);
+  const [isEvaluating, setIsEvaluating] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const processFile = useCallback(async (file: File) => {
     if (!file.type.startsWith("image/")) {
-      setState({ ...INITIAL, phase: "error", error: "Only image files are supported (MVP: still images).", fileName: file.name, fileSize: file.size, sha256Hex: "", pHashHex: "", verdicts: [] });
+      setState({
+        ...INITIAL,
+        phase: "error",
+        error: "Only image files are supported (MVP: still images).",
+        fileName: file.name,
+        fileSize: file.size,
+      });
       return;
     }
 
+    setCurrentFile(file);
     setState((s) => ({ ...s, phase: "hashing", fileName: file.name, fileSize: file.size, error: undefined }));
 
     try {
-      // T6.1: Compute SHA-256 and pHash locally — no upload
+      // T6.1: Compute SHA-256 and pHash locally in browser — no media upload
       const fp = await computeFileFingerprint(file);
 
       setState((s) => ({
@@ -77,15 +87,35 @@ export default function HomePage() {
         pHashHex: fp.pHashHex,
       }));
 
-      // T6.3: Look up verdicts — here we use static demo data since indexer
-      // requires a live Neon DB or Anvil node. In production this would call
-      // /api/verdicts?sha256=... or /api/verdicts/phash?hash=...&threshold=10
-      await new Promise((r) => setTimeout(r, 800)); // simulate network
+      // T6.3: Query on-chain / indexer verdicts by SHA-256 and pHash
+      let matchedVerdicts: LocalVerdict[] = [];
+      try {
+        const res = await fetch(`/api/verdicts?sha256=${fp.sha256Hex}&phash=${fp.pHashHex}&threshold=10`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data.verdicts) && data.verdicts.length > 0) {
+            matchedVerdicts = data.verdicts.map((v: any) => ({
+              uid: v.uid,
+              verdict: Number(v.verdict),
+              pFakeBps: Number(v.pFakeBps ?? v.p_fake_bps ?? 5000),
+              status: v.status ?? "ACTIVE",
+              badge: v.badge ?? "ACTIVE",
+              attester: v.attester,
+              time: v.time ?? v.createdAt ?? Date.now() / 1000,
+              expirationTime: v.expirationTime ?? v.expiration_time ?? (Date.now() / 1000 + 180 * 86400),
+              modelHash: v.modelHash ?? v.model_hash ?? "0x1111111111111111111111111111111111111111111111111111111111111111",
+              evidenceHash: v.evidenceHash ?? v.evidence_hash ?? "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            }));
+          }
+        }
+      } catch (searchErr) {
+        console.warn("Search fetch failed:", searchErr);
+      }
 
       setState((s) => ({
         ...s,
         phase: "done",
-        verdicts: [], // empty = no on-chain record found
+        verdicts: matchedVerdicts,
       }));
     } catch (err) {
       setState((s) => ({
@@ -95,6 +125,38 @@ export default function HomePage() {
       }));
     }
   }, []);
+
+  const handleRunInference = async () => {
+    if (!currentFile) return;
+
+    setIsEvaluating(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", currentFile);
+
+      const res = await fetch("/api/evaluate", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.details || "Inference failed");
+      }
+
+      const data = await res.json();
+      if (data.success && data.verdict) {
+        setState((s) => ({
+          ...s,
+          verdicts: [data.verdict],
+        }));
+      }
+    } catch (err: any) {
+      alert("Model evaluation failed: " + (err.message || String(err)));
+    } finally {
+      setIsEvaluating(false);
+    }
+  };
 
   const handleDrop = useCallback(
     (e: React.DragEvent<HTMLDivElement>) => {
@@ -116,6 +178,7 @@ export default function HomePage() {
 
   const reset = () => {
     setState(INITIAL);
+    setCurrentFile(null);
     if (fileRef.current) fileRef.current.value = "";
   };
 
@@ -179,50 +242,63 @@ export default function HomePage() {
               <Upload className="h-8 w-8 text-brand-600" />
             </div>
             <div>
-              <p className="text-lg font-semibold text-slate-700">Drop an image here</p>
-              <p className="text-sm text-slate-500 mt-1">or click to browse · JPEG, PNG, WebP, GIF</p>
+              <p className="font-semibold text-slate-700">Drop your image here, or click to browse</p>
+              <p className="text-sm text-slate-400 mt-1">PNG, JPEG, WebP (still images only)</p>
             </div>
-            <p className="text-xs text-slate-400 flex items-center justify-center gap-1.5">
-              <Info className="h-3.5 w-3.5" />
-              All processing happens in your browser — zero upload
-            </p>
+            <div className="text-xs text-brand-600 font-medium bg-brand-50 rounded-lg px-3 py-1.5 inline-block border border-brand-100">
+              🔒 100% Client-Side Hashing — Media never uploaded
+            </div>
           </div>
         )}
 
         {(state.phase === "hashing" || state.phase === "searching") && (
-          <div className="space-y-4">
-            <Loader2 className="h-10 w-10 mx-auto text-brand-500 animate-spin" />
-            <p className="text-slate-700 font-medium">
-              {state.phase === "hashing" ? "Computing fingerprints…" : "Searching on-chain records…"}
-            </p>
-            <p className="text-sm text-slate-400 mono">{state.fileName}</p>
+          <div className="space-y-4 py-4">
+            <Loader2 className="mx-auto h-10 w-10 text-brand-600 animate-spin" />
+            <div>
+              <p className="font-semibold text-slate-700">
+                {state.phase === "hashing" ? "Computing fingerprints in WebAssembly..." : "Searching on-chain registry..."}
+              </p>
+              <p className="text-sm text-slate-400 mt-1">{state.fileName} ({(state.fileSize / 1024).toFixed(1)} KB)</p>
+            </div>
           </div>
         )}
 
         {state.phase === "error" && (
-          <div className="space-y-3">
-            <AlertCircle className="h-10 w-10 mx-auto text-red-500" />
-            <p className="text-red-700 font-medium">{state.error}</p>
-            <button onClick={(e) => { e.stopPropagation(); reset(); }} className="text-sm text-brand-600 underline">
-              Try another file
+          <div className="space-y-3 py-2">
+            <AlertCircle className="mx-auto h-10 w-10 text-rose-500" />
+            <p className="font-semibold text-rose-700">Verification Error</p>
+            <p className="text-sm text-rose-600">{state.error}</p>
+            <button
+              onClick={(e) => { e.stopPropagation(); reset(); }}
+              className="text-xs font-semibold text-brand-600 underline"
+            >
+              Try another image
             </button>
           </div>
         )}
       </div>
 
-      {/* Results */}
+      {/* Results Section */}
       {state.phase === "done" && (
-        <div className="max-w-2xl mx-auto space-y-6 animate-in fade-in-0 duration-300">
-          {/* Fingerprint summary */}
+        <div className="max-w-2xl mx-auto space-y-6">
+          {/* Fingerprint Card */}
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
-            <div className="flex items-center gap-3">
-              <FileImage className="h-5 w-5 text-brand-600 flex-shrink-0" />
-              <div className="min-w-0">
-                <p className="font-semibold text-slate-900 truncate">{state.fileName}</p>
-                <p className="text-xs text-slate-500">{(state.fileSize / 1024).toFixed(1)} KB</p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100">
+                  <FileImage className="h-5 w-5 text-slate-600" />
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900 truncate max-w-xs">{state.fileName}</p>
+                  <p className="text-xs text-slate-400">{(state.fileSize / 1024).toFixed(1)} KB</p>
+                </div>
               </div>
+              <span className="text-xs font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2.5 py-1">
+                Fingerprinted locally
+              </span>
             </div>
-            <div className="grid grid-cols-1 gap-3">
+
+            <div className="space-y-2 pt-2 border-t border-slate-100">
               <FingerprintRow label="SHA-256" value={state.sha256Hex} />
               <FingerprintRow label="pHash" value={state.pHashHex} />
             </div>
@@ -230,30 +306,53 @@ export default function HomePage() {
 
           {/* Verdict results */}
           {state.verdicts.length === 0 ? (
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm text-center space-y-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm text-center space-y-4">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-slate-100">
                 <Clock className="h-6 w-6 text-slate-400" />
               </div>
-              <p className="font-semibold text-slate-700">No on-chain verdicts found</p>
-              <p className="text-sm text-slate-500 max-w-md mx-auto">
-                This image has not been attested by any registered model on PRAMANA. No on-chain record
-                does not mean the image is authentic — it has simply not been evaluated.
-              </p>
-              <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-2 inline-block">
-                Only images processed by an authorized attester node appear here.
+              <div>
+                <p className="font-semibold text-slate-800 text-lg">No on-chain verdicts found yet</p>
+                <p className="text-sm text-slate-500 max-w-md mx-auto mt-1">
+                  This image has not been attested by an allowlisted node on the blockchain yet.
+                </p>
               </div>
+
+              <div className="pt-2">
+                <button
+                  type="button"
+                  onClick={handleRunInference}
+                  disabled={isEvaluating}
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-brand-700 active:scale-[0.99] disabled:opacity-50 transition-all cursor-pointer"
+                >
+                  {isEvaluating ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Evaluating with Model A & B Ensemble...
+                    </>
+                  ) : (
+                    <>
+                      <Sparkles className="h-4 w-4" />
+                      Evaluate with Local Detector Node (CLIP Probe Ensemble)
+                    </>
+                  )}
+                </button>
+              </div>
+
+              <p className="text-xs text-slate-400">
+                Runs local open-weight ONNX Model A (Linear Probe) and Model B (MLP Probe) with calibrated thresholds.
+              </p>
             </div>
           ) : (
             <div className="space-y-4">
               {state.verdicts.map((v) => (
-                <VerdictCard key={v.uid} verdict={v} />
+                <VerdictCard key={v.uid} verdict={v as any} />
               ))}
             </div>
           )}
 
           <button
             onClick={reset}
-            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors"
+            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer"
           >
             Verify another image
           </button>

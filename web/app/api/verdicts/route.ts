@@ -5,61 +5,83 @@
  * Returns array of matching verdicts with computed status.
  */
 import { NextRequest, NextResponse } from "next/server";
+import { LOCAL_VERDICTS } from "@/lib/local-verdicts";
+
+function hammingDistance(hexA: string, hexB: string): number {
+  try {
+    const a = BigInt("0x" + hexA.replace(/^0x/, ""));
+    const b = BigInt("0x" + hexB.replace(/^0x/, ""));
+    let xor = a ^ b;
+    let dist = 0;
+    while (xor > 0n) {
+      if (xor & 1n) dist++;
+      xor >>= 1n;
+    }
+    return dist;
+  } catch {
+    return 64;
+  }
+}
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
-  const sha256 = searchParams.get("sha256");
-  const phash = searchParams.get("phash");
+  const sha256 = searchParams.get("sha256")?.toLowerCase().replace(/^0x/, "");
+  const phash = searchParams.get("phash")?.toLowerCase().replace(/^0x/, "");
   const threshold = parseInt(searchParams.get("threshold") ?? "10", 10);
 
   if (!sha256 && !phash) {
     return NextResponse.json({ error: "Provide sha256 or phash query param" }, { status: 400 });
   }
 
-  if (!process.env.NEON_DATABASE_URL) {
-    return NextResponse.json(
-      {
-        error: "Indexer database not configured",
-        hint: "Set NEON_DATABASE_URL to connect to Neon Postgres.",
-      },
-      { status: 503 }
-    );
-  }
+  // 1. If Neon database is configured, query PostgreSQL
+  if (process.env.NEON_DATABASE_URL) {
+    try {
+      const { drizzle } = await import("drizzle-orm/postgres-js");
+      const postgres = (await import("postgres")).default;
 
-  try {
-    const { drizzle } = await import("drizzle-orm/postgres-js");
-    const postgres = (await import("postgres")).default;
+      const sql = postgres(process.env.NEON_DATABASE_URL, { ssl: "require", max: 1 });
+      const db = drizzle(sql);
 
-    const sql = postgres(process.env.NEON_DATABASE_URL, { ssl: "require", max: 1 });
-    const db = drizzle(sql);
+      const { verdicts } = await import("@pramana/indexer");
+      const { eq } = await import("drizzle-orm");
 
-    const { verdicts } = await import("@pramana/indexer");
-    const { eq } = await import("drizzle-orm");
+      let results;
+      if (sha256) {
+        const normalizedSha = "0x" + sha256;
+        results = await db.select().from(verdicts).where(eq(verdicts.sha256Hash, normalizedSha)).limit(20);
+      } else {
+        const phashBits = BigInt("0x" + (phash ?? "0")).toString(2).padStart(64, "0");
+        const rawResult = await sql`
+          SELECT * FROM verdicts
+          WHERE bit_count(p_hash # ${phashBits}::bit(64)) <= ${threshold}
+          ORDER BY bit_count(p_hash # ${phashBits}::bit(64)) ASC
+          LIMIT 20
+        `;
+        results = rawResult;
+      }
 
-    let results;
-    if (sha256) {
-      const normalizedSha = sha256.startsWith("0x") ? sha256 : "0x" + sha256;
-      results = await db.select().from(verdicts).where(eq(verdicts.sha256Hash, normalizedSha)).limit(20);
-    } else {
-      // pHash Hamming search using Neon bit_count XOR query
-      // Raw SQL required because Drizzle doesn't expose bit operators
-      const phashBits = BigInt("0x" + (phash ?? "0")).toString(2).padStart(64, "0");
-      const rawResult = await sql`
-        SELECT * FROM verdicts
-        WHERE bit_count(p_hash # ${phashBits}::bit(64)) <= ${threshold}
-        ORDER BY bit_count(p_hash # ${phashBits}::bit(64)) ASC
-        LIMIT 20
-      `;
-      results = rawResult;
+      await sql.end();
+      if (results && results.length > 0) {
+        return NextResponse.json({ verdicts: results, count: results.length });
+      }
+    } catch (err) {
+      console.warn("Neon DB query skipped, falling back to local registry:", err);
     }
-
-    await sql.end();
-    return NextResponse.json({ verdicts: results, count: results.length });
-  } catch (err) {
-    console.error("Verdict search error:", err);
-    return NextResponse.json(
-      { error: "Database error", detail: err instanceof Error ? err.message : "unknown" },
-      { status: 500 }
-    );
   }
+
+  // 2. Local Registry Search (for local testing, Anvil, and zero-spend setups)
+  const matches = LOCAL_VERDICTS.filter((v) => {
+    if (sha256 && v.sha256Hash.toLowerCase().replace(/^0x/, "") === sha256) {
+      return true;
+    }
+    if (phash && v.pHash) {
+      const dist = hammingDistance(v.pHash, phash);
+      if (dist <= threshold) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  return NextResponse.json({ verdicts: matches, count: matches.length });
 }

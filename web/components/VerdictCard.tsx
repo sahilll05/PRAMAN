@@ -11,11 +11,11 @@ interface VerdictCardProps {
     uid: string;
     verdict: number;
     pFakeBps: number;
-    status: VerdictStatus;
+    status: VerdictStatus | string;
     badge: string;
     attester: string;
-    time: bigint;
-    expirationTime: bigint;
+    time: bigint | string | number;
+    expirationTime: bigint | string | number;
     modelHash: string;
     evidenceHash: string;
   };

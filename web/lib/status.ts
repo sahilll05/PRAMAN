@@ -166,8 +166,8 @@ export function pFakePct(bps: number): string {
   return (bps / 100).toFixed(2) + "%";
 }
 
-/** Format Unix timestamp (bigint seconds) to locale string. */
-export function formatTs(ts: bigint): string {
-  if (ts === 0n) return "—";
+/** Format Unix timestamp to locale string. */
+export function formatTs(ts: bigint | number | string): string {
+  if (!ts || ts === 0n || ts === "0" || ts === 0) return "—";
   return new Date(Number(ts) * 1000).toLocaleString();
 }
