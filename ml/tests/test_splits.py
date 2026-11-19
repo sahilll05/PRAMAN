@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
 import torch
+from PIL import Image
 
 from lv_ml.data.dataset import PramanaDataset
 from lv_ml.data.splits import verify_split_disjointness

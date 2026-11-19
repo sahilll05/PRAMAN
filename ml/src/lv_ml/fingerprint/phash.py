@@ -2,7 +2,7 @@
 
 Normative implementation:
 1. Decode image to RGB.
-2. Convert to grayscale luma: Y = 0.299*R + 0.587*G + 0.114*B (float in [0, 255]).
+2. Convert to grayscale luma: Y = 0.299*R + 0.587*G + 0.114*B (ITU-R BT.601 via PIL mode 'L').
 3. Resize to 32x32 using box (area-average) filter.
 4. Apply 2D DCT-II to the 32x32 float matrix.
 5. Take the top-left 8x8 sub-matrix (64 coefficients, DC at [0,0]).
@@ -38,18 +38,15 @@ def compute_phash(image: Image.Image | bytes) -> int:
     # 1. Decode image to RGB
     rgb_img = pil_img.convert("RGB")
 
-    # 2. Convert to grayscale luma Y = 0.299*R + 0.587*G + 0.114*B
-    rgb_array = np.asarray(rgb_img, dtype=np.float64)
-    luma = 0.299 * rgb_array[:, :, 0] + 0.587 * rgb_array[:, :, 1] + 0.114 * rgb_array[:, :, 2]
-
-    # Convert back to PIL Image (mode 'F') to apply box filter resizing
-    luma_img = Image.fromarray(luma, mode="F")
+    # 2. Convert to grayscale luma (ITU-R BT.601: Y = 0.299*R + 0.587*G + 0.114*B)
+    # Using PIL mode 'L' which uses ITU-R 601-2 transform natively and avoids NaN in box resize
+    luma_img = rgb_img.convert("L")
 
     # 3. Resize to 32x32 using box (area-average) filter
     resized_img = luma_img.resize((32, 32), resample=Image.Resampling.BOX)
     matrix = np.asarray(resized_img, dtype=np.float64)
 
-    # 4. Apply 2D DCT-II (type=2, norm=None as standard unnormalized DCT-II)
+    # 4. Apply 2D DCT-II (type=2, standard unnormalized DCT-II)
     # 2D DCT = 1D DCT along axis 0, then 1D DCT along axis 1
     dct_2d = dct(dct(matrix, type=2, axis=0), type=2, axis=1)
 

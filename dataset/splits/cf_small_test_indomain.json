@@ -1,0 +1,2202 @@
+[
+  {
+    "image_name": "Masagin_Deliberate_00000394.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000394.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "d2a60c3c7d7e47831098f3bf37d442f4b7df088014380ec12d5b3d2f45de5726",
+    "phash": 8836578509937302800,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000378.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000378.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "993d6500aae0da4a21e7578efff709d1ac9755946ea5ab491eefe9d3d351a8be",
+    "phash": 4204299560998464294,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000167.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "5037abfe02a8cf1d21ab5e1b318a4b9ffdd9eb748fc46e786145aba2d3f917a8",
+    "phash": 5602070990530146473,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000302.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000302.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7a8f521030702d7fb3ee181cb549262e905a2f5d5ee1ce06ec25573aa1ec1828",
+    "phash": 2453251671059717270,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000206.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "2c39026a1399a71e4c7ccdb69e7d4a6bdf96b1ab248a66f156b2ef1a355c2fd7",
+    "phash": 365998746434548923,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000250.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000250.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "e0c890bf9921ab8f8913bd360c4137a2bd5142ea621f35aa517223518bee0892",
+    "phash": 7369112981538191590,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000161.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000161.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "25304a0e43e557f189566ca28a0996e75ad0161dc1fff14a07619e3f7b14ac74",
+    "phash": 4292280476987559119,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000265.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "0934634682765fd2d71a85104512377add8b5dbfae16a26a4228869b56ec9ba5",
+    "phash": 4689960849262362005,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000080.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "b456dd1f2084dfa0d26412b3ec5b4c3c87d1f990e1332f98843affb2965da5a7",
+    "phash": 4585088735672767700,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kamillaova_epiCRealism_00000030.png",
+    "local_path": "dataset\\cf_small\\images\\kamillaova_epiCRealism_00000030.png",
+    "label": 1,
+    "model_name": "kamillaova/epiCRealism",
+    "real_source": "LAION",
+    "sha256": "0f08b087297d6946b094b7177a639eee14850ad32a713ff90ed1e61edb8ce55f",
+    "phash": 9193132579936109628,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000048.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000048.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "35c02afc513deb62c6d8bb6653749bf441c202e5cd9d91bb822c202180da5aff",
+    "phash": 8912764832198914105,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000055.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000055.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "57d17a063ff168053d45530333162af0eaa8f7c84a8a30156b901ae09e97aa92",
+    "phash": 5982460885388747670,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000324.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000324.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "79863ac70dd8c3b7de9b0a46670c3155ec410e65363796d8598fbb674eab3368",
+    "phash": 1138056316841085327,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000288.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000288.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "192065e87545a790772e0744ba4a1de30ec0aab5851dc831cfc244bee42a98df",
+    "phash": 5061526478470889860,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000264.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000264.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "LAION",
+    "sha256": "e2aeaa4aab6831573118d9029b42f2ef73ce556f96a6cceff3a1138562d8fbcf",
+    "phash": 7357020909001497188,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000152.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "LAION",
+    "sha256": "fbf7c633cec5231d90b0783efa005b0d7d00242ff6a6733bb925c9583a9e177b",
+    "phash": 5895001647134059595,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000188.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000188.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "LAION",
+    "sha256": "a997b4f1613b12f0a4687d8e1c07fa0c4f035c1f1c9b93947ab0ecdcb48486ac",
+    "phash": 9071381949245912965,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000360.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000360.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "204a4131979f31c86f275955a12a970830568936931eefcc2f877fd35fbd222d",
+    "phash": 130744160993711922,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000153.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "6976ec245ce7bf6fd7edd65fe42638333b4edb6611b8bb1b154cb94b0970e6a1",
+    "phash": 913372904658408271,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "LieDeath_MergeStove2.5D_00000217.png",
+    "local_path": "dataset\\cf_small\\images\\LieDeath_MergeStove2.5D_00000217.png",
+    "label": 1,
+    "model_name": "LieDeath/MergeStove2.5D",
+    "real_source": "LAION",
+    "sha256": "81248b4ace26cf01a763fddeaf9a7111b47c1f3de5a53d23109249dd3629d120",
+    "phash": 438653165968766314,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000314.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "f2312af666ca5304629b7ba0c472b59da42b4986141226974db9375655e2aee6",
+    "phash": 2221010405975519378,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000061.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000061.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "b78e38dddb6812350cb451f97ec86b5005de240b091e304d77ab789f25c801de",
+    "phash": 819872420925222044,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000265.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "82a0726b821d52ffc9b61d0727f6c67fb4c4f10a1e508ef716165477b42e6f9e",
+    "phash": 189276302060328894,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000241.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000241.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "da6606f7397db21dbb4147406ec2b4349d242a48a17273b0e54c9b7c85b62c95",
+    "phash": 7697346179876725900,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000162.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000162.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "LAION",
+    "sha256": "c31ae7ce42b2f7eb61111a2b4b5d29143759a89bbc061d48b04df733362e95d3",
+    "phash": 6066139856305701663,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000327.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000327.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "96502e1c3676c03bd70ee9f011a513dc5399b56d5e148af990e6f873b9c9d9be",
+    "phash": 9141900844919170075,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000374.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000374.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "3585110450a524d6c3e25418c3f2a50edef41577b30ced8c49cc00b68bb1732c",
+    "phash": 2714876359249398395,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000197.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000197.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "ce1f055dfac10c73934fb32371451fe172ef5e3e90a8a48af607e21871f107c8",
+    "phash": 6218634776624666063,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000297.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000297.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "LAION",
+    "sha256": "99a9e2ba045a9bd3fdd88f67ea7660389d77a16664cc7b457cec20364a877e23",
+    "phash": 5808897635842779273,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000162.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000162.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "a98f8283ae7c7b9dc3f2367aa9969909f68f0acb98cb3a8fca8ca42f300e8ece",
+    "phash": 8671705424320460919,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000167.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "07a23dd38f87f912219fca55ce4723f35f560ab1985c320c7894085c7dba3bd2",
+    "phash": 4557961200036462652,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "ashishwaghule_my-pet-dog-ash_00000095.png",
+    "local_path": "dataset\\cf_small\\images\\ashishwaghule_my-pet-dog-ash_00000095.png",
+    "label": 1,
+    "model_name": "ashishwaghule/my-pet-dog-ash",
+    "real_source": "LAION",
+    "sha256": "c186d08fb32164082fd09eefe4a35c77a30fcac9864ed6ea672aff2195ad3412",
+    "phash": 2356512194323111403,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000007.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000007.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "LAION",
+    "sha256": "f2c24a56fc7e0aa4887180b6085c4cc5eec88fcfd31b2b9d9449e25f31aab65c",
+    "phash": 7252315855784122570,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000380.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000380.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "45f89b2a7123441c314e507c2c9cbcfad275580cb46eb518dcdf186ba7f7d7e9",
+    "phash": 3804018627086979796,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_Dark-Sushi-2.5D_00000318.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_Dark-Sushi-2.5D_00000318.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/Dark-Sushi-2.5D",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "f9e2ce925bcdc7cce45233c65fe205bc30ce5beba8e691ac16b5cf48c5da5e38",
+    "phash": 3893882182131161929,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000318.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000318.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cc157033bb9c8bd2ceaf1ca9d4dcc1650c5e889d2dcbc4ca346d02229c727c1e",
+    "phash": 2676462905852139893,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000171.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000171.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "d68e2f5df6891b44832f354633333040e557f72397717b84af570b9f459a86cf",
+    "phash": 8097109339036817831,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000105.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000105.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "25f61047497b5429a59553ef4f45ece90e3332e3b6c8c883b082b0f3f5206bf3",
+    "phash": 5517768478794620617,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000154.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000154.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "439a12471b0ad8f6d64d9a3323d54d8404f11f5230c87bfacfdd752fe79aa0fd",
+    "phash": 7279971424701865174,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "ashishwaghule_my-pet-dog-ash_00000250.png",
+    "local_path": "dataset\\cf_small\\images\\ashishwaghule_my-pet-dog-ash_00000250.png",
+    "label": 1,
+    "model_name": "ashishwaghule/my-pet-dog-ash",
+    "real_source": "LAION",
+    "sha256": "d4cae3f2f2b6fc151bec53f376c7ce9cfe2a8fc9277832b8b7bc2ef8d369ad7b",
+    "phash": 529551454634737200,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000110.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "faf180ee8d36c39197170f1cf3bccb51ec96202f47a9871d4a0edd7d2253136e",
+    "phash": 173549926026222258,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000378.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000378.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b3f76e85eb9dc8fe224175b387fb51b997fa49a100980a2a0e768560ffe5090e",
+    "phash": 2527392400974219490,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000186.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000186.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "9ef47381a1bcb765cc373b8565c8e7da0b572b4437f1b08bb5bf60276b0f74d3",
+    "phash": 7468315147019982744,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000210.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000210.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "c5684999ea3ff724cc537650762327a8044a9343e824a78cc2a02eaa189190c8",
+    "phash": 6366017781420615987,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000033.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000033.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "6486f7f2c6a4ab5a6f1b9d7ef8dc92e1df5514aae2993e01ac1b8ca1d42de585",
+    "phash": 3948614783475010972,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000110.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "04f2ca3484432c8238da4959f18f96053ee6d7c02df0e13f785ce6fa6e9f95d2",
+    "phash": 6387684002631187843,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000199.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000199.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "dbc2ac682b60817b87a07f25a568555e706d99f3ab2c983f7fcc63a136141f84",
+    "phash": 2136490855457888879,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000292.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000292.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "84a8b65aa5f3a6ebc68f2cf248475a05f1a2fefa5fe47be3febca748b3c1f3bc",
+    "phash": 1232151852486195650,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000099.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "LAION",
+    "sha256": "448dcdfa3fe76074f720670435b079de51608ee115d463effda8607a3596cb9d",
+    "phash": 2201784065949310833,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000083.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000083.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "6e6177eb54dcb8c0e3815cf410314b283a6f418451f79330e3d8750925a75f5f",
+    "phash": 6748228879113896560,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000271.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000271.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "c2fa0de00cfff0a4554b74e799b15ccb8f120862bee6f85c36ec57498329d99f",
+    "phash": 6178377378991466376,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000011.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000011.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "028bbc00b3a8906d89739aa476057127265ebf416667cf7a8969740b42cd9045",
+    "phash": 1725805181748456476,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000213.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000213.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "LAION",
+    "sha256": "a7a2d19a0d18192af4d635deaff3c1b8cfbea29cc5096b672ee67aede6b8070f",
+    "phash": 782179858410385820,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000132.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "fe3c994a3f796c5d210fb49972a8a7162dae4d7dde775645aedb5d1198858a10",
+    "phash": 6582218811584004158,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000158.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000158.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "117ef7cf7efe4c532138a10b617f1e744efd13d105f869bba09f0eee197db00b",
+    "phash": 7249043300376951782,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000134.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000134.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "LAION",
+    "sha256": "050f836da1bab8f4589ac6d04acc6a3d799b9e853890dfea303b60260aedb7e4",
+    "phash": 4327695294423403299,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000099.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "8bfd1d764d8d5af9a45ceda0ea3d5ed8c6f880dfb935f513f1cb5c7528bca4e0",
+    "phash": 8044495875707122220,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000007.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000007.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "ef4a3e0efdaf4c0cc86ba1f89de25c273fde95d28ca15ab09328facfde288dbd",
+    "phash": 5125467447563855105,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "LieDeath_MergeStove2.5D_00000376.png",
+    "local_path": "dataset\\cf_small\\images\\LieDeath_MergeStove2.5D_00000376.png",
+    "label": 1,
+    "model_name": "LieDeath/MergeStove2.5D",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "48fc16603c5eefd3157648a0e91de9ebe8e3f1481f3d0f89572306a24e223674",
+    "phash": 385456235310898230,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000161.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000161.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "51402dd4d72ef1fbf7d070a7193e442d14542391b88a70e4eccbbf0ddfcc53ff",
+    "phash": 3575414867411299466,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000310.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7abf7da07d30214a83411e356896cb59688cf85b050a92a4d59f1bb01e9fc117",
+    "phash": 4683578484390405226,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000153.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "a8c90013e9cf9d1ab63bd26292cc03d2f19dd2cde50b142709132c5993c29efc",
+    "phash": 1840150938857959959,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000135.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000135.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "c927a2a9c5434c4de6cb3bd7161060d2c9790c116501e3be16ec9766dfc541f7",
+    "phash": 6906218076786605952,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000299.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000299.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "ec0082449903e89a768f91ebaf82be3608192a5b93bc369e1453a37d2cab2c11",
+    "phash": 5461696628800545144,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000312.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000312.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "30744c060746c57beb0afeba7c12935ab2f76a5c0cad58898ae7b45fea40ce45",
+    "phash": 9130701659449923099,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000333.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000333.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "52083197db51beab660e248eb9602325a7ffb2ff112066755df7e516e30ba34f",
+    "phash": 2354573013148673574,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000045.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000045.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "960b3edeeb2f933469f4ad5ca0c17d7951f77d1d97bb1b7eb5a646df4c07b1e5",
+    "phash": 3718089512197773361,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "aliyualisa_model_00000241.png",
+    "local_path": "dataset\\cf_small\\images\\aliyualisa_model_00000241.png",
+    "label": 1,
+    "model_name": "aliyualisa/model",
+    "real_source": "LAION",
+    "sha256": "e03e44be6bc4a14d1552fcdfb187047c0e180803371ccbc3528e88cd901d8f18",
+    "phash": 6104183761650686227,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000083.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000083.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "ac673405dd833802d0484e666dec6d3aeae9789be7efb9ecc971081530c9b0aa",
+    "phash": 4487912959929001651,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Shaleny_my-pet-dog-xzg_00000212.png",
+    "local_path": "dataset\\cf_small\\images\\Shaleny_my-pet-dog-xzg_00000212.png",
+    "label": 1,
+    "model_name": "Shaleny/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "c2512fa47ef925005401af77314ace8ee75764f3ecc9f4d6bf15c69b22d0b281",
+    "phash": 4335909502381898817,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000333.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000333.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7d1be1945aac8d31155a7c533580c4567696daf9735f7e1796d3c279f8adb6d6",
+    "phash": 4016034724656206406,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000005.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000005.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "2793b36f3b0113fb5fbbda959509700148ec746e42793adba366822e41232949",
+    "phash": 4317180289430477856,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000178.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000178.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "c4aba13ca361eaadb0ef4a8498d238c4469776d78a88844176365bdcf40097ae",
+    "phash": 1751880945801218215,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000298.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000298.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "LAION",
+    "sha256": "e195e7345dde8335243cc749904f6c47dec115301f25f380bb2d3e33db7a0c2d",
+    "phash": 199403810215336388,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000393.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000393.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cea725c02500fe437fda03102761bbe262cdefcedd719de89ec57e187bd476b6",
+    "phash": 7284975266323424807,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000055.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000055.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "b09ffebf2744433f98c40bf336c09a4562ad553cae148d0f61e40877ceaa4bf0",
+    "phash": 8228865452144170078,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000045.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000045.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "0484698052f3bc4a46c7fcd09196cc2647711c7a5d19ea2ce500f7e660a359bd",
+    "phash": 5393115080727656491,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000167.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "62132b06c8e08e545c54ca3f49ee0db4d131ba4c318d824623f8427f92cc765d",
+    "phash": 843448546812540613,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000209.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000209.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "4bbd79241a11ac2c262c0537b06c3f22e009d4c7dffbd4e1f3e4e7373369ed02",
+    "phash": 8510009436587393453,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000314.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7c70d5a79dd81fa2e8203d538c08922d17af2cec89c6cf69a29609e516144356",
+    "phash": 3509090505864734412,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000364.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000364.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "08a103a725479071316a2f72bb8c218c4e1df9244dc11fc6a05d498235a1329c",
+    "phash": 180135399021479879,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000256.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000256.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "LAION",
+    "sha256": "43231bd1971d2cb671b7ef7843c9ea09de5c50c83c39253c68ac24e534f1b147",
+    "phash": 3774519627713517932,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000228.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000228.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "554fb3b299481318386a0b92abd79fd2417ef001b38eb7159bda29515a535d5f",
+    "phash": 931242176120304338,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000055.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000055.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "2145903e56c48ec123c5c199f0cb4245c2ab789fe4b29764777a4f9e603a973a",
+    "phash": 6985838016103421940,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000257.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000257.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "65de05f2097c32ef6113a0aada4838ae4ea02a184b64bce4bd7431dfbfe411cc",
+    "phash": 3455792810945793702,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000050.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000050.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "147b6f9b3e80647a9d969b4041bc1490dca1c93d4a472f3ef48968050dd4408e",
+    "phash": 7954740736292062983,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000206.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "ab9951b9334f22e5bb306c2c7f646b822cffe0d55a478af1f9b398804e47f600",
+    "phash": 3007353159306277093,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000265.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "c423c5019743dde1f6d7c850d748f6cb592a5caabcde699baaab006536bd0510",
+    "phash": 4592139579454186638,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000346.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000346.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a15731264ef94dfddb290bc2add1329f32ccf90e3d3cba32d569a59d784bfe56",
+    "phash": 8710286358957163307,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000092.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000092.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "88e77a6f0c5409c4cd69dfa0ac91cffdf1821ba3cdaf34a47b7b9cc5e57bd032",
+    "phash": 458211141061331053,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000397.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000397.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b472a10b2f4c2e9926ca819d8fddd8ba36594c6dca77f82f100306932f38820a",
+    "phash": 5481891663040474188,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000195.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000195.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "90c5d9c9b6e5f26b96cb23f8d747c3db82a96fb124577126800d4da566f50557",
+    "phash": 2411776160899772660,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "mlpc-lab_TokenCompose_SD14_A_00000071.png",
+    "local_path": "dataset\\cf_small\\images\\mlpc-lab_TokenCompose_SD14_A_00000071.png",
+    "label": 1,
+    "model_name": "mlpc-lab/TokenCompose_SD14_A",
+    "real_source": "LAION",
+    "sha256": "7028de134eea28f9e8fa1c5ab0a65187d1dc570cd940709dee19bbea87b23979",
+    "phash": 1259479347917769325,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000310.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "dcb0fdd20f892ca0ec65bd632e151419a54de06cbdfd7403baf471e9421bf79d",
+    "phash": 8626046989521325688,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Shaleny_my-pet-dog-xzg_00000250.png",
+    "local_path": "dataset\\cf_small\\images\\Shaleny_my-pet-dog-xzg_00000250.png",
+    "label": 1,
+    "model_name": "Shaleny/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "9526a03ea566a95658643db9c6f35e8a1cc5fbcfdadf8d3b88442329f0aef2e4",
+    "phash": 2109622384480644792,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000147.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000147.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "bebd5fa694e84d090fc4b7db7d001317134be2383c0bd2d366d8048cfbb90e94",
+    "phash": 1396489693890367067,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000000.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000000.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "310567f0e2e2825ce261c277b255e80e26f4128a787450aaa770a6d90a89fea2",
+    "phash": 8483392691484455193,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000223.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000223.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "9ef16ad4334cd2fadc97b776e8007f8684d089e4ff449053dcada9ce8036ec47",
+    "phash": 5507886230950563296,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000337.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000337.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "8461a6cef99dc8582e30c4ec655101f9f66ae817288e5ba2d5f33bdd03c03781",
+    "phash": 5018616575007792528,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000232.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000232.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "8db8ef8f6a4d34cb199b429452aa6d4de87da9cd8859ecfc4ee935274a87f708",
+    "phash": 5728856453641375941,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000110.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "c3c14bd01db5bb09d4818278ba52a40b5db27c116c9a8be832173349206f65a2",
+    "phash": 5393937366354642022,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000110.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "LAION",
+    "sha256": "03e4dd313f0ee7810d6277c01bf42b363dad6f83d5ac06cb1e9967578e8b1b15",
+    "phash": 7611549970744395369,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000385.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000385.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "2612fba3661657aef8580a14b7181381c1f15c1d35b5f936ce89dcaa16e3c5cf",
+    "phash": 1209207752834455468,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000346.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000346.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "39327e64e057a687c7493800de1428ee797bee3c3a773963d47be4710e25043b",
+    "phash": 5733406295992243609,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000024.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000024.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "326e71df619ba60281ddcf7f2cebb33441b6ba39ff9d0eedc01822db3cbf0d46",
+    "phash": 6523174110064140737,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000080.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "d06fbc200f4712c8b0a0c25585b3187b1d819005f69004005e780d6f7c349bce",
+    "phash": 1293463882977058544,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000271.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000271.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "LAION",
+    "sha256": "632cf393c3a4b89f8cbd8d90f3d307813d14985f54972c8574191433482f119d",
+    "phash": 5466114700588429550,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000314.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "82950d3586593222de7113decae7f01f34bb203867bb8324faf73c646e73aebd",
+    "phash": 2826477349453787167,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000298.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000298.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "7a69e81af741389e7b9c6a150d6bf0009d716f013b55372b00fbee5ab682f134",
+    "phash": 1742298021817297721,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000274.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000274.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "8d183c4fceaf1bf0640dd2c4db1055342c2826d82e8cff6c5814f12dea84d7c0",
+    "phash": 7582414234908479123,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000280.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000280.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "2a0eaeed91f3dd922da5a17d7abfc87d131676d3fc0557b0f22e6fbb4887de24",
+    "phash": 3345421081470623920,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000236.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000236.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "6c7cb7ff9d54b9eecefc2f9dc057029deba3a579bc60505147eac9b7b6dff0b5",
+    "phash": 6353232785742524732,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000007.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000007.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "80fdff7ae94043ff7016dafacc056e0af63fcf5c980c915045ec070bef0bb788",
+    "phash": 8970240965693573177,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000095.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000095.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "4536fa8ffc474ef01a03a25bd52a544d23e2248babaadff5a3a8d6a988ee3182",
+    "phash": 1974289230311292666,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000134.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000134.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "7aa3d6fdf08fd53d5cc627722a69c37010a28f55400d6709aacf8465cd96a632",
+    "phash": 4859586873810479508,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000096.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000096.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "7ee54a1064488012b4d3de45a69de14d53e4768c4d0c4f911d029f3dc14f633d",
+    "phash": 3146382081733752396,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000306.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000306.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "98263a789b87288785d86cb093880b32f6c227c9b3f85bc6121c1edd526f54a8",
+    "phash": 1304375618038983861,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000364.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000364.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "21837ea3aa9b704859a2b824577bed784d32d0b1d2b0bd505705fc35f38da7e5",
+    "phash": 8335068181720166020,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000365.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000365.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "0d438b3af5dc699d3c0eddf6b9ca16f8852b9af557e1f7c5685f6a344ae0e913",
+    "phash": 1285537204382535227,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000101.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000101.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "8d97ef2c818f07e7b16aabddc2d87da9df7148c9e4ff4fcfd006a37032868e6c",
+    "phash": 2062063787330597766,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000133.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000133.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "6c30dc092b6b508348cdcaaf7e76f79aa50f9b0148ea268a1b91d188ce4a4ace",
+    "phash": 80355534383059569,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000185.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000185.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "cedc375721f855eb06f200886ac76df1074b0b3f4406a7e7021329a52deb521d",
+    "phash": 7697361171051289072,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000041.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000041.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "4a831182defd553523cace3bf8deadf1317d8be9ea5276d8302d879cb6e4d27b",
+    "phash": 6365921331101411832,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000310.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "c62c83aa78eeb45982a0bc073279bf0b2aa59c10c19db1020b5e5f12c6427813",
+    "phash": 539489868867916818,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000290.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000290.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "739285f650ab9e6ed4b256ffe7d3d60b198b06ce45e125055a3edc23add90dd8",
+    "phash": 5900562396600925976,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "mlpc-lab_TokenCompose_SD14_A_00000169.png",
+    "local_path": "dataset\\cf_small\\images\\mlpc-lab_TokenCompose_SD14_A_00000169.png",
+    "label": 1,
+    "model_name": "mlpc-lab/TokenCompose_SD14_A",
+    "real_source": "LAION",
+    "sha256": "515cc4b256573c8837b00ff9a3a61ee063f1a62e3a065a64d13a84542f56b45a",
+    "phash": 6137177813541891467,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000373.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000373.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "867dcdeb2e928919766133dbd7ae6e2c198180c0fc0b06845f56b4d0d3be4b47",
+    "phash": 37459911791025679,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000268.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000268.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "9e976267f6ecbd7c9b3c8a7b3839224a0d6ad8319f9aa9c9b8ab4fa48a43f0d2",
+    "phash": 3871165139946736330,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000243.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000243.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "935e448dc71ed059bd97fbde724a785641daf98d4a6ec89b4c808e58a9e93c3c",
+    "phash": 5828328137238396342,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000152.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "55002a2580b85a8208a763b285d7c0cb2a38087c6094ccb87538d7d951b4551c",
+    "phash": 3639121418954989030,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000099.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "cd197ee41d6c2807a571cd5cf16c87e184d7ed3da5f9df16f19ac77e0e0644ad",
+    "phash": 6482925709332881570,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000303.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000303.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "5a91e1bd118a4aca72a58aa4f6b0c554060a2485b1f98693ce9fa93070af9838",
+    "phash": 6353918633386302502,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "aliyualisa_model_00000011.png",
+    "local_path": "dataset\\cf_small\\images\\aliyualisa_model_00000011.png",
+    "label": 1,
+    "model_name": "aliyualisa/model",
+    "real_source": "LAION",
+    "sha256": "0b24bbed503480eaafb90771aeb6b162f35cafd4c591e7cf54c6eac263b1ad64",
+    "phash": 8753178069502113472,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000076.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000076.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "12b1d965c6ceb6cc6b54606276da6e9fcbce1b7b0933c1f994f43fd0fb73f503",
+    "phash": 7655191728951252370,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000217.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000217.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "717fdcd7798e0e72223e83ac064c36ebb97bd72eaf5e368bdfaf057826e2f16c",
+    "phash": 6202434411085022822,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000303.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000303.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b78cf4b2aa1b4d5eab300df0802d7208b921601ffdf8de57478006e67240eb69",
+    "phash": 3178598858316556260,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000209.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000209.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "01ea30956b43f2e66c455505a10366c5290b86e76490f03056f4618e27480ad1",
+    "phash": 2222730597124041792,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000215.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000215.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "87bb5942d6f3e92ebed3cc1497033d6a2ee848e2079776c6435ec239794531a4",
+    "phash": 3941011717407185124,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000112.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000112.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "b9a1c276906624c9e718c302c6803166e06044ff9eb3379afa08442a664b5008",
+    "phash": 5094610256509529449,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000080.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "b38b906df2ee4f9f188efcd2c9da7e405938b901c21c2fbe798e2f617e97c78b",
+    "phash": 38763655121673927,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000152.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "c520558ad5cd05f228a26c8cfd56c8d184e070f2d545989320827f26a8f562fb",
+    "phash": 7512446297954853869,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000021.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000021.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "LAION",
+    "sha256": "84876229fac82d300512b6e416b03639d6cae160d9e82885444944b0ec0c7fc5",
+    "phash": 2749067917932090600,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000115.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000115.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "0597b6a61d8def06ecf6bcd2ab23fe6c4beefd7c3ef45d54974cb989ec268c62",
+    "phash": 4420910907917182680,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Shaleny_my-pet-dog-xzg_00000256.png",
+    "local_path": "dataset\\cf_small\\images\\Shaleny_my-pet-dog-xzg_00000256.png",
+    "label": 1,
+    "model_name": "Shaleny/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "15696b7c9c658900c96deaf5b5802b69ac406b03ad59643b7fdd52506552d441",
+    "phash": 3724983009328029752,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000066.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000066.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "f12568d55254fb04a5fe6a5f9d21c1a3007d8188c001d3962b17835f90ccfad9",
+    "phash": 415807970202175456,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000176.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000176.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "83660c3853d7309c24ec01ade656d3fbf240d65b14da05a17e4b97f2901f1214",
+    "phash": 3731527728165878956,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kamillaova_epiCRealism_00000178.png",
+    "local_path": "dataset\\cf_small\\images\\kamillaova_epiCRealism_00000178.png",
+    "label": 1,
+    "model_name": "kamillaova/epiCRealism",
+    "real_source": "LAION",
+    "sha256": "725069fd0af139ed169f0b1e5fd5256e80cb8fd9f0a14015ead82ac08fe29fb4",
+    "phash": 684608075343423311,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000289.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000289.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "293762859cbdd1863f13a0066cb0b5a5f10d6945e769b23317292ee4895e1370",
+    "phash": 7903197481751370000,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000310.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "c9f614d4a1f8c87f8568072e2128526609a090fb443f90526fb9cab1e90af886",
+    "phash": 4161360333333682077,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000080.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "4c25fb64842e7a93a5fa6e66944b3758db64fbc24e676d48aa719f80c097ae31",
+    "phash": 1722033745213142738,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000132.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "e7122f3865b7ddb0d7e547a1622f051a57149cb28afc03a1d0b0a4f6c7e9df28",
+    "phash": 7750928154363680616,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000397.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000397.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e715bc85713165b861f04a68ecf6570bcbe023b70c1caf3ab444172a252fb0eb",
+    "phash": 5715028072276861577,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000101.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000101.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "LAION",
+    "sha256": "507a430046b723fe9ab341879c10a1211311eb4c655c16191d2c57b4a36415a5",
+    "phash": 3005403823101717876,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000003.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000003.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "233677aaa3998173b5d03c1727f9cdfb78823713c9d8c1941fbd50418f3efbf1",
+    "phash": 8779352378819520690,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000113.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000113.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "6a25a6420e358cce4dea14ade5162a376a283251cb9a3acdae4a00cd9503c8dd",
+    "phash": 5459686814953803111,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000132.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "LAION",
+    "sha256": "593a64c0e2e9ee4e9b8bedd605d21c3e988b35792a15e6ce8d171da176490f31",
+    "phash": 2162767769515894220,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000167.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "LAION",
+    "sha256": "680b592e3f1e594cc4f72958dccc0dda71956a916914092612c7eb8815de0671",
+    "phash": 724046924347595148,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000132.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "a28ca7f6f549fac279f212a210aff7dfef412ee82e4127da17dbccfc3965e169",
+    "phash": 2189175876109933767,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000155.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000155.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "40186a9026b366f7d3db40e0aa9a52b1fd52941a4f5a59efdec420ed210063a1",
+    "phash": 5037953175798613889,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000083.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000083.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "e303802f209d8a96df2a943bab69565b142f8698d8962b5996dbdb4d83b55c44",
+    "phash": 228966937071606410,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000357.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000357.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "ca8da5677a39c10d92264bd1e6224c4e9ce0c181c71fc61ec28685849b496bee",
+    "phash": 5854478942371196335,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000099.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "572a6a596838e5612ab357960f6b747e676f7be5ee586628696f2d2df2f0e20e",
+    "phash": 7801310134965749495,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000158.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000158.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "780c7c82c0b9990ada6cc60395dce6b1162d483a44bda8ea022c59b75d95ae4c",
+    "phash": 2590909469595224360,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000380.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000380.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "239aaaf358efaf6363b461a6e6a3b0c0cda8edc80f4df478e96ee93fa3b2de8d",
+    "phash": 5133309469357912600,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000153.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "LAION",
+    "sha256": "fa2783ff202e1f3ea672c0478d6f86afff55d525e9f1ee0fef710c8c17de626b",
+    "phash": 3000444686710591561,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000142.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000142.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "418bd16d3eb7403178fd33db9c971a8a718c3c90a4b8f8ca5389b491df29ac4d",
+    "phash": 5408115566121726737,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000322.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000322.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a2c6883a65901bbee975c838bfaac32771805e3fa104b9dc2fbd218505a447d6",
+    "phash": 6393347408196262080,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000099.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "9b7b34eb052a5c651d26d37b88afb74facc3ea64312b27df6c0e497c9017094c",
+    "phash": 6316938742280140575,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000209.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000209.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "LAION",
+    "sha256": "008f342942eb67f26290e445a716dff46468c42c56fda1160878b94d45d9f193",
+    "phash": 3074422790605163724,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000385.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000385.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b2ae1b8e4c247438b01bae85ec5b266cef073cd9f93ac50b5f7b3aad00bd3fb8",
+    "phash": 8016770789299069214,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000265.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "b10bd172a04e4d9700851d046e259205e3cb19536cffed2c82d61a579ce0486a",
+    "phash": 1349987206591180250,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000380.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000380.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "bf061982c8740a1c353147a14c0bdd9bbcadbe2365cff7a2ad11ff6aa9245138",
+    "phash": 7510804847693016777,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000213.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000213.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "LAION",
+    "sha256": "f8c6db5e953964ea0daf7b825be7880218f534807879eafe4406f90ee6e4799e",
+    "phash": 8940107603990122790,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000193.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000193.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "c07153233120b98bd5f59b89e083645101714508c54d2662fb08057f30f718af",
+    "phash": 2949530699663679384,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000310.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "89dfdc7d6e6edbca6eeef454551ab7ec662da9837280cc7cf7791bde47a9ebd5",
+    "phash": 1484318516461708716,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000297.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000297.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "51e1162226255580068fbb8933ac9c6071271cddea80dfc7749258c4c78f2400",
+    "phash": 4534424726391645482,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000393.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000393.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "155f393127eb678e6827c80f58e9d917a9f7f750867127115306a68ab8583838",
+    "phash": 7400139641146083532,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000237.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000237.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "43ac34b0623b8b43001b94c535fa77c3f9b84ab8368d77bcbe239a94a2a3718f",
+    "phash": 55239219474315078,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000307.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000307.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "628d9c27ca308ad9d94978d0073f67b6feca0fb8602bffbf39e8218e6bf3541e",
+    "phash": 1339316373987512014,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000353.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000353.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a9776d19b17a4cb9c4d0e7d9bf42414eddfe6b94124401a28b4d75dc744397da",
+    "phash": 7456737520556560545,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000231.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000231.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "29754bc0c5950895649d9522a54037b8a72c813a6905bb034935babbaa3316fd",
+    "phash": 5708745751151494041,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000013.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000013.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "4f8197a33022266f6cdda278934c2e6d426bdb65721d37712e3e20eb3dbdcb07",
+    "phash": 8380793344773754163,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000023.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000023.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "204bc834c839c16ee53e398752ac290d0ea2203664e9b6a66ef11599172c197d",
+    "phash": 990853327942275019,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000305.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000305.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cb74bd857f0ed3bfd32c37d409f354f032897743f8d7786ead64830ce6897512",
+    "phash": 723968942775572726,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000190.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000190.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "22dd43cc2f3d96d1aa16f78af68de6a4aee6257958ac8ce5bb34204d9da1693f",
+    "phash": 8917237891060929956,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000390.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000390.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "622d6cfd91016742c9fb836258382cdab037a7948445503dc9c9dd1895a2394e",
+    "phash": 717214344452437066,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000121.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000121.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "67e941648d64c4436b2d3d9f70e1078373d869364803a88feeb91185c688422a",
+    "phash": 3546103586199793369,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000297.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000297.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "LAION",
+    "sha256": "51e706c00b835085188d09784ea066bfaa6bd625fc2dc047292b401d4a86d37f",
+    "phash": 1361970845553974148,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000092.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000092.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "LAION",
+    "sha256": "d4a94979d4aece3210f96202a7b051ecc704fc3050885d424647c831f2293ed9",
+    "phash": 7551381647979369092,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "LieDeath_MergeStove2.5D_00000197.png",
+    "local_path": "dataset\\cf_small\\images\\LieDeath_MergeStove2.5D_00000197.png",
+    "label": 1,
+    "model_name": "LieDeath/MergeStove2.5D",
+    "real_source": "LAION",
+    "sha256": "8326569555884d7fff8eb0dcb8c6b2e91aeaf70f5c2da1a20f250e377208c348",
+    "phash": 7343162033024647852,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000310.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e9da2ab8e4fcbb041212428cc7d3d7f0a4b5ba2f21ecb19fe08e707500e1ecd5",
+    "phash": 3519745531464563460,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000246.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000246.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "13536a9cc57046a50e2264cfceb45827aa367f0482e61a559bd53d343e375752",
+    "phash": 6101614800873081683,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000050.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000050.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "9d57ee0527e0e115f609730d056f61e93e13f9b3525343c57cf0394b9390776a",
+    "phash": 7913595038423213235,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000090.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000090.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "bcc3a791b8cbc694889070e30fd8ffd83f20c2275611b5c4d33b1b98e22e4b0e",
+    "phash": 8301226416311802213,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000132.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "7d1de6270a4635f995e5469fdda9729c4125dca34db157fe87d66cbcf89fb418",
+    "phash": 3140299292712323803,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000303.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000303.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "8066ff9f36153086e20328ecd06f7818bcd03d17c59636a233c97860281952fa",
+    "phash": 3833296418462143193,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000393.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000393.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "09ed8d3376cb99afea236dc4217443b0e2491ac8f14009fb7c25459ce41c2f80",
+    "phash": 5838693746611723643,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000072.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000072.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "f9b55735124f8f60c5896e32ca5555e12441b030ada21e856f1409161ea1b6f4",
+    "phash": 4584608073651376364,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000161.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000161.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "f67374fcea8316e18f02cf57ee8bde33e4a443975e0f1fc69eede022c2ab93cb",
+    "phash": 7266994121127151334,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000322.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000322.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a73dd7a7f48b7ad52512190f20c6338e2e02febf6d2cc3835743dc45798fd698",
+    "phash": 6979979783695573112,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000354.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000354.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "3de9e31db92a9a2c96aac02335fdd34700e8b85f3a2911c08e5cc09b0f2167ea",
+    "phash": 5527269363732933768,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000289.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000289.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "5668bfeec0829e83ba596084e82501761d05c1840332dbef46ba179e791dfd15",
+    "phash": 6997780604168009931,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000397.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000397.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7e99824763b4030597032211dc1d0cce2fea771a975e58380bc2f930550b9319",
+    "phash": 4155299449969959572,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000206.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "LAION",
+    "sha256": "dd24390f569feec4971969a0350b2230b4d4993e6a7701a7926b939fe1b043af",
+    "phash": 7361320124262631763,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000062.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000062.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "58d2785c124e0ccaa6b75cb57ab9f47126a31d09dca733acc5031d0eb846c704",
+    "phash": 933330784232277139,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000314.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "ee4292b4395fa1d85435cafdef8b18f4b528a09b656348c20e409a70a5fe5884",
+    "phash": 2180834167319619862,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000152.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "a28740602dfc49c2f1828acf49366c747e1c1812d02c659f22b682647bac7fde",
+    "phash": 1990294806739610245,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000197.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000197.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "257a58cd1ef8b9233c9d5c2dee08a5feb702a6e9de18ef6ebf718fc99d11f7f6",
+    "phash": 1088280036907934826,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "aliyualisa_model_00000204.png",
+    "local_path": "dataset\\cf_small\\images\\aliyualisa_model_00000204.png",
+    "label": 1,
+    "model_name": "aliyualisa/model",
+    "real_source": "LAION",
+    "sha256": "d72777019c6330c8f18c1b433a5d016899ad79e548499e92e9da42fdaf401aa7",
+    "phash": 3229989990894556593,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000194.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000194.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "ecf35791c3996771139615c8befb92583735239f1a948175a8bfbeec0ec892e8",
+    "phash": 7048317146309965041,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000259.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000259.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "84fcb10cbe891d2da4e89cc29fffd13f3bc9d5f6942f2a0401bf208795737ea6",
+    "phash": 3056089883267714078,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "mlpc-lab_TokenCompose_SD14_A_00000277.png",
+    "local_path": "dataset\\cf_small\\images\\mlpc-lab_TokenCompose_SD14_A_00000277.png",
+    "label": 1,
+    "model_name": "mlpc-lab/TokenCompose_SD14_A",
+    "real_source": "LAION",
+    "sha256": "f38c6f60238fe914f85fa16320e4068d3dfb035e353840136c8e88a006cd00a1",
+    "phash": 8471659875331225043,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000237.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000237.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "4cb301ea4ad2602134f0cb64f863dbbe70d12ff9d4f3c7e750546697be1d0b5d",
+    "phash": 3427102464015785271,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000257.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000257.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "b76208384aa70fadcd4e3abbb4bc2c23f842e6155eb50bfc51d1b100aaaea4c9",
+    "phash": 2525923765691336018,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000092.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000092.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "8d4667fc6246e692f959837cdb860871d55ebcdf6fc2329a54731174ea1e52db",
+    "phash": 1784608060915937391,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000328.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000328.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e3c46f4667b1b777d1bea6376263bebced30a8aeb540aa44d5badd7c4d2ff50d",
+    "phash": 3102569671584551761,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000354.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000354.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "03baf55ec374fa199e6faeaf5e71ffbe8239d4f184f13689b2f88bc61764b96d",
+    "phash": 553024195481355809,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000206.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "032fb848b2a52199aa7c37b9b06ab7af44853f76d01dd414ea33e0b8a8b4ffee",
+    "phash": 3323956260412180333,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000099.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "f9b895ec614ceea475fea36eea17767438811569e02cba336cc4d66d63b03038",
+    "phash": 4041224125238242361,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000290.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000290.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "b78b35d9b7804556424da1d6a4a9337a07ef27d637cc81fddce384c3bf6ad943",
+    "phash": 451000651365310255,
+    "resolution": "512x512"
+  }
+]

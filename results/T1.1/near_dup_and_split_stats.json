@@ -1,0 +1,67 @@
+{
+  "task": "T1.1",
+  "date": "2026-11-19 22:17:53",
+  "deduplication": {
+    "total_rows_inspected": 1500,
+    "accepted_samples": 1500,
+    "near_dupes_filtered": 0,
+    "dup_rate_pct": 0.0,
+    "elapsed_sec": 41.75
+  },
+  "splits": {
+    "train_count": 1032,
+    "cal_count": 220,
+    "test_indomain_count": 220,
+    "test_disjoint_count": 28,
+    "train_generators": [
+      "employelalisa/min",
+      "lewdryuna/A-Rainier",
+      "alea31415/onimai-characters",
+      "danbochman/ccxl",
+      "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+      "tensor-diffusion/Dark-Sushi-2.5D",
+      "tensor-diffusion/chilloutmix-NI",
+      "AACEE/textual_inversion_cat",
+      "AACEE/textual_inversion_sksship",
+      "TopdeckingLands/ArtOfMtg_V1",
+      "nota-ai/bk-sdm-small",
+      "JamesFlare/pastel-mix",
+      "KORguy/textual_inversion_shirt",
+      "kalebanana/textual_inversion_mvtec",
+      "MohitSK/RealisticComicBook",
+      "VegaKH/Ultraskin",
+      "Linaqruf/animagine-xl-2.0",
+      "Linaqruf/animagine-xl",
+      "Crosstyan/BPModel",
+      "dream-textures/texture-diffusion",
+      "cgburgos/sdxl-1-0-base",
+      "bguisard/stable-diffusion-nano-2-1",
+      "Masagin/Deliberate",
+      "Sygil/Sygil-Diffusion",
+      "1mohitmanoj/surya",
+      "doohickey/neopian-diffusion",
+      "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+      "WarriorMama777/AbyssOrangeMix2",
+      "LieDeath/MergeStove2.5D",
+      "haor/Evt_V4-preview",
+      "selshiya/teapot",
+      "ashishwaghule/my-pet-dog-ash",
+      "Haya44/shrt-finetune",
+      "mlpc-lab/TokenCompose_SD14_A",
+      "divyansh-jain3/my-pet-dog-xzg",
+      "aliyualisa/model",
+      "Shaleny/my-pet-dog-xzg",
+      "kamillaova/epiCRealism"
+    ],
+    "test_disjoint_generators": [
+      "WarriorMama777/AbyssOrangeMix"
+    ],
+    "disjoint_check": {
+      "is_disjoint": true,
+      "train_generator_count": 38,
+      "test_generator_count": 1,
+      "generator_overlap": [],
+      "sample_overlap_count": 0
+    }
+  }
+}

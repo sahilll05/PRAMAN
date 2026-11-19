@@ -37,7 +37,7 @@ contracts/cache/
 
 # ── Data and models (large files) ─────────────────────────────────────────────
 /data/
-/dataset/
+/dataset/*
 !/dataset/README.md
 !/dataset/splits/
 !/dataset/splits/**

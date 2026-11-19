@@ -1,0 +1,59 @@
+{
+  "experiment": "E0",
+  "task": "T1.2",
+  "device": "cuda",
+  "peak_vram_mib": 405.96,
+  "total_images": 1500,
+  "total_time_sec": 45.17,
+  "overall_images_per_sec": 33.21,
+  "splits": {
+    "train": {
+      "n_samples": 1032,
+      "embed_dim": 512,
+      "total_time_sec": 17.33,
+      "images_per_sec": 59.54,
+      "peak_vram_mib": 449.49,
+      "device": "cuda",
+      "model_name": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "embeddings_file": "dataset\\embeddings\\train_embeddings.dat",
+      "labels_file": "dataset\\embeddings\\train_labels.npy"
+    },
+    "cal": {
+      "n_samples": 220,
+      "embed_dim": 512,
+      "total_time_sec": 11.29,
+      "images_per_sec": 19.48,
+      "peak_vram_mib": 449.49,
+      "device": "cuda",
+      "model_name": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "embeddings_file": "dataset\\embeddings\\cal_embeddings.dat",
+      "labels_file": "dataset\\embeddings\\cal_labels.npy"
+    },
+    "test_indomain": {
+      "n_samples": 220,
+      "embed_dim": 512,
+      "total_time_sec": 11.22,
+      "images_per_sec": 19.61,
+      "peak_vram_mib": 449.49,
+      "device": "cuda",
+      "model_name": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "embeddings_file": "dataset\\embeddings\\test_indomain_embeddings.dat",
+      "labels_file": "dataset\\embeddings\\test_indomain_labels.npy"
+    },
+    "test_disjoint": {
+      "n_samples": 28,
+      "embed_dim": 512,
+      "total_time_sec": 5.33,
+      "images_per_sec": 5.25,
+      "peak_vram_mib": 405.96,
+      "device": "cuda",
+      "model_name": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "embeddings_file": "dataset\\embeddings\\test_disjoint_embeddings.dat",
+      "labels_file": "dataset\\embeddings\\test_disjoint_labels.npy"
+    }
+  }
+}
