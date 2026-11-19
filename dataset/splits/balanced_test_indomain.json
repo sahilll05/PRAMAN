@@ -1,0 +1,4402 @@
+[
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000161.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000161.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "51402dd4d72ef1fbf7d070a7193e442d14542391b88a70e4eccbbf0ddfcc53ff",
+    "phash": 3575414867411299466,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000304180.jpg",
+    "local_path": "dataset/coco/images/000000304180.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "655b8f4c204a7820d26b2a53d454a572e8e2c65a46cd1fe71132a0c2794b83c0",
+    "phash": 7217323888654109143,
+    "resolution": "640x418"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000380.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000380.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "45f89b2a7123441c314e507c2c9cbcfad275580cb46eb518dcdf186ba7f7d7e9",
+    "phash": 3804018627086979796,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000088218.jpg",
+    "local_path": "dataset/coco/images/000000088218.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "faa37d0ad642b2c7a6f7cd4492abb29c19aca29937f0050181745e0f7e765dfa",
+    "phash": 3499114006710938309,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000306.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000306.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "98263a789b87288785d86cb093880b32f6c227c9b3f85bc6121c1edd526f54a8",
+    "phash": 1304375618038983861,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000206.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "032fb848b2a52199aa7c37b9b06ab7af44853f76d01dd414ea33e0b8a8b4ffee",
+    "phash": 3323956260412180333,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000393.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000393.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "155f393127eb678e6827c80f58e9d917a9f7f750867127115306a68ab8583838",
+    "phash": 7400139641146083532,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000347664.jpg",
+    "local_path": "dataset/coco/images/000000347664.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8221dddac9492f8c86b317fe80500f9fc5a81c4597f0b58c0dee7338abc795da",
+    "phash": 1057438353402323433,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000142790.jpg",
+    "local_path": "dataset/coco/images/000000142790.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "765d8b193b9350dcabbe5bb338f172c08eba969eda914afcae4787a90ec29bcb",
+    "phash": 2386026414225159049,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000152.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "55002a2580b85a8208a763b285d7c0cb2a38087c6094ccb87538d7d951b4551c",
+    "phash": 3639121418954989030,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000099.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "cd197ee41d6c2807a571cd5cf16c87e184d7ed3da5f9df16f19ac77e0e0644ad",
+    "phash": 6482925709332881570,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000119233.jpg",
+    "local_path": "dataset/coco/images/000000119233.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "24bfe0c95b1dbd6163fb6d36c61a40958d03f8ff6e1a45a2fc4ae8cbb9c4daf2",
+    "phash": 9068114146795348257,
+    "resolution": "500x334"
+  },
+  {
+    "image_name": "coco_000000052007.jpg",
+    "local_path": "dataset/coco/images/000000052007.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "83345dfd3d5402861ec0a5ae0767b01439733c798cf81637b304c309abfd085e",
+    "phash": 8409498038758508134,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000322.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000322.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a2c6883a65901bbee975c838bfaac32771805e3fa104b9dc2fbd218505a447d6",
+    "phash": 6393347408196262080,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000143961.jpg",
+    "local_path": "dataset/coco/images/000000143961.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8d8d7280995330c5960b595164a6e7407fc3d190cdef14a7134bb348e5f22e28",
+    "phash": 1201174262607247647,
+    "resolution": "640x356"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000099.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "LAION",
+    "sha256": "448dcdfa3fe76074f720670435b079de51608ee115d463effda8607a3596cb9d",
+    "phash": 2201784065949310833,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000397.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000397.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e715bc85713165b861f04a68ecf6570bcbe023b70c1caf3ab444172a252fb0eb",
+    "phash": 5715028072276861577,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000230993.jpg",
+    "local_path": "dataset/coco/images/000000230993.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "552bc04a6d870c41f098aa958c302904992e7816ad665a39a6b757fe47d5623a",
+    "phash": 6233379333794805916,
+    "resolution": "640x408"
+  },
+  {
+    "image_name": "selshiya_teapot_00000171.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000171.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "d68e2f5df6891b44832f354633333040e557f72397717b84af570b9f459a86cf",
+    "phash": 8097109339036817831,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000288.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000288.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "192065e87545a790772e0744ba4a1de30ec0aab5851dc831cfc244bee42a98df",
+    "phash": 5061526478470889860,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000261712.jpg",
+    "local_path": "dataset/coco/images/000000261712.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d756e1d84259e0955e397530050cd30165e4e45d6c622a8ee6861554b04f794e",
+    "phash": 2766527035587399392,
+    "resolution": "640x476"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000374.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000374.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "3585110450a524d6c3e25418c3f2a50edef41577b30ced8c49cc00b68bb1732c",
+    "phash": 2714876359249398395,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000314.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "ee4292b4395fa1d85435cafdef8b18f4b528a09b656348c20e409a70a5fe5884",
+    "phash": 2180834167319619862,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000195.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000195.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "90c5d9c9b6e5f26b96cb23f8d747c3db82a96fb124577126800d4da566f50557",
+    "phash": 2411776160899772660,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000129756.jpg",
+    "local_path": "dataset/coco/images/000000129756.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "46c0e8721b27741971feadc7eb37aa3d710e50294a3b27dbe8b522e3eab3295f",
+    "phash": 3073333604989089205,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000224200.jpg",
+    "local_path": "dataset/coco/images/000000224200.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "fc8144ba807a9587b0024a3e0435e00226d0e3afcc23039cd1d4d2d5f8aa5a71",
+    "phash": 807256198062165908,
+    "resolution": "640x640"
+  },
+  {
+    "image_name": "selshiya_teapot_00000299.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000299.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "ec0082449903e89a768f91ebaf82be3608192a5b93bc369e1453a37d2cab2c11",
+    "phash": 5461696628800545144,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000197.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000197.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "257a58cd1ef8b9233c9d5c2dee08a5feb702a6e9de18ef6ebf718fc99d11f7f6",
+    "phash": 1088280036907934826,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "mlpc-lab_TokenCompose_SD14_A_00000071.png",
+    "local_path": "dataset\\cf_small\\images\\mlpc-lab_TokenCompose_SD14_A_00000071.png",
+    "label": 1,
+    "model_name": "mlpc-lab/TokenCompose_SD14_A",
+    "real_source": "LAION",
+    "sha256": "7028de134eea28f9e8fa1c5ab0a65187d1dc570cd940709dee19bbea87b23979",
+    "phash": 1259479347917769325,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000104198.jpg",
+    "local_path": "dataset/coco/images/000000104198.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a1886d3f68fef35f0f32da3f93e44fa774a790e37c98b75daf7ee88303c90df2",
+    "phash": 5308052113266948662,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000206.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "ab9951b9334f22e5bb306c2c7f646b822cffe0d55a478af1f9b398804e47f600",
+    "phash": 3007353159306277093,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000005.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000005.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "2793b36f3b0113fb5fbbda959509700148ec746e42793adba366822e41232949",
+    "phash": 4317180289430477856,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000382122.jpg",
+    "local_path": "dataset/coco/images/000000382122.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b1398a7fa27d4a377f5055933e502c565b84cd76185c71094bb411c2e6d09e51",
+    "phash": 6446942406198155305,
+    "resolution": "424x640"
+  },
+  {
+    "image_name": "coco_000000226417.jpg",
+    "local_path": "dataset/coco/images/000000226417.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3b9c08f91df2e02c28c663da9f5a7204768633fb278b8489330f595dd144f94d",
+    "phash": 669297234838751914,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000373.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000373.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "867dcdeb2e928919766133dbd7ae6e2c198180c0fc0b06845f56b4d0d3be4b47",
+    "phash": 37459911791025679,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000359135.jpg",
+    "local_path": "dataset/coco/images/000000359135.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "9ed869f7865a4f14eec1dac691c62e22f7620aade6c0cca1e8014969539bb533",
+    "phash": 5736241688031793522,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000400794.jpg",
+    "local_path": "dataset/coco/images/000000400794.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5349be150c2d7e247d150a6873f1f22b839b1296c88e44a17dce49155f8cee5c",
+    "phash": 1158291519176827462,
+    "resolution": "426x640"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000099.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "9b7b34eb052a5c651d26d37b88afb74facc3ea64312b27df6c0e497c9017094c",
+    "phash": 6316938742280140575,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000351589.jpg",
+    "local_path": "dataset/coco/images/000000351589.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d96a7b416f6c12a6c6f9f3405c7ac9a04ec3b231700248148aa808fc30bd0972",
+    "phash": 310274181672955475,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000110042.jpg",
+    "local_path": "dataset/coco/images/000000110042.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "88b7ccf4adef80e715b18d95c379df1ad798dcffe5105cbb0451dd5aeb073b2c",
+    "phash": 5588329653296795326,
+    "resolution": "425x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000385.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000385.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "2612fba3661657aef8580a14b7181381c1f15c1d35b5f936ce89dcaa16e3c5cf",
+    "phash": 1209207752834455468,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000101884.jpg",
+    "local_path": "dataset/coco/images/000000101884.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3f02716109a94fa293c6ac1968a28e3c422030ab978497ad015aca5766a6eaa3",
+    "phash": 3074425368931571593,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000473015.jpg",
+    "local_path": "dataset/coco/images/000000473015.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "63624f7eab4948f4a15b7f2010dbd70f7c5a5db6fe8ab640afd1b51a01521b43",
+    "phash": 5961688200344258342,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000308631.jpg",
+    "local_path": "dataset/coco/images/000000308631.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "65be0c7d51b9ff262cfcac4592f5a3643cbda23a5fd571eee701c2dafd43e2d4",
+    "phash": 2898595325670514250,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000237.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000237.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "4cb301ea4ad2602134f0cb64f863dbbe70d12ff9d4f3c7e750546697be1d0b5d",
+    "phash": 3427102464015785271,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000310.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "c9f614d4a1f8c87f8568072e2128526609a090fb443f90526fb9cab1e90af886",
+    "phash": 4161360333333682077,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000110.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "c3c14bd01db5bb09d4818278ba52a40b5db27c116c9a8be832173349206f65a2",
+    "phash": 5393937366354642022,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000328.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000328.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e3c46f4667b1b777d1bea6376263bebced30a8aeb540aa44d5badd7c4d2ff50d",
+    "phash": 3102569671584551761,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000393.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000393.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "09ed8d3376cb99afea236dc4217443b0e2491ac8f14009fb7c25459ce41c2f80",
+    "phash": 5838693746611723643,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000185473.jpg",
+    "local_path": "dataset/coco/images/000000185473.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ccf9002db2e904761e86212f5b3d9155cb3c7a6a5f3c020ce07ff70fe4a03e7e",
+    "phash": 1533742024137986610,
+    "resolution": "640x194"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000176.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000176.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "83660c3853d7309c24ec01ade656d3fbf240d65b14da05a17e4b97f2901f1214",
+    "phash": 3731527728165878956,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000207585.jpg",
+    "local_path": "dataset/coco/images/000000207585.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6530da6b150e680ff646bdf792199fdda377385c6554bad2d0efbcf9db9daeb1",
+    "phash": 1478699750331478916,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000110.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "faf180ee8d36c39197170f1cf3bccb51ec96202f47a9871d4a0edd7d2253136e",
+    "phash": 173549926026222258,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000257.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000257.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "b76208384aa70fadcd4e3abbb4bc2c23f842e6155eb50bfc51d1b100aaaea4c9",
+    "phash": 2525923765691336018,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000209.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000209.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "LAION",
+    "sha256": "008f342942eb67f26290e445a716dff46468c42c56fda1160878b94d45d9f193",
+    "phash": 3074422790605163724,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000245311.jpg",
+    "local_path": "dataset/coco/images/000000245311.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "bc7545ae9dbc9ba854c4d4370ff9654de28b07c549bbfa411b50e1a3a3be5d58",
+    "phash": 7201693540021081235,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "coco_000000266082.jpg",
+    "local_path": "dataset/coco/images/000000266082.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4c98c6f7611c13a34ae9ee7b4046b3750451b91ef01bfa980cb11a84c6da39fb",
+    "phash": 8677924029081399569,
+    "resolution": "375x500"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000153.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "a8c90013e9cf9d1ab63bd26292cc03d2f19dd2cde50b142709132c5993c29efc",
+    "phash": 1840150938857959959,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000518770.jpg",
+    "local_path": "dataset/coco/images/000000518770.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5561f4a4b7834f24b878e03bf4a6ce3e1d06b963ef195f745595135bfcb31023",
+    "phash": 6917063385035102456,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "aliyualisa_model_00000204.png",
+    "local_path": "dataset\\cf_small\\images\\aliyualisa_model_00000204.png",
+    "label": 1,
+    "model_name": "aliyualisa/model",
+    "real_source": "LAION",
+    "sha256": "d72777019c6330c8f18c1b433a5d016899ad79e548499e92e9da42fdaf401aa7",
+    "phash": 3229989990894556593,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000364102.jpg",
+    "local_path": "dataset/coco/images/000000364102.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a483de72c2bde7c3ec8c91e3c0b0666ef898b747c51029b08821cbab1c63b937",
+    "phash": 134910290925753164,
+    "resolution": "640x398"
+  },
+  {
+    "image_name": "coco_000000226154.jpg",
+    "local_path": "dataset/coco/images/000000226154.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c1c4315fd2043e9a2ae44d5e9176a1b844b3dd5d50c2b0b74fdd3084dc0d216e",
+    "phash": 7636576985277822996,
+    "resolution": "640x507"
+  },
+  {
+    "image_name": "coco_000000362520.jpg",
+    "local_path": "dataset/coco/images/000000362520.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e7d7b2042253c96bbb74418afee60182f133ee7f3ccbc1b41159b0c42183602f",
+    "phash": 7810881788376853720,
+    "resolution": "424x640"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000365.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000365.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "0d438b3af5dc699d3c0eddf6b9ca16f8852b9af557e1f7c5685f6a344ae0e913",
+    "phash": 1285537204382535227,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000569972.jpg",
+    "local_path": "dataset/coco/images/000000569972.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b96e14c3c9c9e437b77b87306aa8b67f7ffbba620c12143c22bf5b2d28adae85",
+    "phash": 8557052509738262830,
+    "resolution": "640x574"
+  },
+  {
+    "image_name": "coco_000000445248.jpg",
+    "local_path": "dataset/coco/images/000000445248.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "caca5f576c379d916e7890a08a2e685d9b0d7dde36457095d9d7096e540df119",
+    "phash": 7640837761547725665,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "ashishwaghule_my-pet-dog-ash_00000095.png",
+    "local_path": "dataset\\cf_small\\images\\ashishwaghule_my-pet-dog-ash_00000095.png",
+    "label": 1,
+    "model_name": "ashishwaghule/my-pet-dog-ash",
+    "real_source": "LAION",
+    "sha256": "c186d08fb32164082fd09eefe4a35c77a30fcac9864ed6ea672aff2195ad3412",
+    "phash": 2356512194323111403,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000090956.jpg",
+    "local_path": "dataset/coco/images/000000090956.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4cd3cdfd87e339afae764353aaa4006724135b9e933cd2d6177b94fd1d835d1a",
+    "phash": 4111441501768699422,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000103585.jpg",
+    "local_path": "dataset/coco/images/000000103585.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "47fce9d4d181e9198abd705a02216ac34f4ce0172ff3bfb87949abe0c62220fb",
+    "phash": 759551311474662322,
+    "resolution": "425x640"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000132.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "LAION",
+    "sha256": "593a64c0e2e9ee4e9b8bedd605d21c3e988b35792a15e6ce8d171da176490f31",
+    "phash": 2162767769515894220,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000167.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "LAION",
+    "sha256": "680b592e3f1e594cc4f72958dccc0dda71956a916914092612c7eb8815de0671",
+    "phash": 724046924347595148,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000289.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000289.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "293762859cbdd1863f13a0066cb0b5a5f10d6945e769b23317292ee4895e1370",
+    "phash": 7903197481751370000,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000217.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000217.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "717fdcd7798e0e72223e83ac064c36ebb97bd72eaf5e368bdfaf057826e2f16c",
+    "phash": 6202434411085022822,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000550939.jpg",
+    "local_path": "dataset/coco/images/000000550939.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6c991128a1b28a048a4f746ba0aa4a27dbb388039b02c47d2216d8b8954abc9d",
+    "phash": 4353246092167414801,
+    "resolution": "418x640"
+  },
+  {
+    "image_name": "coco_000000052996.jpg",
+    "local_path": "dataset/coco/images/000000052996.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "0be041c42db05b3e7a7074e5fc857a7b5d616697504048f751ea5025e856f406",
+    "phash": 1839551558372117274,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000312.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000312.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "30744c060746c57beb0afeba7c12935ab2f76a5c0cad58898ae7b45fea40ce45",
+    "phash": 9130701659449923099,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000088269.jpg",
+    "local_path": "dataset/coco/images/000000088269.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "72aa4d9bb5c19bdaa96ebec98fa875c330eec634aacbe53e44f113b903db36c7",
+    "phash": 1184233056537595593,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000273420.jpg",
+    "local_path": "dataset/coco/images/000000273420.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "0ffe8967a9050226882557ab0ded3a4349b254d9ce6b3517f72580e791a7aae4",
+    "phash": 316807201364210649,
+    "resolution": "500x400"
+  },
+  {
+    "image_name": "coco_000000252701.jpg",
+    "local_path": "dataset/coco/images/000000252701.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ed9f6d83bc7d0c258731cfbcda3af6aea5fb85d00179500649cb3afe19fb2d50",
+    "phash": 4051102001591160396,
+    "resolution": "640x378"
+  },
+  {
+    "image_name": "coco_000000127624.jpg",
+    "local_path": "dataset/coco/images/000000127624.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6227325ba425dd3ba148eb0e02605a114824f4a66d8a6f387286895f30480129",
+    "phash": 7608436984666548337,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000265.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "0934634682765fd2d71a85104512377add8b5dbfae16a26a4228869b56ec9ba5",
+    "phash": 4689960849262362005,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000274.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000274.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "8d183c4fceaf1bf0640dd2c4db1055342c2826d82e8cff6c5814f12dea84d7c0",
+    "phash": 7582414234908479123,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000083.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000083.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "e303802f209d8a96df2a943bab69565b142f8698d8962b5996dbdb4d83b55c44",
+    "phash": 228966937071606410,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000293804.jpg",
+    "local_path": "dataset/coco/images/000000293804.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5029aa3cb3511612c828f5924dfe285b2f6831cfb71de6817fa0099c945d19d9",
+    "phash": 6690484494532182579,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "coco_000000176701.jpg",
+    "local_path": "dataset/coco/images/000000176701.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ae6f462f467cd7cd7f6f3ec2e3c34a12f6f29549e44dad3e1c5324ebed87255f",
+    "phash": 976105491621290411,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000173033.jpg",
+    "local_path": "dataset/coco/images/000000173033.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "07d41032e885a982cc42f7c2eda86732de7ba5eff15268cfbe7e6e32a4d63842",
+    "phash": 7333721032563766425,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "coco_000000245513.jpg",
+    "local_path": "dataset/coco/images/000000245513.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2fd09b0c7ee57e18458b21999fea4c9e2e0b9fb8fad467be286f9b53b2b3fb50",
+    "phash": 4629945463311676272,
+    "resolution": "500x381"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000152.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "a28740602dfc49c2f1828acf49366c747e1c1812d02c659f22b682647bac7fde",
+    "phash": 1990294806739610245,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000303863.jpg",
+    "local_path": "dataset/coco/images/000000303863.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "886f530f5431029d641303cbe7e41b63c419c620ab5e1e2b7ae2f1b0c8112a1d",
+    "phash": 4673004867197214417,
+    "resolution": "640x431"
+  },
+  {
+    "image_name": "coco_000000034071.jpg",
+    "local_path": "dataset/coco/images/000000034071.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a948458ba76bbb64a2a1ce28a88ffb43c7ced9f03f983648fe7ece83a8826b75",
+    "phash": 6543057331557827360,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000224051.jpg",
+    "local_path": "dataset/coco/images/000000224051.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ad01e4704883ecaaa25321efcc24d2ada74a725fe70cc0578890dca7a4745c60",
+    "phash": 918416012458689096,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "coco_000000428280.jpg",
+    "local_path": "dataset/coco/images/000000428280.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e1fe3a66ec23e9b0e7400e44ad69912499fdacdbd955454acb9ec9675883b022",
+    "phash": 6239883213243937299,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000280.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000280.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "2a0eaeed91f3dd922da5a17d7abfc87d131676d3fc0557b0f22e6fbb4887de24",
+    "phash": 3345421081470623920,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000378.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000378.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b3f76e85eb9dc8fe224175b387fb51b997fa49a100980a2a0e768560ffe5090e",
+    "phash": 2527392400974219490,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000547816.jpg",
+    "local_path": "dataset/coco/images/000000547816.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "12a5454d970b0a2330d3ab53018b977b90d717d60ca71c36778ed5aa7310d3c2",
+    "phash": 5440488950214825194,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "Shaleny_my-pet-dog-xzg_00000256.png",
+    "local_path": "dataset\\cf_small\\images\\Shaleny_my-pet-dog-xzg_00000256.png",
+    "label": 1,
+    "model_name": "Shaleny/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "15696b7c9c658900c96deaf5b5802b69ac406b03ad59643b7fdd52506552d441",
+    "phash": 3724983009328029752,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000507893.jpg",
+    "local_path": "dataset/coco/images/000000507893.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "98fca92664567dc7360f7801b1db6bb7906cd5f1ba7ba1e6ab8618094a4b9dbc",
+    "phash": 4650862984583615124,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "coco_000000311928.jpg",
+    "local_path": "dataset/coco/images/000000311928.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a6d2111d919c66f142459554a58697446623b2b109b32a70ee03ed4a86730dd1",
+    "phash": 7161635866479959598,
+    "resolution": "640x398"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000324.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000324.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "79863ac70dd8c3b7de9b0a46670c3155ec410e65363796d8598fbb674eab3368",
+    "phash": 1138056316841085327,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000310.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "c62c83aa78eeb45982a0bc073279bf0b2aa59c10c19db1020b5e5f12c6427813",
+    "phash": 539489868867916818,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000119911.jpg",
+    "local_path": "dataset/coco/images/000000119911.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1b5bac3644319f23c90ad7baaa952666c6a2625fe44ef4735548b4b44b017185",
+    "phash": 4629991853045444,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000135.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000135.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "c927a2a9c5434c4de6cb3bd7161060d2c9790c116501e3be16ec9766dfc541f7",
+    "phash": 6906218076786605952,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000318.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000318.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cc157033bb9c8bd2ceaf1ca9d4dcc1650c5e889d2dcbc4ca346d02229c727c1e",
+    "phash": 2676462905852139893,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000015597.jpg",
+    "local_path": "dataset/coco/images/000000015597.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e34e098c9a41160f1f6cd0181d946ddca4e31bb94af38c060e36d6ec4f406e79",
+    "phash": 3385723146460851266,
+    "resolution": "433x640"
+  },
+  {
+    "image_name": "coco_000000208208.jpg",
+    "local_path": "dataset/coco/images/000000208208.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1df85ecd80d70c0e82089f2b9badcf4d8cfde414c5d005bcc6d3ef05d5fc44cc",
+    "phash": 6966686918104476352,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000113867.jpg",
+    "local_path": "dataset/coco/images/000000113867.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d895a9fa969ec8d05cd0811d6c1d0581403ab62bf7978033c30cad1e2486609f",
+    "phash": 470205717580186521,
+    "resolution": "633x640"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000024.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000024.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "326e71df619ba60281ddcf7f2cebb33441b6ba39ff9d0eedc01822db3cbf0d46",
+    "phash": 6523174110064140737,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000438017.jpg",
+    "local_path": "dataset/coco/images/000000438017.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "fdc7f44727b7ebd7a606b0483544ef7e70c8804c36bd57a720814c43a633025c",
+    "phash": 65441959283752862,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000167.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "5037abfe02a8cf1d21ab5e1b318a4b9ffdd9eb748fc46e786145aba2d3f917a8",
+    "phash": 5602070990530146473,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000125405.jpg",
+    "local_path": "dataset/coco/images/000000125405.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "aeb172b088be9b334a97fcd4df1fe89b5730bc5836765a23c82f2b8b4ff3d03b",
+    "phash": 8307114317000903860,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "coco_000000281693.jpg",
+    "local_path": "dataset/coco/images/000000281693.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e26a646c09883c33aa0708148e1cb7b9eea596702087f5bb62a31787eae5763c",
+    "phash": 1703873976369247050,
+    "resolution": "640x481"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000092.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000092.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "LAION",
+    "sha256": "d4a94979d4aece3210f96202a7b051ecc704fc3050885d424647c831f2293ed9",
+    "phash": 7551381647979369092,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000147.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000147.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "bebd5fa694e84d090fc4b7db7d001317134be2383c0bd2d366d8048cfbb90e94",
+    "phash": 1396489693890367067,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000427160.jpg",
+    "local_path": "dataset/coco/images/000000427160.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "34d59037b3289cea82204ddd5067a9736a987276fb83839d6dab8d126042d65f",
+    "phash": 5203885148315300152,
+    "resolution": "640x512"
+  },
+  {
+    "image_name": "coco_000000398377.jpg",
+    "local_path": "dataset/coco/images/000000398377.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b2fce7c24d850739541b77b845303e457b0e689354778b8303f54f94485fac99",
+    "phash": 5876503149410509657,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "coco_000000534394.jpg",
+    "local_path": "dataset/coco/images/000000534394.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6f8472c4f1c89d5941991c5b6bfb25d5836e3908fa71430745cb3d558f528673",
+    "phash": 2967006722630201660,
+    "resolution": "640x359"
+  },
+  {
+    "image_name": "employelalisa_min_00000062.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000062.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "58d2785c124e0ccaa6b75cb57ab9f47126a31d09dca733acc5031d0eb846c704",
+    "phash": 933330784232277139,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000067406.jpg",
+    "local_path": "dataset/coco/images/000000067406.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "83b8bf598b7a5541402cf0e4de96c024bb9c102b248ac92c6c4fc233d3747175",
+    "phash": 6254683163450763212,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "coco_000000063602.jpg",
+    "local_path": "dataset/coco/images/000000063602.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "f5ec3b32e35d09164814b6a3950129e266e69ef36ac8dd3f0918b0991dccfab7",
+    "phash": 6043009921700820680,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000271.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000271.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "c2fa0de00cfff0a4554b74e799b15ccb8f120862bee6f85c36ec57498329d99f",
+    "phash": 6178377378991466376,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000206.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "2c39026a1399a71e4c7ccdb69e7d4a6bdf96b1ab248a66f156b2ef1a355c2fd7",
+    "phash": 365998746434548923,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000106281.jpg",
+    "local_path": "dataset/coco/images/000000106281.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c0e4922ef54172a9926493ed866391755c885c4864d3e5d7721c6c3bb1e41c34",
+    "phash": 5170053891430039913,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000209.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000209.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "01ea30956b43f2e66c455505a10366c5290b86e76490f03056f4618e27480ad1",
+    "phash": 2222730597124041792,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000007281.jpg",
+    "local_path": "dataset/coco/images/000000007281.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "57f3508e600d3370320487dde8665f208f11612a11caac0801c7f5fc19188ac3",
+    "phash": 3086573277809319632,
+    "resolution": "640x361"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000167.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "62132b06c8e08e545c54ca3f49ee0db4d131ba4c318d824623f8427f92cc765d",
+    "phash": 843448546812540613,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000314.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7c70d5a79dd81fa2e8203d538c08922d17af2cec89c6cf69a29609e516144356",
+    "phash": 3509090505864734412,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000153.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "6976ec245ce7bf6fd7edd65fe42638333b4edb6611b8bb1b154cb94b0970e6a1",
+    "phash": 913372904658408271,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000383838.jpg",
+    "local_path": "dataset/coco/images/000000383838.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8f1a6220e63b77533def7e515bc4e7ebe8879d68cd6cf13c90f3f507c0c2583d",
+    "phash": 4593087094478128832,
+    "resolution": "640x588"
+  },
+  {
+    "image_name": "employelalisa_min_00000322.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000322.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a73dd7a7f48b7ad52512190f20c6338e2e02febf6d2cc3835743dc45798fd698",
+    "phash": 6979979783695573112,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000434297.jpg",
+    "local_path": "dataset/coco/images/000000434297.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1d8845dab875af4f2893ebfa3e89c7346c77274efdfe3c7d71c7ae06ccd0ae30",
+    "phash": 7787797885769312924,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "kamillaova_epiCRealism_00000030.png",
+    "local_path": "dataset\\cf_small\\images\\kamillaova_epiCRealism_00000030.png",
+    "label": 1,
+    "model_name": "kamillaova/epiCRealism",
+    "real_source": "LAION",
+    "sha256": "0f08b087297d6946b094b7177a639eee14850ad32a713ff90ed1e61edb8ce55f",
+    "phash": 9193132579936109628,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000297.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000297.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "LAION",
+    "sha256": "51e706c00b835085188d09784ea066bfaa6bd625fc2dc047292b401d4a86d37f",
+    "phash": 1361970845553974148,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000290.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000290.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "739285f650ab9e6ed4b256ffe7d3d60b198b06ce45e125055a3edc23add90dd8",
+    "phash": 5900562396600925976,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000337.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000337.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "8461a6cef99dc8582e30c4ec655101f9f66ae817288e5ba2d5f33bdd03c03781",
+    "phash": 5018616575007792528,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000266206.jpg",
+    "local_path": "dataset/coco/images/000000266206.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8547dffbecd713cdaa2125264e62058abf38e211d2be78deba244d5ffcd53bdc",
+    "phash": 2021574609185500498,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "coco_000000261036.jpg",
+    "local_path": "dataset/coco/images/000000261036.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "33123675af9257888d466d4333ba28bdaf1d7cecdf5be325d3182cc854d100b0",
+    "phash": 2225274229672643192,
+    "resolution": "333x500"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000206.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000206.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "LAION",
+    "sha256": "dd24390f569feec4971969a0350b2230b4d4993e6a7701a7926b939fe1b043af",
+    "phash": 7361320124262631763,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000298.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000298.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "LAION",
+    "sha256": "e195e7345dde8335243cc749904f6c47dec115301f25f380bb2d3e33db7a0c2d",
+    "phash": 199403810215336388,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000152.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "c520558ad5cd05f228a26c8cfd56c8d184e070f2d545989320827f26a8f562fb",
+    "phash": 7512446297954853869,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000506454.jpg",
+    "local_path": "dataset/coco/images/000000506454.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "0ce984bbb75788a7bb8dc3a962a66ca4ce44c9f66c4980c1fa304e6bc2eca17c",
+    "phash": 1247868036432403443,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000215259.jpg",
+    "local_path": "dataset/coco/images/000000215259.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4681f712406ecb952b74606dc1bc597d81019f209843ca806ae3c188be700afe",
+    "phash": 4936432406773698773,
+    "resolution": "336x500"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000099.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "572a6a596838e5612ab357960f6b747e676f7be5ee586628696f2d2df2f0e20e",
+    "phash": 7801310134965749495,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000362716.jpg",
+    "local_path": "dataset/coco/images/000000362716.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a535d5a73d971b18b9729279feea26659f6781cccdacf20e08d5dab8cde7a12d",
+    "phash": 4343462006650368268,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000271.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000271.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "LAION",
+    "sha256": "632cf393c3a4b89f8cbd8d90f3d307813d14985f54972c8574191433482f119d",
+    "phash": 5466114700588429550,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000571264.jpg",
+    "local_path": "dataset/coco/images/000000571264.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a310373f200737f37ab6e24eaca6f9cf54045e801eb112194506472901c97fe2",
+    "phash": 3956088164769679637,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000314709.jpg",
+    "local_path": "dataset/coco/images/000000314709.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "487977ae8e06409c8ce630bf56340f5816de6b0da878714b7f8d49f91f69d742",
+    "phash": 8318760512775456649,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000080.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "4c25fb64842e7a93a5fa6e66944b3758db64fbc24e676d48aa719f80c097ae31",
+    "phash": 1722033745213142738,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000302.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000302.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7a8f521030702d7fb3ee181cb549262e905a2f5d5ee1ce06ec25573aa1ec1828",
+    "phash": 2453251671059717270,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000364.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000364.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "21837ea3aa9b704859a2b824577bed784d32d0b1d2b0bd505705fc35f38da7e5",
+    "phash": 8335068181720166020,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000132.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "7d1de6270a4635f995e5469fdda9729c4125dca34db157fe87d66cbcf89fb418",
+    "phash": 3140299292712323803,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000333.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000333.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7d1be1945aac8d31155a7c533580c4567696daf9735f7e1796d3c279f8adb6d6",
+    "phash": 4016034724656206406,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000297595.jpg",
+    "local_path": "dataset/coco/images/000000297595.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "decb66eed1cbb10802e090b4d932757b2e6963d30fa1f9f963507edcb61870e6",
+    "phash": 8953582667509580094,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000317999.jpg",
+    "local_path": "dataset/coco/images/000000317999.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e544237abf5a228ed17308bac2ecb381ffcd1151b8bf404d473a401d142a41ab",
+    "phash": 4312216317106768916,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "coco_000000017959.jpg",
+    "local_path": "dataset/coco/images/000000017959.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8d525d9c133ee9ce8110fd8e2cca767d051bd22e8822c8f9ede6e72b7ff398d8",
+    "phash": 2784664770533700428,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000115.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000115.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "0597b6a61d8def06ecf6bcd2ab23fe6c4beefd7c3ef45d54974cb989ec268c62",
+    "phash": 4420910907917182680,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000303.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000303.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "8066ff9f36153086e20328ecd06f7818bcd03d17c59636a233c97860281952fa",
+    "phash": 3833296418462143193,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000265.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "82a0726b821d52ffc9b61d0727f6c67fb4c4f10a1e508ef716165477b42e6f9e",
+    "phash": 189276302060328894,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000439525.jpg",
+    "local_path": "dataset/coco/images/000000439525.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "86e817c972ad296e83b7a67560b1aab4aed98dddd463bf2914ca76a17927a930",
+    "phash": 3888968000099196098,
+    "resolution": "453x640"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000256.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000256.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "LAION",
+    "sha256": "43231bd1971d2cb671b7ef7843c9ea09de5c50c83c39253c68ac24e534f1b147",
+    "phash": 3774519627713517932,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000498709.jpg",
+    "local_path": "dataset/coco/images/000000498709.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a93dc2050f71b91bcba2390bcfa8bae6379152cd45ef4cf2426e28a31ffeb7aa",
+    "phash": 8057380257647171338,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "coco_000000257865.jpg",
+    "local_path": "dataset/coco/images/000000257865.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a01c2809cb0b625392b1383a9fef03ad38721a54f2bdc9a8eac9979950a0cb20",
+    "phash": 5490226353807962937,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000315257.jpg",
+    "local_path": "dataset/coco/images/000000315257.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "aa6ff439cf5f79daa81108324455020df80b1c4c5327f040f63d4e3c7183c07d",
+    "phash": 4379352704944405084,
+    "resolution": "640x514"
+  },
+  {
+    "image_name": "coco_000000322574.jpg",
+    "local_path": "dataset/coco/images/000000322574.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ce4fc4045c9dbe6d5c321248c3d8af821036e2403c6d159d3745c75f6f6bc9e1",
+    "phash": 6128883386207592906,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000451571.jpg",
+    "local_path": "dataset/coco/images/000000451571.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "501c4119054a0ee3110f260afa17f205289de089b9747d18a81b61348b512712",
+    "phash": 6244323121641606462,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000236.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000236.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "6c7cb7ff9d54b9eecefc2f9dc057029deba3a579bc60505147eac9b7b6dff0b5",
+    "phash": 6353232785742524732,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000390.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000390.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "622d6cfd91016742c9fb836258382cdab037a7948445503dc9c9dd1895a2394e",
+    "phash": 717214344452437066,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000298.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000298.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "7a69e81af741389e7b9c6a150d6bf0009d716f013b55372b00fbee5ab682f134",
+    "phash": 1742298021817297721,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000208423.jpg",
+    "local_path": "dataset/coco/images/000000208423.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8d9c134ecfb0e96cc02d5b78120aa9e11286217ac7e1fef4c8afbd4a3a7d3070",
+    "phash": 9097621721934183427,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000007.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000007.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "LAION",
+    "sha256": "f2c24a56fc7e0aa4887180b6085c4cc5eec88fcfd31b2b9d9449e25f31aab65c",
+    "phash": 7252315855784122570,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000087470.jpg",
+    "local_path": "dataset/coco/images/000000087470.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "813249b022ac9a945404f6ff101afe450fd3c34815b9118e99a31bed63a65a37",
+    "phash": 2338432203992340988,
+    "resolution": "640x470"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000158.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000158.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "117ef7cf7efe4c532138a10b617f1e744efd13d105f869bba09f0eee197db00b",
+    "phash": 7249043300376951782,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000186.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000186.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "9ef47381a1bcb765cc373b8565c8e7da0b572b4437f1b08bb5bf60276b0f74d3",
+    "phash": 7468315147019982744,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000278973.jpg",
+    "local_path": "dataset/coco/images/000000278973.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "9740805eff2b13ba607f2128994bf7028f667231bb57f25a4e5418bec0744fad",
+    "phash": 4343515006763566158,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000382125.jpg",
+    "local_path": "dataset/coco/images/000000382125.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d83f8b6bbbef41c27da7cc759e139b983c5025bc30da9f23f6c9402d29cfb22f",
+    "phash": 5187259776564474057,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000319696.jpg",
+    "local_path": "dataset/coco/images/000000319696.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8553becb13b9673b395568279b88bcdaec95cf1aff5cf0b577da62330aac2e9d",
+    "phash": 3942844627912176694,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "coco_000000340894.jpg",
+    "local_path": "dataset/coco/images/000000340894.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3e3b877390b6f0cf1873444eae7912dea498ea6515ee60bd0a2fa6b7d5fc52fa",
+    "phash": 4522973563834112421,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000548506.jpg",
+    "local_path": "dataset/coco/images/000000548506.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6587aa7e069e1aec1ef2bac033583a7173db33619ba2cecdd4e52e8cf17e4ad3",
+    "phash": 3691995994042670538,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "coco_000000499622.jpg",
+    "local_path": "dataset/coco/images/000000499622.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b863e07e2ae99859bd5d3713fa30cbd580a24fa6f01e8e6a65394e9967819ee8",
+    "phash": 7142230072186494150,
+    "resolution": "412x456"
+  },
+  {
+    "image_name": "coco_000000106757.jpg",
+    "local_path": "dataset/coco/images/000000106757.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3638552bcd5b55fbbd710dbef5cbc4cb142b375397d006104fc87350683d7ad7",
+    "phash": 4028690484419331164,
+    "resolution": "426x640"
+  },
+  {
+    "image_name": "aliyualisa_model_00000011.png",
+    "local_path": "dataset\\cf_small\\images\\aliyualisa_model_00000011.png",
+    "label": 1,
+    "model_name": "aliyualisa/model",
+    "real_source": "LAION",
+    "sha256": "0b24bbed503480eaafb90771aeb6b162f35cafd4c591e7cf54c6eac263b1ad64",
+    "phash": 8753178069502113472,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "LieDeath_MergeStove2.5D_00000197.png",
+    "local_path": "dataset\\cf_small\\images\\LieDeath_MergeStove2.5D_00000197.png",
+    "label": 1,
+    "model_name": "LieDeath/MergeStove2.5D",
+    "real_source": "LAION",
+    "sha256": "8326569555884d7fff8eb0dcb8c6b2e91aeaf70f5c2da1a20f250e377208c348",
+    "phash": 7343162033024647852,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000243.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000243.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "935e448dc71ed059bd97fbde724a785641daf98d4a6ec89b4c808e58a9e93c3c",
+    "phash": 5828328137238396342,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000080.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "b456dd1f2084dfa0d26412b3ec5b4c3c87d1f990e1332f98843affb2965da5a7",
+    "phash": 4585088735672767700,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000136334.jpg",
+    "local_path": "dataset/coco/images/000000136334.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "f06e5539ac4ea05d778598f8a61c00f6ccfd73a533707373eabf0b640714b872",
+    "phash": 6367570499464468495,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000321214.jpg",
+    "local_path": "dataset/coco/images/000000321214.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5b4d5e12a578b4407a3724c83a8950c5f00b36763bdefdc535363818d057ae9e",
+    "phash": 1751008155607885768,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000163746.jpg",
+    "local_path": "dataset/coco/images/000000163746.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1a6a36f8e88b5ff69228ddd0e9ace1484d075de3dfe55f73be3e658b5ab5b726",
+    "phash": 5753473946227505701,
+    "resolution": "640x488"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000045.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000045.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "0484698052f3bc4a46c7fcd09196cc2647711c7a5d19ea2ce500f7e660a359bd",
+    "phash": 5393115080727656491,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000310.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e9da2ab8e4fcbb041212428cc7d3d7f0a4b5ba2f21ecb19fe08e707500e1ecd5",
+    "phash": 3519745531464563460,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000310.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7abf7da07d30214a83411e356896cb59688cf85b050a92a4d59f1bb01e9fc117",
+    "phash": 4683578484390405226,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kamillaova_epiCRealism_00000178.png",
+    "local_path": "dataset\\cf_small\\images\\kamillaova_epiCRealism_00000178.png",
+    "label": 1,
+    "model_name": "kamillaova/epiCRealism",
+    "real_source": "LAION",
+    "sha256": "725069fd0af139ed169f0b1e5fd5256e80cb8fd9f0a14015ead82ac08fe29fb4",
+    "phash": 684608075343423311,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000153529.jpg",
+    "local_path": "dataset/coco/images/000000153529.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a7fd364903b9b75a4080b0e39dda9b6c17b89179e34152536db0d38ae3279a2c",
+    "phash": 3515565012898598759,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "coco_000000414638.jpg",
+    "local_path": "dataset/coco/images/000000414638.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "fa32398a8441c2a27f5047bc2ad2f9144127f10f2c6663b22f0701679e8e97c3",
+    "phash": 314741733726433165,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000215.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000215.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "87bb5942d6f3e92ebed3cc1497033d6a2ee848e2079776c6435ec239794531a4",
+    "phash": 3941011717407185124,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000498807.jpg",
+    "local_path": "dataset/coco/images/000000498807.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5178a90bdbd6a38bb29e9ad7c0f7051280a520eac5425d516d778a5871af776c",
+    "phash": 8329769017269431350,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000384527.jpg",
+    "local_path": "dataset/coco/images/000000384527.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "283e14ef8a28efda65411d850119607c68bf02036460b94f6a73688703fae491",
+    "phash": 3526556708046104078,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000190676.jpg",
+    "local_path": "dataset/coco/images/000000190676.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d2302cb8d9e0d37a4a150d79ffbb4ba9b1adfd2bcfd477b7b64581ba40e00b7b",
+    "phash": 1580470333434628037,
+    "resolution": "640x264"
+  },
+  {
+    "image_name": "coco_000000371042.jpg",
+    "local_path": "dataset/coco/images/000000371042.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8ed73f4ca3adf8efe91804beeca5da1792092ab32a03a247c01d372730ea5b60",
+    "phash": 5922999588075129983,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000021.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000021.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "LAION",
+    "sha256": "84876229fac82d300512b6e416b03639d6cae160d9e82885444944b0ec0c7fc5",
+    "phash": 2749067917932090600,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "LieDeath_MergeStove2.5D_00000376.png",
+    "local_path": "dataset\\cf_small\\images\\LieDeath_MergeStove2.5D_00000376.png",
+    "label": 1,
+    "model_name": "LieDeath/MergeStove2.5D",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "48fc16603c5eefd3157648a0e91de9ebe8e3f1481f3d0f89572306a24e223674",
+    "phash": 385456235310898230,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000450439.jpg",
+    "local_path": "dataset/coco/images/000000450439.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "78606863d9db34150c552041ef05bcb17bbb2f2f3b706b5bd30c80ae1f9d38b9",
+    "phash": 7883932226026759272,
+    "resolution": "500x234"
+  },
+  {
+    "image_name": "coco_000000557672.jpg",
+    "local_path": "dataset/coco/images/000000557672.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "0a38afac00ef0b033b52a7add01e220615db5995f7f71657845602deb97acaf9",
+    "phash": 548985579162771563,
+    "resolution": "640x433"
+  },
+  {
+    "image_name": "coco_000000254368.jpg",
+    "local_path": "dataset/coco/images/000000254368.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "df2b6aad8abe17d07ada9c6f7a1807b4891989b61a0c48927f74766f9d82a79c",
+    "phash": 3878760105494077570,
+    "resolution": "392x640"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000112.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000112.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "b9a1c276906624c9e718c302c6803166e06044ff9eb3379afa08442a664b5008",
+    "phash": 5094610256509529449,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000509824.jpg",
+    "local_path": "dataset/coco/images/000000509824.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "314d60af974f7abb4935d80a6386f47a03dffcf755853ce38f293ce2449bf985",
+    "phash": 5392567805249225545,
+    "resolution": "640x640"
+  },
+  {
+    "image_name": "coco_000000066817.jpg",
+    "local_path": "dataset/coco/images/000000066817.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6351cac5a13a7c1334040342dc1f7d587abcbdd4c7f0efc5fca6132c0714af17",
+    "phash": 5042195557654092236,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000061.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000061.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "b78e38dddb6812350cb451f97ec86b5005de240b091e304d77ab789f25c801de",
+    "phash": 819872420925222044,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000216296.jpg",
+    "local_path": "dataset/coco/images/000000216296.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1f081a21d9cc1c50f01f970b43f224d6676f9b4c895277d5cd53adf166795415",
+    "phash": 4910092979460102266,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000265.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "b10bd172a04e4d9700851d046e259205e3cb19536cffed2c82d61a579ce0486a",
+    "phash": 1349987206591180250,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000307.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000307.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "628d9c27ca308ad9d94978d0073f67b6feca0fb8602bffbf39e8218e6bf3541e",
+    "phash": 1339316373987512014,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000507015.jpg",
+    "local_path": "dataset/coco/images/000000507015.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3e1e27b0ffcd3d5673c69ba4914fa68ab44c23716e2435111ea5298648e68a70",
+    "phash": 950101245648299251,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000331817.jpg",
+    "local_path": "dataset/coco/images/000000331817.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d3998c56c380a7e22455cd99bc940da1fe5eefd1f471ddb1316a351e81a9130e",
+    "phash": 6092877973660807112,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000377113.jpg",
+    "local_path": "dataset/coco/images/000000377113.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1f611f47b69886a7a7ac6804c328877167ec98ec9c9286f1477a488c30d73359",
+    "phash": 8146473447034166224,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000509656.jpg",
+    "local_path": "dataset/coco/images/000000509656.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "35999246ea14f79b4f19825a38b428955f3456a389c3a0aa2301067cc9141d40",
+    "phash": 3802194470658069052,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000083.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000083.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "ac673405dd833802d0484e666dec6d3aeae9789be7efb9ecc971081530c9b0aa",
+    "phash": 4487912959929001651,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000028452.jpg",
+    "local_path": "dataset/coco/images/000000028452.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b9adf909244cbd3c6105af33723d6664bf7e88cd7ce4de697f990828d4c16a76",
+    "phash": 4961888388558140565,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000007.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000007.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "ef4a3e0efdaf4c0cc86ba1f89de25c273fde95d28ca15ab09328facfde288dbd",
+    "phash": 5125467447563855105,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000290.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000290.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "b78b35d9b7804556424da1d6a4a9337a07ef27d637cc81fddce384c3bf6ad943",
+    "phash": 451000651365310255,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000324614.jpg",
+    "local_path": "dataset/coco/images/000000324614.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "349e8a6b5af5f7455e1ede69e260e7a664dcf12a9af328df058d5cfb260d631f",
+    "phash": 56146015779094303,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000474095.jpg",
+    "local_path": "dataset/coco/images/000000474095.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6e216fd96173658eb945140933ef0c9ae23217a733f02765fe59f57f9db0ae6e",
+    "phash": 3581095746986658244,
+    "resolution": "333x500"
+  },
+  {
+    "image_name": "coco_000000383676.jpg",
+    "local_path": "dataset/coco/images/000000383676.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3990c662e2d7e2e3f13e4832dfe4a555bcd433388e0e98de143375dad170f8d6",
+    "phash": 4200960580252648977,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000527220.jpg",
+    "local_path": "dataset/coco/images/000000527220.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4924216bbf86e812d729c8c9cde904d4a9827020c7cfc22787af0fa67dd6c6c7",
+    "phash": 7634263726406833437,
+    "resolution": "500x169"
+  },
+  {
+    "image_name": "coco_000000229216.jpg",
+    "local_path": "dataset/coco/images/000000229216.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "627bc997b0d21da6ac5ea5b715a456282e8b5f0f62cd30b6fec45ad1341aaabd",
+    "phash": 5849837424123911118,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000488270.jpg",
+    "local_path": "dataset/coco/images/000000488270.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8eb4f49f47cb599d5ee6fc2ae12919eed7347267a6799dd442f479e761bf96f0",
+    "phash": 6083495938664623452,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000453584.jpg",
+    "local_path": "dataset/coco/images/000000453584.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8be58f3db657cb975cec207f543f5932b7f38937487f53bbabf6c22447fab97b",
+    "phash": 8678862174884802158,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000149568.jpg",
+    "local_path": "dataset/coco/images/000000149568.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "655fb1dd7db397c663b8d64448b6f5cea7f4c84f36375a7961c6933c841caf97",
+    "phash": 8949579683470421097,
+    "resolution": "640x549"
+  },
+  {
+    "image_name": "Shaleny_my-pet-dog-xzg_00000250.png",
+    "local_path": "dataset\\cf_small\\images\\Shaleny_my-pet-dog-xzg_00000250.png",
+    "label": 1,
+    "model_name": "Shaleny/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "9526a03ea566a95658643db9c6f35e8a1cc5fbcfdadf8d3b88442329f0aef2e4",
+    "phash": 2109622384480644792,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000193348.jpg",
+    "local_path": "dataset/coco/images/000000193348.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "365c286bc6e06e895a7e41991f9c3491a5a6ecfa674bb39b2a6a555e8514e932",
+    "phash": 4943653197737308054,
+    "resolution": "426x640"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000232.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000232.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "8db8ef8f6a4d34cb199b429452aa6d4de87da9cd8859ecfc4ee935274a87f708",
+    "phash": 5728856453641375941,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000080.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "b38b906df2ee4f9f188efcd2c9da7e405938b901c21c2fbe798e2f617e97c78b",
+    "phash": 38763655121673927,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000153.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "LAION",
+    "sha256": "fa2783ff202e1f3ea672c0478d6f86afff55d525e9f1ee0fef710c8c17de626b",
+    "phash": 3000444686710591561,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000241.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000241.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "da6606f7397db21dbb4147406ec2b4349d242a48a17273b0e54c9b7c85b62c95",
+    "phash": 7697346179876725900,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "aliyualisa_model_00000241.png",
+    "local_path": "dataset\\cf_small\\images\\aliyualisa_model_00000241.png",
+    "label": 1,
+    "model_name": "aliyualisa/model",
+    "real_source": "LAION",
+    "sha256": "e03e44be6bc4a14d1552fcdfb187047c0e180803371ccbc3528e88cd901d8f18",
+    "phash": 6104183761650686227,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000011511.jpg",
+    "local_path": "dataset/coco/images/000000011511.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4e24ed1528891621658ff01d23e8a74735cd18720d41f7fd2264044497ad2a0e",
+    "phash": 80319194336831132,
+    "resolution": "640x464"
+  },
+  {
+    "image_name": "coco_000000047121.jpg",
+    "local_path": "dataset/coco/images/000000047121.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ff6c860fbb42455a29074dece1073bf8edb5f5e7fa862784e00129822a8ad89c",
+    "phash": 5067307885112418906,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "mlpc-lab_TokenCompose_SD14_A_00000169.png",
+    "local_path": "dataset\\cf_small\\images\\mlpc-lab_TokenCompose_SD14_A_00000169.png",
+    "label": 1,
+    "model_name": "mlpc-lab/TokenCompose_SD14_A",
+    "real_source": "LAION",
+    "sha256": "515cc4b256573c8837b00ff9a3a61ee063f1a62e3a065a64d13a84542f56b45a",
+    "phash": 6137177813541891467,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000133.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000133.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "6c30dc092b6b508348cdcaaf7e76f79aa50f9b0148ea268a1b91d188ce4a4ace",
+    "phash": 80355534383059569,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000110.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "LAION",
+    "sha256": "03e4dd313f0ee7810d6277c01bf42b363dad6f83d5ac06cb1e9967578e8b1b15",
+    "phash": 7611549970744395369,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000475484.jpg",
+    "local_path": "dataset/coco/images/000000475484.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e1f307ba2c5905702d019ae7aeea4a18fa24e6fb412f33acffe906ea7e03d838",
+    "phash": 6230141743549540916,
+    "resolution": "426x640"
+  },
+  {
+    "image_name": "coco_000000386912.jpg",
+    "local_path": "dataset/coco/images/000000386912.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e4d58abb24655f12e70e056631e96915a142e1e60fb0b1f75372269bad764828",
+    "phash": 8412445240764318974,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000162.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000162.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "a98f8283ae7c7b9dc3f2367aa9969909f68f0acb98cb3a8fca8ca42f300e8ece",
+    "phash": 8671705424320460919,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000354.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000354.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "03baf55ec374fa199e6faeaf5e71ffbe8239d4f184f13689b2f88bc61764b96d",
+    "phash": 553024195481355809,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000270677.jpg",
+    "local_path": "dataset/coco/images/000000270677.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "79b1eb7e458d3ce406cabfb1dc62cf7a36fce90d4f58b2873cde763363f76b06",
+    "phash": 1145592273116990419,
+    "resolution": "634x640"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000314.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "f2312af666ca5304629b7ba0c472b59da42b4986141226974db9375655e2aee6",
+    "phash": 2221010405975519378,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000393.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000393.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cea725c02500fe437fda03102761bbe262cdefcedd719de89ec57e187bd476b6",
+    "phash": 7284975266323424807,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000172856.jpg",
+    "local_path": "dataset/coco/images/000000172856.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "672c6731fe24b8ed25bea74b97eebc376a34fb70f6c2ea7eddf7e301534e2c99",
+    "phash": 1589613228507893866,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "selshiya_teapot_00000210.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000210.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "c5684999ea3ff724cc537650762327a8044a9343e824a78cc2a02eaa189190c8",
+    "phash": 6366017781420615987,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000213.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_AsianRealistic_SDLife_ChiasedammeV9.0_00000213.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/AsianRealistic_SDLife_ChiasedammeV9.0",
+    "real_source": "LAION",
+    "sha256": "a7a2d19a0d18192af4d635deaff3c1b8cfbea29cc5096b672ee67aede6b8070f",
+    "phash": 782179858410385820,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000161.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000161.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "25304a0e43e557f189566ca28a0996e75ad0161dc1fff14a07619e3f7b14ac74",
+    "phash": 4292280476987559119,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000427997.jpg",
+    "local_path": "dataset/coco/images/000000427997.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "610fae475122adfd14bc33b367758ff65212b1f681fb4c2118621b4bc40c386b",
+    "phash": 309749691101498588,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "coco_000000318080.jpg",
+    "local_path": "dataset/coco/images/000000318080.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c7acb98203e36fe331a1ecd7a9fbd816edc6143725ac5fc81c118fcdea031328",
+    "phash": 1822697574643539786,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "divyansh-jain3_my-pet-dog-xzg_00000041.png",
+    "local_path": "dataset\\cf_small\\images\\divyansh-jain3_my-pet-dog-xzg_00000041.png",
+    "label": 1,
+    "model_name": "divyansh-jain3/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "4a831182defd553523cace3bf8deadf1317d8be9ea5276d8302d879cb6e4d27b",
+    "phash": 6365921331101411832,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000003.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000003.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "233677aaa3998173b5d03c1727f9cdfb78823713c9d8c1941fbd50418f3efbf1",
+    "phash": 8779352378819520690,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000357.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000357.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "ca8da5677a39c10d92264bd1e6224c4e9ce0c181c71fc61ec28685849b496bee",
+    "phash": 5854478942371196335,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000578500.jpg",
+    "local_path": "dataset/coco/images/000000578500.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "7b0c55d345757ae8431fde2b2900ba6d49f27bbf50e19033564555ce5588fd75",
+    "phash": 4861013512228696978,
+    "resolution": "640x290"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000259.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000259.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "84fcb10cbe891d2da4e89cc29fffd13f3bc9d5f6942f2a0401bf208795737ea6",
+    "phash": 3056089883267714078,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000420472.jpg",
+    "local_path": "dataset/coco/images/000000420472.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c883905d6c0edd979d5ca3a7e531e30fbdd8ee391c6afe889e86b05670fc9c60",
+    "phash": 382593291912517317,
+    "resolution": "640x373"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000033.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000033.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "6486f7f2c6a4ab5a6f1b9d7ef8dc92e1df5514aae2993e01ac1b8ca1d42de585",
+    "phash": 3948614783475010972,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000099.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "f9b895ec614ceea475fea36eea17767438811569e02cba336cc4d66d63b03038",
+    "phash": 4041224125238242361,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000378.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000378.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "993d6500aae0da4a21e7578efff709d1ac9755946ea5ab491eefe9d3d351a8be",
+    "phash": 4204299560998464294,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000190.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000190.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "22dd43cc2f3d96d1aa16f78af68de6a4aee6257958ac8ce5bb34204d9da1693f",
+    "phash": 8917237891060929956,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000360661.jpg",
+    "local_path": "dataset/coco/images/000000360661.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "712a562e5bb59a69ccff92aae43d6690a3193732c912cfa9c36440eda3386a9d",
+    "phash": 632429437551803833,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000209.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000209.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "4bbd79241a11ac2c262c0537b06c3f22e009d4c7dffbd4e1f3e4e7373369ed02",
+    "phash": 8510009436587393453,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000384616.jpg",
+    "local_path": "dataset/coco/images/000000384616.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "f4e345c18280466638c367e36990f8ff1b9f4186b174f5a1ffe439f0d876eb81",
+    "phash": 2414813158100936547,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000289.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000289.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "5668bfeec0829e83ba596084e82501761d05c1840332dbef46ba179e791dfd15",
+    "phash": 6997780604168009931,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000327.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000327.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "96502e1c3676c03bd70ee9f011a513dc5399b56d5e148af990e6f873b9c9d9be",
+    "phash": 9141900844919170075,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000083.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000083.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "6e6177eb54dcb8c0e3815cf410314b283a6f418451f79330e3d8750925a75f5f",
+    "phash": 6748228879113896560,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000261732.jpg",
+    "local_path": "dataset/coco/images/000000261732.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ddbfc26792efff1d7f2e675390c57303f274df9f8131997505aff801b85b4e6a",
+    "phash": 1596385571925624828,
+    "resolution": "640x438"
+  },
+  {
+    "image_name": "alea31415_onimai-characters_00000101.png",
+    "local_path": "dataset\\cf_small\\images\\alea31415_onimai-characters_00000101.png",
+    "label": 1,
+    "model_name": "alea31415/onimai-characters",
+    "real_source": "LAION",
+    "sha256": "507a430046b723fe9ab341879c10a1211311eb4c655c16191d2c57b4a36415a5",
+    "phash": 3005403823101717876,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000066.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000066.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "f12568d55254fb04a5fe6a5f9d21c1a3007d8188c001d3962b17835f90ccfad9",
+    "phash": 415807970202175456,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000012670.jpg",
+    "local_path": "dataset/coco/images/000000012670.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "00c989b165bdde8eb54cbe7d1fcfb0ae7b2ac7f5f23d83baea723e7d2acf7099",
+    "phash": 969029684228138131,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000194.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000194.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "ecf35791c3996771139615c8befb92583735239f1a948175a8bfbeec0ec892e8",
+    "phash": 7048317146309965041,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000223.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000223.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "9ef16ad4334cd2fadc97b776e8007f8684d089e4ff449053dcada9ce8036ec47",
+    "phash": 5507886230950563296,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000080.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000080.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "d06fbc200f4712c8b0a0c25585b3187b1d819005f69004005e780d6f7c349bce",
+    "phash": 1293463882977058544,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000039769.jpg",
+    "local_path": "dataset/coco/images/000000039769.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "dea9e7ef97386345f7cff32f9055da4982da5471c48d575146c796ab4563b04e",
+    "phash": 8084039732710562297,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000127263.jpg",
+    "local_path": "dataset/coco/images/000000127263.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "aacdd27c1d31c7007fafd83676e6bb66953e8c0de02080671c811093e6058b40",
+    "phash": 1250292210626939689,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000197.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000197.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "ce1f055dfac10c73934fb32371451fe172ef5e3e90a8a48af607e21871f107c8",
+    "phash": 6218634776624666063,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000138819.jpg",
+    "local_path": "dataset/coco/images/000000138819.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "9af2254f27aa3dee46b1f91e2212b4e81931573d018aa672413e0d35a408126a",
+    "phash": 5028873097780122293,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000376442.jpg",
+    "local_path": "dataset/coco/images/000000376442.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "555d3137e46d077dd13ca8aed3e80cda8333470abf5159fd7189ff3eafc0bdb7",
+    "phash": 1708074010346730444,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000257.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000257.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "65de05f2097c32ef6113a0aada4838ae4ea02a184b64bce4bd7431dfbfe411cc",
+    "phash": 3455792810945793702,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000010092.jpg",
+    "local_path": "dataset/coco/images/000000010092.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "70eae5520682d2ad23ff01df57fc4f29cb3f5d4c1d63753d3b7f120f6a0d939b",
+    "phash": 8231195891360647958,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000152.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000152.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "LAION",
+    "sha256": "fbf7c633cec5231d90b0783efa005b0d7d00242ff6a6733bb925c9583a9e177b",
+    "phash": 5895001647134059595,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000496954.jpg",
+    "local_path": "dataset/coco/images/000000496954.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1b421620d7ad815cfee2e35be71b57047519852db306bef90646ddfa5385b20d",
+    "phash": 5849552977446521974,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000193.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000193.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "c07153233120b98bd5f59b89e083645101714508c54d2662fb08057f30f718af",
+    "phash": 2949530699663679384,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000292.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000292.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "84a8b65aa5f3a6ebc68f2cf248475a05f1a2fefa5fe47be3febca748b3c1f3bc",
+    "phash": 1232151852486195650,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000295797.jpg",
+    "local_path": "dataset/coco/images/000000295797.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "368b90bf1c63c2f6a34b1a6d97d038d667feb73c28fd2894d67479f95bccd54e",
+    "phash": 5590717979370616876,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000154.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000154.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "439a12471b0ad8f6d64d9a3323d54d8404f11f5230c87bfacfdd752fe79aa0fd",
+    "phash": 7279971424701865174,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000228.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000228.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "554fb3b299481318386a0b92abd79fd2417ef001b38eb7159bda29515a535d5f",
+    "phash": 931242176120304338,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000084477.jpg",
+    "local_path": "dataset/coco/images/000000084477.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "182bab08d6173f7d044f291b2493833dcd7ce61f54bd83e0ecfc2e58b22e33b2",
+    "phash": 5432169753350100185,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "selshiya_teapot_00000265.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000265.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "c423c5019743dde1f6d7c850d748f6cb592a5caabcde699baaab006536bd0510",
+    "phash": 4592139579454186638,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000297.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000297.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "51e1162226255580068fbb8933ac9c6071271cddea80dfc7749258c4c78f2400",
+    "phash": 4534424726391645482,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000221693.jpg",
+    "local_path": "dataset/coco/images/000000221693.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3f29a5476862ca3d3aa75ae64b84f987ef799bb6b65306fcddf2188725296f41",
+    "phash": 3768253008203626457,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "coco_000000005586.jpg",
+    "local_path": "dataset/coco/images/000000005586.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d7c4ce5acc9c578c41ff04aa60e610423e304e66b77fff92df501c207460b349",
+    "phash": 6153355692807359799,
+    "resolution": "320x240"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000076.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000076.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "12b1d965c6ceb6cc6b54606276da6e9fcbce1b7b0933c1f994f43fd0fb73f503",
+    "phash": 7655191728951252370,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000295231.jpg",
+    "local_path": "dataset/coco/images/000000295231.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "20698318661eebbdaba9dbcb8cbb6af8cd9e7399f53ed61d57f19f6417cee391",
+    "phash": 5963379008708742934,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "coco_000000474854.jpg",
+    "local_path": "dataset/coco/images/000000474854.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "0e66a2748ad65ccd3cb04e5163b77def18ae135109bfe19935ff7d3183eba7b4",
+    "phash": 4293764610020909693,
+    "resolution": "424x640"
+  },
+  {
+    "image_name": "coco_000000180798.jpg",
+    "local_path": "dataset/coco/images/000000180798.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c198bd864428c87ce1867f86332eb5f70b1c05b7db8d79702c0fd18fcc088580",
+    "phash": 2613807325105167966,
+    "resolution": "375x500"
+  },
+  {
+    "image_name": "employelalisa_min_00000360.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000360.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "204a4131979f31c86f275955a12a970830568936931eefcc2f877fd35fbd222d",
+    "phash": 130744160993711922,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000533958.jpg",
+    "local_path": "dataset/coco/images/000000533958.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4822d53ce9a21aaaec01d508cd612fa0f319952414fe35b45c2f492547eaa262",
+    "phash": 3115226452711556812,
+    "resolution": "640x640"
+  },
+  {
+    "image_name": "coco_000000259097.jpg",
+    "local_path": "dataset/coco/images/000000259097.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "23acc13dba72469607a7e61b6c2fd6e0e2c73dfa33fff340424bd6c805ac8cfc",
+    "phash": 5087227104088676646,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000055.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000055.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "LAION",
+    "sha256": "2145903e56c48ec123c5c199f0cb4245c2ab789fe4b29764777a4f9e603a973a",
+    "phash": 6985838016103421940,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000096.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000096.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "7ee54a1064488012b4d3de45a69de14d53e4768c4d0c4f911d029f3dc14f633d",
+    "phash": 3146382081733752396,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000156924.jpg",
+    "local_path": "dataset/coco/images/000000156924.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "082a70c2f73301eb02c31170e638a0b4610f299b242c0af232954b7e2766a55e",
+    "phash": 3585584066931164301,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "coco_000000101068.jpg",
+    "local_path": "dataset/coco/images/000000101068.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c7e214905c25c01403f3677f0c4070bd70a285f3aa8bafd6711bd27d73453bf9",
+    "phash": 682953045531306970,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000453341.jpg",
+    "local_path": "dataset/coco/images/000000453341.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "703bb682af684144d492dcd45f65cea99fe5e65312f93b03d54ee90a3be24553",
+    "phash": 4827746244759419973,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000050.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000050.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "9d57ee0527e0e115f609730d056f61e93e13f9b3525343c57cf0394b9390776a",
+    "phash": 7913595038423213235,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000332845.jpg",
+    "local_path": "dataset/coco/images/000000332845.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "73c74c21de560b7f3c109b1e0c237f72bec10bab32dcf9bdfc69ea308f8c942d",
+    "phash": 1048829853632248241,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000269632.jpg",
+    "local_path": "dataset/coco/images/000000269632.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "eacd77dd985fd0c0ea4a761c6087956a885394240033649296cb015e4469485e",
+    "phash": 1462453666150974563,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000574702.jpg",
+    "local_path": "dataset/coco/images/000000574702.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "43404f8739d1929d5d4e7dc52c28fa0c0730848e82e706783ea46c861947b412",
+    "phash": 5244398631614162459,
+    "resolution": "333x500"
+  },
+  {
+    "image_name": "coco_000000533493.jpg",
+    "local_path": "dataset/coco/images/000000533493.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "70ce085b852201411730b097046ca4196457395b7d612b5f3282ca0768ac2c2b",
+    "phash": 1925258369803964238,
+    "resolution": "500x281"
+  },
+  {
+    "image_name": "mlpc-lab_TokenCompose_SD14_A_00000277.png",
+    "local_path": "dataset\\cf_small\\images\\mlpc-lab_TokenCompose_SD14_A_00000277.png",
+    "label": 1,
+    "model_name": "mlpc-lab/TokenCompose_SD14_A",
+    "real_source": "LAION",
+    "sha256": "f38c6f60238fe914f85fa16320e4068d3dfb035e353840136c8e88a006cd00a1",
+    "phash": 8471659875331225043,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000054593.jpg",
+    "local_path": "dataset/coco/images/000000054593.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2927085bfe4c7b09fc4cea90216f71beedcaed0ec501cdb06630bf40b126ec25",
+    "phash": 1038343800434792147,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000092.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000092.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "LAION",
+    "sha256": "8d4667fc6246e692f959837cdb860871d55ebcdf6fc2329a54731174ea1e52db",
+    "phash": 1784608060915937391,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000534601.jpg",
+    "local_path": "dataset/coco/images/000000534601.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a61dcd41da39c0c794937470219d9955d51046aa492ab780450cd984df259c30",
+    "phash": 1990032919051576674,
+    "resolution": "500x332"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000072.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000072.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "f9b55735124f8f60c5896e32ca5555e12441b030ada21e856f1409161ea1b6f4",
+    "phash": 4584608073651376364,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000162.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000162.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "LAION",
+    "sha256": "c31ae7ce42b2f7eb61111a2b4b5d29143759a89bbc061d48b04df733362e95d3",
+    "phash": 6066139856305701663,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000163951.jpg",
+    "local_path": "dataset/coco/images/000000163951.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "7456c620ce6861d938795de4313085c2f004e38ef3073f549a4c5c70954947c4",
+    "phash": 8691040602655962217,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000134.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000134.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "LAION",
+    "sha256": "050f836da1bab8f4589ac6d04acc6a3d799b9e853890dfea303b60260aedb7e4",
+    "phash": 4327695294423403299,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000303.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000303.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "5a91e1bd118a4aca72a58aa4f6b0c554060a2485b1f98693ce9fa93070af9838",
+    "phash": 6353918633386302502,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "doohickey_neopian-diffusion_00000353.png",
+    "local_path": "dataset\\cf_small\\images\\doohickey_neopian-diffusion_00000353.png",
+    "label": 1,
+    "model_name": "doohickey/neopian-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a9776d19b17a4cb9c4d0e7d9bf42414eddfe6b94124401a28b4d75dc744397da",
+    "phash": 7456737520556560545,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_Dark-Sushi-2.5D_00000318.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_Dark-Sushi-2.5D_00000318.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/Dark-Sushi-2.5D",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "f9e2ce925bcdc7cce45233c65fe205bc30ce5beba8e691ac16b5cf48c5da5e38",
+    "phash": 3893882182131161929,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000268.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000268.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "9e976267f6ecbd7c9b3c8a7b3839224a0d6ad8319f9aa9c9b8ab4fa48a43f0d2",
+    "phash": 3871165139946736330,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000314.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000314.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "82950d3586593222de7113decae7f01f34bb203867bb8324faf73c646e73aebd",
+    "phash": 2826477349453787167,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000303.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000303.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b78cf4b2aa1b4d5eab300df0802d7208b921601ffdf8de57478006e67240eb69",
+    "phash": 3178598858316556260,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000250.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000250.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "e0c890bf9921ab8f8913bd360c4137a2bd5142ea621f35aa517223518bee0892",
+    "phash": 7369112981538191590,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000417249.jpg",
+    "local_path": "dataset/coco/images/000000417249.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a0788f6d609cf3a4e194b317b810b1e806fe95436588355cc76073d783a4f7d2",
+    "phash": 5967697630538193725,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000380.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000380.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "bf061982c8740a1c353147a14c0bdd9bbcadbe2365cff7a2ad11ff6aa9245138",
+    "phash": 7510804847693016777,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000110.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000110.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "LAION",
+    "sha256": "04f2ca3484432c8238da4959f18f96053ee6d7c02df0e13f785ce6fa6e9f95d2",
+    "phash": 6387684002631187843,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000226147.jpg",
+    "local_path": "dataset/coco/images/000000226147.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "bf59212be5221a26ae41a0e3e05adc902986b029d00b89d0c68760991a322053",
+    "phash": 5411740094081644681,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000050.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000050.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "147b6f9b3e80647a9d969b4041bc1490dca1c93d4a472f3ef48968050dd4408e",
+    "phash": 7954740736292062983,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000380.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000380.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "239aaaf358efaf6363b461a6e6a3b0c0cda8edc80f4df478e96ee93fa3b2de8d",
+    "phash": 5133309469357912600,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000237.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000237.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "43ac34b0623b8b43001b94c535fa77c3f9b84ab8368d77bcbe239a94a2a3718f",
+    "phash": 55239219474315078,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000144114.jpg",
+    "local_path": "dataset/coco/images/000000144114.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "34496ddf1489c1b376a46ddb93f09ced0e61c779ff98b111535a04ef4507aea5",
+    "phash": 3947837416870524107,
+    "resolution": "600x400"
+  },
+  {
+    "image_name": "ashishwaghule_my-pet-dog-ash_00000250.png",
+    "local_path": "dataset\\cf_small\\images\\ashishwaghule_my-pet-dog-ash_00000250.png",
+    "label": 1,
+    "model_name": "ashishwaghule/my-pet-dog-ash",
+    "real_source": "LAION",
+    "sha256": "d4cae3f2f2b6fc151bec53f376c7ce9cfe2a8fc9277832b8b7bc2ef8d369ad7b",
+    "phash": 529551454634737200,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000516318.jpg",
+    "local_path": "dataset/coco/images/000000516318.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "22fc5359e3694d6654d34fb54f040ae2a1c6a08d003bca12db6fe698aadee131",
+    "phash": 7903978307133298285,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000376856.jpg",
+    "local_path": "dataset/coco/images/000000376856.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "fa1981ada37a8f122ae998a64adcdaac58708a272f16045a8c9e4bd3e75e00d3",
+    "phash": 7409019491709681884,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "coco_000000099039.jpg",
+    "local_path": "dataset/coco/images/000000099039.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "03b7ba8aac61bb08650f9fb4bb0aad823e81e49156c2b5d15fdfb2d78fd4c3cc",
+    "phash": 6095862844840372417,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix2_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix2_00000132.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix2",
+    "real_source": "LAION",
+    "sha256": "fe3c994a3f796c5d210fb49972a8a7162dae4d7dde775645aedb5d1198858a10",
+    "phash": 6582218811584004158,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000497568.jpg",
+    "local_path": "dataset/coco/images/000000497568.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "02de0154b5ee5226abb14ec491c521600950b74ca917865d325f3d9a8e62b9a3",
+    "phash": 4954518781160881022,
+    "resolution": "640x424"
+  },
+  {
+    "image_name": "coco_000000397327.jpg",
+    "local_path": "dataset/coco/images/000000397327.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b3b3caa8fa0f6b032a8779a7892a0bd5fd61642f75f275046ab5ce71f5368338",
+    "phash": 6026229644927041598,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000095.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000095.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "4536fa8ffc474ef01a03a25bd52a544d23e2248babaadff5a3a8d6a988ee3182",
+    "phash": 1974289230311292666,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000171190.jpg",
+    "local_path": "dataset/coco/images/000000171190.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "f91f91529cda49927ba1f546fb9d986f8e063ee2f2c61f1f7245e462f154b3eb",
+    "phash": 1831471140111736451,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000296634.jpg",
+    "local_path": "dataset/coco/images/000000296634.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d655d317be6a4c34514b7c4e9412e25b98c7af7c05df40c2ce47ff2025b4caf4",
+    "phash": 873156137133502247,
+    "resolution": "640x453"
+  },
+  {
+    "image_name": "coco_000000490515.jpg",
+    "local_path": "dataset/coco/images/000000490515.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a6654419cd09f606a15c6120ba95f9976d364841d8499048b98675c27149b6d4",
+    "phash": 7016967134315244396,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "dream-textures_texture-diffusion_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\dream-textures_texture-diffusion_00000310.png",
+    "label": 1,
+    "model_name": "dream-textures/texture-diffusion",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "dcb0fdd20f892ca0ec65bd632e151419a54de06cbdfd7403baf471e9421bf79d",
+    "phash": 8626046989521325688,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000188.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000188.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "LAION",
+    "sha256": "a997b4f1613b12f0a4687d8e1c07fa0c4f035c1f1c9b93947ab0ecdcb48486ac",
+    "phash": 9071381949245912965,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000001818.jpg",
+    "local_path": "dataset/coco/images/000000001818.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e638b349929d13bb27e148f4303a576e0a964ef81c0907d36748e0adb822a8e6",
+    "phash": 5421638123796515599,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "tensor-diffusion_chilloutmix-NI_00000354.png",
+    "local_path": "dataset\\cf_small\\images\\tensor-diffusion_chilloutmix-NI_00000354.png",
+    "label": 1,
+    "model_name": "tensor-diffusion/chilloutmix-NI",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "3de9e31db92a9a2c96aac02335fdd34700e8b85f3a2911c08e5cc09b0f2167ea",
+    "phash": 5527269363732933768,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000523194.jpg",
+    "local_path": "dataset/coco/images/000000523194.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "af1eedd94475fb353dc27c99aced5d2f7ffddfb5bcb258faeb12c2ae2d1e9526",
+    "phash": 6592324524934726521,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "coco_000000304365.jpg",
+    "local_path": "dataset/coco/images/000000304365.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4724eb96f5dc146879b69156b3d70ff7b1e0c656ecb4939652b0fea0462532b7",
+    "phash": 5875126834474881707,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000084492.jpg",
+    "local_path": "dataset/coco/images/000000084492.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "42cb1fddaf42db3203c1cc1273278c62c273a4017e06fa4e7156400db7cca321",
+    "phash": 2998296479734776523,
+    "resolution": "426x640"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_sksship_00000333.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_sksship_00000333.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_sksship",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "52083197db51beab660e248eb9602325a7ffb2ff112066755df7e516e30ba34f",
+    "phash": 2354573013148673574,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "danbochman_ccxl_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\danbochman_ccxl_00000132.png",
+    "label": 1,
+    "model_name": "danbochman/ccxl",
+    "real_source": "LAION",
+    "sha256": "e7122f3865b7ddb0d7e547a1622f051a57149cb28afc03a1d0b0a4f6c7e9df28",
+    "phash": 7750928154363680616,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000132.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000132.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "a28ca7f6f549fac279f212a210aff7dfef412ee82e4127da17dbccfc3965e169",
+    "phash": 2189175876109933767,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000090.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000090.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "LAION",
+    "sha256": "bcc3a791b8cbc694889070e30fd8ffd83f20c2275611b5c4d33b1b98e22e4b0e",
+    "phash": 8301226416311802213,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000308799.jpg",
+    "local_path": "dataset/coco/images/000000308799.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "fffd7265f668d66ca38fdcd46612c6c322803c297a6677d08d8857221ec5250f",
+    "phash": 3417833241708670150,
+    "resolution": "375x500"
+  },
+  {
+    "image_name": "coco_000000319534.jpg",
+    "local_path": "dataset/coco/images/000000319534.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "cb018144e2a6a2b66f620f12df0e2ac05f5e2daea8923aeb0000e94a55a3ea58",
+    "phash": 4781947359196843338,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000141597.jpg",
+    "local_path": "dataset/coco/images/000000141597.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "25c14df824e33813379628baba9adad6a93ebc5003667a88ef3c113d74689c05",
+    "phash": 7699608552687025042,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "Sygil_Sygil-Diffusion_00000134.png",
+    "local_path": "dataset\\cf_small\\images\\Sygil_Sygil-Diffusion_00000134.png",
+    "label": 1,
+    "model_name": "Sygil/Sygil-Diffusion",
+    "real_source": "LAION",
+    "sha256": "7aa3d6fdf08fd53d5cc627722a69c37010a28f55400d6709aacf8465cd96a632",
+    "phash": 4859586873810479508,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000023.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000023.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "204bc834c839c16ee53e398752ac290d0ea2203664e9b6a66ef11599172c197d",
+    "phash": 990853327942275019,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000449661.jpg",
+    "local_path": "dataset/coco/images/000000449661.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2895c86db358797e7524830ceff5826d3f0bbaf9a79ca717e8e2c587ff4631e3",
+    "phash": 5973068219153330206,
+    "resolution": "640x169"
+  },
+  {
+    "image_name": "coco_000000075612.jpg",
+    "local_path": "dataset/coco/images/000000075612.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ad55b7fe3105db47f033892e97ffe87a92c3545ae303f129d4bd59c5f211148a",
+    "phash": 115993010200964557,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000025228.jpg",
+    "local_path": "dataset/coco/images/000000025228.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2b6b45ffe7197a9006a98ed31b8f55495bb876e0c224f1695810f04e61f626cd",
+    "phash": 5173523759251656152,
+    "resolution": "640x436"
+  },
+  {
+    "image_name": "coco_000000327890.jpg",
+    "local_path": "dataset/coco/images/000000327890.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "92b54b3e01c17d1a8d2b2b9d6995eb1a1a43c6cce9dd491d38e7078030a7d4f4",
+    "phash": 3296029233797495980,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000568690.jpg",
+    "local_path": "dataset/coco/images/000000568690.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a880d09c5756f5151d26295299ed32a91f8adee7a71034cef27025c312704878",
+    "phash": 5794907410988053707,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "coco_000000475572.jpg",
+    "local_path": "dataset/coco/images/000000475572.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "7106fb63c032cbd014e6d608e55466b263860a5fd022051cf64f097354dbec05",
+    "phash": 6891408768686463648,
+    "resolution": "640x431"
+  },
+  {
+    "image_name": "coco_000000527960.jpg",
+    "local_path": "dataset/coco/images/000000527960.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8be06a8ebb4f0b7626a8315f158d65bf862e6817ad4a191b80edc5d662f98249",
+    "phash": 1665932057340139870,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000321557.jpg",
+    "local_path": "dataset/coco/images/000000321557.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "eb9287cd59c1a6105e9dd468dfd70a5a3e76493e8b89b8d707bc477ea7428453",
+    "phash": 8045052441671931232,
+    "resolution": "547x640"
+  },
+  {
+    "image_name": "coco_000000214869.jpg",
+    "local_path": "dataset/coco/images/000000214869.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5dafe617fb1fab8bc768392c015e5bb2c9168cf964b2fe5eafdf3017c8a1475c",
+    "phash": 7550196402462742466,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000445792.jpg",
+    "local_path": "dataset/coco/images/000000445792.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a29432f00584746de3c41eb2b9e9157db39dcf23f4173f98a522a008787151b3",
+    "phash": 1857095613038694918,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000364.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000364.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "08a103a725479071316a2f72bb8c218c4e1df9244dc11fc6a05d498235a1329c",
+    "phash": 180135399021479879,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Shaleny_my-pet-dog-xzg_00000212.png",
+    "local_path": "dataset\\cf_small\\images\\Shaleny_my-pet-dog-xzg_00000212.png",
+    "label": 1,
+    "model_name": "Shaleny/my-pet-dog-xzg",
+    "real_source": "LAION",
+    "sha256": "c2512fa47ef925005401af77314ace8ee75764f3ecc9f4d6bf15c69b22d0b281",
+    "phash": 4335909502381898817,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000202001.jpg",
+    "local_path": "dataset/coco/images/000000202001.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "589af779eb55d7b7c4a08ad21875193e86b8bf2bb16f6ef7772db7656a3fe873",
+    "phash": 7487829291692134639,
+    "resolution": "500x461"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000113.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000113.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "6a25a6420e358cce4dea14ade5162a376a283251cb9a3acdae4a00cd9503c8dd",
+    "phash": 5459686814953803111,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "MohitSK_RealisticComicBook_00000213.png",
+    "local_path": "dataset\\cf_small\\images\\MohitSK_RealisticComicBook_00000213.png",
+    "label": 1,
+    "model_name": "MohitSK/RealisticComicBook",
+    "real_source": "LAION",
+    "sha256": "f8c6db5e953964ea0daf7b825be7880218f534807879eafe4406f90ee6e4799e",
+    "phash": 8940107603990122790,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "selshiya_teapot_00000011.png",
+    "local_path": "dataset\\cf_small\\images\\selshiya_teapot_00000011.png",
+    "label": 1,
+    "model_name": "selshiya/teapot",
+    "real_source": "LAION",
+    "sha256": "028bbc00b3a8906d89739aa476057127265ebf416667cf7a8969740b42cd9045",
+    "phash": 1725805181748456476,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000189475.jpg",
+    "local_path": "dataset/coco/images/000000189475.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "60f811f165e2fff08c1a9280361c0bf6102be0b5aa623455be1d314594f6ec53",
+    "phash": 2156912652133380992,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000397.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000397.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "7e99824763b4030597032211dc1d0cce2fea771a975e58380bc2f930550b9319",
+    "phash": 4155299449969959572,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000534673.jpg",
+    "local_path": "dataset/coco/images/000000534673.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e3596c112886930b23b8e698ad5f637a1fe7522f45acc7f7a927b4a7e294757a",
+    "phash": 4517635744795690545,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000022969.jpg",
+    "local_path": "dataset/coco/images/000000022969.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a4cd0db37176242a6911559074b58a67306c6a774df9dd07f1c9a30112ecbc30",
+    "phash": 6793334294069035653,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000246.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000246.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "13536a9cc57046a50e2264cfceb45827aa367f0482e61a559bd53d343e375752",
+    "phash": 6101614800873081683,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000105.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000105.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "25f61047497b5429a59553ef4f45ece90e3332e3b6c8c883b082b0f3f5206bf3",
+    "phash": 5517768478794620617,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000121.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000121.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "67e941648d64c4436b2d3d9f70e1078373d869364803a88feeb91185c688422a",
+    "phash": 3546103586199793369,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000449406.jpg",
+    "local_path": "dataset/coco/images/000000449406.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "11971b510cc1221ece63bb8bfbc5c15279e161d2e7c0dad44c4e02a575720145",
+    "phash": 7252722416376803640,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000099.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000099.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "LAION",
+    "sha256": "8bfd1d764d8d5af9a45ceda0ea3d5ed8c6f880dfb935f513f1cb5c7528bca4e0",
+    "phash": 8044495875707122220,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000339870.jpg",
+    "local_path": "dataset/coco/images/000000339870.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "78b0b34c63d00024b8d7d56e672ed7484dd2ad38dcfccf33e1bdbc14630bf409",
+    "phash": 3842805557617792614,
+    "resolution": "640x424"
+  },
+  {
+    "image_name": "coco_000000017031.jpg",
+    "local_path": "dataset/coco/images/000000017031.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "cbe18fd21bd5691cb27085cda1f10c3c5556d5918fcd04363a5e5b145ee3177b",
+    "phash": 8335979206596936651,
+    "resolution": "500x334"
+  },
+  {
+    "image_name": "coco_000000108495.jpg",
+    "local_path": "dataset/coco/images/000000108495.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "39fe33b1206fd1a95b465676a76652aa60f31abed3939beaf8a46ffb257b5841",
+    "phash": 6997376014283627848,
+    "resolution": "333x500"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000055.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000055.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "b09ffebf2744433f98c40bf336c09a4562ad553cae148d0f61e40877ceaa4bf0",
+    "phash": 8228865452144170078,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "employelalisa_min_00000055.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000055.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "57d17a063ff168053d45530333162af0eaa8f7c84a8a30156b901ae09e97aa92",
+    "phash": 5982460885388747670,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000167.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000167.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "07a23dd38f87f912219fca55ce4723f35f560ab1985c320c7894085c7dba3bd2",
+    "phash": 4557961200036462652,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000142.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000142.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "418bd16d3eb7403178fd33db9c971a8a718c3c90a4b8f8ca5389b491df29ac4d",
+    "phash": 5408115566121726737,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000086582.jpg",
+    "local_path": "dataset/coco/images/000000086582.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "445975ce033b1845fe2d9f66ea7833bbd0f651be7c621b0b8bc85d741da4a1da",
+    "phash": 5660076627177109831,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000266981.jpg",
+    "local_path": "dataset/coco/images/000000266981.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2d2f6894a170d7efd1d3398194e046ef0e421ebbc29259bd098e8bfd552522ec",
+    "phash": 3145361733033159521,
+    "resolution": "426x640"
+  },
+  {
+    "image_name": "Crosstyan_BPModel_00000310.png",
+    "local_path": "dataset\\cf_small\\images\\Crosstyan_BPModel_00000310.png",
+    "label": 1,
+    "model_name": "Crosstyan/BPModel",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "89dfdc7d6e6edbca6eeef454551ab7ec662da9837280cc7cf7791bde47a9ebd5",
+    "phash": 1484318516461708716,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Haya44_shrt-finetune_00000045.png",
+    "local_path": "dataset\\cf_small\\images\\Haya44_shrt-finetune_00000045.png",
+    "label": 1,
+    "model_name": "Haya44/shrt-finetune",
+    "real_source": "LAION",
+    "sha256": "960b3edeeb2f933469f4ad5ca0c17d7951f77d1d97bb1b7eb5a646df4c07b1e5",
+    "phash": 3718089512197773361,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "bguisard_stable-diffusion-nano-2-1_00000346.png",
+    "local_path": "dataset\\cf_small\\images\\bguisard_stable-diffusion-nano-2-1_00000346.png",
+    "label": 1,
+    "model_name": "bguisard/stable-diffusion-nano-2-1",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "39327e64e057a687c7493800de1428ee797bee3c3a773963d47be4710e25043b",
+    "phash": 5733406295992243609,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000187243.jpg",
+    "local_path": "dataset/coco/images/000000187243.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "48829dbed343327f51da7555ae926765ba1b951bf6cced116a64934478bab8a5",
+    "phash": 4200115698127094218,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000385.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000385.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b2ae1b8e4c247438b01bae85ec5b266cef073cd9f93ac50b5f7b3aad00bd3fb8",
+    "phash": 8016770789299069214,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "Masagin_Deliberate_00000394.png",
+    "local_path": "dataset\\cf_small\\images\\Masagin_Deliberate_00000394.png",
+    "label": 1,
+    "model_name": "Masagin/Deliberate",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "d2a60c3c7d7e47831098f3bf37d442f4b7df088014380ec12d5b3d2f45de5726",
+    "phash": 8836578509937302800,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000284106.jpg",
+    "local_path": "dataset/coco/images/000000284106.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c6e2d69d67f6c87377d64f761b3312293b7c2112d1714b5bf726b1aace24fef8",
+    "phash": 5281354808581588893,
+    "resolution": "640x421"
+  },
+  {
+    "image_name": "coco_000000016958.jpg",
+    "local_path": "dataset/coco/images/000000016958.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8595370fdfc1ca1382a3eb464e53b2ae6c483d76d426d85b4fe0511ff25c0333",
+    "phash": 7840158657738392515,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000048.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000048.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "35c02afc513deb62c6d8bb6653749bf441c202e5cd9d91bb822c202180da5aff",
+    "phash": 8912764832198914105,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000544306.jpg",
+    "local_path": "dataset/coco/images/000000544306.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d238afe7dd8d579c3891d35ca8eca2925e43d196f933e61ac6f93d418fe68987",
+    "phash": 5590465026424912492,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "coco_000000459396.jpg",
+    "local_path": "dataset/coco/images/000000459396.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "fffb28b884b9c945b389d2481e58dd11e696745c1522f37a21d5b4b5e2aba0e0",
+    "phash": 3646733605489922512,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl_00000101.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl_00000101.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl",
+    "real_source": "LAION",
+    "sha256": "8d97ef2c818f07e7b16aabddc2d87da9df7148c9e4ff4fcfd006a37032868e6c",
+    "phash": 2062063787330597766,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "JamesFlare_pastel-mix_00000297.png",
+    "local_path": "dataset\\cf_small\\images\\JamesFlare_pastel-mix_00000297.png",
+    "label": 1,
+    "model_name": "JamesFlare/pastel-mix",
+    "real_source": "LAION",
+    "sha256": "99a9e2ba045a9bd3fdd88f67ea7660389d77a16664cc7b457cec20364a877e23",
+    "phash": 5808897635842779273,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "1mohitmanoj_surya_00000199.png",
+    "local_path": "dataset\\cf_small\\images\\1mohitmanoj_surya_00000199.png",
+    "label": 1,
+    "model_name": "1mohitmanoj/surya",
+    "real_source": "LAION",
+    "sha256": "dbc2ac682b60817b87a07f25a568555e706d99f3ab2c983f7fcc63a136141f84",
+    "phash": 2136490855457888879,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "LieDeath_MergeStove2.5D_00000217.png",
+    "local_path": "dataset\\cf_small\\images\\LieDeath_MergeStove2.5D_00000217.png",
+    "label": 1,
+    "model_name": "LieDeath/MergeStove2.5D",
+    "real_source": "LAION",
+    "sha256": "81248b4ace26cf01a763fddeaf9a7111b47c1f3de5a53d23109249dd3629d120",
+    "phash": 438653165968766314,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000284698.jpg",
+    "local_path": "dataset/coco/images/000000284698.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "ec1b02bdd97c3f384d9f9de71d38212504c9ad64ba6440ba70e9f1c662b07c45",
+    "phash": 5100847203577092585,
+    "resolution": "375x500"
+  },
+  {
+    "image_name": "TopdeckingLands_ArtOfMtg_V1_00000092.png",
+    "local_path": "dataset\\cf_small\\images\\TopdeckingLands_ArtOfMtg_V1_00000092.png",
+    "label": 1,
+    "model_name": "TopdeckingLands/ArtOfMtg_V1",
+    "real_source": "LAION",
+    "sha256": "88e77a6f0c5409c4cd69dfa0ac91cffdf1821ba3cdaf34a47b7b9cc5e57bd032",
+    "phash": 458211141061331053,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "lewdryuna_A-Rainier_00000155.png",
+    "local_path": "dataset\\cf_small\\images\\lewdryuna_A-Rainier_00000155.png",
+    "label": 1,
+    "model_name": "lewdryuna/A-Rainier",
+    "real_source": "LAION",
+    "sha256": "40186a9026b366f7d3db40e0aa9a52b1fd52941a4f5a59efdec420ed210063a1",
+    "phash": 5037953175798613889,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000419201.jpg",
+    "local_path": "dataset/coco/images/000000419201.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "939f41978292a9237b7bdec68d84b392094e0b93dd5a8addf06ec9950525b54d",
+    "phash": 5380205243048204989,
+    "resolution": "640x425"
+  },
+  {
+    "image_name": "coco_000000472623.jpg",
+    "local_path": "dataset/coco/images/000000472623.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3b1a4b3e7a06e2f67ff42f2821f089e5038d53d9a06de390a23f65652af85d6d",
+    "phash": 6552035429657045460,
+    "resolution": "425x640"
+  },
+  {
+    "image_name": "cgburgos_sdxl-1-0-base_00000000.png",
+    "local_path": "dataset\\cf_small\\images\\cgburgos_sdxl-1-0-base_00000000.png",
+    "label": 1,
+    "model_name": "cgburgos/sdxl-1-0-base",
+    "real_source": "LAION",
+    "sha256": "310567f0e2e2825ce261c277b255e80e26f4128a787450aaa770a6d90a89fea2",
+    "phash": 8483392691484455193,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000529528.jpg",
+    "local_path": "dataset/coco/images/000000529528.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "31ce1e5fddd2baed32b0ebc998c074b703305eae3e9c2ffef41d3796ab4dfa2c",
+    "phash": 400006532012284916,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000178.png",
+    "local_path": "dataset\\cf_small\\images\\EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000178.png",
+    "label": 1,
+    "model_name": "EnD-Diffusers/Porcelain-Dusk-Mix-V1",
+    "real_source": "LAION",
+    "sha256": "c4aba13ca361eaadb0ef4a8498d238c4469776d78a88844176365bdcf40097ae",
+    "phash": 1751880945801218215,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000552842.jpg",
+    "local_path": "dataset/coco/images/000000552842.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5c54b158f361a854da3855830074cb79f190470605bcf8d12be4ffa39994470f",
+    "phash": 1247229483200392275,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000303653.jpg",
+    "local_path": "dataset/coco/images/000000303653.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "677a7f0ad1d0af9492a3f7c73cbc166e80969f4c38c5f80d3709a5b55a5eb2c5",
+    "phash": 4330847898306774125,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "Linaqruf_animagine-xl-2.0_00000231.png",
+    "local_path": "dataset\\cf_small\\images\\Linaqruf_animagine-xl-2.0_00000231.png",
+    "label": 1,
+    "model_name": "Linaqruf/animagine-xl-2.0",
+    "real_source": "LAION",
+    "sha256": "29754bc0c5950895649d9522a54037b8a72c813a6905bb034935babbaa3316fd",
+    "phash": 5708745751151494041,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000102644.jpg",
+    "local_path": "dataset/coco/images/000000102644.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "90c88dcef8f0c6af6a20dbefa8d1039ed80f64fe319e954de0b15398f610e6c3",
+    "phash": 5002965661818806333,
+    "resolution": "375x500"
+  },
+  {
+    "image_name": "coco_000000060886.jpg",
+    "local_path": "dataset/coco/images/000000060886.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "746e5db6776623e0c0782b2c37488470092e59982960c544acdb315576470349",
+    "phash": 177845294756989320,
+    "resolution": "500x333"
+  },
+  {
+    "image_name": "kalebanana_textual_inversion_mvtec_00000264.png",
+    "local_path": "dataset\\cf_small\\images\\kalebanana_textual_inversion_mvtec_00000264.png",
+    "label": 1,
+    "model_name": "kalebanana/textual_inversion_mvtec",
+    "real_source": "LAION",
+    "sha256": "e2aeaa4aab6831573118d9029b42f2ef73ce556f96a6cceff3a1138562d8fbcf",
+    "phash": 7357020909001497188,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000532058.jpg",
+    "local_path": "dataset/coco/images/000000532058.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3b6990cfb16374c2e2a7bf4387c2a99bdd93d85c26abaaed29ddd92dfc6487d9",
+    "phash": 5993460071822209778,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "KORguy_textual_inversion_shirt_00000305.png",
+    "local_path": "dataset\\cf_small\\images\\KORguy_textual_inversion_shirt_00000305.png",
+    "label": 1,
+    "model_name": "KORguy/textual_inversion_shirt",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cb74bd857f0ed3bfd32c37d409f354f032897743f8d7786ead64830ce6897512",
+    "phash": 723968942775572726,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000190307.jpg",
+    "local_path": "dataset/coco/images/000000190307.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "462b4190845ca027dc5d201f98ac07b4a90dd85a68108aea85167acdf475554e",
+    "phash": 8530412374927726688,
+    "resolution": "540x640"
+  },
+  {
+    "image_name": "coco_000000032941.jpg",
+    "local_path": "dataset/coco/images/000000032941.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2b881cc082e3d79f6685320ddf02e04ec534e7f904a090a4e627eb445cb26ebc",
+    "phash": 2054925358522590026,
+    "resolution": "458x640"
+  },
+  {
+    "image_name": "coco_000000455267.jpg",
+    "local_path": "dataset/coco/images/000000455267.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b15979551bf26ce97f41b22860e99787ab9c1602f12afb133b5ad2818c455777",
+    "phash": 852928028307411750,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "employelalisa_min_00000158.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000158.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "780c7c82c0b9990ada6cc60395dce6b1162d483a44bda8ea022c59b75d95ae4c",
+    "phash": 2590909469595224360,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000388258.jpg",
+    "local_path": "dataset/coco/images/000000388258.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "faaaa534a67576d0fd1a8dee3341856a9cf1fcf75778ab870780fef111d39573",
+    "phash": 3515745273834141750,
+    "resolution": "640x478"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000185.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000185.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "LAION",
+    "sha256": "cedc375721f855eb06f200886ac76df1074b0b3f4406a7e7021329a52deb521d",
+    "phash": 7697361171051289072,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "nota-ai_bk-sdm-small_00000397.png",
+    "local_path": "dataset\\cf_small\\images\\nota-ai_bk-sdm-small_00000397.png",
+    "label": 1,
+    "model_name": "nota-ai/bk-sdm-small",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b472a10b2f4c2e9926ca819d8fddd8ba36594c6dca77f82f100306932f38820a",
+    "phash": 5481891663040474188,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "VegaKH_Ultraskin_00000346.png",
+    "local_path": "dataset\\cf_small\\images\\VegaKH_Ultraskin_00000346.png",
+    "label": 1,
+    "model_name": "VegaKH/Ultraskin",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a15731264ef94dfddb290bc2add1329f32ccf90e3d3cba32d569a59d784bfe56",
+    "phash": 8710286358957163307,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000215245.jpg",
+    "local_path": "dataset/coco/images/000000215245.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "8f26d81db7cb960105b0dbfdd5e2846a4aace8d2fb352b0698f00afb3fe6ebb4",
+    "phash": 1571975342411955406,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "AACEE_textual_inversion_cat_00000013.png",
+    "local_path": "dataset\\cf_small\\images\\AACEE_textual_inversion_cat_00000013.png",
+    "label": 1,
+    "model_name": "AACEE/textual_inversion_cat",
+    "real_source": "LAION",
+    "sha256": "4f8197a33022266f6cdda278934c2e6d426bdb65721d37712e3e20eb3dbdcb07",
+    "phash": 8380793344773754163,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "haor_Evt_V4-preview_00000161.png",
+    "local_path": "dataset\\cf_small\\images\\haor_Evt_V4-preview_00000161.png",
+    "label": 1,
+    "model_name": "haor/Evt_V4-preview",
+    "real_source": "LAION",
+    "sha256": "f67374fcea8316e18f02cf57ee8bde33e4a443975e0f1fc69eede022c2ab93cb",
+    "phash": 7266994121127151334,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000118594.jpg",
+    "local_path": "dataset/coco/images/000000118594.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "422552f71b460a7db60633b4037d9a3b97bf7a2c4eb4c91e4fb6b466b0619da0",
+    "phash": 8310703274826507318,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000488075.jpg",
+    "local_path": "dataset/coco/images/000000488075.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "3c81a0b96e8154545bee42c0629076509127ce14e2bee6c35a58448b5d3b55c2",
+    "phash": 8739873462352177268,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000385029.jpg",
+    "local_path": "dataset/coco/images/000000385029.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "58a441c306e752465afbd5c5c829c330eb3965dca8e3c3eeb92fa04a72f84d54",
+    "phash": 2109163632420939674,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "employelalisa_min_00000007.png",
+    "local_path": "dataset\\cf_small\\images\\employelalisa_min_00000007.png",
+    "label": 1,
+    "model_name": "employelalisa/min",
+    "real_source": "LAION",
+    "sha256": "80fdff7ae94043ff7016dafacc056e0af63fcf5c980c915045ec070bef0bb788",
+    "phash": 8970240965693573177,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000078404.jpg",
+    "local_path": "dataset/coco/images/000000078404.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "325c239236841298fc6d1d96f0be32b13b0a93478e97735b1911e8502f04e01e",
+    "phash": 5747068353637892292,
+    "resolution": "500x350"
+  }
+]

@@ -1,0 +1,562 @@
+[
+  {
+    "image_name": "coco_000000500423.jpg",
+    "local_path": "dataset/coco/images/000000500423.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e4dac1ad56d604efd8fe0efdeef885588a555e21fb254066dde0f2b0e92cf6ee",
+    "phash": 4791574442099795148,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000394.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000394.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "f97ebb41da2a2be89bcb60f7b755eea8e504a040ab70ea0f94332781310ef171",
+    "phash": 8820561812679902146,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000550426.jpg",
+    "local_path": "dataset/coco/images/000000550426.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "46b4e78fc22c44edfca47861e94718fc98a4002955f478b874340a857b79bc74",
+    "phash": 7361562198359587446,
+    "resolution": "416x640"
+  },
+  {
+    "image_name": "coco_000000167486.jpg",
+    "local_path": "dataset/coco/images/000000167486.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1198b8e38fa916c2dd72b00a17ab8944f52547aaee81b3098b9c1ca55e6fa0d1",
+    "phash": 6415667348439394494,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000475.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000475.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "b5ada8bfb6dfe12fa7011e475bd825b771bb8f7d020a8ebd643f6332d147a93a",
+    "phash": 7387974531744969116,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000235057.jpg",
+    "local_path": "dataset/coco/images/000000235057.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "bb9dc22912bbd5ac120a93062bb45e2d58e3beae75c45386b67e0e16f8c671f4",
+    "phash": 5480673435767902238,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000295.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000295.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "f81eafb1aa7bdb5560eb1a196bae29e7c1a19fbbfd9f534f78eac1417de8f34b",
+    "phash": 2470283126026105588,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000366.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000366.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "e8c8a906cab1711adc0bbc6c6718806bf8b0cf9ee00c3fadea7a67edfa34c982",
+    "phash": 6917252433395890695,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000229358.jpg",
+    "local_path": "dataset/coco/images/000000229358.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2c8d100ab71de8b3ef22f3d0999aec2174bf10a911712e1d7bb3de1e2def6eb7",
+    "phash": 1556516501129046758,
+    "resolution": "640x423"
+  },
+  {
+    "image_name": "coco_000000344611.jpg",
+    "local_path": "dataset/coco/images/000000344611.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "01e78cd4c4e4fbbdf618a980b0726da279e2b4a66f71c47970b58efa4dd22888",
+    "phash": 4882144829010031216,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000153.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000153.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "0219691f7ed323d57b5118956151f88c88a324a6cfa7532be360dd15757af4d4",
+    "phash": 7693158187660985750,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000570169.jpg",
+    "local_path": "dataset/coco/images/000000570169.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d8e7c1966059adc456db944a485ef844d367f730c72b04d4a5a51dcb8400e077",
+    "phash": 5811080415166557298,
+    "resolution": "423x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000062.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000062.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "bf9f1fd6fba2a9ce078276727d93cde0a60190e3bc79946ca4c850b2238c7027",
+    "phash": 5963362792195122198,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000378.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000378.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "cfc4668096b38cf386b1639415301229ef1c8fa1d5637300ace58a9db28764c8",
+    "phash": 370746007046284131,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000078.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000078.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "ddcd53437fb2484d47d8570e46580527ca14a711a59b62e2de1162f73392b391",
+    "phash": 4955053933633657935,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000142971.jpg",
+    "local_path": "dataset/coco/images/000000142971.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "837a1b9788dc54393ec3cc7e8522e12e4202b83abc0e7f66b9d3f9954e3707bd",
+    "phash": 8690195512807720816,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000243.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000243.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "40ab73d58ffc8a0ef5447026b846f03964b6d9ca169cbbc292e0c192f016f9ae",
+    "phash": 2864632296016013886,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000336.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000336.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a4802fd60ef2b0e8346eb13f25c1edad984f186893997db59ac61ef2786d9e78",
+    "phash": 4886683381629361230,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000408.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000408.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "95f0975215cd06d80f2d2f4da38196c0eb5ad21bd468c3d6eca9fefff0061950",
+    "phash": 3644376802190418206,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000047010.jpg",
+    "local_path": "dataset/coco/images/000000047010.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "d3d2e08209430be0d54b9aab3b6bd7c8ce4c2ddd79b9ed7f994dbb3bc5134856",
+    "phash": 6939480250649860665,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000385190.jpg",
+    "local_path": "dataset/coco/images/000000385190.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "cf3f29102a816983fd65daace27a91c4da55438eb16de7869ccbd76a268e1fdc",
+    "phash": 4721684063707781425,
+    "resolution": "500x375"
+  },
+  {
+    "image_name": "coco_000000465585.jpg",
+    "local_path": "dataset/coco/images/000000465585.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e3f134c23b12cbf26929e4de7e89dcfdea55b63c6294367c73d6ba1a554176a3",
+    "phash": 6324268610309550482,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000022.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000022.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "4a75bb18d50a92c4c5185aa0234c2f0052058ab6d15e4c00062187affb3534c9",
+    "phash": 926793687108964265,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000049060.jpg",
+    "local_path": "dataset/coco/images/000000049060.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "24fdb66de0ab05eab30ceeceba3b4725084e075b8e40d91bb9d28201cd70b484",
+    "phash": 3813026824625212441,
+    "resolution": "640x411"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000023.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000023.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "8a14b317faec306a7abdb95b81ce7b777fb38f439027200f54b4c92ccd3ec6ab",
+    "phash": 1286578662807647012,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000431848.jpg",
+    "local_path": "dataset/coco/images/000000431848.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "b6d4e6d0d4b57e9643bc7104cd7fbf1935d1dae27a35e3134d3ad205a5abb564",
+    "phash": 744490195421108381,
+    "resolution": "378x640"
+  },
+  {
+    "image_name": "coco_000000025394.jpg",
+    "local_path": "dataset/coco/images/000000025394.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "f13f54a3cbe28140004425b1b010c51bd5be0e4c4da1d4b1e382e3e0b426e316",
+    "phash": 5142604779127818088,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000436.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000436.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "6611b0d053aff71a13941a633ad1099fc750717b11fdea7b3fad417a7e6f0c7c",
+    "phash": 7841404455964122203,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000108.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000108.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "37f647bbd7baaa9a3d8f902d1b58ede51674b155b8ead820001d2e9b245e793e",
+    "phash": 7199378620178544436,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000288.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000288.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "b2498ff83ad10319db631c67e67d0b21c6f84e4378e5708d1bd97d75d07e8b24",
+    "phash": 2810378653568199115,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000343.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000343.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "12ef56863231c83f25369ad55450810388417b5acc97b2366ee939c808379d83",
+    "phash": 4702190973171127853,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000361.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000361.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "fdd120428a35daf677f12be146da0c03ab773716805366395c81e76152ebf76b",
+    "phash": 3789016486764169778,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000258.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000258.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "c7a5942686a5608ee0d9728ce2df820fda56c32eeb7721a32b55385abc4d6ae9",
+    "phash": 6061398920857596848,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000306.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000306.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "52f066cf8875d4a1e887cbe5b83661a87628be35820d311f9a47c12d39c4c70d",
+    "phash": 2466224126786353057,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000331604.jpg",
+    "local_path": "dataset/coco/images/000000331604.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2a81535ca1b02d682c5e06e61dd743ab5356801e410870dc08e9c90f5bb6eaa1",
+    "phash": 6050318477336665225,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000060932.jpg",
+    "local_path": "dataset/coco/images/000000060932.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "5dc30fc8cef779e2e4905235a08bddf1116dadc659356238293e2ac90792a7ed",
+    "phash": 1679080263994373030,
+    "resolution": "640x428"
+  },
+  {
+    "image_name": "coco_000000291861.jpg",
+    "local_path": "dataset/coco/images/000000291861.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "0ea62df424497d5d69f414968efd9bc66e13e2e8cd7fac652881d78636553418",
+    "phash": 1831412024632298336,
+    "resolution": "640x426"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000034.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000034.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "cb0ffb0d485113dc573b7e43241ec180f676c731b83b25aca6d70e27d4a5d2bd",
+    "phash": 7622520468278984749,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000341828.jpg",
+    "local_path": "dataset/coco/images/000000341828.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c287d4d6d8fd2b891c933dae96cd7489c160bcfad5417f3ccddf4c771cacbb33",
+    "phash": 7308034560331716800,
+    "resolution": "612x612"
+  },
+  {
+    "image_name": "coco_000000567740.jpg",
+    "local_path": "dataset/coco/images/000000567740.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "7d5540f44438a85c429ed48e16f2d561384d20dd18f8efd589de54602141a48a",
+    "phash": 5419220955857424749,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000015254.jpg",
+    "local_path": "dataset/coco/images/000000015254.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "a03e74678aedee90fe6777e9ba4eef8b3025ba0b6f426723b2cf2b35c5ffef4f",
+    "phash": 5080975064937667782,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000208.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000208.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "5f418bd362295cddae027f7dbd39613101eba61484bcef26300879b55177e27e",
+    "phash": 8183098535174396924,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000225670.jpg",
+    "local_path": "dataset/coco/images/000000225670.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "4c4c7afca03680bc9563f87bab9689021216ee97c4c225816622b707fecd0f41",
+    "phash": 69627164183796761,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000450559.jpg",
+    "local_path": "dataset/coco/images/000000450559.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "6b499bed18af66b182859133ab3208762c3c40c3048c5c21c91b7f6b144a7f36",
+    "phash": 6944797905844657432,
+    "resolution": "427x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000402.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000402.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "coco,forchheim,imagenet,imd2020,laion,landscapesHQ,vision",
+    "sha256": "a9bab8d910aac8e105b1fd217473b14e27926320567eeca6f025b29d4ba99b6f",
+    "phash": 922549408351796011,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000103.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000103.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "cf142bc59f87a39c759117118126e2dac2e77af44e3d849c51e7072ae86aa3c5",
+    "phash": 2876419580037433102,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000514797.jpg",
+    "local_path": "dataset/coco/images/000000514797.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "792c2a942e751ae380500a6cabb330c776d30f8b01628eb8292997ac8ec8c4a8",
+    "phash": 5235252687723193955,
+    "resolution": "640x439"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000198.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000198.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "7a596cd72679848f23225d54d62e455a36dbdc57ae2fbac222b7c0c7c2c17846",
+    "phash": 3121466415064649415,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000357459.jpg",
+    "local_path": "dataset/coco/images/000000357459.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "1e3d6a821474334f0e30bd96a3688690e969da57dfae4876a0c3196fbfe8a89e",
+    "phash": 6477344748398026712,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "coco_000000076625.jpg",
+    "local_path": "dataset/coco/images/000000076625.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "e7d1448bc57f8ffd10a19d12665a164779add701e07daa67b82ff51480a4105e",
+    "phash": 4933961542476810805,
+    "resolution": "640x480"
+  },
+  {
+    "image_name": "coco_000000226111.jpg",
+    "local_path": "dataset/coco/images/000000226111.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "c57ab832bf70043e1c08b82ef43b2d65e09ad09bc1437658d3c0a15cc0f99ac6",
+    "phash": 8611395228545483188,
+    "resolution": "480x640"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000097.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000097.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "23c907714b26ff0fe904c7a499fef2c316d4c67b1802dc923249e9c3c5eae130",
+    "phash": 5002640075890737873,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000355610.jpg",
+    "local_path": "dataset/coco/images/000000355610.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "2ccae45b3bcbcc5f1fc797eacdf1151e50d86187e08c2fe3b9e01efd13529c58",
+    "phash": 8756621770021693380,
+    "resolution": "640x427"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000084.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000084.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "cbb5b94b834a9f18d87c3084c85f9ee105664774f1346d3c98b9d875238fd5ae",
+    "phash": 1186785463068670093,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "WarriorMama777_AbyssOrangeMix_00000220.png",
+    "local_path": "dataset\\cf_small\\images\\WarriorMama777_AbyssOrangeMix_00000220.png",
+    "label": 1,
+    "model_name": "WarriorMama777/AbyssOrangeMix",
+    "real_source": "LAION",
+    "sha256": "b920503ff64c031c0c0c8ddd373425e26e336a80937a2e462cc731d7731d23ff",
+    "phash": 3938638910415227214,
+    "resolution": "512x512"
+  },
+  {
+    "image_name": "coco_000000057597.jpg",
+    "local_path": "dataset/coco/images/000000057597.jpg",
+    "model_name": "coco_val2017",
+    "label": 0,
+    "real_source": "COCO",
+    "sha256": "003280b50c99124750084f25939f305f3fefbd9e3caf5002a456249242b154c0",
+    "phash": 5795066407680198086,
+    "resolution": "640x426"
+  }
+]
