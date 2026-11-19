@@ -17,7 +17,7 @@ import io
 
 import numpy as np
 from PIL import Image
-from scipy.fft import dct
+from scipy.fft import dct  # type: ignore[import-untyped]
 
 
 def compute_phash(image: Image.Image | bytes) -> int:
@@ -29,6 +29,7 @@ def compute_phash(image: Image.Image | bytes) -> int:
     Returns:
         64-bit unsigned integer pHash.
     """
+    pil_img: Image.Image
     if isinstance(image, bytes):
         pil_img = Image.open(io.BytesIO(image))
     else:
