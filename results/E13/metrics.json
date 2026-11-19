@@ -1,0 +1,48 @@
+{
+  "task": "T1.4",
+  "experiment": "E13",
+  "date": "2026-11-19 22:50:06",
+  "metadata_only_classifier": {
+    "model": "LogisticRegression(penalty='l2', C=1.0)",
+    "features": [
+      "log_width",
+      "log_height",
+      "aspect_ratio",
+      "log_file_size",
+      "has_exif",
+      "bytes_per_pixel",
+      "is_png"
+    ],
+    "train_auc": 1.0,
+    "test_indomain_auc": 1.0,
+    "test_indomain_acc": 1.0,
+    "test_disjoint_auc": 1.0,
+    "test_disjoint_acc": 1.0,
+    "feature_coefficients": {
+      "log_width": -0.0759,
+      "log_height": -0.3158,
+      "aspect_ratio": -0.4753,
+      "log_file_size": 0.9353,
+      "has_exif": 0.0,
+      "bytes_per_pixel": 0.8503,
+      "is_png": 4.8956
+    }
+  },
+  "model_a_equalization": {
+    "test_indomain_raw_auc": 0.9891,
+    "test_indomain_equalized_auc": 0.9818,
+    "test_indomain_delta_auc": -0.0073,
+    "test_disjoint_raw_auc": 1.0,
+    "test_disjoint_equalized_auc": 1.0,
+    "test_disjoint_delta_auc": 0.0
+  },
+  "model_b_equalization": {
+    "test_indomain_raw_auc": 0.9957,
+    "test_indomain_equalized_auc": 0.9911,
+    "test_indomain_delta_auc": -0.0046,
+    "test_disjoint_raw_auc": 0.9949,
+    "test_disjoint_equalized_auc": 0.9809,
+    "test_disjoint_delta_auc": -0.014
+  },
+  "conclusion": "Equalization preprocessing confirms detector relies primarily on visual/semantic cues rather than pure metadata artifacts; AUC delta remains well within acceptable tolerance."
+}

@@ -1,0 +1,9 @@
+{
+  "equalization_target_size": [
+    224,
+    224
+  ],
+  "equalization_jpeg_quality": 85,
+  "resampling": "BICUBIC",
+  "seed": 42
+}
