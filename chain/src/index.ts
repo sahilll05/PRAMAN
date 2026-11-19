@@ -11,3 +11,6 @@
  *   revoke.ts    — revoke attestation (original attester only)
  */
 export const CHAIN_VERSION = "0.1.0-skeleton";
+
+export * from "./fingerprint/phash.js";
+

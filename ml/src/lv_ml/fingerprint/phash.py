@@ -51,7 +51,8 @@ def compute_phash(image: Image.Image | bytes) -> int:
     dct_2d = dct(dct(matrix, type=2, axis=0), type=2, axis=1)
 
     # 5. Take top-left 8x8 sub-matrix
-    dct_8x8 = dct_2d[:8, :8]
+    dct_8x8 = dct_2d[:8, :8].copy()
+    dct_8x8[np.abs(dct_8x8) < 1e-9] = 0.0
 
     # 6. Compute median of the 63 non-DC coefficients (exclude [0,0])
     ac_coeffs = np.concatenate([dct_8x8[0, 1:], dct_8x8[1:, :].flatten()])

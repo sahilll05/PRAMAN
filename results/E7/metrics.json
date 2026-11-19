@@ -1,0 +1,20 @@
+{
+  "experiment": "E7",
+  "task": "T3.3",
+  "date": "2026-11-20 00:15:10",
+  "watermark_model": "TrustMark variant Q (BCH_5)",
+  "n_samples": 20,
+  "average_psnr_db": 41.55234026727594,
+  "average_ssim": 0.999491736064865,
+  "unmarked_false_positive_rate": 0.05,
+  "survival_rates": {
+    "clean_stego": 1.0,
+    "jpeg_95": 1.0,
+    "jpeg_75": 1.0,
+    "jpeg_50": 0.95,
+    "jpeg_30": 0.8,
+    "resize_075": 1.0,
+    "resize_050": 1.0,
+    "blur_10": 1.0
+  }
+}

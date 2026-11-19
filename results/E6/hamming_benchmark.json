@@ -1,0 +1,10 @@
+{
+  "task": "T3.4",
+  "date": "2026-11-20 00:18:39",
+  "postgres_syntax": "SELECT id, bit_count(p_hash # $1::bit(64)) AS hamming_dist FROM media_fingerprints WHERE bit_count(p_hash # $1::bit(64)) <= $2",
+  "threshold_T": 10,
+  "n_10k_latency_ms": 1.2585000004037283,
+  "n_100k_latency_ms": 12.512299999798415,
+  "status": "PASS",
+  "requirement_5ms_met": true
+}

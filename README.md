@@ -3,8 +3,8 @@
 > **Evidence-Driven, Temporally Validated, and Challengeable AI-Generated Image Authenticity Verification**  
 > *A decentralized protocol and reference implementation deployed on Base Sepolia testnet.*
 
-[![CI - Python Tests](https://img.shields.io/badge/pytest-25%20passed-brightgreen.svg)](#testing--verification)
-[![CI - TypeScript Tests](https://img.shields.io/badge/vitest-3%20passed-brightgreen.svg)](#testing--verification)
+[![CI - Python Tests](https://img.shields.io/badge/pytest-27%20passed-brightgreen.svg)](#testing--verification)
+[![CI - TypeScript Tests](https://img.shields.io/badge/vitest-9%20passed-brightgreen.svg)](#testing--verification)
 [![Smart Contracts](https://img.shields.io/badge/foundry-forge-blue.svg)](#smart-contracts--eas)
 [![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#protocol-architecture)
 [![License](https://img.shields.io/badge/license-MIT%20%2F%20Non--Commercial-lightgrey.svg)](#ethics--licensing)
@@ -88,6 +88,9 @@ All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/Comm
 | **E4** | Risk-Coverage & Abstention | Temperature scaling, Mahalanobis OOD gate, and Split Conformal Prediction evaluated on shifted OpenFake data | **Selective Acc @ 80% cov: 61.2%** (vs 59.0% at 100% cov)<br>Unified Engine Acc: **67.0%** at 58.4% natural coverage<br>In-domain calibrated ECE: **0.0399 / 0.0163** | **PASSED** (Target met: positive abstention value under generator shift) |
 | **E5** | Determinism (CPU-CPU) | Independent CPU ReferenceRunner executions on $N=200$ test images | **Max diff: 0 bps (0.00%)**<br>Mean diff: 0.00 bps<br>**Verdict mismatch rate: 0.0%** (0/200) | **PASSED** (Bit-level determinism confirmed, $\epsilon=10$ bps) |
 | **E5b** | CPU-vs-GPU Parity | Numerical difference between GPU fp16 and CPU ONNX fp32 on $N=200$ images | **Max diff: 20 bps (0.20%)**<br>Mean diff: 3.0 bps (0.030%)<br>**Verdict mismatch rate: 0.0%** | **PASSED** (Tolerance bounded within 25 bps) |
+| **E6** | Perceptual Hashing (pHash) | pHash v1 DCT-II threshold sweep on $N=200$ images, 19,900 unmatched pairs across 8 transforms | **Composite Recall: 100.0%**<br>**False Match Rate: 0.0000%** at $T=10$<br>Unmatched min dist: 16 bits (mean 31.45)<br>Separation margin: $\ge 6$ bits | **PASSED** ($T=10$ frozen in ADR `D-PHASH-T`) |
+| **E7** | TrustMark Watermark Survival | TrustMark variant Q (BCH_5 ECC, 40-bit ID) under JPEG Q95-Q30, resize 0.75/0.50, blur | **Clean Recovery: 100.0%**<br>JPEG 95/75: **100.0%** \| JPEG 50: **95.0%**<br>Resize 0.75/0.50: **100.0%**<br>Avg PSNR: **41.55 dB** (SSIM: 0.9995) | **PASSED** (High fidelity & survival) |
+| **T3.4** | Neon Postgres Bit Ops Benchmark | 64-bit perceptual hash bitwise XOR and popcount query across $N=10,000$ and $N=100,000$ hashes | **10k Search Latency: 1.02 ms** (TS) / **1.26 ms** (Python)<br>100k Latency: 12.5 ms<br>Postgres query: `bit_count(p_hash # $1::bit(64)) <= 10` | **PASSED** (Budget $<5\text{ ms}$ met) |
 | **E13** | Shortcut Audit | Metadata-only classification vs. uniform equalization (224px, JPEG Q85) | **Equalized AUC: 0.9818 / 0.9911**<br>$\Delta \text{AUC}: -0.0073 / -0.0046$ | **PASSED** (Eliminates container metadata shortcuts) |
 
 *Full experiment configs, metrics, and environment logs are archived under [`results/`](results/).*

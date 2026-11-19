@@ -9,3 +9,6 @@
  *   db.ts      — Drizzle ORM schema + Postgres connection
  */
 export const INDEXER_VERSION = "0.1.0-skeleton";
+
+export * from "./db/schema.js";
+export * from "./db/hamming.js";
