@@ -5,21 +5,22 @@ Produces canonical evidence.json and verdict.json bundles validating against
 spec/schemas/evidence.schema.json and spec/schemas/verdict.schema.json.
 """
 
-from datetime import datetime, timezone
 import hashlib
 import json
-from pathlib import Path
 import platform
 import sys
 import time
+from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any
 
 import jsonschema
 import numpy as np
 import onnxruntime as ort
 import open_clip
-from PIL import Image
+import PIL
 import torch
+from PIL import Image
 
 from lv_ml.fingerprint.phash import compute_phash
 
@@ -52,9 +53,9 @@ class ReferenceRunner:
         # Load schemas for validation
         self.repo_root = Path(__file__).resolve().parents[4]
         schemas_dir = self.repo_root / "spec" / "schemas"
-        with open(schemas_dir / "verdict.schema.json", "r", encoding="utf-8") as f:
+        with open(schemas_dir / "verdict.schema.json", encoding="utf-8") as f:
             self.verdict_schema = json.load(f)
-        with open(schemas_dir / "evidence.schema.json", "r", encoding="utf-8") as f:
+        with open(schemas_dir / "evidence.schema.json", encoding="utf-8") as f:
             self.evidence_schema = json.load(f)
 
         # Preprocessing hash: pinned parameters + pinned libraries
@@ -131,7 +132,7 @@ class ReferenceRunner:
         verdict = 2 if p_fake >= 0.5 else 1
 
         # Current timestamp
-        created_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+        created_at = datetime.now(UTC).isoformat().replace("+00:00", "Z")
         now_ts = int(time.time())
         expiration_time = now_ts + expiration_ttl_sec
 
@@ -158,9 +159,11 @@ class ReferenceRunner:
             },
             "preprocHash": self.preproc_hash,
             "libs": {
-                "python": f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}",
+                "python": (
+                    f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+                ),
                 "onnxruntime": ort.__version__,
-                "pillow": Image.__version__,
+                "pillow": PIL.__version__,
                 "numpy": np.__version__,
             },
             "perFrame": [
@@ -191,11 +194,16 @@ class ReferenceRunner:
                 "cpu": platform.processor() or "CPU",
                 "os": f"{platform.system()} {platform.release()}",
             },
-            "reproduceCommand": f"python -m lv_ml.runner.cpu_runner --image {img_path.name} --model {self.onnx_model_path.name}",
+            "reproduceCommand": (
+                f"python -m lv_ml.runner.cpu_runner --image {img_path.name} "
+                f"--model {self.onnx_model_path.name}"
+            ),
         }
 
         # Canonicalize evidence JSON: sorted keys, UTF-8, no whitespace
-        canonical_evidence_bytes = json.dumps(evidence, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        canonical_evidence_bytes = json.dumps(
+            evidence, sort_keys=True, separators=(",", ":")
+        ).encode("utf-8")
         evidence_hash = hashlib.sha256(canonical_evidence_bytes).hexdigest()
 
         # Construct verdict payload

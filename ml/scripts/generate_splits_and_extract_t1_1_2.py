@@ -65,11 +65,13 @@ def stream_and_filter_cf_small(
             dist = hamming_distance(sample_phash, prev_phash)
             if dist <= dup_hamming_threshold:
                 is_near_dup = True
-                near_dupe_events.append({
-                    "sample_index": total_processed,
-                    "image_name": item.get("image_name"),
-                    "hamming_dist": dist,
-                })
+                near_dupe_events.append(
+                    {
+                        "sample_index": total_processed,
+                        "image_name": item.get("image_name"),
+                        "hamming_dist": dist,
+                    }
+                )
                 break
 
         if is_near_dup:
@@ -237,9 +239,7 @@ def extract_embeddings_and_benchmark(
         total_time += metrics["total_time_sec"]
 
     overall_fps = total_images / total_time if total_time > 0 else 0.0
-    peak_vram = (
-        torch.cuda.max_memory_allocated() / (1024 * 1024) if device == "cuda" else 0.0
-    )
+    peak_vram = torch.cuda.max_memory_allocated() / (1024 * 1024) if device == "cuda" else 0.0
 
     # Write results/E0/env.txt
     env_txt_path = results_e0_dir / "env.txt"

@@ -6,19 +6,18 @@ Applies equalization preprocessing (uniform 224x224 resize, EXIF strip, uniform 
 and measures the impact on Model A and Model B performance.
 """
 
-import io
 import json
 import math
-from pathlib import Path
 import time
+from pathlib import Path
 from typing import Any
 
 import numpy as np
+import torch
 from PIL import Image
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.preprocessing import StandardScaler
-import torch
 
 from lv_ml.features.clip_extractor import ClipEmbeddingExtractor
 from lv_ml.models.probe import ClipLinearProbe, MlpProbe
@@ -48,7 +47,12 @@ def extract_metadata_features(image_path: str | Path) -> list[float]:
     return [log_w, log_h, aspect_ratio, log_size, has_exif, bpp, is_png]
 
 
-def equalize_image(image_path: str | Path, output_path: str | Path, target_size: tuple[int, int] = (224, 224), quality: int = 85) -> Path:
+def equalize_image(
+    image_path: str | Path,
+    output_path: str | Path,
+    target_size: tuple[int, int] = (224, 224),
+    quality: int = 85,
+) -> Path:
     """Apply uniform equalization transform: bicubic resize to target_size, strip EXIF, uniform JPEG Q85."""
     out_p = Path(output_path)
     out_p.parent.mkdir(parents=True, exist_ok=True)
@@ -82,7 +86,8 @@ def run_shortcut_audit(
         test_dis_records = json.load(f)
 
     print("\n--- Step 1: Extracting Metadata Features for Train and Test Sets ---")
-    def extract_split_features(records: list[dict]) -> tuple[np.ndarray, np.ndarray]:
+
+    def extract_split_features(records: list[dict[str, Any]]) -> tuple[np.ndarray, np.ndarray]:
         feats = []
         labels = []
         for r in records:
@@ -115,25 +120,31 @@ def run_shortcut_audit(
     acc_meta_test_in = float(accuracy_score(y_test_in, (meta_probs_test_in >= 0.5).astype(int)))
     acc_meta_test_dis = float(accuracy_score(y_test_dis, (meta_probs_test_dis >= 0.5).astype(int)))
 
-    print(f"Metadata-Only Classifier: Train AUC={auc_meta_train:.4f} | In-Domain Test AUC={auc_meta_test_in:.4f} (Acc={acc_meta_test_in:.4f}) | Disjoint Test AUC={auc_meta_test_dis:.4f} (Acc={acc_meta_test_dis:.4f})")
+    print(
+        f"Metadata-Only Classifier: Train AUC={auc_meta_train:.4f} | In-Domain Test AUC={auc_meta_test_in:.4f} (Acc={acc_meta_test_in:.4f}) | Disjoint Test AUC={auc_meta_test_dis:.4f} (Acc={acc_meta_test_dis:.4f})"
+    )
 
     # 3. Equalization Preprocessing
-    print("\n--- Step 2: Applying Equalization Preprocessing (224x224 Bicubic + Strip EXIF + JPEG Q85) ---")
+    print(
+        "\n--- Step 2: Applying Equalization Preprocessing (224x224 Bicubic + Strip EXIF + JPEG Q85) ---"
+    )
     equalized_dir = root / "dataset" / "equalized_cache"
     equalized_dir.mkdir(parents=True, exist_ok=True)
 
-    def process_equalized_records(records: list[dict], split_tag: str) -> list[dict]:
+    def process_equalized_records(records: list[dict[str, Any]], split_tag: str) -> list[dict[str, Any]]:
         eq_records = []
         for i, r in enumerate(records):
             orig_p = root / r["local_path"]
             eq_p = equalized_dir / f"{split_tag}_{orig_p.stem}.jpg"
             equalize_image(orig_p, eq_p, target_size=(224, 224), quality=85)
-            eq_records.append({
-                "image_name": eq_p.name,
-                "local_path": str(eq_p.relative_to(root)),
-                "label": r["label"],
-                "model_name": r.get("model_name", "unknown"),
-            })
+            eq_records.append(
+                {
+                    "image_name": eq_p.name,
+                    "local_path": str(eq_p.relative_to(root)),
+                    "label": r["label"],
+                    "model_name": r.get("model_name", "unknown"),
+                }
+            )
         return eq_records
 
     eq_test_in_records = process_equalized_records(test_in_records, "test_in")
@@ -141,9 +152,11 @@ def run_shortcut_audit(
 
     # 4. Extract CLIP features for raw and equalized test sets
     print("\n--- Step 3: Extracting CLIP Embeddings on Equalized Images ---")
-    extractor = ClipEmbeddingExtractor(model_name="ViT-B-32", pretrained="laion2b_s34b_b79k", device=device)
+    extractor = ClipEmbeddingExtractor(
+        model_name="ViT-B-32", pretrained="laion2b_s34b_b79k", device=device
+    )
 
-    def extract_features_from_records(records: list[dict]) -> np.ndarray:
+    def extract_features_from_records(records: list[dict[str, Any]]) -> np.ndarray:
         paths = [root / r["local_path"] for r in records]
         feats = []
         with torch.inference_mode():
@@ -157,8 +170,26 @@ def run_shortcut_audit(
                     feats.append(f.cpu().float().numpy()[0])
         return np.array(feats, dtype=np.float32)
 
-    X_test_in_raw = np.memmap(root / "dataset" / "embeddings" / "balanced_test_indomain_embeddings.dat", dtype=np.float16, mode="r", shape=(len(test_in_records), 512)).copy().astype(np.float32)
-    X_test_dis_raw = np.memmap(root / "dataset" / "embeddings" / "balanced_test_disjoint_embeddings.dat", dtype=np.float16, mode="r", shape=(len(test_dis_records), 512)).copy().astype(np.float32)
+    X_test_in_raw = (
+        np.memmap(
+            root / "dataset" / "embeddings" / "balanced_test_indomain_embeddings.dat",
+            dtype=np.float16,
+            mode="r",
+            shape=(len(test_in_records), 512),
+        )
+        .copy()
+        .astype(np.float32)
+    )
+    X_test_dis_raw = (
+        np.memmap(
+            root / "dataset" / "embeddings" / "balanced_test_disjoint_embeddings.dat",
+            dtype=np.float16,
+            mode="r",
+            shape=(len(test_dis_records), 512),
+        )
+        .copy()
+        .astype(np.float32)
+    )
 
     X_test_in_eq = extract_features_from_records(eq_test_in_records)
     X_test_dis_eq = extract_features_from_records(eq_test_dis_records)
@@ -196,10 +227,18 @@ def run_shortcut_audit(
     b_dis_eq_auc, b_dis_eq_acc = eval_features(model_b, X_test_dis_eq, y_test_dis)
 
     print("\n--- Shortcut Audit Results ---")
-    print(f"Model A (In-Domain): Raw AUC={a_in_raw_auc:.4f} -> Equalized AUC={a_in_eq_auc:.4f} (Δ={a_in_eq_auc - a_in_raw_auc:+.4f})")
-    print(f"Model A (Disjoint):  Raw AUC={a_dis_raw_auc:.4f} -> Equalized AUC={a_dis_eq_auc:.4f} (Δ={a_dis_eq_auc - a_dis_raw_auc:+.4f})")
-    print(f"Model B (In-Domain): Raw AUC={b_in_raw_auc:.4f} -> Equalized AUC={b_in_eq_auc:.4f} (Δ={b_in_eq_auc - b_in_raw_auc:+.4f})")
-    print(f"Model B (Disjoint):  Raw AUC={b_dis_raw_auc:.4f} -> Equalized AUC={b_dis_eq_auc:.4f} (Δ={b_dis_eq_auc - b_dis_raw_auc:+.4f})")
+    print(
+        f"Model A (In-Domain): Raw AUC={a_in_raw_auc:.4f} -> Equalized AUC={a_in_eq_auc:.4f} (Δ={a_in_eq_auc - a_in_raw_auc:+.4f})"
+    )
+    print(
+        f"Model A (Disjoint):  Raw AUC={a_dis_raw_auc:.4f} -> Equalized AUC={a_dis_eq_auc:.4f} (Δ={a_dis_eq_auc - a_dis_raw_auc:+.4f})"
+    )
+    print(
+        f"Model B (In-Domain): Raw AUC={b_in_raw_auc:.4f} -> Equalized AUC={b_in_eq_auc:.4f} (Δ={b_in_eq_auc - b_in_raw_auc:+.4f})"
+    )
+    print(
+        f"Model B (Disjoint):  Raw AUC={b_dis_raw_auc:.4f} -> Equalized AUC={b_dis_eq_auc:.4f} (Δ={b_dis_eq_auc - b_dis_raw_auc:+.4f})"
+    )
 
     report: dict[str, Any] = {
         "task": "T1.4",
@@ -207,7 +246,15 @@ def run_shortcut_audit(
         "date": time.strftime("%Y-%m-%d %H:%M:%S"),
         "metadata_only_classifier": {
             "model": "LogisticRegression(penalty='l2', C=1.0)",
-            "features": ["log_width", "log_height", "aspect_ratio", "log_file_size", "has_exif", "bytes_per_pixel", "is_png"],
+            "features": [
+                "log_width",
+                "log_height",
+                "aspect_ratio",
+                "log_file_size",
+                "has_exif",
+                "bytes_per_pixel",
+                "is_png",
+            ],
             "train_auc": round(auc_meta_train, 4),
             "test_indomain_auc": round(auc_meta_test_in, 4),
             "test_indomain_acc": round(acc_meta_test_in, 4),
@@ -216,7 +263,15 @@ def run_shortcut_audit(
             "feature_coefficients": {
                 name: round(float(coef), 4)
                 for name, coef in zip(
-                    ["log_width", "log_height", "aspect_ratio", "log_file_size", "has_exif", "bytes_per_pixel", "is_png"],
+                    [
+                        "log_width",
+                        "log_height",
+                        "aspect_ratio",
+                        "log_file_size",
+                        "has_exif",
+                        "bytes_per_pixel",
+                        "is_png",
+                    ],
                     clf.coef_[0],
                 )
             },
@@ -247,12 +302,16 @@ def run_shortcut_audit(
         json.dump(report, f, indent=2)
 
     with open(results_dir / "config.json", "w") as f:
-        json.dump({
-            "equalization_target_size": [224, 224],
-            "equalization_jpeg_quality": 85,
-            "resampling": "BICUBIC",
-            "seed": 42,
-        }, f, indent=2)
+        json.dump(
+            {
+                "equalization_target_size": [224, 224],
+                "equalization_jpeg_quality": 85,
+                "resampling": "BICUBIC",
+                "seed": 42,
+            },
+            f,
+            indent=2,
+        )
 
     return report
 

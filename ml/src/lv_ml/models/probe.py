@@ -8,18 +8,17 @@ Training is GPU-accelerated (with CPU fallback), supports mixed precision,
 checkpoints every epoch, and logs training curves to results/T1.3/.
 """
 
-import json
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import numpy as np
-from sklearn.metrics import accuracy_score, brier_score_loss, roc_auc_score
 import torch
 import torch.nn as nn
+from sklearn.metrics import accuracy_score, brier_score_loss, roc_auc_score
 from torch.utils.data import DataLoader, Dataset
 
 
-class EmbeddingDataset(Dataset):
+class EmbeddingDataset(Dataset[tuple[torch.Tensor, torch.Tensor]]):
     """Memory-mapped dataset of pre-extracted CLIP embeddings and labels."""
 
     def __init__(self, embeddings_path: str | Path, labels_path: str | Path) -> None:
@@ -49,7 +48,7 @@ class ClipLinearProbe(nn.Module):
         self.fc = nn.Linear(in_features, num_classes)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        return self.fc(x)
+        return cast(torch.Tensor, self.fc(x))
 
 
 class MlpProbe(nn.Module):
@@ -72,7 +71,7 @@ class MlpProbe(nn.Module):
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        return self.net(x)
+        return cast(torch.Tensor, self.net(x))
 
 
 def compute_metrics(
@@ -107,7 +106,7 @@ def compute_metrics(
 
 def evaluate_probe(
     model: nn.Module,
-    dataloader: DataLoader,
+    dataloader: DataLoader[tuple[torch.Tensor, torch.Tensor]],
     device: str = "cuda",
 ) -> tuple[dict[str, float], np.ndarray, np.ndarray]:
     """Evaluate probe on a dataloader, returning metrics, all probabilities, and ground truth."""
@@ -140,8 +139,8 @@ def evaluate_probe(
 
 def train_probe(
     model: nn.Module,
-    train_dataset: Dataset,
-    val_dataset: Dataset,
+    train_dataset: Dataset[tuple[torch.Tensor, torch.Tensor]],
+    val_dataset: Dataset[tuple[torch.Tensor, torch.Tensor]],
     epochs: int = 25,
     batch_size: int = 64,
     lr: float = 1e-3,
@@ -177,7 +176,6 @@ def train_probe(
             start_epoch = checkpoint["epoch"] + 1
             history = checkpoint.get("history", [])
             best_cal_auc = checkpoint.get("best_cal_auc", -1.0)
-            print(f"Resumed training from epoch {start_epoch} (best cal AUC: {best_cal_auc:.4f})")
 
     for epoch in range(start_epoch, epochs):
         model.train()
@@ -194,7 +192,7 @@ def train_probe(
             train_loss += loss.item() * len(y)
 
         scheduler.step()
-        train_loss /= max(len(train_dataset), 1)
+        train_loss /= max(len(train_dataset), 1)  # type: ignore[arg-type]
 
         val_metrics, _, _ = evaluate_probe(model, val_loader, device=device)
 

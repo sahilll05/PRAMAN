@@ -1,0 +1,4 @@
+{
+  "dataset": "balanced_test_disjoint.json",
+  "held_out_generator": "WarriorMama777/AbyssOrangeMix"
+}

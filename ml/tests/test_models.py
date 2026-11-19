@@ -1,11 +1,11 @@
 """Unit tests for PRAMANA ML Models and CPU Reference Runner (T1.3)."""
 
-from pathlib import Path
 import tempfile
+from pathlib import Path
 
 import numpy as np
-from PIL import Image
 import torch
+from PIL import Image
 
 from lv_ml.models.probe import ClipLinearProbe, MlpProbe, compute_metrics
 from lv_ml.runner.cpu_runner import ReferenceRunner

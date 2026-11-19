@@ -1,0 +1,30 @@
+{
+  "experiment": "E1",
+  "task": "T1.5",
+  "date": "2026-11-19 22:57:11",
+  "dataset": "CommunityForensics-Small + COCO val2017 (balanced in-domain test split)",
+  "n_samples": 440,
+  "label_distribution": {
+    "0": 220,
+    "1": 220
+  },
+  "model_a": {
+    "auc": 0.9891,
+    "accuracy": 0.9341,
+    "brier": 0.0861,
+    "ece": 0.2036,
+    "precision": 0.9751,
+    "recall": 0.8909,
+    "f1": 0.9311
+  },
+  "model_b": {
+    "auc": 0.9957,
+    "accuracy": 0.9659,
+    "brier": 0.023,
+    "ece": 0.0218,
+    "precision": 0.9556,
+    "recall": 0.9773,
+    "f1": 0.9663
+  },
+  "pre_registered_target_met": true
+}

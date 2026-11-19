@@ -1,0 +1,7 @@
+{
+  "dataset": "ComplexDataLab/OpenFake core",
+  "source_files": [
+    "core_train_0.parquet",
+    "core_train_1.parquet"
+  ]
+}

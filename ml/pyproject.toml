@@ -42,8 +42,9 @@ select = ["E", "F", "I", "UP", "N", "ANN", "S", "B", "C4", "T20"]
 
 
 [tool.ruff.lint.per-file-ignores]
-"scripts/*" = ["T201", "INP001"]
+"scripts/*" = ["T201", "INP001", "S310", "S311", "E501", "S101"]
 "tests/*" = ["S101", "ANN"]
+"src/lv_ml/eval/*" = ["T201", "S311", "E501", "B905", "N803", "N806", "ANN401", "B007"]
 
 
 [tool.ruff.format]
@@ -53,9 +54,26 @@ quote-style = "double"
 python_version = "3.11"
 strict = true
 ignore_missing_imports = false
+disable_error_code = ["import-untyped"]
 
 [[tool.mypy.overrides]]
-module = ["scipy.*", "open_clip.*", "datasets.*", "huggingface_hub.*"]
+module = [
+    "scipy.*",
+    "open_clip.*",
+    "open_clip",
+    "datasets.*",
+    "datasets",
+    "huggingface_hub.*",
+    "huggingface_hub",
+    "onnxruntime.*",
+    "onnxruntime",
+    "jsonschema.*",
+    "jsonschema",
+    "sklearn.*",
+    "sklearn",
+    "pandas.*",
+    "pandas",
+]
 ignore_missing_imports = true
 
 

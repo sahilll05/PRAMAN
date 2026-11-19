@@ -8,9 +8,9 @@ Rule compliance:
 """
 
 import json
-from pathlib import Path
 import random
 import time
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -19,7 +19,6 @@ from lv_ml.models.probe import (
     ClipLinearProbe,
     EmbeddingDataset,
     MlpProbe,
-    evaluate_probe,
     train_probe,
 )
 from lv_ml.runner.cpu_runner import ReferenceRunner
@@ -63,7 +62,9 @@ def main() -> None:
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"--- Starting T1.3 Model Training on {device} ---")
-    print(f"Datasets: train={len(train_ds)}, cal={len(cal_ds)}, test_in={len(test_in_ds)}, test_dis={len(test_dis_ds)}")
+    print(
+        f"Datasets: train={len(train_ds)}, cal={len(cal_ds)}, test_in={len(test_in_ds)}, test_dis={len(test_dis_ds)}"
+    )
 
     # ----------------------------------------------------
     # 2. Train Model A: ClipLinearProbe
@@ -84,7 +85,9 @@ def main() -> None:
         resume=False,
     )
     t_train_a = time.time() - t0_a
-    print(f"Model A trained in {t_train_a:.2f}s | Best Cal AUC: {res_a['best_cal_auc']:.4f} | Final Cal Metrics: {res_a['final_cal_metrics']}")
+    print(
+        f"Model A trained in {t_train_a:.2f}s | Best Cal AUC: {res_a['best_cal_auc']:.4f} | Final Cal Metrics: {res_a['final_cal_metrics']}"
+    )
 
     # Save PyTorch weights
     torch.save(model_a.state_dict(), models_dir / "model_a.pt")
@@ -92,7 +95,9 @@ def main() -> None:
     # Export Model A to ONNX
     onnx_a_path = models_dir / "model_a.onnx"
     export_a_info = export_probe_to_onnx(model_a, onnx_a_path, in_features=512)
-    print(f"Exported Model A to ONNX: {onnx_a_path.name} | modelHash: {export_a_info['model_hash'][:16]}... | max abs diff: {export_a_info['max_abs_diff']:.2e}")
+    print(
+        f"Exported Model A to ONNX: {onnx_a_path.name} | modelHash: {export_a_info['model_hash'][:16]}... | max abs diff: {export_a_info['max_abs_diff']:.2e}"
+    )
 
     # ----------------------------------------------------
     # 3. Train Model B: MlpProbe
@@ -113,7 +118,9 @@ def main() -> None:
         resume=False,
     )
     t_train_b = time.time() - t0_b
-    print(f"Model B trained in {t_train_b:.2f}s | Best Cal AUC: {res_b['best_cal_auc']:.4f} | Final Cal Metrics: {res_b['final_cal_metrics']}")
+    print(
+        f"Model B trained in {t_train_b:.2f}s | Best Cal AUC: {res_b['best_cal_auc']:.4f} | Final Cal Metrics: {res_b['final_cal_metrics']}"
+    )
 
     # Save PyTorch weights
     torch.save(model_b.state_dict(), models_dir / "model_b.pt")
@@ -121,7 +128,9 @@ def main() -> None:
     # Export Model B to ONNX
     onnx_b_path = models_dir / "model_b.onnx"
     export_b_info = export_probe_to_onnx(model_b, onnx_b_path, in_features=512)
-    print(f"Exported Model B to ONNX: {onnx_b_path.name} | modelHash: {export_b_info['model_hash'][:16]}... | max abs diff: {export_b_info['max_abs_diff']:.2e}")
+    print(
+        f"Exported Model B to ONNX: {onnx_b_path.name} | modelHash: {export_b_info['model_hash'][:16]}... | max abs diff: {export_b_info['max_abs_diff']:.2e}"
+    )
 
     # ----------------------------------------------------
     # 4. Verify Reference CPU Runner & Schema Validity
@@ -149,21 +158,29 @@ def main() -> None:
 
     print(f"Running CPU runner on Real image: {real_img_path.name}...")
     verdict_real_a, evidence_real_a = runner_a.predict_image(real_img_path)
-    print(f"  Model A -> Verdict: {verdict_real_a['onChain']['verdict']} (pFake: {evidence_real_a['aggregate']['pFake']}, pFakeBps: {verdict_real_a['onChain']['pFakeBps']})")
+    print(
+        f"  Model A -> Verdict: {verdict_real_a['onChain']['verdict']} (pFake: {evidence_real_a['aggregate']['pFake']}, pFakeBps: {verdict_real_a['onChain']['pFakeBps']})"
+    )
     assert verdict_real_a["onChain"]["verdict"] in [0, 1, 2]
 
     print(f"Running CPU runner on Synthetic image: {synth_img_path.name}...")
     verdict_synth_a, evidence_synth_a = runner_a.predict_image(synth_img_path)
-    print(f"  Model A -> Verdict: {verdict_synth_a['onChain']['verdict']} (pFake: {evidence_synth_a['aggregate']['pFake']}, pFakeBps: {verdict_synth_a['onChain']['pFakeBps']})")
+    print(
+        f"  Model A -> Verdict: {verdict_synth_a['onChain']['verdict']} (pFake: {evidence_synth_a['aggregate']['pFake']}, pFakeBps: {verdict_synth_a['onChain']['pFakeBps']})"
+    )
     assert verdict_synth_a["onChain"]["verdict"] in [0, 1, 2]
 
-    print(f"Running CPU runner on Real image with Model B...")
+    print("Running CPU runner on Real image with Model B...")
     verdict_real_b, evidence_real_b = runner_b.predict_image(real_img_path)
-    print(f"  Model B -> Verdict: {verdict_real_b['onChain']['verdict']} (pFake: {evidence_real_b['aggregate']['pFake']}, pFakeBps: {verdict_real_b['onChain']['pFakeBps']})")
+    print(
+        f"  Model B -> Verdict: {verdict_real_b['onChain']['verdict']} (pFake: {evidence_real_b['aggregate']['pFake']}, pFakeBps: {verdict_real_b['onChain']['pFakeBps']})"
+    )
 
-    print(f"Running CPU runner on Synthetic image with Model B...")
+    print("Running CPU runner on Synthetic image with Model B...")
     verdict_synth_b, evidence_synth_b = runner_b.predict_image(synth_img_path)
-    print(f"  Model B -> Verdict: {verdict_synth_b['onChain']['verdict']} (pFake: {evidence_synth_b['aggregate']['pFake']}, pFakeBps: {verdict_synth_b['onChain']['pFakeBps']})")
+    print(
+        f"  Model B -> Verdict: {verdict_synth_b['onChain']['verdict']} (pFake: {evidence_synth_b['aggregate']['pFake']}, pFakeBps: {verdict_synth_b['onChain']['pFakeBps']})"
+    )
 
     # Save sample verdict and evidence for inspection
     with open(results_dir / "sample_verdict_model_a.json", "w") as f:

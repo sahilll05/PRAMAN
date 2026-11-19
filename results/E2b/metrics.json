@@ -1,0 +1,206 @@
+{
+  "experiment": "E2b",
+  "task": "T1.5",
+  "date": "2026-11-19 22:57:20",
+  "dataset": "ComplexDataLab/OpenFake (core split zero-shot)",
+  "n_samples": 161,
+  "label_distribution": {
+    "fake": 87,
+    "real": 74
+  },
+  "model_a": {
+    "auc": 0.6541,
+    "accuracy": 0.5652,
+    "brier": 0.2316,
+    "ece": 0.1286,
+    "precision": 0.5659,
+    "recall": 0.8391,
+    "f1": 0.6759
+  },
+  "model_b": {
+    "auc": 0.6707,
+    "accuracy": 0.5901,
+    "brier": 0.3637,
+    "ece": 0.3598,
+    "precision": 0.5766,
+    "recall": 0.908,
+    "f1": 0.7054
+  },
+  "per_model_breakdown": {
+    "flux.1-dev": {
+      "count": 5,
+      "label": "fake",
+      "accuracy_model_a": 0.8
+    },
+    "gpt-image-1": {
+      "count": 9,
+      "label": "fake",
+      "accuracy_model_a": 0.8889
+    },
+    "laion": {
+      "count": 42,
+      "label": "real",
+      "accuracy_model_a": 0.2857
+    },
+    "midjourney-6": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 0.5
+    },
+    "dalle-3": {
+      "count": 5,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sd-turbo": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sd-2.1": {
+      "count": 9,
+      "label": "fake",
+      "accuracy_model_a": 0.6667
+    },
+    "pexels": {
+      "count": 32,
+      "label": "real",
+      "accuracy_model_a": 0.1875
+    },
+    "flux-1.1-pro": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 0.5
+    },
+    "sdxl": {
+      "count": 3,
+      "label": "fake",
+      "accuracy_model_a": 0.6667
+    },
+    "flux.1-schnell": {
+      "count": 4,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "cyberrealistic-pony-v14.1": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "seedream-v4.0": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sd-3.5": {
+      "count": 7,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sdxl-touchofrealism": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "flux-mvc5000": {
+      "count": 5,
+      "label": "fake",
+      "accuracy_model_a": 0.4
+    },
+    "cyberrealistic-pony-v16.0": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sdxl-realvis-v5": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "studio-ghibli-wan2.1-t2v-14b-v1.0": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "stable-diffusion-v1-5": {
+      "count": 3,
+      "label": "fake",
+      "accuracy_model_a": 0.6667
+    },
+    "sdxl-1.0": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "tiny-random-sana": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "anima-preview2": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sd-1.5-dreamshaper": {
+      "count": 3,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "flux.2-klein-4b": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 0.5
+    },
+    "ideogram-3.0": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "flux.2-klein-base-4b": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 0.5
+    },
+    "sdxl-epic-realism": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "qwen-image": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sd-1.5-epicdream": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sd-1.5": {
+      "count": 2,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "pony": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "sdxl-juggernaut": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "grok-imagine": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    },
+    "one-obsession-17-red-sdxl": {
+      "count": 1,
+      "label": "fake",
+      "accuracy_model_a": 1.0
+    }
+  }
+}

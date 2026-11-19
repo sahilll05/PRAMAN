@@ -1,0 +1,14 @@
+{
+  "n_subset": 200,
+  "conditions": [
+    "clean",
+    "jpeg_q95",
+    "jpeg_q75",
+    "jpeg_q50",
+    "jpeg_q30",
+    "resize_075",
+    "resize_050",
+    "gaussian_blur",
+    "gaussian_noise"
+  ]
+}

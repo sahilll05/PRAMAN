@@ -34,7 +34,7 @@ def export_probe_to_onnx(
     # Export to ONNX
     torch.onnx.export(
         model_cpu,
-        dummy_input,
+        (dummy_input,),
         str(output_onnx_path),
         input_names=["input"],
         output_names=["logits"],
@@ -68,9 +68,8 @@ def export_probe_to_onnx(
 
     max_abs_diff = float(np.max(np.abs(pytorch_logits - onnx_logits)))
     if max_abs_diff > tolerance:
-        raise ValueError(
-            f"PyTorch vs ONNX numerical mismatch: max abs diff {max_abs_diff:.6f} > tolerance {tolerance}"
-        )
+        msg = f"PyTorch vs ONNX mismatch: max abs diff {max_abs_diff:.6f} > {tolerance}"
+        raise ValueError(msg)
 
     # Compute canonical modelHash: SHA-256 hex string (no 0x prefix)
     onnx_bytes = output_onnx_path.read_bytes()

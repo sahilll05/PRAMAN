@@ -1,0 +1,41 @@
+{
+  "experiment": "E2",
+  "task": "T1.5",
+  "date": "2026-11-19 22:57:12",
+  "dataset": "CommunityForensics-Small (held-out WarriorMama777/AbyssOrangeMix) + COCO",
+  "n_samples": 56,
+  "model_a": {
+    "auc": 1.0,
+    "accuracy": 1.0,
+    "brier": 0.0642,
+    "ece": 0.2372,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "model_b": {
+    "auc": 0.9949,
+    "accuracy": 0.9643,
+    "brier": 0.0247,
+    "ece": 0.0417,
+    "precision": 0.9643,
+    "recall": 0.9643,
+    "f1": 0.9643
+  },
+  "per_generator_breakdown": {
+    "coco_val2017": {
+      "count": 28,
+      "correct_a": 28,
+      "correct_b": 27,
+      "acc_a": 1.0,
+      "acc_b": 0.9643
+    },
+    "WarriorMama777/AbyssOrangeMix": {
+      "count": 28,
+      "correct_a": 28,
+      "correct_b": 27,
+      "acc_a": 1.0,
+      "acc_b": 0.9643
+    }
+  }
+}

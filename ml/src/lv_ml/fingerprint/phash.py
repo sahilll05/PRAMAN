@@ -17,7 +17,7 @@ import io
 
 import numpy as np
 from PIL import Image
-from scipy.fft import dct  # type: ignore[import-untyped]
+from scipy.fft import dct
 
 
 def compute_phash(image: Image.Image | bytes) -> int:

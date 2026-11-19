@@ -109,20 +109,22 @@ def process_shard_and_filter(
         local_img_path = images_dir / unique_img_name
         img.save(local_img_path, format="PNG")
 
-        accepted_samples.append({
-            "image_name": unique_img_name,
-            "local_path": str(local_img_path),
-            "label": label_val,
-            "model_name": model_name,
-            "real_source": real_src,
-            "sha256": sha256_hash,
-            "phash": sample_phash,
-            "resolution": f"{img.size[0]}x{img.size[1]}",
-        })
+        accepted_samples.append(
+            {
+                "image_name": unique_img_name,
+                "local_path": str(local_img_path),
+                "label": label_val,
+                "model_name": model_name,
+                "real_source": real_src,
+                "sha256": sha256_hash,
+                "phash": sample_phash,
+                "resolution": f"{img.size[0]}x{img.size[1]}",
+            }
+        )
         accepted_phashes.append(sample_phash)
 
         if len(accepted_samples) % 250 == 0:
-            print(f"  Processed {i+1}/{limit} rows -> {len(accepted_samples)} accepted...")
+            print(f"  Processed {i + 1}/{limit} rows -> {len(accepted_samples)} accepted...")
 
     dt = time.time() - t0
     stats = {
@@ -260,9 +262,7 @@ def extract_embeddings_and_benchmark(
         total_time += metrics["total_time_sec"]
 
     overall_fps = total_images / total_time if total_time > 0 else 0.0
-    peak_vram = (
-        torch.cuda.max_memory_allocated() / (1024 * 1024) if device == "cuda" else 0.0
-    )
+    peak_vram = torch.cuda.max_memory_allocated() / (1024 * 1024) if device == "cuda" else 0.0
 
     env_txt_path = results_e0_dir / "env.txt"
     with open(env_txt_path, "w", encoding="utf-8") as f:

@@ -1,5 +1,6 @@
 """PRAMANA ML Evaluation Modules."""
 
+from lv_ml.eval.benchmark import BenchmarkRunner
 from lv_ml.eval.shortcut_audit import (
     equalize_image,
     extract_metadata_features,
@@ -7,6 +8,7 @@ from lv_ml.eval.shortcut_audit import (
 )
 
 __all__ = [
+    "BenchmarkRunner",
     "equalize_image",
     "extract_metadata_features",
     "run_shortcut_audit",

@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
-import open_clip  # type: ignore[import-untyped]
+import open_clip
 import torch
 from torch.utils.data import DataLoader
 

@@ -1,0 +1,174 @@
+{
+  "experiment": "E5b",
+  "task": "T1.5",
+  "date": "2026-11-19 22:58:03",
+  "n_samples": 200,
+  "max_diff_bps": 20,
+  "mean_diff_bps": 3.0,
+  "p99_diff_bps": 14.0,
+  "verdict_mismatches": 0,
+  "verdict_mismatch_rate": 0.0,
+  "elapsed_sec": 14.96,
+  "sample_logs": [
+    {
+      "image_name": "coco_000000226147.jpg",
+      "p_fake_cpu": 0.0831,
+      "p_fake_gpu": 0.0831,
+      "diff_bps": 0,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "AACEE_textual_inversion_cat_00000153.png",
+      "p_fake_cpu": 0.619,
+      "p_fake_gpu": 0.6196,
+      "diff_bps": 6,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "coco_000000052007.jpg",
+      "p_fake_cpu": 0.2212,
+      "p_fake_gpu": 0.221,
+      "diff_bps": 2,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "nota-ai_bk-sdm-small_00000246.png",
+      "p_fake_cpu": 0.7289,
+      "p_fake_gpu": 0.728,
+      "diff_bps": 9,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "coco_000000215259.jpg",
+      "p_fake_cpu": 0.3444,
+      "p_fake_gpu": 0.344,
+      "diff_bps": 4,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "cgburgos_sdxl-1-0-base_00000314.png",
+      "p_fake_cpu": 0.8515,
+      "p_fake_gpu": 0.8516,
+      "diff_bps": 1,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "coco_000000398377.jpg",
+      "p_fake_cpu": 0.135,
+      "p_fake_gpu": 0.1345,
+      "diff_bps": 5,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "EnD-Diffusers_Porcelain-Dusk-Mix-V1_00000289.png",
+      "p_fake_cpu": 0.6135,
+      "p_fake_gpu": 0.6143,
+      "diff_bps": 8,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "coco_000000534673.jpg",
+      "p_fake_cpu": 0.206,
+      "p_fake_gpu": 0.2064,
+      "diff_bps": 4,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "cgburgos_sdxl-1-0-base_00000110.png",
+      "p_fake_cpu": 0.6349,
+      "p_fake_gpu": 0.6338,
+      "diff_bps": 11,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "tensor-diffusion_chilloutmix-NI_00000354.png",
+      "p_fake_cpu": 0.9318,
+      "p_fake_gpu": 0.9318,
+      "diff_bps": 0,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "coco_000000488075.jpg",
+      "p_fake_cpu": 0.1925,
+      "p_fake_gpu": 0.1927,
+      "diff_bps": 2,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "coco_000000010092.jpg",
+      "p_fake_cpu": 0.3673,
+      "p_fake_gpu": 0.3671,
+      "diff_bps": 2,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "WarriorMama777_AbyssOrangeMix2_00000237.png",
+      "p_fake_cpu": 0.7877,
+      "p_fake_gpu": 0.7875,
+      "diff_bps": 2,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "coco_000000101068.jpg",
+      "p_fake_cpu": 0.307,
+      "p_fake_gpu": 0.3072,
+      "diff_bps": 2,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "Sygil_Sygil-Diffusion_00000290.png",
+      "p_fake_cpu": 0.6608,
+      "p_fake_gpu": 0.6607,
+      "diff_bps": 1,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "KORguy_textual_inversion_shirt_00000397.png",
+      "p_fake_cpu": 0.5188,
+      "p_fake_gpu": 0.5187,
+      "diff_bps": 1,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "Crosstyan_BPModel_00000099.png",
+      "p_fake_cpu": 0.7403,
+      "p_fake_gpu": 0.7406,
+      "diff_bps": 3,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    },
+    {
+      "image_name": "nota-ai_bk-sdm-small_00000328.png",
+      "p_fake_cpu": 0.4713,
+      "p_fake_gpu": 0.4704,
+      "diff_bps": 9,
+      "verdict_cpu": 1,
+      "verdict_gpu": 1
+    },
+    {
+      "image_name": "MohitSK_RealisticComicBook_00000092.png",
+      "p_fake_cpu": 0.8113,
+      "p_fake_gpu": 0.8112,
+      "diff_bps": 1,
+      "verdict_cpu": 2,
+      "verdict_gpu": 2
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 """Generate three throwaway testnet private keys and write to .env — no output to stdout."""
+
 import secrets
 from pathlib import Path
 
 root = Path(__file__).parent.parent  # PRAMANA/
 
+
 def gen_key() -> str:
     return "0x" + secrets.token_hex(32)
+
 
 d_key = gen_key()
 a_key = gen_key()
