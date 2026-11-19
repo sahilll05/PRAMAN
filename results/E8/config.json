@@ -1,0 +1,7 @@
+{
+  "temporal_cutoff": "2024-01",
+  "models": [
+    "model_a",
+    "model_b"
+  ]
+}

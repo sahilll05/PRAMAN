@@ -8,3 +8,5 @@ export * from "./schemas.js";
 export * from "./abis.js";
 export * from "./client.js";
 export * from "./actions.js";
+export * from "./keeper.js";
+export * from "./canary.js";

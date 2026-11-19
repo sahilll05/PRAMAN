@@ -51,6 +51,7 @@ Commands:
   attest-verdict   --rpc <url> --key <privKey> --eas <addr> --registry <addr> --schema <uid> --sha256 <hex> --phash <uint64> --wmid <uint64> --model-hash <hex> --preproc-hash <hex> --pfake-bps <bps> --verdict <0|1|2> --evidence-hash <hex> --exp-days <days> [--ref-uid <hex>]
   challenge        --rpc <url> --key <privKey> --eas <addr> --registry <addr> --schema <uid> --target-uid <uid> --model-hash <hex> --pfake-bps <bps> --verdict <0|1|2> --evidence-hash <hex>
   canary           --rpc <url> --key <privKey> --eas <addr> --registry <addr> --schema <uid> --model-hash <hex> --batch-id <hex> --auc-bps <bps> --ece-bps <bps> --cov-bps <bps> -n <num> --labels-hash <hex>
+  supersede-verdict --rpc <url> --key <privKey> --eas <addr> --registry <addr> --schema <uid> --target-uid <uid> --sha256 <hex> --phash <uint64> --wmid <uint64> --model-hash <hex> --preproc-hash <hex> --pfake-bps <bps> --verdict <0|1|2> --evidence-hash <hex> [--exp-days <days>]
   revoke           --rpc <url> --key <privKey> --eas <addr> --registry <addr> --schema <uid> --uid <hex>
   read             --rpc <url> --eas <addr> --registry <addr> --uid <hex> [--verdict-schema <uid>] [--challenge-schema <uid>] [--canary-schema <uid>]
     `);
@@ -179,6 +180,43 @@ Commands:
       console.log(`Revoking attestation ${uid}...`);
       const txHash = await revokeAttestation(clients, schema, uid);
       console.log(`Success: Attestation Revoked. TxHash: ${txHash}`);
+      break;
+    }
+
+    case "supersede-verdict": {
+      const schema = requireArg("--schema") as Hex;
+      const targetUid = requireArg("--target-uid") as Hex;
+      const sha256Hash = requireArg("--sha256") as Hex;
+      const pHash = BigInt(requireArg("--phash"));
+      const wmId = BigInt(requireArg("--wmid"));
+      const modelHash = requireArg("--model-hash") as Hex;
+      const preprocHash = requireArg("--preproc-hash") as Hex;
+      const pFakeBps = Number(requireArg("--pfake-bps"));
+      const verdict = Number(requireArg("--verdict"));
+      const evidenceHash = requireArg("--evidence-hash") as Hex;
+      const expDays = BigInt(getArg("--exp-days") ?? "180");
+
+      console.log(`Keeper superseding verdict ${targetUid}...`);
+      const now = BigInt(Math.floor(Date.now() / 1000));
+      const expirationTime = now + expDays * 24n * 3600n;
+
+      const res = await attestVerdict(clients, {
+        verdictSchemaUID: schema,
+        verdictData: {
+          sha256Hash,
+          pHash,
+          wmId,
+          modelHash,
+          preprocHash,
+          pFakeBps,
+          verdict,
+          evidenceHash,
+        },
+        expirationTime,
+        refUID: targetUid,
+      });
+
+      console.log(`Success: Verdict Superseded. New UID: ${res.uid}, TxHash: ${res.txHash}`);
       break;
     }
 

@@ -1,0 +1,231 @@
+{
+  "experiment": "E8",
+  "task": "T7.4",
+  "date": "2026-11-20 01:55:31",
+  "dataset": "ComplexDataLab/OpenFake Core (temporal partition)",
+  "n_total": 161,
+  "temporal_split": {
+    "cutoff_date": "2024-01",
+    "older_generators": {
+      "n_samples": 128,
+      "n_fake": 54,
+      "n_real": 74,
+      "model_a": {
+        "auc": 0.6346,
+        "accuracy": 0.4922,
+        "brier": 0.258,
+        "ece": 0.1844
+      },
+      "model_b": {
+        "auc": 0.6486,
+        "accuracy": 0.5,
+        "brier": 0.4514,
+        "ece": 0.4532
+      }
+    },
+    "newer_generators": {
+      "n_samples": 107,
+      "n_fake": 33,
+      "n_real": 74,
+      "model_a": {
+        "auc": 0.6859,
+        "accuracy": 0.4299,
+        "brier": 0.2747,
+        "ece": 0.2981
+      },
+      "model_b": {
+        "auc": 0.7068,
+        "accuracy": 0.4393,
+        "brier": 0.4917,
+        "ece": 0.522
+      }
+    },
+    "auc_drop_model_a": -0.0513,
+    "auc_drop_model_b": -0.0582
+  },
+  "flip_rate_analysis": {
+    "total_comparisons": 161,
+    "verdict_flips": 22,
+    "flip_rate": 0.1366,
+    "flip_rate_pct": 13.66,
+    "mean_prob_diff_bps": 2952.0,
+    "max_prob_diff_bps": 6236.7,
+    "per_generator": {
+      "flux.1-dev": {
+        "total": 5,
+        "flips": 1,
+        "flip_rate": 0.2
+      },
+      "gpt-image-1": {
+        "total": 9,
+        "flips": 2,
+        "flip_rate": 0.2222
+      },
+      "laion": {
+        "total": 42,
+        "flips": 4,
+        "flip_rate": 0.0952
+      },
+      "midjourney-6": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "dalle-3": {
+        "total": 5,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sd-turbo": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sd-2.1": {
+        "total": 9,
+        "flips": 2,
+        "flip_rate": 0.2222
+      },
+      "pexels": {
+        "total": 32,
+        "flips": 6,
+        "flip_rate": 0.1875
+      },
+      "flux-1.1-pro": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sdxl": {
+        "total": 3,
+        "flips": 1,
+        "flip_rate": 0.3333
+      },
+      "flux.1-schnell": {
+        "total": 4,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "cyberrealistic-pony-v14.1": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "seedream-v4.0": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sd-3.5": {
+        "total": 7,
+        "flips": 1,
+        "flip_rate": 0.1429
+      },
+      "sdxl-touchofrealism": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "flux-mvc5000": {
+        "total": 5,
+        "flips": 1,
+        "flip_rate": 0.2
+      },
+      "cyberrealistic-pony-v16.0": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sdxl-realvis-v5": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "studio-ghibli-wan2.1-t2v-14b-v1.0": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "stable-diffusion-v1-5": {
+        "total": 3,
+        "flips": 1,
+        "flip_rate": 0.3333
+      },
+      "sdxl-1.0": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "tiny-random-sana": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "anima-preview2": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sd-1.5-dreamshaper": {
+        "total": 3,
+        "flips": 1,
+        "flip_rate": 0.3333
+      },
+      "flux.2-klein-4b": {
+        "total": 2,
+        "flips": 1,
+        "flip_rate": 0.5
+      },
+      "ideogram-3.0": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "flux.2-klein-base-4b": {
+        "total": 2,
+        "flips": 1,
+        "flip_rate": 0.5
+      },
+      "sdxl-epic-realism": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "qwen-image": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sd-1.5-epicdream": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sd-1.5": {
+        "total": 2,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "pony": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "sdxl-juggernaut": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "grok-imagine": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      },
+      "one-obsession-17-red-sdxl": {
+        "total": 1,
+        "flips": 0,
+        "flip_rate": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "n_samples": 100,
+  "thresholds": {
+    "auc_min": 8000,
+    "ece_max": 1500
+  }
+}

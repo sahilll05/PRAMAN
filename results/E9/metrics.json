@@ -1,0 +1,37 @@
+{
+  "experiment": "E9",
+  "task": "T7.4",
+  "date": "2026-11-20 01:56:06",
+  "dataset": "Canary Commit-Reveal Batch (N=100)",
+  "round_1_healthy": {
+    "batch_id": "0x7226e01234712d83475aa86a964d249f4104401cbdd13878983eeb7dbaad5a5c",
+    "labels_commit_hash": "0x9b67902e1cb14b52426abe5e0dd6a6603edb82fa1ff3b0ec385a4a9ccaa3124a",
+    "n": 100,
+    "auc_bps": 10000,
+    "auc_pct": 100.0,
+    "ece_bps": 1153,
+    "ece_pct": 11.53,
+    "coverage_bps": 10000,
+    "is_degraded": false,
+    "status_badge": "ACTIVE"
+  },
+  "round_2_injected_degradation": {
+    "batch_id": "0xfdaeea316b8d57b28ae5698adeabde3328a5c1ebf5897641d4d80d85bd2b2ff1",
+    "labels_commit_hash": "0x6785a744c8f6861332722571f42b68c5434dcb139ee4e39b8859308e20b282f4",
+    "n": 100,
+    "auc_bps": 4816,
+    "auc_pct": 48.16,
+    "ece_bps": 2578,
+    "ece_pct": 25.78,
+    "coverage_bps": 10000,
+    "is_degraded": true,
+    "status_badge": "STALE"
+  },
+  "degradation_rule_validation": {
+    "auc_min_threshold_bps": 8000,
+    "ece_max_threshold_bps": 1500,
+    "degradation_caught": true,
+    "triggers_state_transition": "ACTIVE -> MODEL_DEGRADED (STALE)",
+    "commit_reveal_verified": true
+  }
+}
