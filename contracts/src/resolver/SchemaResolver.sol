@@ -13,6 +13,8 @@ abstract contract SchemaResolver is ISchemaResolver {
     error InsufficientValue();
     error NotPayable();
 
+    error MultiAttestNotSupported();
+
     IEAS internal immutable _eas;
 
     constructor(IEAS eas) {
@@ -35,16 +37,10 @@ abstract contract SchemaResolver is ISchemaResolver {
     }
 
     function multiAttest(
-        Attestation[] calldata attestations,
-        uint256[] calldata values
+        Attestation[] calldata /* attestations */,
+        uint256[] calldata /* values */
     ) external payable override onlyEAS returns (bool) {
-        uint256 total = 0;
-        for (uint256 i = 0; i < attestations.length; i++) {
-            total += values[i];
-            if (!onAttest(attestations[i], values[i])) return false;
-        }
-        if (msg.value < total) revert InsufficientValue();
-        return true;
+        revert MultiAttestNotSupported();
     }
 
     function revoke(Attestation calldata attestation) external payable override onlyEAS returns (bool) {
@@ -53,16 +49,10 @@ abstract contract SchemaResolver is ISchemaResolver {
     }
 
     function multiRevoke(
-        Attestation[] calldata attestations,
-        uint256[] calldata values
+        Attestation[] calldata /* attestations */,
+        uint256[] calldata /* values */
     ) external payable override onlyEAS returns (bool) {
-        uint256 total = 0;
-        for (uint256 i = 0; i < attestations.length; i++) {
-            total += values[i];
-            if (!onRevoke(attestations[i], values[i])) return false;
-        }
-        if (msg.value < total) revert InsufficientValue();
-        return true;
+        revert MultiAttestNotSupported();
     }
 
     function onAttest(Attestation calldata attestation, uint256 value) internal virtual returns (bool);

@@ -1,0 +1,18 @@
+PRAMANA Smart Contracts Slither Static Analysis Report
+============================================================
+
+'forge clean' running (wd: E:\Projects\Blockchain\PRAMANA\contracts)
+'forge config --json' running
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: E:\Projects\Blockchain\PRAMANA\contracts)
+
+INFO:Detectors:
+Detector: timestamp
+VerdictResolver._validateVerdict(Attestation) (src/VerdictResolver.sol#142-205) uses timestamp for comparisons
+	Dangerous comparisons:
+	- attestation.expirationTime <= block.timestamp || attestation.expirationTime > block.timestamp + MAX_TTL (src/VerdictResolver.sol#165-166)
+VerdictResolver._validateChallenge(Attestation) (src/VerdictResolver.sol#207-261) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp >= limit.windowStart + challengeWindow (src/VerdictResolver.sol#224)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Slither:. analyzed (6 contracts with 81 detectors), 2 result(s) found
+
