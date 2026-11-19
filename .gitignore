@@ -29,6 +29,8 @@ node_modules/
 dist/
 *.tsbuildinfo
 pnpm-lock.yaml.bak
+test-results/
+playwright-report/
 
 # ── Foundry ───────────────────────────────────────────────────────────────────
 contracts/out/
