@@ -10,12 +10,15 @@ import {
 
 export const VERDICT_SCHEMA_STR =
   "bytes32 sha256Hash, uint64 pHash, uint64 wmId, bytes32 modelHash, bytes32 preprocHash, uint16 pFakeBps, uint8 verdict, bytes32 evidenceHash";
+export const VERDICT_SCHEMA_STRING = VERDICT_SCHEMA_STR;
 
 export const CHALLENGE_SCHEMA_STR =
   "bytes32 modelHash, uint16 observedPFakeBps, uint8 observedVerdict, bytes32 evidenceHash";
+export const CHALLENGE_SCHEMA_STRING = CHALLENGE_SCHEMA_STR;
 
 export const CANARY_SCHEMA_STR =
   "bytes32 modelHash, bytes32 batchId, uint16 aucBps, uint16 eceBps, uint16 coverageBps, uint32 n, bytes32 labelsCommitHash";
+export const CANARY_SCHEMA_STRING = CANARY_SCHEMA_STR;
 
 const VERDICT_PARAMS = parseAbiParameters(VERDICT_SCHEMA_STR);
 const CHALLENGE_PARAMS = parseAbiParameters(CHALLENGE_SCHEMA_STR);
