@@ -34,29 +34,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans selection:bg-brand-500/20 selection:text-brand-400 transition-colors duration-200 relative">
-        {/* Ambient background glow mesh */}
-        <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-          <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-br from-sky-500/10 via-brand-600/10 to-indigo-600/10 dark:from-sky-500/15 dark:via-brand-600/15 dark:to-indigo-600/15 blur-[120px] rounded-full" />
-          <div className="absolute top-[60%] -left-[200px] w-[500px] h-[400px] bg-sky-500/5 dark:bg-sky-500/10 blur-[100px] rounded-full" />
-          <div className="absolute top-[80%] -right-[200px] w-[500px] h-[400px] bg-brand-500/5 dark:bg-brand-500/10 blur-[100px] rounded-full" />
-        </div>
-
+      <body className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-zinc-200 dark:selection:bg-zinc-800 selection:text-zinc-900 dark:selection:text-zinc-100 transition-colors duration-150 relative">
         {/* Global Navbar */}
         <Navbar />
 
-        {/* Mandatory Research Prototype Banner */}
-        <div className="border-b border-amber-500/20 bg-amber-500/10 px-4 py-2 text-center text-xs text-amber-700 dark:text-amber-300 backdrop-blur-sm">
-          <div className="inline-flex items-center gap-1.5 font-medium">
-            <AlertTriangle className="h-3.5 w-3.5 text-amber-500" />
+        {/* Minimal Research Prototype Disclosure Banner */}
+        <div className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-900/60 px-4 py-1.5 text-center text-xs text-zinc-600 dark:text-zinc-400">
+          <div className="inline-flex items-center gap-1.5 font-normal">
+            <AlertTriangle className="h-3 w-3 text-zinc-500" />
             <span>Research prototype</span>
-            <span className="opacity-60">·</span>
-            <span>AI-generated image analysis only</span>
-            <span className="opacity-60">·</span>
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
+            <span>Still image analysis only</span>
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
             <span>Base Sepolia testnet</span>
-            <span className="opacity-60">·</span>
-            <Link href="/limitations" className="underline underline-offset-2 hover:text-amber-600 dark:hover:text-amber-200">
-              See all limitations →
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
+            <Link href="/limitations" className="underline underline-offset-2 hover:text-zinc-950 dark:hover:text-zinc-100">
+              Limitations
             </Link>
           </div>
         </div>

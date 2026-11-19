@@ -39,7 +39,7 @@ test.describe("PRAMANA Visual Live Verification", () => {
     await page.screenshot({ path: path.join(SCREENSHOT_DIR, "screenshot-dropzone-analyzed.png"), fullPage: true });
 
     // 3. Toggle to Light Mode
-    const themeBtn = page.locator('button[aria-label="Toggle color theme"]');
+    const themeBtn = page.locator('button[aria-label*="mode"]');
     if (await themeBtn.isVisible()) {
       await themeBtn.click();
       await page.waitForTimeout(400);

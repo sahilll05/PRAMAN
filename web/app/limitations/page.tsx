@@ -11,60 +11,60 @@ export default function LimitationsPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-10 py-6">
       <div className="space-y-3">
-        <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 text-xs font-semibold text-amber-600 dark:text-amber-400">
-          <AlertTriangle className="h-4 w-4" />
+        <div className="inline-flex items-center gap-2 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-3 py-1 text-xs font-mono text-zinc-700 dark:text-zinc-300">
+          <AlertTriangle className="h-3.5 w-3.5 text-zinc-500" />
           Mandatory disclosure before relying on any verdict
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
           System Limitations & Scope
         </h1>
-        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+        <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
           PRAMANA is an open research prototype. The following limitations are real and must be understood
           before interpreting any output.
         </p>
       </div>
 
       {/* Core limitations grid */}
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-3.5">
         {LIMITATIONS.map((lim) => (
           <LimitationCard key={lim.title} {...lim} />
         ))}
       </div>
 
       {/* Allowed and forbidden wording */}
-      <div className="rounded-3xl border border-slate-200/80 bg-white/80 dark:border-slate-800/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-sm p-6 sm:p-8 space-y-6">
+      <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6 sm:p-7 space-y-5">
         <div>
-          <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <Shield className="h-5 w-5 text-brand-500" />
-            Permitted vs. Prohibited Communication Wording
+          <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+            <Shield className="h-4 w-4 text-zinc-700 dark:text-zinc-300" />
+            Permitted vs. Forbidden Communication Wording
           </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-            Strict epistemic integrity standards enforced in all reports, UI claims, and documentation.
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+            Strict epistemic integrity standards enforced across all reports and claims.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5 space-y-3">
-            <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4" /> Permitted Wording
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/70 dark:bg-zinc-950/60 p-4 space-y-2.5">
+            <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5 uppercase font-mono">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Permitted Wording
             </p>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+            <ul className="space-y-1.5 text-xs text-zinc-700 dark:text-zinc-300">
               {ALLOWED.map((w) => (
                 <li key={w} className="flex gap-2">
-                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span className="text-emerald-600 font-bold">✓</span>
                   <span>{w}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-rose-500/20 bg-rose-500/5 p-5 space-y-3">
-            <p className="text-sm font-bold text-rose-600 dark:text-rose-400 flex items-center gap-2">
-              <XCircle className="h-4 w-4" /> Forbidden Wording
+          <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/70 dark:bg-zinc-950/60 p-4 space-y-2.5">
+            <p className="text-xs font-bold text-rose-700 dark:text-rose-400 flex items-center gap-1.5 uppercase font-mono">
+              <XCircle className="h-3.5 w-3.5" /> Forbidden Wording
             </p>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+            <ul className="space-y-1.5 text-xs text-zinc-700 dark:text-zinc-300">
               {FORBIDDEN.map((w) => (
                 <li key={w} className="flex gap-2">
-                  <span className="text-rose-500 font-bold">✕</span>
+                  <span className="text-rose-600 font-bold">✕</span>
                   <span>{w}</span>
                 </li>
               ))}
@@ -74,11 +74,11 @@ export default function LimitationsPage() {
       </div>
 
       {/* Experiment citations */}
-      <div className="rounded-3xl border border-brand-500/20 bg-brand-500/5 dark:bg-brand-950/20 p-6 sm:p-7 space-y-3 backdrop-blur-sm">
-        <p className="font-bold text-brand-900 dark:text-brand-300 flex items-center gap-2 text-sm sm:text-base">
-          <Info className="h-4 w-4 text-brand-500" /> Key Measured Quantities (from internal experiments)
+      <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/40 dark:bg-zinc-900/30 p-6 space-y-3">
+        <p className="font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2 text-sm">
+          <Info className="h-4 w-4 text-zinc-500" /> Key Measured Quantities (from internal experiments)
         </p>
-        <ul className="text-xs sm:text-sm text-brand-800 dark:text-brand-300 space-y-1.5 leading-relaxed">
+        <ul className="text-xs text-zinc-600 dark:text-zinc-400 space-y-1.5 leading-relaxed font-mono">
           <li>• In-domain AUC: 0.9891 (Model A), 0.9957 (Model B) — E1</li>
           <li>• Generator-disjoint AUC: 1.0000 (Model A) — E2</li>
           <li>• Cross-dataset recall on OpenFake Core (Flux, DALL·E 3, SD3.5): 83.9% / 90.8% — E2b</li>
@@ -88,7 +88,7 @@ export default function LimitationsPage() {
           <li>• CPU-GPU agreement: max 20 bps, mean 3.0 bps — E5b</li>
           <li>• Shortcut audit: metadata AUC 1.0 on raw format; equalized AUC ≥0.98 — E13</li>
         </ul>
-        <p className="text-[11px] text-slate-400 dark:text-slate-400 pt-1">
+        <p className="text-[11px] text-zinc-400 dark:text-zinc-500 pt-1">
           Source: internal experiments on CommunityForensics-Small + OpenFake datasets (CC-BY-NC-SA-4.0 / CC-BY-NC-4.0).
         </p>
       </div>
@@ -96,9 +96,9 @@ export default function LimitationsPage() {
       <div className="text-center pt-2">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 rounded-2xl bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-brand-500/20 transition-all hover:scale-[1.02]"
+          className="inline-flex items-center gap-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white px-5 py-2.5 text-xs font-semibold shadow-sm transition-colors"
         >
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-3.5 w-3.5" />
           Back to Verifier
         </Link>
       </div>
@@ -117,25 +117,25 @@ function LimitationCard({
 }) {
   const styles = {
     high: {
-      border: "border-rose-500/30 bg-rose-500/10 dark:border-rose-500/20 dark:bg-rose-950/30",
-      icon: <AlertTriangle className="h-5 w-5 text-rose-500 flex-shrink-0 mt-0.5" />,
+      border: "border-rose-500/20 bg-rose-500/5",
+      icon: <AlertTriangle className="h-4 w-4 text-rose-600 dark:text-rose-400 flex-shrink-0 mt-0.5" />,
     },
     medium: {
-      border: "border-amber-500/30 bg-amber-500/10 dark:border-amber-500/20 dark:bg-amber-950/30",
-      icon: <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />,
+      border: "border-amber-500/20 bg-amber-500/5",
+      icon: <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />,
     },
     info: {
-      border: "border-slate-200/80 bg-white/80 dark:border-slate-800/80 dark:bg-slate-900/80",
-      icon: <Info className="h-5 w-5 text-sky-500 flex-shrink-0 mt-0.5" />,
+      border: "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50",
+      icon: <Info className="h-4 w-4 text-zinc-500 flex-shrink-0 mt-0.5" />,
     },
   };
   const s = styles[severity];
   return (
-    <div className={`rounded-2xl border ${s.border} p-5 sm:p-6 flex gap-4 backdrop-blur-sm shadow-sm transition-colors`}>
+    <div className={`rounded-xl border ${s.border} p-4 sm:p-5 flex gap-3.5 transition-colors`}>
       {s.icon}
       <div>
-        <p className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">{title}</p>
-        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">{body}</p>
+        <p className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm">{title}</p>
+        <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1 leading-relaxed">{body}</p>
       </div>
     </div>
   );

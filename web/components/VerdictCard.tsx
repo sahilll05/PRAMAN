@@ -28,45 +28,45 @@ export function VerdictCard({ verdict }: VerdictCardProps) {
   const pFakePercent = verdict.pFakeBps / 100;
 
   return (
-    <div className="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 shadow-lg backdrop-blur-xl overflow-hidden transition-all duration-200">
-      {/* Header accent strip */}
+    <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 overflow-hidden transition-colors">
+      {/* Accent hairline */}
       <div
         className={
           isSynthetic
-            ? "h-2 bg-gradient-to-r from-rose-500 via-red-500 to-amber-500"
+            ? "h-1 bg-rose-600 dark:bg-rose-500"
             : isAuthentic
-            ? "h-2 bg-gradient-to-r from-emerald-400 via-teal-500 to-sky-500"
-            : "h-2 bg-gradient-to-r from-slate-400 to-slate-600"
+            ? "h-1 bg-emerald-600 dark:bg-emerald-500"
+            : "h-1 bg-zinc-400 dark:bg-zinc-600"
         }
       />
 
-      <div className="p-6 sm:p-7 space-y-6">
+      <div className="p-5 sm:p-6 space-y-5">
         {/* Top row: Verdict Header & Badge */}
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               {isSynthetic ? (
-                <ShieldAlert className="h-6 w-6 text-rose-500" />
+                <ShieldAlert className="h-5 w-5 text-rose-600 dark:text-rose-400" />
               ) : isAuthentic ? (
-                <ShieldCheck className="h-6 w-6 text-emerald-500" />
+                <ShieldCheck className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               ) : (
-                <AlertCircle className="h-6 w-6 text-slate-400" />
+                <AlertCircle className="h-5 w-5 text-zinc-400" />
               )}
               <h3
                 className={
                   isSynthetic
-                    ? "text-2xl font-extrabold text-rose-600 dark:text-rose-400 tracking-tight"
+                    ? "text-xl font-bold text-rose-700 dark:text-rose-400 tracking-tight"
                     : isAuthentic
-                    ? "text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 tracking-tight"
-                    : "text-2xl font-extrabold text-slate-500 dark:text-slate-400 tracking-tight"
+                    ? "text-xl font-bold text-emerald-700 dark:text-emerald-400 tracking-tight"
+                    : "text-xl font-bold text-zinc-600 dark:text-zinc-400 tracking-tight"
                 }
               >
                 {verdictLabel(verdict.verdict)}
               </h3>
             </div>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Calibrated Statistical Likelihood:{" "}
-              <strong className="text-slate-900 dark:text-white font-bold">{pFakePct(verdict.pFakeBps)}</strong>{" "}
+            <p className="text-xs text-zinc-600 dark:text-zinc-400">
+              Calibrated statistical likelihood:{" "}
+              <strong className="text-zinc-900 dark:text-zinc-100 font-mono font-semibold">{pFakePct(verdict.pFakeBps)}</strong>{" "}
               synthetic confidence
             </p>
           </div>
@@ -74,27 +74,27 @@ export function VerdictCard({ verdict }: VerdictCardProps) {
           <StatusBadge badge={badge} />
         </div>
 
-        {/* Probability Meter Bar */}
+        {/* Minimal Probability Meter Bar */}
         <div className="space-y-1.5">
-          <div className="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+          <div className="flex justify-between text-[10px] font-mono uppercase text-zinc-400 dark:text-zinc-500">
             <span>Authentic (0%)</span>
-            <span>Threshold (50%)</span>
+            <span>Decision Boundary (50%)</span>
             <span>Synthetic (100%)</span>
           </div>
-          <div className="relative h-3 w-full rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden p-0.5">
+          <div className="relative h-2 w-full rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
             <div
-              className={`h-full rounded-full transition-all duration-500 ${
+              className={`h-full rounded-full transition-all duration-300 ${
                 isSynthetic
-                  ? "bg-gradient-to-r from-amber-500 to-rose-500"
-                  : "bg-gradient-to-r from-emerald-400 to-teal-500"
+                  ? "bg-rose-600 dark:bg-rose-500"
+                  : "bg-emerald-600 dark:bg-emerald-500"
               }`}
-              style={{ width: `${Math.min(Math.max(pFakePercent, 4), 100)}%` }}
+              style={{ width: `${Math.min(Math.max(pFakePercent, 3), 100)}%` }}
             />
           </div>
         </div>
 
         {/* Key Metadata Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
           <MetaCard label="Attested" value={formatTs(verdict.time)} />
           <MetaCard label="Expires" value={formatTs(verdict.expirationTime)} />
           <MetaCard label="Attester Node" value={truncateAddr(verdict.attester)} mono />
@@ -102,24 +102,24 @@ export function VerdictCard({ verdict }: VerdictCardProps) {
         </div>
 
         {/* Action Link Row */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100 dark:border-slate-800/80">
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
           <Link
             href={`/verdicts/${verdict.uid}`}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline"
           >
-            <span>View Full EAS Attestation & Timeline</span>
-            <ExternalLink className="h-3.5 w-3.5" />
+            <span>View full EAS attestation & timeline</span>
+            <ExternalLink className="h-3 w-3" />
           </Link>
 
           {verdict.evidenceHash && verdict.evidenceHash !== "0x" + "00".repeat(32) && (
-            <span className="text-[11px] font-mono text-slate-400">
+            <span className="text-[10px] font-mono text-zinc-400">
               Evidence: {truncateHash(verdict.evidenceHash)}
             </span>
           )}
         </div>
 
-        <p className="text-[11px] text-slate-400 dark:text-slate-400 leading-normal">
-          Model-assessed likelihood only — not a ruling. Live on Base Sepolia testnet.
+        <p className="text-[11px] text-zinc-500 dark:text-zinc-500 leading-normal">
+          Model-assessed likelihood only — not a ruling. Anchored onto Base Sepolia testnet.
         </p>
       </div>
     </div>
@@ -128,21 +128,21 @@ export function VerdictCard({ verdict }: VerdictCardProps) {
 
 function MetaCard({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
   return (
-    <div className="rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800/60 p-3 space-y-0.5">
-      <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">{label}</p>
-      <p className={`text-xs font-semibold ${mono ? "font-mono text-slate-800 dark:text-slate-200" : "text-slate-900 dark:text-slate-100"} truncate`}>
+    <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950/70 p-2.5 border border-zinc-200/60 dark:border-zinc-800">
+      <p className="text-[10px] font-mono uppercase text-zinc-400 dark:text-zinc-500">{label}</p>
+      <p className={`text-xs font-medium text-zinc-800 dark:text-zinc-200 mt-0.5 truncate ${mono ? "font-mono" : ""}`}>
         {value}
       </p>
     </div>
   );
 }
 
-function truncateAddr(addr: string): string {
-  if (!addr || addr.length < 10) return addr;
-  return addr.slice(0, 6) + "…" + addr.slice(-4);
+function truncateAddr(addr: string) {
+  if (!addr || addr.length < 12) return addr || "—";
+  return `${addr.slice(0, 6)}…${addr.slice(-4)}`;
 }
 
-function truncateHash(h: string): string {
-  if (!h || h.length < 10) return h;
-  return h.slice(0, 8) + "…" + h.slice(-6);
+function truncateHash(hash: string) {
+  if (!hash || hash.length < 16) return hash || "—";
+  return `${hash.slice(0, 8)}…${hash.slice(-6)}`;
 }

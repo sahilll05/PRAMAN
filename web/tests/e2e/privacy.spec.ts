@@ -92,7 +92,7 @@ test.describe("PRAMANA Privacy Guarantee (Task T6.4, Claim C9)", () => {
     expect(mediaViolations.length).toBe(0);
 
     // 8. Confirm fingerprints are visible and correct
-    const shaRow = page.locator("text=SHA-256").locator("..");
+    const shaRow = page.locator("text=SHA-256").first().locator("..");
     await expect(shaRow).toBeVisible();
   });
 });

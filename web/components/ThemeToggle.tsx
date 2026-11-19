@@ -45,12 +45,12 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       type="button"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="relative flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/80 bg-white/80 dark:border-slate-800 dark:bg-slate-900/80 text-slate-600 dark:text-slate-300 shadow-sm backdrop-blur-sm transition-all hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-95"
+      className="relative flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800"
     >
       {theme === "dark" ? (
-        <Sun className="h-4 w-4 text-amber-400 transition-transform duration-200 hover:rotate-45" />
+        <Sun className="h-4 w-4 text-zinc-200 transition-transform duration-200 hover:rotate-45" />
       ) : (
-        <Moon className="h-4 w-4 text-sky-600 transition-transform duration-200 hover:-rotate-12" />
+        <Moon className="h-4 w-4 text-zinc-800 transition-transform duration-200 hover:-rotate-12" />
       )}
     </button>
   );
