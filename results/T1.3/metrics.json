@@ -1,0 +1,40 @@
+{
+  "task": "T1.3",
+  "date": "2026-11-19 22:46:51",
+  "device": "cuda",
+  "model_a": {
+    "name": "ClipLinearProbe",
+    "train_time_sec": 1.91,
+    "best_cal_auc": 0.9915,
+    "cal_metrics": {
+      "auc": 0.9915,
+      "accuracy": 0.9409,
+      "brier": 0.0824,
+      "ece": 0.1976,
+      "loss": 0.3157
+    },
+    "model_hash": "b061468a9abc417e5f6770086b4637d3e9b4d4f907a2b0b78876be92c69790d3",
+    "onnx_size_bytes": 4355,
+    "max_abs_diff_onnx": 1.430511474609375e-06
+  },
+  "model_b": {
+    "name": "MlpProbe",
+    "train_time_sec": 2.81,
+    "best_cal_auc": 0.9983,
+    "cal_metrics": {
+      "auc": 0.9983,
+      "accuracy": 0.9773,
+      "brier": 0.0164,
+      "ece": 0.0079,
+      "loss": 0.0534
+    },
+    "model_hash": "f0983e3627fd8033f137a153061655683cdf89ec55f71c8e6a2167263c3ccf86",
+    "onnx_size_bytes": 533078,
+    "max_abs_diff_onnx": 3.0517578125e-05
+  },
+  "acceptance_criteria": {
+    "models_saved": true,
+    "training_curves_logged": true,
+    "cpu_onnx_path_validates_schemas": true
+  }
+}

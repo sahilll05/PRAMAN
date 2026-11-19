@@ -1,0 +1,59 @@
+{
+  "specVersion": "0.1.0-draft",
+  "createdAt": "2026-11-19T17:16:51.304446Z",
+  "attester": "0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF",
+  "fileMeta": {
+    "sha256": "6287d00fe8340bb3f5b8069169d0d6a9000c431535ed91928956ebb6e8a2f4bc",
+    "size": 444449,
+    "mime": "image/png"
+  },
+  "fingerprints": {
+    "sha256Hash": "6287d00fe8340bb3f5b8069169d0d6a9000c431535ed91928956ebb6e8a2f4bc",
+    "pHash": "319e6ce0e8b36c8a",
+    "wmId": "0"
+  },
+  "model": {
+    "hash": "b061468a9abc417e5f6770086b4637d3e9b4d4f907a2b0b78876be92c69790d3",
+    "uri": "https://models.pramana.example/clip-linear-probe-v0.1.0.onnx",
+    "name": "clip-linear-probe",
+    "version": "0.1.0"
+  },
+  "preprocHash": "31f18fa7aa9bae0bc79ba37fc529afbd6aa2a23f7c4603015745956feb46749d",
+  "libs": {
+    "python": "3.11.0",
+    "onnxruntime": "1.32.0",
+    "pillow": "13.0.0",
+    "numpy": "2.4.6"
+  },
+  "perFrame": [
+    {
+      "idx": 0,
+      "pFake": 0.7381,
+      "oodScore": 0.0,
+      "predSet": [
+        2
+      ]
+    }
+  ],
+  "aggregate": {
+    "rule": "clip_probe_v1",
+    "pFake": 0.7381,
+    "verdict": 2
+  },
+  "calibration": {
+    "T": 1.0,
+    "alpha": 0.1,
+    "qhat": 0.9,
+    "calSetId": "balanced_cal_v1"
+  },
+  "oodGate": {
+    "metric": "mahalanobis",
+    "threshold": 100.0,
+    "percentile": 99.0
+  },
+  "runtime": {
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "os": "Windows 10"
+  },
+  "reproduceCommand": "python -m lv_ml.runner.cpu_runner --image bguisard_stable-diffusion-nano-2-1_00000161.png --model model_a.onnx"
+}

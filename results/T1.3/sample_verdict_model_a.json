@@ -1,0 +1,15 @@
+{
+  "specVersion": "0.1.0-draft",
+  "evidenceHash": "c1ca534d515861af5d896d5275952a32ff3c592e5b0cf6efcf7879b81b7f0eed",
+  "onChain": {
+    "sha256Hash": "6287d00fe8340bb3f5b8069169d0d6a9000c431535ed91928956ebb6e8a2f4bc",
+    "pHash": "319e6ce0e8b36c8a",
+    "wmId": "0",
+    "modelHash": "b061468a9abc417e5f6770086b4637d3e9b4d4f907a2b0b78876be92c69790d3",
+    "preprocHash": "31f18fa7aa9bae0bc79ba37fc529afbd6aa2a23f7c4603015745956feb46749d",
+    "pFakeBps": 7381,
+    "verdict": 2,
+    "evidenceHash": "c1ca534d515861af5d896d5275952a32ff3c592e5b0cf6efcf7879b81b7f0eed",
+    "expirationTime": 1810660611
+  }
+}
