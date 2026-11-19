@@ -131,7 +131,9 @@ def run_shortcut_audit(
     equalized_dir = root / "dataset" / "equalized_cache"
     equalized_dir.mkdir(parents=True, exist_ok=True)
 
-    def process_equalized_records(records: list[dict[str, Any]], split_tag: str) -> list[dict[str, Any]]:
+    def process_equalized_records(
+        records: list[dict[str, Any]], split_tag: str
+    ) -> list[dict[str, Any]]:
         eq_records = []
         for i, r in enumerate(records):
             orig_p = root / r["local_path"]

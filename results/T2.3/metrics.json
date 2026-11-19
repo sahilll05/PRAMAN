@@ -1,0 +1,46 @@
+{
+  "git_sha": "b1a5e0bdffeafef03ca022a57f0b039b34067a5e",
+  "alpha": 0.1,
+  "model_a": {
+    "q_hat": 0.2819605134164991,
+    "cal_stats": {
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9022727272727272,
+      "average_set_size": 0.9295454545454546,
+      "singleton_rate": 0.9295454545454546,
+      "empty_rate": 0.07045454545454545,
+      "ambiguous_rate": 0.0,
+      "q_hat": 0.2819605134164991
+    },
+    "test_stats": {
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.8909090909090909,
+      "average_set_size": 0.9227272727272727,
+      "singleton_rate": 0.9227272727272727,
+      "empty_rate": 0.07727272727272727,
+      "ambiguous_rate": 0.0,
+      "q_hat": 0.2819605134164991
+    }
+  },
+  "model_b": {
+    "q_hat": 0.05077847309431183,
+    "cal_stats": {
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9022727272727272,
+      "average_set_size": 0.9045454545454545,
+      "singleton_rate": 0.9045454545454545,
+      "empty_rate": 0.09545454545454546,
+      "ambiguous_rate": 0.0,
+      "q_hat": 0.05077847309431183
+    },
+    "test_stats": {
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9045454545454545,
+      "average_set_size": 0.9136363636363637,
+      "singleton_rate": 0.9136363636363637,
+      "empty_rate": 0.08636363636363636,
+      "ambiguous_rate": 0.0,
+      "q_hat": 0.05077847309431183
+    }
+  }
+}

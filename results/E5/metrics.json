@@ -1,0 +1,24 @@
+{
+  "experiment": "E5",
+  "task": "T2.7",
+  "date": "2026-11-19 23:48:48",
+  "git_sha": "b1a5e0bdffeafef03ca022a57f0b039b34067a5e",
+  "n_samples": 200,
+  "elapsed_seconds": 26.11,
+  "throughput_img_per_sec": 15.32,
+  "max_diff_bps": 0,
+  "mean_diff_bps": 0.0,
+  "p99_diff_bps": 0.0,
+  "p999_diff_bps": 0.0,
+  "verdict_mismatches": 0,
+  "verdict_mismatch_rate": 0.0,
+  "sha256_match_rate": 1.0,
+  "phash_match_rate": 1.0,
+  "target_met": true,
+  "recommended_epsilon_bps": 10,
+  "system": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "python": "3.11.0"
+  }
+}

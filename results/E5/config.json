@@ -1,0 +1,7 @@
+{
+  "split": "balanced_test_indomain.json",
+  "n_samples": 200,
+  "runner": "ReferenceRunner (CPU ONNX fp32, single-thread)",
+  "onnx_model_a": "model_a.onnx",
+  "onnx_model_b": "model_b.onnx"
+}

@@ -1,0 +1,7 @@
+{
+  "experiment": "E4",
+  "alpha": 0.1,
+  "percentile_ood": 99.0,
+  "temperature_a": 0.23441274721323055,
+  "temperature_b": 0.9821249458269046
+}

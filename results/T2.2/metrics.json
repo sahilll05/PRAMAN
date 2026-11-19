@@ -1,0 +1,8 @@
+{
+  "git_sha": "b1a5e0bdffeafef03ca022a57f0b039b34067a5e",
+  "percentile": 99.0,
+  "ood_threshold": 39.09624490918883,
+  "cal_ood_rate": 0.011363636363636364,
+  "test_indomain_ood_rate": 0.013636363636363636,
+  "test_disjoint_ood_rate": 0.03571428571428571
+}

@@ -1,0 +1,29 @@
+{
+  "git_sha": "b1a5e0bdffeafef03ca022a57f0b039b34067a5e",
+  "temperature_a": 0.23441274721323055,
+  "temperature_b": 0.9821249458269046,
+  "model_a_test_metrics_uncalibrated": {
+    "ece_equal_mass": 0.19648006292568013,
+    "ece_equal_width": 0.2036155798726461,
+    "brier_score": 0.08605839023520699,
+    "nll": 0.3242405874669805
+  },
+  "model_a_test_metrics_calibrated": {
+    "ece_equal_mass": 0.039917361792587,
+    "ece_equal_width": 0.04055586044818459,
+    "brier_score": 0.046919418986103266,
+    "nll": 0.15376923303191603
+  },
+  "model_b_test_metrics_uncalibrated": {
+    "ece_equal_mass": 0.016019134227580462,
+    "ece_equal_width": 0.017113457154861126,
+    "brier_score": 0.023026960593292876,
+    "nll": 0.08522558624030126
+  },
+  "model_b_test_metrics_calibrated": {
+    "ece_equal_mass": 0.016274066844506038,
+    "ece_equal_width": 0.017488692232334978,
+    "brier_score": 0.02306179861840412,
+    "nll": 0.08573859744112386
+  }
+}

@@ -3,7 +3,7 @@
 > **Evidence-Driven, Temporally Validated, and Challengeable AI-Generated Image Authenticity Verification**  
 > *A decentralized protocol and reference implementation deployed on Base Sepolia testnet.*
 
-[![CI - Python Tests](https://img.shields.io/badge/pytest-20%20passed-brightgreen.svg)](#testing--verification)
+[![CI - Python Tests](https://img.shields.io/badge/pytest-25%20passed-brightgreen.svg)](#testing--verification)
 [![CI - TypeScript Tests](https://img.shields.io/badge/vitest-3%20passed-brightgreen.svg)](#testing--verification)
 [![Smart Contracts](https://img.shields.io/badge/foundry-forge-blue.svg)](#smart-contracts--eas)
 [![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#protocol-architecture)
@@ -85,6 +85,8 @@ All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/Comm
 | **E2b** | Cross-Dataset (Zero-Shot) | OpenFake core sample ($N=161$): Flux.1, DALL-E 3, SD 3.5, GPT-Image-1, SDXL | **Synthetic Recall: 83.9% / 90.8%**<br>Zero-shot AUC: 0.6541 / 0.6707<br>Uncalibrated ECE: 0.1286 / 0.3598 | **DOCUMENTED** (Reflects expected cross-dataset domain shift) |
 | **E2c** | In-The-Wild Evaluation | OpenFake Reddit social media images ($N=62$) | **Synthetic Recall: 100.0% / 96.4%**<br>AUC: 0.8571 / 0.7096 | **DOCUMENTED** (High recall under social distribution) |
 | **E3** | Transformation Robustness | Stress test on $N=200$ images under JPEG (Q95, Q75, Q50, Q30), resize (0.75, 0.50), blur, and noise | **AUC remains $>0.962$** under all conditions (JPEG Q30 AUC: 0.9828, 50% resize AUC: 0.9684) | **PASSED** (Stable under heavy degradation) |
+| **E4** | Risk-Coverage & Abstention | Temperature scaling, Mahalanobis OOD gate, and Split Conformal Prediction evaluated on shifted OpenFake data | **Selective Acc @ 80% cov: 61.2%** (vs 59.0% at 100% cov)<br>Unified Engine Acc: **67.0%** at 58.4% natural coverage<br>In-domain calibrated ECE: **0.0399 / 0.0163** | **PASSED** (Target met: positive abstention value under generator shift) |
+| **E5** | Determinism (CPU-CPU) | Independent CPU ReferenceRunner executions on $N=200$ test images | **Max diff: 0 bps (0.00%)**<br>Mean diff: 0.00 bps<br>**Verdict mismatch rate: 0.0%** (0/200) | **PASSED** (Bit-level determinism confirmed, $\epsilon=10$ bps) |
 | **E5b** | CPU-vs-GPU Parity | Numerical difference between GPU fp16 and CPU ONNX fp32 on $N=200$ images | **Max diff: 20 bps (0.20%)**<br>Mean diff: 3.0 bps (0.030%)<br>**Verdict mismatch rate: 0.0%** | **PASSED** (Tolerance bounded within 25 bps) |
 | **E13** | Shortcut Audit | Metadata-only classification vs. uniform equalization (224px, JPEG Q85) | **Equalized AUC: 0.9818 / 0.9911**<br>$\Delta \text{AUC}: -0.0073 / -0.0046$ | **PASSED** (Eliminates container metadata shortcuts) |
 

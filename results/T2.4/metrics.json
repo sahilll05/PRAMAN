@@ -1,0 +1,31 @@
+{
+  "git_sha": "b1a5e0bdffeafef03ca022a57f0b039b34067a5e",
+  "test_indomain": {
+    "total_samples": 440,
+    "abstained_samples": 74,
+    "abstention_rate": 0.16818181818181818,
+    "coverage": 0.8318181818181818,
+    "selective_accuracy": 0.9890710382513661,
+    "overall_accuracy": 0.8227272727272728,
+    "reasons_tally": {
+      "CONFORMAL_UNCERTAINTY_MODEL_B_SIZE_0": 38,
+      "CONFORMAL_UNCERTAINTY_MODEL_A_SIZE_0": 34,
+      "ENSEMBLE_MODEL_DISAGREEMENT": 28,
+      "OOD_DISTANCE_EXCEEDED": 6
+    }
+  },
+  "test_disjoint": {
+    "total_samples": 56,
+    "abstained_samples": 9,
+    "abstention_rate": 0.16071428571428573,
+    "coverage": 0.8392857142857143,
+    "selective_accuracy": 1.0,
+    "overall_accuracy": 0.8392857142857143,
+    "reasons_tally": {
+      "CONFORMAL_UNCERTAINTY_MODEL_B_SIZE_0": 6,
+      "OOD_DISTANCE_EXCEEDED": 2,
+      "CONFORMAL_UNCERTAINTY_MODEL_A_SIZE_0": 1,
+      "ENSEMBLE_MODEL_DISAGREEMENT": 2
+    }
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "experiment": "E4",
+  "task": "T2.5",
+  "date": "2026-11-19 23:45:26",
+  "target_1_ece_le_0_10_shifted": {
+    "achieved": false,
+    "details": {
+      "openfake_core_model_a_cal_ece": 0.2937818095933798,
+      "openfake_core_model_b_cal_ece": 0.3358000410135587,
+      "openfake_core_ensemble_cal_ece": 0.31200972166546237,
+      "openfake_reddit_model_a_cal_ece": 0.7542011803764563,
+      "openfake_reddit_model_b_cal_ece": 0.7613496900908931,
+      "openfake_reddit_ensemble_cal_ece": 0.7577754352336747
+    }
+  },
+  "target_2_selective_acc_80_gt_100": {
+    "achieved": true,
+    "details": {
+      "core_acc_80": 0.6124031007751938,
+      "core_acc_100": 0.5900621118012422,
+      "reddit_acc_80": 0.14814814814814814,
+      "reddit_acc_100": 0.20588235294117646
+    }
+  },
+  "openfake_core": {
+    "dataset_name": "OpenFake Core (Cross-Dataset Shift)",
+    "n_samples": 161,
+    "synthetic_count": 87,
+    "authentic_count": 74,
+    "baseline_accuracy_100pct_coverage": 0.5900621118012422,
+    "calibration": {
+      "model_a_uncalibrated": {
+        "ece_equal_mass": 0.1323162837428336,
+        "ece_equal_width": 0.09924679679900225,
+        "brier_score": 0.23164609462003868,
+        "nll": 0.650138148484842
+      },
+      "model_a_calibrated": {
+        "ece_equal_mass": 0.2937818095933798,
+        "ece_equal_width": 0.307738366764224,
+        "brier_score": 0.3191936655053553,
+        "nll": 1.0828721990184962
+      },
+      "model_b_uncalibrated": {
+        "ece_equal_mass": 0.33489190442341743,
+        "ece_equal_width": 0.3796818244580332,
+        "brier_score": 0.363698493912712,
+        "nll": 2.107696252229949
+      },
+      "model_b_calibrated": {
+        "ece_equal_mass": 0.3358000410135587,
+        "ece_equal_width": 0.3719764811152605,
+        "brier_score": 0.3645429283972073,
+        "nll": 2.1431564468361053
+      },
+      "ensemble_calibrated": {
+        "ece_equal_mass": 0.31200972166546237,
+        "ece_equal_width": 0.3198691189080449,
+        "brier_score": 0.32689284433971216,
+        "nll": 1.1750073825837337
+      }
+    },
+    "conformal_coverage": {
+      "model_a": {
+        "nominal_coverage": 0.9,
+        "empirical_coverage": 0.4782608695652174,
+        "average_set_size": 0.7888198757763976,
+        "singleton_rate": 0.7888198757763976,
+        "empty_rate": 0.2111801242236025,
+        "ambiguous_rate": 0.0,
+        "q_hat": 0.2819605134164991
+      },
+      "model_b": {
+        "nominal_coverage": 0.9,
+        "empirical_coverage": 0.4782608695652174,
+        "average_set_size": 0.7515527950310559,
+        "singleton_rate": 0.7515527950310559,
+        "empty_rate": 0.2484472049689441,
+        "ambiguous_rate": 0.0,
+        "q_hat": 0.05077847309431183
+      }
+    },
+    "risk_coverage": {
+      "coverage_100": {
+        "target_coverage": 1.0,
+        "actual_coverage": 1.0,
+        "k_samples": 161,
+        "selective_accuracy": 0.5900621118012422,
+        "selective_risk": 0.40993788819875776
+      },
+      "coverage_95": {
+        "target_coverage": 0.95,
+        "actual_coverage": 0.9503105590062112,
+        "k_samples": 153,
+        "selective_accuracy": 0.5882352941176471,
+        "selective_risk": 0.4117647058823529
+      },
+      "coverage_90": {
+        "target_coverage": 0.9,
+        "actual_coverage": 0.9006211180124224,
+        "k_samples": 145,
+        "selective_accuracy": 0.5862068965517241,
+        "selective_risk": 0.4137931034482759
+      },
+      "coverage_85": {
+        "target_coverage": 0.85,
+        "actual_coverage": 0.8509316770186336,
+        "k_samples": 137,
+        "selective_accuracy": 0.583941605839416,
+        "selective_risk": 0.416058394160584
+      },
+      "coverage_80": {
+        "target_coverage": 0.8,
+        "actual_coverage": 0.8012422360248447,
+        "k_samples": 129,
+        "selective_accuracy": 0.6124031007751938,
+        "selective_risk": 0.3875968992248062
+      },
+      "coverage_70": {
+        "target_coverage": 0.7,
+        "actual_coverage": 0.7018633540372671,
+        "k_samples": 113,
+        "selective_accuracy": 0.6283185840707964,
+        "selective_risk": 0.37168141592920356
+      },
+      "coverage_60": {
+        "target_coverage": 0.6,
+        "actual_coverage": 0.6024844720496895,
+        "k_samples": 97,
+        "selective_accuracy": 0.6597938144329897,
+        "selective_risk": 0.3402061855670103
+      },
+      "coverage_50": {
+        "target_coverage": 0.5,
+        "actual_coverage": 0.4968944099378882,
+        "k_samples": 80,
+        "selective_accuracy": 0.675,
+        "selective_risk": 0.32499999999999996
+      },
+      "coverage_40": {
+        "target_coverage": 0.4,
+        "actual_coverage": 0.39751552795031053,
+        "k_samples": 64,
+        "selective_accuracy": 0.703125,
+        "selective_risk": 0.296875
+      },
+      "coverage_30": {
+        "target_coverage": 0.3,
+        "actual_coverage": 0.2981366459627329,
+        "k_samples": 48,
+        "selective_accuracy": 0.7916666666666666,
+        "selective_risk": 0.20833333333333337
+      },
+      "curve": [
+        {
+          "target_coverage": 1.0,
+          "actual_coverage": 1.0,
+          "k_samples": 161,
+          "selective_accuracy": 0.5900621118012422,
+          "selective_risk": 0.40993788819875776
+        },
+        {
+          "target_coverage": 0.95,
+          "actual_coverage": 0.9503105590062112,
+          "k_samples": 153,
+          "selective_accuracy": 0.5882352941176471,
+          "selective_risk": 0.4117647058823529
+        },
+        {
+          "target_coverage": 0.9,
+          "actual_coverage": 0.9006211180124224,
+          "k_samples": 145,
+          "selective_accuracy": 0.5862068965517241,
+          "selective_risk": 0.4137931034482759
+        },
+        {
+          "target_coverage": 0.85,
+          "actual_coverage": 0.8509316770186336,
+          "k_samples": 137,
+          "selective_accuracy": 0.583941605839416,
+          "selective_risk": 0.416058394160584
+        },
+        {
+          "target_coverage": 0.8,
+          "actual_coverage": 0.8012422360248447,
+          "k_samples": 129,
+          "selective_accuracy": 0.6124031007751938,
+          "selective_risk": 0.3875968992248062
+        },
+        {
+          "target_coverage": 0.7,
+          "actual_coverage": 0.7018633540372671,
+          "k_samples": 113,
+          "selective_accuracy": 0.6283185840707964,
+          "selective_risk": 0.37168141592920356
+        },
+        {
+          "target_coverage": 0.6,
+          "actual_coverage": 0.6024844720496895,
+          "k_samples": 97,
+          "selective_accuracy": 0.6597938144329897,
+          "selective_risk": 0.3402061855670103
+        },
+        {
+          "target_coverage": 0.5,
+          "actual_coverage": 0.4968944099378882,
+          "k_samples": 80,
+          "selective_accuracy": 0.675,
+          "selective_risk": 0.32499999999999996
+        },
+        {
+          "target_coverage": 0.4,
+          "actual_coverage": 0.39751552795031053,
+          "k_samples": 64,
+          "selective_accuracy": 0.703125,
+          "selective_risk": 0.296875
+        },
+        {
+          "target_coverage": 0.3,
+          "actual_coverage": 0.2981366459627329,
+          "k_samples": 48,
+          "selective_accuracy": 0.7916666666666666,
+          "selective_risk": 0.20833333333333337
+        }
+      ]
+    },
+    "unified_verdict_engine": {
+      "natural_coverage": 0.5838509316770186,
+      "abstention_rate": 0.4161490683229814,
+      "selective_accuracy": 0.6702127659574468,
+      "abstention_reasons": {
+        "CONFORMAL_UNCERTAINTY_MODEL_A_SIZE_0": 34,
+        "CONFORMAL_UNCERTAINTY_MODEL_B_SIZE_0": 40,
+        "ENSEMBLE_MODEL_DISAGREEMENT": 22,
+        "OOD_DISTANCE_EXCEEDED": 7
+      }
+    }
+  },
+  "openfake_reddit": {
+    "dataset_name": "OpenFake Reddit (In-The-Wild Shift)",
+    "n_samples": 34,
+    "synthetic_count": 0,
+    "authentic_count": 34,
+    "baseline_accuracy_100pct_coverage": 0.20588235294117646,
+    "calibration": {
+      "model_a_uncalibrated": {
+        "ece_equal_mass": 0.6068703847772935,
+        "ece_equal_width": 0.6068703847772935,
+        "brier_score": 0.3857052100976473,
+        "nll": 0.9893702884169794
+      },
+      "model_a_calibrated": {
+        "ece_equal_mass": 0.7542011803764563,
+        "ece_equal_width": 0.7542011803764563,
+        "brier_score": 0.6604628922962151,
+        "nll": 2.485627316763902
+      },
+      "model_b_uncalibrated": {
+        "ece_equal_mass": 0.76131727490985,
+        "ece_equal_width": 0.76131727490985,
+        "brier_score": 0.7154218650709383,
+        "nll": 4.651369059645543
+      },
+      "model_b_calibrated": {
+        "ece_equal_mass": 0.7613496900908931,
+        "ece_equal_width": 0.7613496900908931,
+        "brier_score": 0.7163607725768111,
+        "nll": 4.7331746094737
+      },
+      "ensemble_calibrated": {
+        "ece_equal_mass": 0.7577754352336747,
+        "ece_equal_width": 0.7577754352336747,
+        "brier_score": 0.6775145253447165,
+        "nll": 2.797770361952959
+      }
+    },
+    "conformal_coverage": {
+      "model_a": {
+        "nominal_coverage": 0.9,
+        "empirical_coverage": 0.14705882352941177,
+        "average_set_size": 0.8235294117647058,
+        "singleton_rate": 0.8235294117647058,
+        "empty_rate": 0.17647058823529413,
+        "ambiguous_rate": 0.0,
+        "q_hat": 0.2819605134164991
+      },
+      "model_b": {
+        "nominal_coverage": 0.9,
+        "empirical_coverage": 0.08823529411764706,
+        "average_set_size": 0.7647058823529411,
+        "singleton_rate": 0.7647058823529411,
+        "empty_rate": 0.23529411764705882,
+        "ambiguous_rate": 0.0,
+        "q_hat": 0.05077847309431183
+      }
+    },
+    "risk_coverage": {
+      "coverage_100": {
+        "target_coverage": 1.0,
+        "actual_coverage": 1.0,
+        "k_samples": 34,
+        "selective_accuracy": 0.20588235294117646,
+        "selective_risk": 0.7941176470588236
+      },
+      "coverage_95": {
+        "target_coverage": 0.95,
+        "actual_coverage": 0.9411764705882353,
+        "k_samples": 32,
+        "selective_accuracy": 0.1875,
+        "selective_risk": 0.8125
+      },
+      "coverage_90": {
+        "target_coverage": 0.9,
+        "actual_coverage": 0.9117647058823529,
+        "k_samples": 31,
+        "selective_accuracy": 0.1935483870967742,
+        "selective_risk": 0.8064516129032258
+      },
+      "coverage_85": {
+        "target_coverage": 0.85,
+        "actual_coverage": 0.8529411764705882,
+        "k_samples": 29,
+        "selective_accuracy": 0.1724137931034483,
+        "selective_risk": 0.8275862068965517
+      },
+      "coverage_80": {
+        "target_coverage": 0.8,
+        "actual_coverage": 0.7941176470588235,
+        "k_samples": 27,
+        "selective_accuracy": 0.14814814814814814,
+        "selective_risk": 0.8518518518518519
+      },
+      "coverage_70": {
+        "target_coverage": 0.7,
+        "actual_coverage": 0.7058823529411765,
+        "k_samples": 24,
+        "selective_accuracy": 0.16666666666666666,
+        "selective_risk": 0.8333333333333334
+      },
+      "coverage_60": {
+        "target_coverage": 0.6,
+        "actual_coverage": 0.5882352941176471,
+        "k_samples": 20,
+        "selective_accuracy": 0.15,
+        "selective_risk": 0.85
+      },
+      "coverage_50": {
+        "target_coverage": 0.5,
+        "actual_coverage": 0.5,
+        "k_samples": 17,
+        "selective_accuracy": 0.11764705882352941,
+        "selective_risk": 0.8823529411764706
+      },
+      "coverage_40": {
+        "target_coverage": 0.4,
+        "actual_coverage": 0.4117647058823529,
+        "k_samples": 14,
+        "selective_accuracy": 0.0,
+        "selective_risk": 1.0
+      },
+      "coverage_30": {
+        "target_coverage": 0.3,
+        "actual_coverage": 0.29411764705882354,
+        "k_samples": 10,
+        "selective_accuracy": 0.0,
+        "selective_risk": 1.0
+      },
+      "curve": [
+        {
+          "target_coverage": 1.0,
+          "actual_coverage": 1.0,
+          "k_samples": 34,
+          "selective_accuracy": 0.20588235294117646,
+          "selective_risk": 0.7941176470588236
+        },
+        {
+          "target_coverage": 0.95,
+          "actual_coverage": 0.9411764705882353,
+          "k_samples": 32,
+          "selective_accuracy": 0.1875,
+          "selective_risk": 0.8125
+        },
+        {
+          "target_coverage": 0.9,
+          "actual_coverage": 0.9117647058823529,
+          "k_samples": 31,
+          "selective_accuracy": 0.1935483870967742,
+          "selective_risk": 0.8064516129032258
+        },
+        {
+          "target_coverage": 0.85,
+          "actual_coverage": 0.8529411764705882,
+          "k_samples": 29,
+          "selective_accuracy": 0.1724137931034483,
+          "selective_risk": 0.8275862068965517
+        },
+        {
+          "target_coverage": 0.8,
+          "actual_coverage": 0.7941176470588235,
+          "k_samples": 27,
+          "selective_accuracy": 0.14814814814814814,
+          "selective_risk": 0.8518518518518519
+        },
+        {
+          "target_coverage": 0.7,
+          "actual_coverage": 0.7058823529411765,
+          "k_samples": 24,
+          "selective_accuracy": 0.16666666666666666,
+          "selective_risk": 0.8333333333333334
+        },
+        {
+          "target_coverage": 0.6,
+          "actual_coverage": 0.5882352941176471,
+          "k_samples": 20,
+          "selective_accuracy": 0.15,
+          "selective_risk": 0.85
+        },
+        {
+          "target_coverage": 0.5,
+          "actual_coverage": 0.5,
+          "k_samples": 17,
+          "selective_accuracy": 0.11764705882352941,
+          "selective_risk": 0.8823529411764706
+        },
+        {
+          "target_coverage": 0.4,
+          "actual_coverage": 0.4117647058823529,
+          "k_samples": 14,
+          "selective_accuracy": 0.0,
+          "selective_risk": 1.0
+        },
+        {
+          "target_coverage": 0.3,
+          "actual_coverage": 0.29411764705882354,
+          "k_samples": 10,
+          "selective_accuracy": 0.0,
+          "selective_risk": 1.0
+        }
+      ]
+    },
+    "unified_verdict_engine": {
+      "natural_coverage": 0.6764705882352942,
+      "abstention_rate": 0.3235294117647059,
+      "selective_accuracy": 0.13043478260869565,
+      "abstention_reasons": {
+        "CONFORMAL_UNCERTAINTY_MODEL_B_SIZE_0": 8,
+        "ENSEMBLE_MODEL_DISAGREEMENT": 4,
+        "CONFORMAL_UNCERTAINTY_MODEL_A_SIZE_0": 6
+      }
+    }
+  }
+}
