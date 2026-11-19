@@ -33,6 +33,99 @@ contract RegistryTest is Test {
         new Registry(address(0));
     }
 
+    // ── Ownership transfer ───────────────────────────────────────────────────
+    function test_transferOwnership() public {
+        address newOwner = address(0xCAFE);
+        vm.prank(owner);
+        vm.expectEmit(true, true, false, false);
+        emit Registry.OwnershipTransferred(owner, newOwner);
+        registry.transferOwnership(newOwner);
+
+        assertEq(registry.owner(), newOwner);
+
+        // New owner can add attester
+        vm.prank(newOwner);
+        registry.addAttester(attester1);
+        assertTrue(registry.isAttester(attester1));
+
+        // Old owner cannot
+        vm.prank(owner);
+        vm.expectRevert(Registry.NotOwner.selector);
+        registry.removeAttester(attester1);
+    }
+
+    function test_transferOwnership_revertZeroAddress() public {
+        vm.prank(owner);
+        vm.expectRevert(Registry.ZeroAddress.selector);
+        registry.transferOwnership(address(0));
+    }
+
+    function test_transferOwnership_revertNotOwner() public {
+        vm.prank(notOwner);
+        vm.expectRevert(Registry.NotOwner.selector);
+        registry.transferOwnership(address(0xCAFE));
+    }
+
+    // ── Canary issuer ─────────────────────────────────────────────────────────
+    function test_setCanaryIssuer() public {
+        address canary = address(0xCACA);
+        vm.prank(owner);
+        vm.expectEmit(true, false, false, false);
+        emit Registry.CanaryIssuerSet(canary);
+        registry.setCanaryIssuer(canary);
+        assertEq(registry.canaryIssuer(), canary);
+    }
+
+    function test_setCanaryIssuer_revertZeroAddress() public {
+        vm.prank(owner);
+        vm.expectRevert(Registry.ZeroAddress.selector);
+        registry.setCanaryIssuer(address(0));
+    }
+
+    function test_setCanaryIssuer_revertNotOwner() public {
+        vm.prank(notOwner);
+        vm.expectRevert(Registry.NotOwner.selector);
+        registry.setCanaryIssuer(address(0xCACA));
+    }
+
+    // ── Model registration ────────────────────────────────────────────────────
+    function test_registerModel_revertZeroHash() public {
+        vm.prank(owner);
+        vm.expectRevert(Registry.InvalidModelHash.selector);
+        registry.registerModel(bytes32(0), bytes32(0), "uri", bytes32(0));
+    }
+
+    function test_getModel() public {
+        bytes32 mHash = keccak256("model-get");
+        bytes32 pHash = keccak256("preproc-get");
+        vm.prank(owner);
+        registry.registerModel(mHash, pHash, "ipfs://model", bytes32("0.1.0"));
+
+        Registry.ModelInfo memory m = registry.getModel(mHash);
+        assertEq(m.preprocHash, pHash);
+        assertEq(m.uri, "ipfs://model");
+        assertEq(m.specVersion, bytes32("0.1.0"));
+        assertEq(m.status, 0);
+        assertTrue(m.registered);
+    }
+
+    function test_getModel_revertNotRegistered() public {
+        vm.expectRevert(Registry.NotRegistered.selector);
+        registry.getModel(keccak256("non-existent"));
+    }
+
+    function test_addAttester_revertZeroAddress() public {
+        vm.prank(owner);
+        vm.expectRevert(Registry.ZeroAddress.selector);
+        registry.addAttester(address(0));
+    }
+
+    function test_removeAttester_revertZeroAddress() public {
+        vm.prank(owner);
+        vm.expectRevert(Registry.ZeroAddress.selector);
+        registry.removeAttester(address(0));
+    }
+
     // ── Model registration ────────────────────────────────────────────────────
     function test_registerModel() public {
         bytes32 mHash = keccak256("model-v1");

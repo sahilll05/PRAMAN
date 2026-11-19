@@ -21,6 +21,7 @@ contract Registry {
     error AlreadyRegistered();
     error NotRegistered();
     error InvalidStatus();
+    error InvalidModelHash();
     error ZeroAddress();
 
     // ── Events ────────────────────────────────────────────────────────────────
@@ -29,6 +30,7 @@ contract Registry {
     event AttesterAdded(address indexed attester);
     event AttesterRemoved(address indexed attester);
     event CanaryIssuerSet(address indexed canaryIssuer);
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
     // ── State ─────────────────────────────────────────────────────────────────
     address public owner;
@@ -57,6 +59,14 @@ contract Registry {
         _;
     }
 
+    // ── Ownership management ─────────────────────────────────────────────────
+    function transferOwnership(address newOwner) external onlyOwner {
+        if (newOwner == address(0)) revert ZeroAddress();
+        address oldOwner = owner;
+        owner = newOwner;
+        emit OwnershipTransferred(oldOwner, newOwner);
+    }
+
     // ── Model management ─────────────────────────────────────────────────────
     function registerModel(
         bytes32 modelHash,
@@ -64,6 +74,7 @@ contract Registry {
         string calldata uri,
         bytes32 specVersion
     ) external onlyOwner {
+        if (modelHash == bytes32(0)) revert InvalidModelHash();
         if (models[modelHash].registered) revert AlreadyRegistered();
         models[modelHash] = ModelInfo({
             preprocHash: preprocHash,
@@ -87,15 +98,26 @@ contract Registry {
         return m.registered && m.status == 0;
     }
 
+    function getModel(bytes32 modelHash) external view returns (ModelInfo memory) {
+        if (!models[modelHash].registered) revert NotRegistered();
+        return models[modelHash];
+    }
+
     // ── Attester allowlist ────────────────────────────────────────────────────
     function addAttester(address attester) external onlyOwner {
+        if (attester == address(0)) revert ZeroAddress();
         attesters[attester] = true;
         emit AttesterAdded(attester);
     }
 
     function removeAttester(address attester) external onlyOwner {
+        if (attester == address(0)) revert ZeroAddress();
         attesters[attester] = false;
         emit AttesterRemoved(attester);
+    }
+
+    function isAttester(address attester) external view returns (bool) {
+        return attesters[attester];
     }
 
     // ── Canary issuer ─────────────────────────────────────────────────────────
