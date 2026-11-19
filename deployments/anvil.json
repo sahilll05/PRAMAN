@@ -1,0 +1,18 @@
+{
+  "network": "anvil",
+  "chainId": 31337,
+  "timestamp": "2026-11-20 00:40:53",
+  "contracts": {
+    "MockEAS": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "MockSchemaRegistry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "Registry": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "VerdictResolver": "0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9"
+  },
+  "schemas": {
+    "Verdict": "0xaf70e6e0c4513e03e723dabb066d9e01e3c8ce4062e179ce1ee3c45fa460ba99",
+    "Challenge": "0x75af41a6841f31130063d320bfba8237732a390fa05f3f6abc723030731805c6",
+    "CanaryResult": "0x40b7431db61c01339c9f901cf5f5d720a7dbbea630a890bebd4891337325691c"
+  },
+  "defaultAttester": "0xa9cf221fFd3EB9b3fF6058F2BaF0CBDEAfC84b44",
+  "defaultCanaryIssuer": "0xc40Bc4A72631A634865B70296e371466fcEA9AcA"
+}

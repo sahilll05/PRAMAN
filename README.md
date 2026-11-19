@@ -5,7 +5,7 @@
 
 [![CI - Python Tests](https://img.shields.io/badge/pytest-27%20passed-brightgreen.svg)](#testing--verification)
 [![CI - TypeScript Tests](https://img.shields.io/badge/vitest-9%20passed-brightgreen.svg)](#testing--verification)
-[![Smart Contracts](https://img.shields.io/badge/foundry-forge-blue.svg)](#smart-contracts--eas)
+[![Smart Contracts](https://img.shields.io/badge/foundry-43%20passed-brightgreen.svg)](#smart-contracts--eas)
 [![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#protocol-architecture)
 [![License](https://img.shields.io/badge/license-MIT%20%2F%20Non--Commercial-lightgrey.svg)](#ethics--licensing)
 [![Spec Version](https://img.shields.io/badge/spec-0.1.0--draft-orange.svg)](spec/schemas/verdict.schema.json)

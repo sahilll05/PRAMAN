@@ -33,6 +33,7 @@ pnpm-lock.yaml.bak
 # ── Foundry ───────────────────────────────────────────────────────────────────
 contracts/out/
 contracts/cache/
+contracts/broadcast/
 # Keep lib/ committed (forge-std submodule / install)
 
 # ── Data and models (large files) ─────────────────────────────────────────────
