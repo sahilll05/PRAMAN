@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AlertTriangle, CheckCircle2, XCircle, Info, Shield } from "lucide-react";
+import { AlertTriangle, CheckCircle2, XCircle, Info, Shield, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Limitations | PRAMANA",
@@ -9,58 +9,76 @@ export const metadata: Metadata = {
 
 export default function LimitationsPage() {
   return (
-    <div className="max-w-3xl mx-auto space-y-10 py-6">
+    <div className="max-w-4xl mx-auto space-y-10 py-6">
       <div className="space-y-3">
-        <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 border border-amber-200 px-4 py-1.5 text-sm font-medium text-amber-800">
+        <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 text-xs font-semibold text-amber-600 dark:text-amber-400">
           <AlertTriangle className="h-4 w-4" />
-          Required reading before relying on any verdict
+          Mandatory disclosure before relying on any verdict
         </div>
-        <h1 className="text-4xl font-bold text-slate-900">Limitations</h1>
-        <p className="text-lg text-slate-600">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          System Limitations & Scope
+        </h1>
+        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
           PRAMANA is an open research prototype. The following limitations are real and must be understood
           before interpreting any output.
         </p>
       </div>
 
       {/* Core limitations grid */}
-      <div className="grid grid-cols-1 gap-5">
+      <div className="grid grid-cols-1 gap-4">
         {LIMITATIONS.map((lim) => (
           <LimitationCard key={lim.title} {...lim} />
         ))}
       </div>
 
-      {/* Allowed wording */}
-      <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6 space-y-4">
-        <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-          <Shield className="h-5 w-5 text-brand-600" />
-          Permitted and forbidden wording
-        </h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <p className="text-sm font-semibold text-green-700 mb-2 flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4" /> Permitted
+      {/* Allowed and forbidden wording */}
+      <div className="rounded-3xl border border-slate-200/80 bg-white/80 dark:border-slate-800/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-sm p-6 sm:p-8 space-y-6">
+        <div>
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <Shield className="h-5 w-5 text-brand-500" />
+            Permitted vs. Prohibited Communication Wording
+          </h2>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            Strict epistemic integrity standards enforced in all reports, UI claims, and documentation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5 space-y-3">
+            <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4" /> Permitted Wording
             </p>
-            <ul className="space-y-1.5 text-sm text-slate-600">
-              {ALLOWED.map((w) => <li key={w} className="flex gap-2"><span className="text-green-500">✓</span>{w}</li>)}
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              {ALLOWED.map((w) => (
+                <li key={w} className="flex gap-2">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>{w}</span>
+                </li>
+              ))}
             </ul>
           </div>
-          <div>
-            <p className="text-sm font-semibold text-red-600 mb-2 flex items-center gap-1.5">
-              <XCircle className="h-4 w-4" /> Forbidden
+          <div className="rounded-2xl border border-rose-500/20 bg-rose-500/5 p-5 space-y-3">
+            <p className="text-sm font-bold text-rose-600 dark:text-rose-400 flex items-center gap-2">
+              <XCircle className="h-4 w-4" /> Forbidden Wording
             </p>
-            <ul className="space-y-1.5 text-sm text-slate-600">
-              {FORBIDDEN.map((w) => <li key={w} className="flex gap-2"><span className="text-red-500">✕</span>{w}</li>)}
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              {FORBIDDEN.map((w) => (
+                <li key={w} className="flex gap-2">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span>{w}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
 
       {/* Experiment citations */}
-      <div className="rounded-xl border border-brand-200 bg-brand-50 px-5 py-4 space-y-2">
-        <p className="font-semibold text-brand-900 flex items-center gap-2">
-          <Info className="h-4 w-4" /> Key measurements (from internal experiments)
+      <div className="rounded-3xl border border-brand-500/20 bg-brand-500/5 dark:bg-brand-950/20 p-6 sm:p-7 space-y-3 backdrop-blur-sm">
+        <p className="font-bold text-brand-900 dark:text-brand-300 flex items-center gap-2 text-sm sm:text-base">
+          <Info className="h-4 w-4 text-brand-500" /> Key Measured Quantities (from internal experiments)
         </p>
-        <ul className="text-sm text-brand-800 space-y-1">
+        <ul className="text-xs sm:text-sm text-brand-800 dark:text-brand-300 space-y-1.5 leading-relaxed">
           <li>• In-domain AUC: 0.9891 (Model A), 0.9957 (Model B) — E1</li>
           <li>• Generator-disjoint AUC: 1.0000 (Model A) — E2</li>
           <li>• Cross-dataset recall on OpenFake Core (Flux, DALL·E 3, SD3.5): 83.9% / 90.8% — E2b</li>
@@ -70,34 +88,54 @@ export default function LimitationsPage() {
           <li>• CPU-GPU agreement: max 20 bps, mean 3.0 bps — E5b</li>
           <li>• Shortcut audit: metadata AUC 1.0 on raw format; equalized AUC ≥0.98 — E13</li>
         </ul>
-        <p className="text-xs text-brand-700">Source: internal experiments on CommunityForensics-Small + OpenFake datasets (CC-BY-NC-SA-4.0 / CC-BY-NC-4.0).</p>
+        <p className="text-[11px] text-slate-400 dark:text-slate-400 pt-1">
+          Source: internal experiments on CommunityForensics-Small + OpenFake datasets (CC-BY-NC-SA-4.0 / CC-BY-NC-4.0).
+        </p>
       </div>
 
-      <div className="text-center pt-4">
+      <div className="text-center pt-2">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700 transition-colors"
+          className="inline-flex items-center gap-2 rounded-2xl bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-brand-500/20 transition-all hover:scale-[1.02]"
         >
-          Back to verifier
+          <ArrowLeft className="h-4 w-4" />
+          Back to Verifier
         </Link>
       </div>
     </div>
   );
 }
 
-function LimitationCard({ severity, title, body }: { severity: "high" | "medium" | "info"; title: string; body: string }) {
+function LimitationCard({
+  severity,
+  title,
+  body,
+}: {
+  severity: "high" | "medium" | "info";
+  title: string;
+  body: string;
+}) {
   const styles = {
-    high: { border: "border-red-200", bg: "bg-red-50", icon: <AlertTriangle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" /> },
-    medium: { border: "border-amber-200", bg: "bg-amber-50", icon: <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" /> },
-    info: { border: "border-slate-200", bg: "bg-white", icon: <Info className="h-5 w-5 text-slate-400 flex-shrink-0 mt-0.5" /> },
+    high: {
+      border: "border-rose-500/30 bg-rose-500/10 dark:border-rose-500/20 dark:bg-rose-950/30",
+      icon: <AlertTriangle className="h-5 w-5 text-rose-500 flex-shrink-0 mt-0.5" />,
+    },
+    medium: {
+      border: "border-amber-500/30 bg-amber-500/10 dark:border-amber-500/20 dark:bg-amber-950/30",
+      icon: <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />,
+    },
+    info: {
+      border: "border-slate-200/80 bg-white/80 dark:border-slate-800/80 dark:bg-slate-900/80",
+      icon: <Info className="h-5 w-5 text-sky-500 flex-shrink-0 mt-0.5" />,
+    },
   };
   const s = styles[severity];
   return (
-    <div className={`rounded-xl border ${s.border} ${s.bg} p-5 flex gap-3`}>
+    <div className={`rounded-2xl border ${s.border} p-5 sm:p-6 flex gap-4 backdrop-blur-sm shadow-sm transition-colors`}>
       {s.icon}
       <div>
-        <p className="font-semibold text-slate-900">{title}</p>
-        <p className="text-sm text-slate-600 mt-1 leading-relaxed">{body}</p>
+        <p className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">{title}</p>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">{body}</p>
       </div>
     </div>
   );
