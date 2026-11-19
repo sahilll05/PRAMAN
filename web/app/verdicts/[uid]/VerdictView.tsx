@@ -253,7 +253,7 @@ export function VerdictView({ data }: { data: VerdictViewData }) {
         <div className="pt-2 text-xs text-zinc-500">
           Explorer link:{" "}
           <a
-            href={`https://base-sepolia.easscan.org/attestation/view/${data.uid}`}
+            href={`https://base-sepolia.easscan.org/attestation/view/${encodeURIComponent(data.uid)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-900 dark:text-zinc-100 hover:underline font-medium inline-flex items-center gap-1"

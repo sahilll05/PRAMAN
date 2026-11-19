@@ -1,0 +1,62 @@
+{
+  "experiment_id": "E10",
+  "description": "Adversarial Perturbation Test (PGD L_infty on GPU)",
+  "date": "2026-11-20",
+  "device": "cuda",
+  "total_time_seconds": 0.31,
+  "samples_evaluated": 200,
+  "ood_threshold": 39.09624490918883,
+  "conformal_alpha": 0.1,
+  "results": {
+    "clean_baseline": {
+      "n_samples": 200,
+      "raw_accuracy_model_a": 0.935,
+      "abstain_rate": 0.17,
+      "correct_verdict_rate": 0.82
+    },
+    "eps_0.01": {
+      "epsilon": 0.01,
+      "raw_asr_model_a": 0.89,
+      "raw_asr_model_b_transfer": 0.73,
+      "ood_rejection_rate": 0.01,
+      "conformal_abstention_rate": 0.47,
+      "ensemble_disagreement_rate": 0.19,
+      "overall_abstain_rate": 0.485,
+      "evasion_success_rate": 0.49,
+      "retained_correct_rate": 0.025
+    },
+    "eps_0.05": {
+      "epsilon": 0.05,
+      "raw_asr_model_a": 1.0,
+      "raw_asr_model_b_transfer": 1.0,
+      "ood_rejection_rate": 1.0,
+      "conformal_abstention_rate": 0.0,
+      "ensemble_disagreement_rate": 0.0,
+      "overall_abstain_rate": 1.0,
+      "evasion_success_rate": 0.0,
+      "retained_correct_rate": 0.0
+    },
+    "eps_0.10": {
+      "epsilon": 0.1,
+      "raw_asr_model_a": 1.0,
+      "raw_asr_model_b_transfer": 1.0,
+      "ood_rejection_rate": 1.0,
+      "conformal_abstention_rate": 0.0,
+      "ensemble_disagreement_rate": 0.0,
+      "overall_abstain_rate": 1.0,
+      "evasion_success_rate": 0.0,
+      "retained_correct_rate": 0.0
+    },
+    "eps_0.20": {
+      "epsilon": 0.2,
+      "raw_asr_model_a": 1.0,
+      "raw_asr_model_b_transfer": 1.0,
+      "ood_rejection_rate": 1.0,
+      "conformal_abstention_rate": 0.0,
+      "ensemble_disagreement_rate": 0.0,
+      "overall_abstain_rate": 1.0,
+      "evasion_success_rate": 0.0,
+      "retained_correct_rate": 0.0
+    }
+  }
+}

@@ -25,12 +25,28 @@ function hammingDistance(hexA: string, hexB: string): number {
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
-  const sha256 = searchParams.get("sha256")?.toLowerCase().replace(/^0x/, "");
-  const phash = searchParams.get("phash")?.toLowerCase().replace(/^0x/, "");
-  const threshold = parseInt(searchParams.get("threshold") ?? "10", 10);
+  const rawSha = searchParams.get("sha256")?.trim();
+  const rawPhash = searchParams.get("phash")?.trim();
+  const rawThreshold = searchParams.get("threshold") ?? "10";
+
+  let threshold = parseInt(rawThreshold, 10);
+  if (isNaN(threshold) || threshold < 0 || threshold > 64) {
+    threshold = 10;
+  }
+
+  const sha256 = rawSha?.toLowerCase().replace(/^0x/, "");
+  const phash = rawPhash?.toLowerCase().replace(/^0x/, "");
 
   if (!sha256 && !phash) {
     return NextResponse.json({ error: "Provide sha256 or phash query param" }, { status: 400 });
+  }
+
+  // Validate hex format
+  if (sha256 && !/^[0-9a-fA-F]{64}$/.test(sha256)) {
+    return NextResponse.json({ error: "Invalid sha256 hex format (expected 64 hex characters)" }, { status: 400 });
+  }
+  if (phash && !/^[0-9a-fA-F]{1,16}$/.test(phash)) {
+    return NextResponse.json({ error: "Invalid phash hex format (expected up to 16 hex characters)" }, { status: 400 });
   }
 
   // 1. If Neon database is configured, query PostgreSQL

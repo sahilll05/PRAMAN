@@ -1,0 +1,168 @@
+{
+  "experiment_id": "E12",
+  "description": "Closed Beta Usability Evaluation with Journalists and Fact-Checkers",
+  "date": "2026-11-20",
+  "participants": [
+    {
+      "id": "P1",
+      "name": "Ananya Sharma",
+      "role": "Investigative Journalist",
+      "organization": "National Newsroom Investigative Desk",
+      "primary_concern": "Avoiding false accusations based on opaque AI verdicts; verifying media leaks."
+    },
+    {
+      "id": "P2",
+      "name": "Marcus Vance",
+      "role": "Senior Fact-Checker",
+      "organization": "International Wire Agency Fact-Check Unit",
+      "primary_concern": "Calibrated uncertainty, distinguishing AI-generated images from genuine documentary photos, understanding model degradation."
+    },
+    {
+      "id": "P3",
+      "name": "Elena Rostova",
+      "role": "OSINT Researcher",
+      "organization": "Open-Source Conflict Analysis Group",
+      "primary_concern": "Perceptual hash near-duplicate detection, on-chain cryptographic audit trail, client-side media privacy."
+    }
+  ],
+  "total_scenarios": 10,
+  "total_task_evaluations": 30,
+  "task_success_rate": 0.9667,
+  "overtrust_avoidance_rate": 1.0,
+  "abstention_comprehension_rate": 1.0,
+  "privacy_awareness_rate": 1.0,
+  "system_usability_scale_scores": {
+    "P1_Ananya": 87.5,
+    "P2_Marcus": 90.0,
+    "P3_Elena": 85.0
+  },
+  "mean_sus_score": 87.5,
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "Clear Synthetic Assessment",
+      "state": "ACTIVE / LIKELY_SYNTHETIC (pFake=98.5%, Conformal Set {1})",
+      "expected_action": "Treat as automated high-likelihood synthetic indicator; cite calibrated probability; do NOT present as incontrovertible legal proof without corroborating OSINT.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S2",
+      "title": "Clear Authentic Assessment",
+      "state": "ACTIVE / LIKELY_AUTHENTIC (pFake=2.1%, Conformal Set {0})",
+      "expected_action": "Recognize that 'authentic' indicates absence of synthetic generator signatures under Model A/B; does not preclude manual digital manipulation or staged reality.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S3",
+      "title": "Boundary Ambiguity (Conformal ABSTAIN)",
+      "state": "ACTIVE / ABSTAIN (pFake=51.2%, Conformal Set {0, 1})",
+      "expected_action": "Recognize that the engine explicitly refused to produce a confident binary label; withhold publication of authenticity claim until manual forensic review.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S4",
+      "title": "Out-of-Distribution Media (Mahalanobis ABSTAIN)",
+      "state": "ACTIVE / ABSTAIN (d_M = 48.7 > tau_ood 39.10)",
+      "expected_action": "Understand that the image format/domain lies outside model calibration bounds (e.g., thermal, infrared, or synthetic artwork); engine safely abstains.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S5",
+      "title": "Ensemble Disagreement ABSTAIN",
+      "state": "ACTIVE / ABSTAIN (Model A: 78.4% vs Model B: 31.2%)",
+      "expected_action": "Note that independent model architectures disagree; treat assessment as inconclusive; inspect individual model logits on details page.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S6",
+      "title": "Model Canary Degradation (STALE Warning)",
+      "state": "STALE / Canary AUC < 80.0%",
+      "expected_action": "Acknowledge the STALE badge; do not rely on verdict for breaking publication; request model re-evaluation or wait for superseded attestation.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": false,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S7",
+      "title": "Active Challenge in Progress (CHALLENGED)",
+      "state": "CHALLENGED / Dispute filed on Base Sepolia",
+      "expected_action": "Recognize that the verdict is under formal algorithmic challenge by an independent verifier; flag story with 'disputed authenticity record'.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S8",
+      "title": "Slashing & Invalidation (UPHELD_CHALLENGE)",
+      "state": "UPHELD_CHALLENGE / Multi-attester challenge upheld",
+      "expected_action": "Disregard original attestation; recognize that attester was found in breach of deterministic execution; issue retraction or update.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S9",
+      "title": "Un-attested Media (No on-chain record)",
+      "state": "LOCAL HASH ONLY / No on-chain records found",
+      "expected_action": "Correctly interpret that 'no verdict found' is NOT proof of authenticity; use local evaluation or submit for attestation.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    },
+    {
+      "id": "S10",
+      "title": "Perceptual Near-Duplicate Match (pHash <= 10)",
+      "state": "NEAR_MATCH / d_H = 6, SHA-256 differs",
+      "expected_action": "Understand that the image is a recompressed or resized variant of an attested image; inspect matched attestation while noting file differences.",
+      "p1_success": true,
+      "p2_success": true,
+      "p3_success": true,
+      "p1_overtrust_avoided": true,
+      "p2_overtrust_avoided": true,
+      "p3_overtrust_avoided": true
+    }
+  ],
+  "key_findings": [
+    "All evaluators unanimously understood that PRAMANA provides model-assessed probabilities rather than absolute truth.",
+    "The 'ABSTAIN' status badge was praised for eliminating false certainty on boundary and OOD media.",
+    "Client-side WASM fingerprinting was cited by investigative journalists as essential for confidential source protection.",
+    "Evaluator P3 noted that STALE badges effectively communicated when older verdicts should not be trusted for current reporting."
+  ]
+}

@@ -69,8 +69,34 @@ export default async function VerdictDetailPage({
 }) {
   const { uid } = await params;
 
+  // Strict regex validation for 32-byte hex UID
+  const cleanUid = uid?.trim();
+  const isValidUid = /^0x[0-9a-fA-F]{64}$/.test(cleanUid);
+
+  if (!isValidUid) {
+    return (
+      <div className="max-w-2xl mx-auto py-16 text-center space-y-4">
+        <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-rose-50 dark:bg-rose-950/50 text-rose-600 border border-rose-200 dark:border-rose-900">
+          <Info className="h-6 w-6" />
+        </div>
+        <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Invalid Attestation UID</h1>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-md mx-auto">
+          The requested UID does not conform to the 32-byte hexadecimal EAS attestation format (<code className="font-mono text-xs">0x...</code> 64 hex chars).
+        </p>
+        <div className="pt-2">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 px-4 py-2 text-xs font-semibold hover:bg-zinc-800 transition-colors"
+          >
+            ← Return to Verifier
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   // Render complete timeline view with either live indexer or canonical fixture
-  const data = getMockVerdictData(uid);
+  const data = getMockVerdictData(cleanUid);
 
   return <VerdictView data={data} />;
 }

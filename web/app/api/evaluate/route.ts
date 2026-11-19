@@ -13,11 +13,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "No file provided" }, { status: 400 });
     }
 
-    // Save temporary file for Python script evaluation
+    // Limit maximum upload size to 20 MB to protect against DoS
+    const MAX_SIZE_BYTES = 20 * 1024 * 1024;
+    if (file.size > MAX_SIZE_BYTES) {
+      return NextResponse.json(
+        { error: "Payload too large. Maximum file size is 20 MB." },
+        { status: 413 }
+      );
+    }
+
+    // Sanitize filename to prevent directory traversal
+    const safeBaseName = path.basename(file.name).replace(/[^a-zA-Z0-9._-]/g, "_");
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
     const tempDir = os.tmpdir();
-    const tempFilePath = path.join(tempDir, `pramana_eval_${Date.now()}_${file.name}`);
+    const tempFilePath = path.join(tempDir, `pramana_eval_${Date.now()}_${safeBaseName}`);
     fs.writeFileSync(tempFilePath, buffer);
 
     const repoRoot = path.resolve(process.cwd(), "..");
