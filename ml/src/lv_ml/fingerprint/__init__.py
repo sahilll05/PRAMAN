@@ -1,1 +1,5 @@
-"""Placeholder package — will be populated in Phase 3."""
+"""Fingerprint package for PRAMANA (spec §4)."""
+
+from lv_ml.fingerprint.phash import compute_phash, hamming_distance
+
+__all__ = ["compute_phash", "hamming_distance"]
