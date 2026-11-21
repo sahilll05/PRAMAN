@@ -2,3 +2,4 @@ packages:
   - "chain"
   - "indexer"
   - "web"
+  - "extension"
