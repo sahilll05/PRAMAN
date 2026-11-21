@@ -218,6 +218,35 @@ cd contracts
 forge build
 ```
 
+### Running the Local Web Verifier (Development Server)
+
+To test the PRAMAN Web Verifier locally in your browser:
+
+```bash
+# Start the Next.js development server (from repository root)
+pnpm dev
+
+# Alternatively, run via package filter:
+pnpm --filter @praman/web dev
+```
+
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+#### What you can test locally:
+1. **Drop-Zone Verifier**: Drag and drop any image to compute streaming SHA-256 (`hash-wasm`) and 64-bit DCT-II perceptual hash (`pHash`) client-side. Zero image bytes leave your browser.
+2. **Protect Mode (`[Verify] / [Protect]`)**: Toggle to `Protect` on the main drop-zone to generate a cryptographic `.praman` receipt signed with browser-native Web Crypto ECDSA P-256 and download the watermarked image.
+3. **Receipt Verification**: Click **"Verify Receipt"** to drag-and-drop or paste `.praman` JSON receipts for local ECDSA signature verification.
+4. **Batch Verification**: Drop multiple images, a folder, or a `.zip` archive to run concurrent worker-based fingerprinting and download a self-contained, valid W3C HTML5 audit report.
+5. **Error Level Analysis (ELA)**: Toggle the ELA inspector on synthetic or ambiguous images to view visual compression anomaly heatmaps computed via HTML5 Canvas 2D.
+6. **Protocol Explorer**: Browse `/models` (registered open-weight architectures), `/canary` (continuous commit-reveal health monitoring), `/attesters` (allowlisted nodes), and `/limitations` (epistemological caveats).
+
+#### Running the Production Build Locally
+```bash
+# Compile and start optimized production build
+pnpm build
+pnpm start
+```
+
 ### Running the Reference CPU Runner
 Generate a canonical on-chain verdict and evidence bundle for an image:
 ```bash

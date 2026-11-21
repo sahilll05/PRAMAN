@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "pnpm --filter @praman/web dev",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "build": "pnpm -r build",
+    "start": "pnpm --filter @praman/web start",
     "typecheck": "pnpm -r typecheck"
   },
   "devDependencies": {
