@@ -6,7 +6,7 @@ Demonstrates:
 (2) Detection of injected generator degradation (AUC drops below 8000 bps or ECE > 1500 bps).
 (3) Automatic triggering of MODEL_DEGRADED status (displaying UI badge "STALE") in the authoritative state machine.
 
-Supports Claim C10 in sahil/claims.md:
+Supports Claim C10:
 "Canary results detect injected/real model degradation and flip status to STALE"
 """
 

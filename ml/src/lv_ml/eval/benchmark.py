@@ -1,6 +1,6 @@
 """PRAMAN Phase 1 Benchmark Experiments Suite (T1.5).
 
-Implements the frozen protocols from sahil/evaluation_plan.md:
+Implements the frozen protocols from Evaluation Protocol:
 - E1:  In-domain sanity evaluation (CF-Small + COCO balanced test set)
 - E2:  Generator-disjoint evaluation (held-out generator AbyssOrangeMix vs COCO real)
 - E2b: Cross-dataset evaluation (OpenFake core with Flux, SD3.5, DALL-E 3, SDXL)

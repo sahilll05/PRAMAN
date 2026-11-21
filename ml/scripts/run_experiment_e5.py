@@ -1,6 +1,6 @@
 """Experiment E5: Determinism and CPU-CPU Numerical Agreement Verification.
 
-Pre-registered in sahil/evaluation_plan.md:
+Pre-registered in Evaluation Protocol:
 - Evaluate identical files across independent CPU reference runner executions (N=200 images).
 - Measure max/mean |pFake diff| in bps and verdict-class mismatch rate.
 - Set canonical challenge tolerance epsilon (bps).

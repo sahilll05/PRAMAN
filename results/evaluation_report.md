@@ -20,7 +20,7 @@ PRAMAN addresses these systemic vulnerabilities through five core pillars:
 4. **Continuous Automated Canary Audits (N4)**: Scheduled commit-reveal canary pipelines that continuously evaluate registered open-weight models against fresh synthetic media, dynamically degrading obsolete models to `STALE`.
 5. **Decentralized Multi-Attester Dispute Resolution (N5)**: Deterministic CPU ONNX reference execution enabling any third party to reproduce model inference and successfully challenge diverging or fraudulent attestations.
 
-This report synthesizes all 14 empirical experiments pre-registered in `sahil/evaluation_plan.md` and evaluates all design claims in `sahil/claims.md`.
+This report synthesizes all 14 empirical experiments pre-registered in the evaluation protocol and evaluates all design claims.
 
 ---
 
@@ -100,7 +100,7 @@ This report synthesizes all 14 empirical experiments pre-registered in `sahil/ev
 | **C5** | Challenge flow works end-to-end on Base Sepolia | e2e test | `tests/e2e`, `VerdictResolver.t.sol` | **SUPPORTED** | End-to-end attest, challenge, and resolution flow verified on Base Sepolia EAS testnet. |
 | **C6** | Verdicts materially change across versions and generations (perishability) | E8 | `results/E8/metrics.json` | **SUPPORTED** | Verdicts materially change across detector architectures and temporal distributions; Model A vs B flip rate is 13.66% on OpenFake core with mean 930 bps divergence. |
 | **C7** | Attestation gas on Base Sepolia is low | forge gas | `deployments/gas.md` | **SUPPORTED** | Verdict attestation with full EAS resolver validation costs ~356k gas (median), amounting to $< \$0.05$ USD on Base Sepolia. |
-| **C8** | Novelty survey confirms N1–N5 combination | novelty log | `sahil/novelty.md` | **SUPPORTED** | To our knowledge, in academic and industry literature reviewed through Nov 2026, no system combines client-side WASM hashing, EAS on-chain attestations, conformal abstention, and commit-reveal canaries. |
+| **C8** | Novelty survey confirms N1–N5 combination | novelty log | Literature survey | **SUPPORTED** | To our knowledge, in academic and industry literature reviewed through Nov 2026, no system combines client-side WASM hashing, EAS on-chain attestations, conformal abstention, and commit-reveal canaries. |
 | **C9** | Web verifier never uploads media bytes | Playwright | `web/tests/e2e/privacy.spec.ts` | **SUPPORTED** | Media never leaves the browser; client-side SHA-256 and pHash compute locally, verified by automated Playwright network interception tests. |
 | **C10** | Canaries detect degradation and trigger `STALE` status | E9 | `results/E9/metrics.json` | **SUPPORTED** | Canary commit-reveal pipeline verifies healthy models and reliably detects injected degradation, immediately flipping status to `MODEL_DEGRADED` / `STALE`. |
 | **C11** | Defenses mitigate adversarial evasion without claiming robustness | E10 | `results/E10/metrics.json` | **SUPPORTED** | White-box PGD achieves 89–100% raw probe ASR; Mahalanobis OOD gate and Conformal sets shift outcomes to `ABSTAIN` (48.5% to 100% defense rate); zero robustness claimed. |

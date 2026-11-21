@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import * as path from "path";
 import * as fs from "fs";
 
-const SCREENSHOT_DIR = "C:/Users/Sahil/.gemini/antigravity/brain/53895e59-d7c7-4553-90b3-24eb4bfe019f";
+const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || path.join(__dirname, "../screenshots");
 
 test.describe("PRAMAN Visual Live Verification", () => {
   test.beforeAll(() => {

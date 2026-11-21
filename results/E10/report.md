@@ -1,6 +1,6 @@
 # Experiment E10: Adversarial Perturbation Evaluation Report
 
-> **Pre-registered Protocol:** `sahil/evaluation_plan.md` Section Protocols E10 & `sahil/threat_model.md` Threat T1  
+> **Pre-registered Protocol:** Protocol E10 & Threat T1  
 > **Date:** 2026-11-20  
 > **Hardware:** NVIDIA GeForce RTX 4060 Laptop GPU (CUDA 12.4, PyTorch 2.5.1+cu124)  
 > **Dataset:** OwensLab/CommunityForensics-Small (Held-out in-domain test set, N=200 balanced samples)  

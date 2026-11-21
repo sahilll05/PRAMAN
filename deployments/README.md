@@ -24,8 +24,8 @@ Deployment record archived in [`deployments/anvil.json`](anvil.json) and gas ben
 
 *Note: Broadcast to Base Sepolia requires faucet ETH on deployer account (balance currently 0). Local Anvil deployment script (`contracts/script/Deploy.s.sol`) is fully automated and reproducible.*
 
-## Base Mainnet (chainId 8453)
+## Base Mainnet (chainId 8453) — OUT OF SCOPE
 
-> **MAINNET DEPLOYMENT REQUIRES "APPROVED MAINNET" FROM SAHIL IN THE CURRENT SESSION.**
+> **ZERO-SPEND POLICY:** Mainnet deployment is permanently out of scope. PRAMAN is a non-commercial research prototype operating exclusively on Base Sepolia testnet ($0 cost).
 
 Not deployed — Phase 9 gate only.

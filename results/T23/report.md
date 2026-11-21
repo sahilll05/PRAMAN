@@ -1,6 +1,6 @@
 # Experiment T23: GPU Non-Determinism and Boundary Challenge Risk
 
-> **Pre-registered Protocol:** `sahil/threat_model.md` Section Threats T23, `sahil/agent_rules.md` Section 2c, and `sahil/evaluation_plan.md` Protocol E5b  
+> **Pre-registered Protocol:** Threat T23 & Protocol E5b (Deterministic CPU ONNX Reference Runner)  
 > **Date:** 2026-11-20  
 > **Hardware:** NVIDIA GeForce RTX 4060 Laptop GPU (fp16, TF32) vs Intel Core i7 / AMD CPU (ONNX Runtime fp32)  
 > **Evaluated Samples:** 2,440 boundary samples (empirical boundary points from CF-Small held-out test set + dense fine-grained crossover interpolations)  

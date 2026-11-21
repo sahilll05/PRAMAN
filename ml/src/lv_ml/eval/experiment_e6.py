@@ -1,6 +1,6 @@
 """Experiment E6: pHash Threshold Sweep (Recall vs. False-Match Rate).
 
-Pre-registered in sahil/evaluation_plan.md:
+Pre-registered in Evaluation Protocol:
 - Evaluate Hamming distance distributions for matched (transformed) vs unmatched pairs on N=200 images.
 - Evaluate transforms: JPEG Q in {95, 75, 50, 30}, resize {0.75, 0.50}, Gaussian blur, Gaussian noise.
 - Measure recall at fixed False Match Rate (FMR = 1e-3 and 1e-4).

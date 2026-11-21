@@ -5,7 +5,7 @@ Evaluates:
 (a) OpenFake temporal split: performance on older generators (<= 2024-01) vs newer generators (> 2024-01).
 (b) Verdict flip rate across detector versions (Model A vs Model B) on the same test samples.
 
-Supports Claim C6 in sahil/claims.md:
+Supports Claim C6:
 "Verdicts materially change across detector versions and across generator generations (perishability is real);
 evidenced by OpenFake temporal split and model v1 vs v2 flip rate"
 """

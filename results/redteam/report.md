@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-A comprehensive red-team review was conducted against the full threat model backlog (`sahil/threat_model.md`), covering:
+A comprehensive red-team review was conducted against the full threat model backlog, covering:
 1. **Adversarial Machine Learning** (PGD evasion attacks & boundary non-determinism).
 2. **Smart Contract Invariants & Gas Griefing** (`Registry.sol` & `VerdictResolver.sol`).
 3. **Web Verifier & API Security** (URI injection, path traversal, DoS, and input validation).

@@ -72,7 +72,7 @@ PRAMAN operates under a strict, non-negotiable **Zero-Spend Policy ($0 total cos
   - Indexer Database: Neon Serverless PostgreSQL free tier.
   - Browser Extension: Open-source sideload package (distributable as `.zip` archive; no $5 Chrome Web Store publisher fee).
   - Model Inference: Canonical reference inference runs locally on consumer CPUs (ONNX Runtime fp32); GPU acceleration is used locally for evaluation. New verdicts appear only when an attester node is run locally by a community participant.
-- **Mainnet Gates**: All mainnet deployment steps in `sahil/deployment_runbook.md` are formally marked `OUT OF SCOPE (zero-spend)`. No mainnet funds will ever be requested or deployed.
+- **Mainnet Gates**: All mainnet deployment steps are formally marked `OUT OF SCOPE (zero-spend)`. No mainnet funds will ever be requested or deployed.
 
 ---
 
@@ -280,7 +280,7 @@ Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS 
 
 ## 9. Required Caveats & Honest Disclosures
 
-In accordance with PRAMAN's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md) and [`sahil/claims.md`](sahil/claims.md)):
+In accordance with PRAMAN's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md)):
 1. **Model-Assessed Likelihood, Not an Oracle Ruling**: Verdicts reflect deterministic outputs of open forensic models at a point in time. They are not definitive statements of ontological truth.
 2. **MVP Modality Scope**: The MVP strictly evaluates **still images** (AI-generated vs. authentic photography). Video deepfakes, audio synthesis, and face-swaps are deferred to stretch phases.
 3. **Zero-Spend Non-Commercial Research**: The project operates with zero capital expenditure ($0). Deployment is restricted to **Base Sepolia testnet** using free testnet ETH. Mainnet deployment is explicitly out of scope.

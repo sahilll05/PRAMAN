@@ -1,6 +1,6 @@
 """Experiment E4: Calibration and Abstention Benchmark on Shifted Distributions.
 
-Pre-registered in sahil/evaluation_plan.md:
+Pre-registered in Evaluation Protocol:
 - Calibrate on source-domain validation set (CommunityForensics-Small + COCO cal split).
 - Evaluate on shifted datasets: OpenFake core (cross-dataset shift) and OpenFake reddit (in-the-wild shift).
 - Metrics evaluated:

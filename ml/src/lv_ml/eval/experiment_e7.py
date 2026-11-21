@@ -1,6 +1,6 @@
 """Experiment E7: TrustMark Watermark Survival Benchmark under Transformations.
 
-Pre-registered in sahil/evaluation_plan.md:
+Pre-registered in Evaluation Protocol:
 - Evaluates TrustMark variant Q encode/decode survival under realistic image degradations.
 - Measures decode success rate, PSNR, and SSIM across varying WM_STRENGTH and transforms.
 """
