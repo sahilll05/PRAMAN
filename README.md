@@ -1,56 +1,85 @@
 # PRAMAN (प्रमाण)
 
-> **Evidence-Driven, Temporally Validated, and Challengeable AI-Generated Image Authenticity Verification**  
-> *A decentralized protocol and reference implementation deployed on Base Sepolia testnet.*
+> **The Privacy-First, Browser-Based Toolkit for Media Authenticity**  
+> *Verify, protect, and audit images locally—without ever uploading your files to a server.*  
+> *Anchored on Base Sepolia testnet via Ethereum Attestation Service (EAS).*
 
-[![CI - Python Tests](https://img.shields.io/badge/pytest-27%20passed-brightgreen.svg)](#testing--verification)
-[![CI - TypeScript Tests](https://img.shields.io/badge/vitest-59%20passed-brightgreen.svg)](#testing--verification)
+[![Release](https://img.shields.io/badge/release-testnet--v1.0.0-blue.svg)](https://github.com/sahilll05/PRAMANA/releases/tag/testnet-v1.0.0)
+[![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#6-decentralized-eas-attestation-protocol)
+[![CI - Python Tests](https://img.shields.io/badge/pytest-26%20passed-brightgreen.svg)](#running-test-suites)
+[![CI - TypeScript Tests](https://img.shields.io/badge/vitest-94%20passed-brightgreen.svg)](#running-test-suites)
 [![Smart Contracts](https://img.shields.io/badge/foundry-43%20passed-brightgreen.svg)](#smart-contracts--eas)
-[![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#protocol-architecture)
-[![License](https://img.shields.io/badge/license-MIT%20%2F%20Non--Commercial-lightgrey.svg)](#ethics--licensing)
+[![Cost](https://img.shields.io/badge/cost-$0%20(Zero--Spend)-success.svg)](#2-zero-spend-policy--mainnet-out-of-scope-disclosure)
 [![Spec Version](https://img.shields.io/badge/spec-0.1.0--draft-orange.svg)](spec/schemas/verdict.schema.json)
+[![License](https://img.shields.io/badge/license-MIT%20%2F%20Non--Commercial-lightgrey.svg)](#10-license)
 
 ---
 
-## 1. Executive Summary & Problem
+## 1. Executive Summary & Toolkit Capabilities
 
-Modern generative diffusion and transformer models (e.g., Stable Diffusion 3.5, Flux, DALL-E 3) make synthetic still imagery increasingly indistinguishable from optical photography. While conventional deepfake detectors report high closed-set benchmark accuracy, they suffer from severe real-world vulnerabilities:
+Modern generative diffusion and transformer models (e.g., Stable Diffusion 3.5, Flux, DALL-E 3) make synthetic imagery increasingly indistinguishable from optical photography. While conventional deepfake detectors report high closed-set accuracy, they suffer from severe real-world vulnerabilities:
 1. **Distributional Collapse & Generator Shift**: Detectors trained on past generative models experience substantial degradation when exposed to unseen architectures, latent spaces, or real-world social media compression pipelines.
 2. **Epistemological Permanence Fallacy**: Treating an authenticity verdict as a static, irrevocable stamp is fundamentally flawed. A classification that appears sound today may be refuted tomorrow as generator families shift and new forensic models emerge.
 3. **Opaque, Centralized Oracles**: Proprietary APIs output unversioned probabilities without public evidence bundles, without reproducible code, and with zero recourse for affected individuals to contest incorrect labels.
+4. **Privacy Invasion**: Uploading private, sensitive, or confidential media to third-party cloud servers for analysis exposes users to surveillance, leaks, and unauthorized data harvesting.
 
 ### The PRAMAN Solution
-**PRAMAN** rejects the concept of an unquestionable "truth oracle." Instead, it treats media authenticity as an **expiring, versioned, challengeable, and re-executable on-chain claim** built on open-weight deterministic detectors and the **Ethereum Attestation Service (EAS)** on Base Sepolia testnet.
+
+**PRAMAN (प्रमाण — Sanskrit for "Means of Valid Knowledge")** rejects the concept of an unquestionable "truth oracle." Instead, PRAMAN provides a **complete, privacy-first, browser-based media authenticity toolkit** where media **never leaves the user's browser**, combined with an open protocol where AI image verdicts are **expiring, versioned, challengeable, and re-executable on-chain claims** on Base Sepolia testnet.
 
 ```
-                             [ User Image (Local) ]
-                                       │
-                ┌──────────────────────┴──────────────────────┐
-                ▼                                             ▼
-     [ Browser Web Verifier ]                       [ Local Attester Node ]
-   - Streaming SHA-256 (hash-wasm)               - Open-weight Vision Backbone (CLIP)
-   - DCT-II Perceptual Hash (spec §4)            - Linear & MLP Detector Heads
-   - Look up on-chain timeline                   - Canonical ONNX CPU fp32 Runner
-   - ZERO MEDIA UPLOAD (Privacy First)           - Generates verdict.json + evidence.json
-                │                                             │
-                │                                             ▼
-                │                            [ Base Sepolia: EAS & VerdictResolver ]
-                │                               - Schema Registry & Attestation UID
-                │                               - Expiration timestamp & refUID
-                │                               - Challenge & Supersession flow
-                ▼                                             │
-   [ On-Chain Assessment Timeline ] ◄─────────────────────────┘
-   - ACTIVE / STALE / SUPERSEDED / CHALLENGED
-   - Model version, confidence, & evidence hash
-   - Transparent contestation / challenge link
+                             [ User Image (Local Browser / Extension) ]
+                                                │
+                 ┌──────────────────────────────┼──────────────────────────────┐
+                 ▼                              ▼                              ▼
+      [ In-Browser Verifier ]           [ Protect Mode ]             [ Batch & ELA Tools ]
+    - Streaming SHA-256 (hash-wasm)   - Web Crypto ECDSA P-256     - Multi-image & ZIP drops
+    - DCT-II pHash 64-bit (spec §4)   - Downloadable .praman file  - Canvas 2D Error Level Analysis
+    - Query EAS timeline via hash     - Spatial Blue-channel WM    - Offline HTML5 audit report
+    - ZERO MEDIA UPLOAD               - ZERO MEDIA UPLOAD          - ZERO MEDIA UPLOAD
+                 │
+                 │ (Hash queries only — 0 image bytes uploaded)
+                 ▼
+    [ Base Sepolia: EAS & VerdictResolver ] ◄──────────── [ Local Attester Node ]
+    - On-chain attestation UID & refUID                   - Pinned open vision models (CLIP)
+    - Living verdicts: ACTIVE / STALE / SUPERSEDED       - Canonical CPU ONNX fp32 runner
+    - Optimistic challenges & Canary commit-reveal        - Generates verdict.json & evidence.json
 ```
+
+### The 6 Core Toolkit Capabilities
+
+| Capability | Module | Privacy & Execution Model | Description |
+|---|---|---|---|
+| 🔍 **In-Browser Verifier** | `web/` | 100% Client-Side | Instant drag-and-drop verification computing streaming SHA-256 (`hash-wasm`) and 64-bit DCT-II perceptual hash (`pHash`). Queries Base Sepolia EAS attestations by hash. **Zero media upload.** |
+| 🛡️ **Protect Mode** | `web/lib/protect.ts` | 100% Client-Side | Generates a locally-signed cryptographic `.praman` receipt using browser-native Web Crypto ECDSA P-256. Optionally embeds a 40-bit spatial digital watermark into the Blue channel (PSNR 44.5–48.2 dB). |
+| 🧩 **Browser Extension** | `extension/` | 100% Client-Side | Chrome MV3 & Firefox WebExtension. Right-click any web image to verify instantly with an in-page floating verdict badge. Supports local image cache inspection and manual SHA-256 search. |
+| 📁 **Batch Verification** | `web/app/` | 100% Client-Side | Drop folders, multiple files, or ZIP archives (`JSZip`). Concurrently hashes files in client Web Workers and generates an interactive, self-contained, valid W3C HTML5 audit report for download. |
+| 🔬 **ELA Visual Inspector** | `web/lib/ela.ts` | 100% Client-Side | In-browser Error Level Analysis via HTML5 Canvas 2D. Recompresses images at JPEG Q=85, computes pixel-wise absolute delta with 5x–20x amplification. Includes mandatory forensic non-ruling disclosures. |
+| ⛓️ **Decentralized EAS Protocol** | `contracts/`, `chain/` | Base Sepolia Testnet | Living verdicts on Ethereum Attestation Service (EAS). Features native TTL expiration, keeper-driven `refUID` supersession, optimistic challenge flows, and cryptographic commit-reveal canaries. |
 
 ---
 
-## 2. Core Architectural Pillars
+## 2. Zero-Spend Policy & Mainnet Out-of-Scope Disclosure
+
+> [!IMPORTANT]
+> **Mainnet deployment is out of scope for this project (zero-spend policy).**
+
+PRAMAN operates under a strict, non-negotiable **Zero-Spend Policy ($0 total cost)**. The project is designed and deployed as a **non-commercial research prototype**:
+- **Testnet-Only Deployment**: Smart contracts and EAS schemas are deployed exclusively to **Base Sepolia testnet** (`chainId: 84532`) using free faucet testnet ETH.
+- **Zero Paid Dependencies**: PRAMAN does not use paid APIs, proprietary vision endpoints, paid IPFS pinning services, cloud GPU rentals, or paid web store fees.
+- **Client & Free-Tier Infrastructure**:
+  - Web UI: Hosted on Vercel Hobby tier (non-commercial research).
+  - Indexer Database: Neon Serverless PostgreSQL free tier.
+  - Browser Extension: Open-source sideload package (distributable as `.zip` archive; no $5 Chrome Web Store publisher fee).
+  - Model Inference: Canonical reference inference runs locally on consumer CPUs (ONNX Runtime fp32); GPU acceleration is used locally for evaluation. New verdicts appear only when an attester node is run locally by a community participant.
+- **Mainnet Gates**: All mainnet deployment steps in `sahil/deployment_runbook.md` are formally marked `OUT OF SCOPE (zero-spend)`. No mainnet funds will ever be requested or deployed.
+
+---
+
+## 3. Core Architectural Pillars
 
 ### 1. Deterministic Reference Runner (spec §7.6)
-To enable fraud-proof challenge mechanics, model execution must be strictly reproducible across disparate machines and operating systems.
+To enable fraud-proof challenge mechanics, model execution must be strictly reproducible across disparate machines and operating systems:
 - **Canonical Attestation Path**: Executed strictly on **CPU ONNX Runtime (fp32)** with pinned preprocessor pipelines, single-thread execution, and fixed math kernels.
 - **GPU Acceleration**: Training, feature extraction, and high-throughput evaluation run on GPU (NVIDIA RTX 4060 Laptop GPU, fp16).
 - **CPU-vs-GPU Numerical Parity (Experiment E5b)**: Evaluated across $N=200$ test images, the GPU fp16 fast path and canonical CPU ONNX path agreed within a **maximum difference of 20 basis points (0.20%)**, a **mean difference of 3.00 basis points (0.030%)**, and achieved a **0.0% verdict mismatch rate** ([results/E5b/metrics.json](results/E5b/metrics.json)).
@@ -62,10 +91,10 @@ Verdicts are formalized as revocable attestations registered in EAS with a custo
 - **Optimistic Challenge Flow**: Any allowlisted attester can independently re-execute the exact pinned model bundle on the original media. If the re-computed probability differs beyond the registered tolerance ($\epsilon$), a counter-challenge attestation is published on-chain.
 - **Canary Degradation**: Maintainer-issued canary rounds continuously monitor detector versions against fresh test sets. If a model's canary metrics fall below acceptable thresholds, the status state machine flags all associated verdicts as **STALE**.
 
-### 3. Client-Side Privacy-First Web Verifier
+### 3. Client-Side Privacy Guarantee (Zero Media Upload)
 - Media files **never leave the user's browser**.
 - Streaming cryptographic SHA-256 and normative 64-bit perceptual hashing (spec §4 DCT-II) are computed entirely client-side via WebAssembly (`hash-wasm`).
-- The web interface queries the indexer exclusively using hashes, retrieving the full attestation timeline, model versions, evidence hashes, and appeal forms without uploading pixels to any server.
+- The web interface and browser extension query the indexer exclusively using hashes, retrieving the full attestation timeline, model versions, evidence hashes, and appeal forms without uploading pixels to any server (verified by Playwright e2e network interception in `web/tests/e2e/privacy.spec.ts`).
 
 ### 4. Rigorous Scientific Discipline & Pre-Registered Shortcut Audit (E13)
 Benchmark datasets often contain spurious shortcuts (e.g., PNG synthetic images vs. JPEG photographic images). PRAMAN pre-registers a formal shortcut audit before reporting results:
@@ -74,7 +103,7 @@ Benchmark datasets often contain spurious shortcuts (e.g., PNG synthetic images 
 
 ---
 
-## 3. Empirical Benchmark Results (Complete Pre-Registered Experiments E0–E13 + T23)
+## 4. Empirical Benchmark Results (Complete Pre-Registered Experiments E0–E13 + T23)
 
 All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/CommunityForensics-Small](https://huggingface.co/datasets/OwensLab/CommunityForensics-Small), [ComplexDataLab/OpenFake](https://huggingface.co/datasets/ComplexDataLab/OpenFake), and [COCO val2017](https://cocodataset.org)). All metrics reflect actual local executions with committed configurations, logs, and git SHAs archived in [`results/`](results/):
 
@@ -104,7 +133,7 @@ All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/Comm
 
 ---
 
-## 4. Why Still Images? (Why Face-Swap Video Deepfakes Were Not Included in MVP)
+## 5. Why Still Images? (Why Face-Swap Video Deepfakes Were Not Included in MVP)
 
 A frequent question is why PRAMAN focuses squarely on **generative still images** rather than video deepfakes (face swaps). This was a deliberate architectural and ethical decision frozen in ADR `D-IMAGES-FIRST`:
 
@@ -124,7 +153,7 @@ A frequent question is why PRAMAN focuses squarely on **generative still images*
 
 ---
 
-## 5. Repository Structure
+## 6. Repository Structure
 
 ```
 PRAMAN/
@@ -138,21 +167,29 @@ PRAMAN/
 │   │   ├── models/             # PyTorch Model A (Linear Probe) & Model B (MLP Probe)
 │   │   ├── runner/             # CPU ONNX Reference Runner & ONNX exporter
 │   │   ├── calibration/        # TemperatureScaler, MahalanobisOODGate, ConformalPredictor
+│   │   ├── watermark/          # TrustMark Q & spatial watermark adapters
 │   │   └── eval/               # Benchmark experiments E1-E13, T23, and shortcut audit
 │   ├── scripts/                # Data download, split generation, training, and eval scripts
 │   └── tests/                  # Pytest test suite (schemas, pHash, models, runners)
 ├── contracts/                  # Solidity Smart Contracts (Foundry)
 │   ├── src/                    # Registry.sol & VerdictResolver.sol
-│   └── test/                   # Fuzz, invariant, and unit tests
+│   └── test/                   # Fuzz, invariant, and unit tests (43 passed)
 ├── chain/                      # TypeScript Chain CLI (viem + EAS SDK)
 ├── indexer/                    # Event Indexer & Status State Machine (Drizzle + Postgres)
-├── web/                        # Next.js Web Verifier (Tailwind + hash-wasm, monochrome + Sanskrit)
+├── web/                        # Next.js 14 Web Verifier (Tailwind + hash-wasm, monochrome + Sanskrit)
+│   ├── app/                    # Web Verifier, Models, Canary, Attesters, Limitations, Batch pages
+│   ├── components/             # DropZone, ProtectCard, VerifyReceiptModal, ELAViewer, BatchVerification
+│   ├── lib/                    # Fingerprint, Protect Mode (ECDSA P-256), Spatial Watermark, ELA
+│   └── tests/                  # Vitest suite & Playwright e2e privacy test
+├── extension/                  # Browser Extension (Chrome MV3 & Firefox WebExtension)
+│   ├── src/                    # Background service worker, Content script, Popup UI
+│   └── dist/                   # Sideload package & praman-extension-v0.1.0.zip
 └── results/                    # Committed experiment results, configs, env.txt, and git SHAs
 ```
 
 ---
 
-## 6. Getting Started & Reproduction
+## 7. Getting Started & Reproduction
 
 ### Prerequisites
 - Python 3.11+
@@ -163,8 +200,8 @@ PRAMAN/
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/sahilll05/PRAMAN.git
-cd PRAMAN
+git clone https://github.com/sahilll05/PRAMANA.git
+cd PRAMANA
 
 # 1. Setup ML Python virtual environment
 cd ml
@@ -189,24 +226,31 @@ python -m lv_ml.runner.cpu_runner \
   --model dataset/models/model_a.onnx
 ```
 
+### Installing the Browser Extension (Sideload)
+The browser extension is distributed as an open-source sideload package (no paid store fee):
+1. Run `pnpm --filter @praman/extension build`.
+2. In Google Chrome / Brave: Open `chrome://extensions/`, enable **Developer mode**, click **Load unpacked**, and select the `extension/dist` directory.
+3. In Firefox: Open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on**, and select `extension/dist/manifest.json`.
+4. Right-click any image on the web and select **"Verify with PRAMAN प्रमाण"**.
+
 ### Running Test Suites
 ```bash
-# Python unit tests & schema validation (27 passed)
-pytest ml/tests/
+# Python unit tests & schema validation (26 passed, 1 skipped)
+uv run --project ml pytest ml/tests/
 
-# TypeScript workspace tests: chain, indexer, web (59 passed)
-pnpm -r test
+# TypeScript workspace tests across all 4 packages (94 passed)
+pnpm test
 
 # Foundry smart contract fuzz & invariant tests (43 passed, 1000 fuzz runs)
-cd contracts && forge test
+forge test --root contracts
 
-# Playwright automated privacy & visual tests
+# Playwright automated privacy & zero-upload verification tests
 pnpm --prefix web test:e2e
 ```
 
 ---
 
-## 7. On-Chain EAS Payload & Verdict Schema
+## 8. On-Chain EAS Payload & Verdict Schema
 
 Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS Schema on Base Sepolia:
 
@@ -234,18 +278,20 @@ Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS 
 
 ---
 
-## 8. Required Caveats & Honest Disclosures
+## 9. Required Caveats & Honest Disclosures
 
-In accordance with PRAMAN's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md)):
+In accordance with PRAMAN's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md) and [`sahil/claims.md`](sahil/claims.md)):
 1. **Model-Assessed Likelihood, Not an Oracle Ruling**: Verdicts reflect deterministic outputs of open forensic models at a point in time. They are not definitive statements of ontological truth.
 2. **MVP Modality Scope**: The MVP strictly evaluates **still images** (AI-generated vs. authentic photography). Video deepfakes, audio synthesis, and face-swaps are deferred to stretch phases.
 3. **Zero-Spend Non-Commercial Research**: The project operates with zero capital expenditure ($0). Deployment is restricted to **Base Sepolia testnet** using free testnet ETH. Mainnet deployment is explicitly out of scope.
 4. **Local Attester Requirement**: New on-chain attestations appear only when an attester node executes the open runner locally. Images are never scanned by a hosted cloud service.
 5. **Non-Commercial Dataset Licensing**: Training utilizes `OwensLab/CommunityForensics-Small` (CC-BY-NC-SA-4.0) and `ComplexDataLab/OpenFake` (CC-BY-NC-4.0). Any redistributed model weights carry non-commercial research restrictions.
 6. **Centralized Initial Allowlist**: In v1, attester addresses are allowlisted by contract governance to mitigate Sybil flooding. Open economic bond-based registration is a post-MVP roadmap item.
+7. **Canaries are Maintainer-Run in v1**: Canary evaluations and health checks are currently scheduled and published by maintainer nodes; this represents a trust assumption documented in Threat Model T18.
+8. **Shortcut Audit Pre-Registration**: Spurious container metadata shortcuts were pre-registered and audited in Experiment E13; all models are evaluated under uniform spatial-compression equalization.
 
 ---
 
-## 9. License
+## 10. License
 
 This repository is released under the **MIT License**. Third-party dataset subsets and model backbones are governed by their respective non-commercial licenses (CC-BY-NC-SA 4.0 / CC-BY-NC 4.0 / LAION OpenCLIP).
