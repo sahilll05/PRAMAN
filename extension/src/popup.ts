@@ -230,8 +230,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         const res = await fetchVerdicts(sha256, phash, rawVal, config);
-        displayResult(res);
         displayManualResult(res);
+        if (chrome?.storage?.local) {
+          await chrome.storage.local.set({ lastVerification: res });
+        }
 
         if (manualMsg) {
           manualMsg.style.display = "none";

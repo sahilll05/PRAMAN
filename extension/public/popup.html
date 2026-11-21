@@ -10,72 +10,87 @@
       margin: 0;
       padding: 0;
     }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
     body {
       width: 380px;
       background: #09090b;
       color: #f4f4f5;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 13px;
-      line-height: 1.5;
-      padding: 16px;
+      font-size: 12px;
+      line-height: 1.45;
+      padding: 12px 14px;
+      overflow-x: hidden;
     }
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #27272a;
-      padding-bottom: 12px;
-      margin-bottom: 14px;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
     .brand svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       stroke: #fafafa;
     }
     .brand-title {
       font-weight: 600;
       letter-spacing: 0.05em;
       color: #fafafa;
+      font-size: 13px;
     }
     .brand-sanskrit {
       color: #a1a1aa;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 400;
     }
     .badge-testnet {
-      font-size: 10px;
-      padding: 1px 6px;
+      font-size: 9px;
+      padding: 1px 5px;
       border-radius: 4px;
       background: #18181b;
       border: 1px solid #27272a;
       color: #a1a1aa;
     }
     .section-title {
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #71717a;
-      margin-bottom: 8px;
-      font-weight: 500;
+      margin-bottom: 5px;
+      font-weight: 600;
     }
     .card {
       background: #121214;
       border: 1px solid #1f1f23;
       border-radius: 6px;
-      padding: 12px;
-      margin-bottom: 14px;
+      padding: 10px 11px;
+      margin-bottom: 10px;
     }
     .field-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 11px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .field-label {
       color: #71717a;
@@ -86,10 +101,10 @@
     }
     .status-badge {
       display: inline-block;
-      font-size: 10px;
-      font-weight: 500;
+      font-size: 9px;
+      font-weight: 600;
       text-transform: uppercase;
-      padding: 2px 6px;
+      padding: 1.5px 5px;
       border-radius: 4px;
       border: 1px solid #3f3f46;
       background: #18181b;
@@ -98,15 +113,15 @@
     .input-group {
       display: flex;
       gap: 6px;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
     input[type="text"] {
       flex: 1;
       background: #18181b;
       border: 1px solid #27272a;
       border-radius: 4px;
-      padding: 6px 10px;
-      font-size: 12px;
+      padding: 5px 8px;
+      font-size: 11px;
       color: #fafafa;
       outline: none;
     }
@@ -117,10 +132,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 6px 12px;
+      gap: 5px;
+      padding: 5px 10px;
       border-radius: 4px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       border: 1px solid #27272a;
@@ -145,42 +160,42 @@
     }
     .nav-links {
       display: flex;
-      gap: 6px;
-      margin-bottom: 14px;
+      gap: 5px;
+      margin-bottom: 10px;
     }
     .nav-links .btn {
       flex: 1;
-      font-size: 11px;
-      padding: 5px;
+      font-size: 10px;
+      padding: 4px 6px;
     }
     .footer {
       border-top: 1px solid #1f1f23;
-      padding-top: 10px;
+      padding-top: 8px;
       font-size: 10px;
       color: #71717a;
-      line-height: 1.4;
+      line-height: 1.35;
     }
     .privacy-tag {
       color: #a1a1aa;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       display: flex;
       align-items: center;
       gap: 4px;
     }
     .settings-toggle {
-      font-size: 11px;
+      font-size: 10px;
       color: #71717a;
       cursor: pointer;
       text-align: right;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .settings-panel {
       display: none;
       background: #121214;
       border: 1px solid #27272a;
       border-radius: 6px;
-      padding: 10px;
-      margin-bottom: 12px;
+      padding: 8px;
+      margin-bottom: 10px;
       font-size: 11px;
     }
     .settings-panel.active {
@@ -209,13 +224,13 @@
 
   <div class="section-title">Last Verified Image</div>
   <div id="last-verified-card" class="card">
-    <div id="empty-state" style="color: #71717a; font-size: 12px; text-align: center; padding: 12px 0;">
+    <div id="empty-state" style="color: #71717a; font-size: 11px; text-align: center; padding: 8px 0;">
       Right-click any image on the web and select <strong>"Verify with PRAMANA प्रमाण"</strong>.
     </div>
     <div id="verified-state" style="display: none;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
         <span id="res-status-badge" class="status-badge">ACTIVE</span>
-        <span id="res-time" style="color: #71717a; font-size: 11px;">Just now</span>
+        <span id="res-time" style="color: #71717a; font-size: 10px;">Just now</span>
       </div>
       <div class="field-row">
         <span class="field-label">SHA-256</span>
@@ -233,30 +248,30 @@
         <span class="field-label">Synthetic Likelihood</span>
         <span id="res-score" class="field-value">--</span>
       </div>
-      <div style="margin-top: 10px;">
+      <div style="margin-top: 8px;">
         <a id="res-link" href="http://localhost:3000" target="_blank" class="btn btn-primary btn-full">View On-Chain Record →</a>
       </div>
     </div>
   </div>
 
   <div class="section-title">Manual Hash / URL Lookup</div>
-  <div class="card" style="padding: 12px;">
+  <div class="card">
     <div class="input-group">
       <input type="text" id="manual-input" placeholder="Paste SHA-256 (0x...) or Image URL...">
-      <button id="manual-btn" class="btn btn-primary" style="padding: 6px 14px;">Verify</button>
+      <button id="manual-btn" class="btn btn-primary" style="padding: 5px 10px;">Verify</button>
     </div>
-    <div id="manual-msg" style="font-size: 11px; color: #a1a1aa; margin-top: 6px; display: none;"></div>
+    <div id="manual-msg" style="font-size: 10px; color: #a1a1aa; margin-top: 4px; display: none;"></div>
     
-    <div id="manual-result" style="display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #1f1f23;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+    <div id="manual-result" style="display: none; margin-top: 8px; padding-top: 8px; border-top: 1px solid #1f1f23;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
         <span id="man-status-badge" class="status-badge">NO ON-CHAIN RECORD</span>
-        <span id="man-time" style="color: #71717a; font-size: 11px;"></span>
+        <span id="man-time" style="color: #71717a; font-size: 10px;"></span>
       </div>
       <div class="field-row">
         <span class="field-label">SHA-256</span>
         <span id="man-sha256" class="field-value" style="font-size: 10px;">--</span>
       </div>
-      <div id="man-detail-text" style="font-size: 11px; color: #a1a1aa; margin: 8px 0; line-height: 1.4;"></div>
+      <div id="man-detail-text" style="font-size: 10px; color: #a1a1aa; margin: 6px 0; line-height: 1.35;"></div>
       <div id="man-model-row" class="field-row" style="display: none;">
         <span class="field-label">Model</span>
         <span id="man-model" class="field-value">--</span>
@@ -265,7 +280,7 @@
         <span class="field-label">Synthetic Likelihood</span>
         <span id="man-score" class="field-value">--</span>
       </div>
-      <div style="margin-top: 10px;">
+      <div style="margin-top: 8px;">
         <a id="man-link" href="http://localhost:3000" target="_blank" class="btn btn-primary btn-full">View On-Chain Record →</a>
       </div>
     </div>
@@ -273,8 +288,8 @@
 
   <div class="settings-toggle" id="toggle-settings">⚙️ Settings</div>
   <div class="settings-panel" id="settings-panel">
-    <div style="margin-bottom: 6px;">Indexer API Base URL:</div>
-    <div class="input-group" style="margin-bottom: 6px;">
+    <div style="margin-bottom: 4px;">Indexer API Base URL:</div>
+    <div class="input-group">
       <input type="text" id="config-api-url" value="http://localhost:3000">
       <button id="save-config-btn" class="btn">Save</button>
     </div>
@@ -288,7 +303,7 @@
   </div>
 
   <div class="footer">
-    <div class="privacy-tag">🛡️ <strong>Zero Media Upload:</strong> Hashes are computed client-side.</div>
+    <div class="privacy-tag">🛡️ <strong>Zero Media Upload:</strong> Client-side hashing only.</div>
     <div>Model-assessed likelihood only — not a ruling. See limitations.</div>
   </div>
 
