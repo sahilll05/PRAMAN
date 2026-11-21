@@ -4,7 +4,7 @@
 > *Verify, protect, and audit images locally—without ever uploading your files to a server.*  
 > *Anchored on Base Sepolia testnet via Ethereum Attestation Service (EAS).*
 
-[![Release](https://img.shields.io/badge/release-praman--v1.0.0-blue.svg)](https://github.com/sahilll05/PRAMANA/releases/tag/praman-v1.0.0)
+[![Release](https://img.shields.io/badge/release-praman--v1.0.0-blue.svg)](https://github.com/sahilll05/PRAMAN/releases/tag/praman-v1.0.0)
 [![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#6-decentralized-eas-attestation-protocol)
 [![CI - Python Tests](https://img.shields.io/badge/pytest-26%20passed-brightgreen.svg)](#running-test-suites)
 [![CI - TypeScript Tests](https://img.shields.io/badge/vitest-94%20passed-brightgreen.svg)](#running-test-suites)
@@ -200,8 +200,8 @@ PRAMAN/
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/sahilll05/PRAMANA.git
-cd PRAMANA
+git clone https://github.com/sahilll05/PRAMAN.git
+cd PRAMAN
 
 # 1. Setup ML Python virtual environment
 cd ml
