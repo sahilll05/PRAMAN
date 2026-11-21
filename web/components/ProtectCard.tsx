@@ -11,16 +11,26 @@ import {
   FileCode,
   FileCheck,
   Info,
+  ImageDown,
+  Sparkles,
 } from "lucide-react";
 import { PramanaReceipt, downloadReceiptFile, verifyProtectReceipt } from "@/lib/protect";
+import { downloadWatermarkedImage } from "@/lib/watermark";
 import { cn } from "@/lib/utils";
 
 interface ProtectCardProps {
   receipt: PramanaReceipt;
+  watermarkedBlob?: Blob | null;
+  watermarkPsnr?: number | null;
   onReset: () => void;
 }
 
-export function ProtectCard({ receipt, onReset }: ProtectCardProps) {
+export function ProtectCard({
+  receipt,
+  watermarkedBlob,
+  watermarkPsnr,
+  onReset,
+}: ProtectCardProps) {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
   const [isVerifyingSelf, setIsVerifyingSelf] = useState(false);
   const [selfVerificationResult, setSelfVerificationResult] = useState<string | null>(null);
@@ -68,18 +78,41 @@ export function ProtectCard({ receipt, onReset }: ProtectCardProps) {
             </p>
           </div>
         </div>
-        <span className="self-start sm:self-auto inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 rounded-md px-2.5 py-1">
-          <ShieldCheck className="h-3.5 w-3.5" />
-          Locally Signed (ECDSA P-256)
-        </span>
+        <div className="flex flex-wrap items-center gap-2">
+          {receipt.watermark.trustmarkId && (
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md px-2.5 py-1 font-mono">
+              <Sparkles className="h-3 w-3 text-emerald-500" />
+              Watermarked ({watermarkPsnr ? `${watermarkPsnr.toFixed(1)} dB` : ">=38 dB"})
+            </span>
+          )}
+          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 rounded-md px-2.5 py-1">
+            <ShieldCheck className="h-3.5 w-3.5" />
+            Locally Signed (ECDSA P-256)
+          </span>
+        </div>
       </div>
 
       {/* Primary Actions */}
       <div className="flex flex-col sm:flex-row gap-3">
+        {watermarkedBlob && (
+          <button
+            type="button"
+            onClick={() => downloadWatermarkedImage(watermarkedBlob, receipt.media.fileName)}
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white px-5 py-3 text-xs font-semibold shadow-sm transition-colors cursor-pointer"
+          >
+            <ImageDown className="h-4 w-4" />
+            Download Watermarked Image
+          </button>
+        )}
         <button
           type="button"
           onClick={() => downloadReceiptFile(receipt)}
-          className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white px-5 py-3 text-xs font-semibold shadow-sm transition-colors cursor-pointer"
+          className={cn(
+            "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-xs font-semibold shadow-sm transition-colors cursor-pointer",
+            watermarkedBlob
+              ? "border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+              : "flex-1 bg-zinc-900 hover:bg-zinc-800 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+          )}
         >
           <Download className="h-4 w-4" />
           Download .pramana Receipt
@@ -152,6 +185,20 @@ export function ProtectCard({ receipt, onReset }: ProtectCardProps) {
             <p className="text-zinc-800 dark:text-zinc-200">{receipt.media.pHash}</p>
           </div>
 
+          {receipt.watermark.trustmarkId && (
+            <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950 p-3 border border-zinc-200/70 dark:border-zinc-800/80 space-y-1">
+              <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400">
+                <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider">
+                  <Sparkles className="h-3.5 w-3.5 text-emerald-500" /> Digital Watermark Payload (40-bit ID)
+                </span>
+                <span className="text-[10px] text-emerald-600 dark:text-emerald-400">
+                  {watermarkPsnr ? `PSNR ${watermarkPsnr.toFixed(1)} dB (>=38 dB threshold)` : "Imperceptible"}
+                </span>
+              </div>
+              <p className="text-zinc-800 dark:text-zinc-200">{receipt.watermark.trustmarkId}</p>
+            </div>
+          )}
+
           <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950 p-3 border border-zinc-200/70 dark:border-zinc-800/80 space-y-1">
             <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400">
               <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider">
@@ -199,10 +246,10 @@ export function ProtectCard({ receipt, onReset }: ProtectCardProps) {
         <Info className="h-4 w-4 text-zinc-500 flex-shrink-0 mt-0.5" />
         <div className="space-y-1">
           <p className="font-semibold text-zinc-800 dark:text-zinc-200">
-            Notice on Digital Receipts
+            Notice on Digital Receipts & Watermarking
           </p>
           <p className="leading-relaxed text-[11px]">
-            A <code className="font-mono text-zinc-700 dark:text-zinc-300">.pramana</code> receipt generates a locally-signed record of your media&apos;s content hash and creation timestamp using standard Web Crypto primitives. It provides a verifiable timestamped fingerprint, not legal proof of copyright or copyright registration. Media never leaves your browser.
+            A <code className="font-mono text-zinc-700 dark:text-zinc-300">.pramana</code> receipt generates a locally-signed record of your media&apos;s content hash, watermark ID, and creation timestamp using Web Crypto primitives. Watermarking embeds an imperceptible high-frequency differential payload (PSNR &ge; 38 dB) into pixel channels. It provides a verifiable fingerprint, not legal proof of copyright or copyright registration. Media never leaves your browser.
           </p>
         </div>
       </div>

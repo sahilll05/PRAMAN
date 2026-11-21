@@ -20,6 +20,7 @@ import {
 import { cn } from "@/lib/utils";
 import { computeFileFingerprint } from "@/lib/fingerprint";
 import { generateProtectReceipt, PramanaReceipt } from "@/lib/protect";
+import { applyWatermarkToFile } from "@/lib/watermark";
 import { StatusBadge } from "@/components/StatusBadge";
 import { VerdictCard } from "@/components/VerdictCard";
 import { ProtectCard } from "@/components/ProtectCard";
@@ -51,6 +52,8 @@ interface VerifyState {
   error?: string;
   verdicts: LocalVerdict[];
   receipt?: PramanaReceipt;
+  watermarkedBlob?: Blob | null;
+  watermarkPsnr?: number | null;
 }
 
 const INITIAL: VerifyState = {
@@ -105,7 +108,7 @@ export default function HomePage() {
         const fp = await computeFileFingerprint(file);
 
         if (mode === "protect") {
-          // T10.1: Protect Mode — Generate locally signed .pramana receipt via Web Crypto
+          // T10.1 & T10.1b: Protect Mode — Digital Watermarking + Signed .pramana Receipt
           setState((s) => ({
             ...s,
             phase: "signing",
@@ -113,17 +116,29 @@ export default function HomePage() {
             pHashHex: fp.pHashHex,
           }));
 
+          // T10.1b: Embed imperceptible digital watermark via HTML5 Canvas (PSNR >= 38 dB)
+          let wmResult = null;
+          try {
+            wmResult = await applyWatermarkToFile(file);
+          } catch (wmErr) {
+            console.warn("Watermarking execution failed:", wmErr);
+          }
+
           const receipt = await generateProtectReceipt({
             fileName: file.name,
             fileSize: file.size,
             sha256Hex: fp.sha256Hex,
             pHashHex: fp.pHashHex,
+            trustmarkId: wmResult?.watermarkIdHex ?? null,
+            watermarkStatus: wmResult ? ("embedded" as const) : ("none" as const),
           });
 
           setState((s) => ({
             ...s,
             phase: "done",
             receipt,
+            watermarkedBlob: wmResult?.watermarkedBlob ?? null,
+            watermarkPsnr: wmResult?.psnr ?? null,
           }));
           return;
         }
@@ -417,7 +432,12 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto space-y-6">
           {mode === "protect" && state.receipt ? (
             /* Protect Mode Result */
-            <ProtectCard receipt={state.receipt} onReset={reset} />
+            <ProtectCard
+              receipt={state.receipt}
+              watermarkedBlob={state.watermarkedBlob}
+              watermarkPsnr={state.watermarkPsnr}
+              onReset={reset}
+            />
           ) : (
             /* Verify Mode Result */
             <>

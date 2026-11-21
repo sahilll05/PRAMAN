@@ -11,6 +11,7 @@ import {
   FileCode,
 } from "lucide-react";
 import { verifyProtectReceipt, PramanaReceipt } from "@/lib/protect";
+import { extractWatermark } from "@/lib/watermark";
 import { cn } from "@/lib/utils";
 
 interface VerifyReceiptModalProps {
@@ -25,6 +26,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
     valid?: boolean;
     error?: string;
     receipt?: PramanaReceipt;
+    watermarkDetected?: { found: boolean; id?: string };
   }>({ tested: false });
   const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -57,6 +59,41 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
   };
 
   const handleFileUpload = (file: File) => {
+    if (file.type.startsWith("image/")) {
+      // Check for embedded watermark in image file
+      setIsLoading(true);
+      const img = new Image();
+      const objectUrl = URL.createObjectURL(file);
+      img.onload = () => {
+        try {
+          const canvas = document.createElement("canvas");
+          canvas.width = img.naturalWidth || img.width;
+          canvas.height = img.naturalHeight || img.height;
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0);
+            const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const wmRes = extractWatermark(imgData.data, canvas.width, canvas.height);
+            setResult({
+              tested: true,
+              valid: wmRes.found,
+              error: wmRes.found ? undefined : "No PRAMANA watermark detected in this image.",
+              watermarkDetected: { found: wmRes.found, id: wmRes.watermarkIdHex },
+            });
+          }
+        } finally {
+          URL.revokeObjectURL(objectUrl);
+          setIsLoading(false);
+        }
+      };
+      img.onerror = () => {
+        URL.revokeObjectURL(objectUrl);
+        setIsLoading(false);
+      };
+      img.src = objectUrl;
+      return;
+    }
+
     const reader = new FileReader();
     reader.onload = (e) => {
       const text = e.target?.result as string;
@@ -104,7 +141,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
           </button>
         </div>
 
-        {/* Drop Zone for .pramana */}
+        {/* Drop Zone for .pramana or image */}
         <div
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
@@ -114,7 +151,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
           <input
             ref={fileInputRef}
             type="file"
-            accept=".pramana,.json"
+            accept=".pramana,.json,image/*"
             className="sr-only"
             onChange={(e) => {
               const file = e.target.files?.[0];
@@ -123,10 +160,10 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
           />
           <Upload className="mx-auto h-6 w-6 text-zinc-400 mb-2" />
           <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">
-            Drop a .pramana or .json receipt file here, or click to browse
+            Drop a .pramana receipt or image file here, or click to browse
           </p>
           <p className="text-[11px] text-zinc-400 mt-1">
-            Evaluated entirely in Web Crypto · Zero data sent to any server
+            Evaluates cryptographic signatures & embedded watermarks locally · Zero data sent to any server
           </p>
         </div>
 
@@ -162,7 +199,19 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
             )}
           >
             <div className="flex items-center gap-2 font-semibold text-xs">
-              {result.valid ? (
+              {result.watermarkDetected ? (
+                result.watermarkDetected.found ? (
+                  <>
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                    <span>Digital Watermark Recovered: {result.watermarkDetected.id}</span>
+                  </>
+                ) : (
+                  <>
+                    <AlertTriangle className="h-4 w-4 text-rose-600 dark:text-rose-400" />
+                    <span>No PRAMANA Watermark Detected</span>
+                  </>
+                )
+              ) : result.valid ? (
                 <>
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Valid PRAMANA Receipt — Signature Verified</span>
@@ -181,11 +230,22 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
               </p>
             )}
 
+            {result.watermarkDetected?.found && (
+              <div className="rounded-lg bg-white/70 dark:bg-zinc-900/80 p-3 space-y-1.5 text-xs font-mono border border-zinc-200/50 dark:border-zinc-800 text-zinc-800 dark:text-zinc-200">
+                <p><span className="text-zinc-400">Status:</span> Watermark recovered with CRC-8 integrity verified</p>
+                <p><span className="text-zinc-400">Payload ID:</span> {result.watermarkDetected.id}</p>
+                <p><span className="text-zinc-400">Method:</span> PRAMANA Interleaved Differential Watermark</p>
+              </div>
+            )}
+
             {result.receipt && (
               <div className="rounded-lg bg-white/70 dark:bg-zinc-900/80 p-3 space-y-1.5 text-xs font-mono border border-zinc-200/50 dark:border-zinc-800 text-zinc-800 dark:text-zinc-200">
                 <p><span className="text-zinc-400">File:</span> {result.receipt.media.fileName}</p>
                 <p><span className="text-zinc-400">SHA-256:</span> {result.receipt.media.sha256}</p>
                 <p><span className="text-zinc-400">pHash:</span> {result.receipt.media.pHash}</p>
+                {result.receipt.watermark.trustmarkId && (
+                  <p><span className="text-zinc-400">Watermark:</span> {result.receipt.watermark.trustmarkId}</p>
+                )}
                 <p><span className="text-zinc-400">Timestamp:</span> {result.receipt.timestamp}</p>
                 <p><span className="text-zinc-400">Algorithm:</span> {result.receipt.signer.algorithm} {result.receipt.signer.namedCurve}</p>
               </div>

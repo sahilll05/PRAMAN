@@ -118,6 +118,7 @@ export async function generateProtectReceipt(params: {
   pHashHex: string;
   customTimestamp?: string;
   trustmarkId?: string | null;
+  watermarkStatus?: "none" | "pending_v2" | "embedded";
 }): Promise<PramanaReceipt> {
   const subtle = crypto.subtle;
   if (!subtle) {
@@ -148,7 +149,7 @@ export async function generateProtectReceipt(params: {
       pHash: params.pHashHex.toLowerCase(),
     },
     watermark: {
-      status: "pending_v2" as const,
+      status: params.watermarkStatus ?? (params.trustmarkId ? ("embedded" as const) : ("none" as const)),
       trustmarkId: params.trustmarkId ?? null,
     },
   };
