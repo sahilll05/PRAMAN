@@ -240,12 +240,35 @@
   </div>
 
   <div class="section-title">Manual Hash / URL Lookup</div>
-  <div class="card" style="padding: 10px;">
+  <div class="card" style="padding: 12px;">
     <div class="input-group">
-      <input type="text" id="manual-input" placeholder="Paste SHA-256 or Image URL...">
-      <button id="manual-btn" class="btn">Verify</button>
+      <input type="text" id="manual-input" placeholder="Paste SHA-256 (0x...) or Image URL...">
+      <button id="manual-btn" class="btn btn-primary" style="padding: 6px 14px;">Verify</button>
     </div>
-    <div id="manual-msg" style="font-size: 11px; color: #a1a1aa; display: none;"></div>
+    <div id="manual-msg" style="font-size: 11px; color: #a1a1aa; margin-top: 6px; display: none;"></div>
+    
+    <div id="manual-result" style="display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #1f1f23;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span id="man-status-badge" class="status-badge">NO ON-CHAIN RECORD</span>
+        <span id="man-time" style="color: #71717a; font-size: 11px;"></span>
+      </div>
+      <div class="field-row">
+        <span class="field-label">SHA-256</span>
+        <span id="man-sha256" class="field-value" style="font-size: 10px;">--</span>
+      </div>
+      <div id="man-detail-text" style="font-size: 11px; color: #a1a1aa; margin: 8px 0; line-height: 1.4;"></div>
+      <div id="man-model-row" class="field-row" style="display: none;">
+        <span class="field-label">Model</span>
+        <span id="man-model" class="field-value">--</span>
+      </div>
+      <div id="man-score-row" class="field-row" style="display: none;">
+        <span class="field-label">Synthetic Likelihood</span>
+        <span id="man-score" class="field-value">--</span>
+      </div>
+      <div style="margin-top: 10px;">
+        <a id="man-link" href="http://localhost:3000" target="_blank" class="btn btn-primary btn-full">View On-Chain Record →</a>
+      </div>
+    </div>
   </div>
 
   <div class="settings-toggle" id="toggle-settings">⚙️ Settings</div>

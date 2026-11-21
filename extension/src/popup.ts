@@ -25,6 +25,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   const manualInput = document.getElementById("manual-input") as HTMLInputElement;
   const manualBtn = document.getElementById("manual-btn") as HTMLButtonElement;
   const manualMsg = document.getElementById("manual-msg");
+  const manualResult = document.getElementById("manual-result");
+  const manStatusBadge = document.getElementById("man-status-badge");
+  const manTime = document.getElementById("man-time");
+  const manSha256 = document.getElementById("man-sha256");
+  const manDetailText = document.getElementById("man-detail-text");
+  const manModelRow = document.getElementById("man-model-row");
+  const manModel = document.getElementById("man-model");
+  const manScoreRow = document.getElementById("man-score-row");
+  const manScore = document.getElementById("man-score");
+  const manLink = document.getElementById("man-link") as HTMLAnchorElement;
 
   const toggleSettings = document.getElementById("toggle-settings");
   const settingsPanel = document.getElementById("settings-panel");
@@ -115,38 +125,113 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Display result in manual lookup card helper
+  function displayManualResult(result: PramanaVerifyResult): void {
+    if (!manualResult) return;
+    manualResult.style.display = "block";
+
+    if (manStatusBadge) {
+      if (result.found) {
+        manStatusBadge.textContent = result.status.replace("_", " ");
+        manStatusBadge.style.borderColor = "#3f3f46";
+        manStatusBadge.style.color = "#fafafa";
+      } else {
+        manStatusBadge.textContent = "NO ON-CHAIN RECORD";
+        manStatusBadge.style.borderColor = "#27272a";
+        manStatusBadge.style.color = "#a1a1aa";
+      }
+    }
+
+    if (manTime) {
+      manTime.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    }
+
+    if (manSha256) {
+      manSha256.textContent = `${result.sha256.slice(0, 10)}...${result.sha256.slice(-8)}`;
+      manSha256.title = result.sha256;
+    }
+
+    if (result.found && result.verdicts.length > 0) {
+      const v = result.verdicts[0]!;
+      if (manDetailText) {
+        manDetailText.textContent = "On-chain EAS attestation verified on Base Sepolia.";
+      }
+      if (manModelRow && manModel) {
+        manModelRow.style.display = "flex";
+        manModel.textContent = v.modelName || v.modelId.slice(0, 12);
+      }
+      if (manScoreRow && manScore && typeof v.score === "number") {
+        manScoreRow.style.display = "flex";
+        manScore.textContent = `${(v.score * 100).toFixed(1)}%`;
+      }
+      if (manLink) {
+        const base = config.webAppUrl || "http://localhost:3000";
+        manLink.href = v.uid ? `${base}/verdicts/${v.uid}` : `${base}/?sha256=${result.sha256}`;
+        manLink.textContent = "View On-Chain Record →";
+      }
+    } else {
+      if (manDetailText) {
+        manDetailText.textContent =
+          "No on-chain attestation found. If this is a locally protected image, verify its signed .pramana receipt in the Web Verifier.";
+      }
+      if (manModelRow) manModelRow.style.display = "none";
+      if (manScoreRow) manScoreRow.style.display = "none";
+      if (manLink) {
+        const base = config.webAppUrl || "http://localhost:3000";
+        manLink.href = `${base}/?sha256=${result.sha256}`;
+        manLink.textContent = "Open in PRAMANA Web Verifier →";
+      }
+    }
+  }
+
+  // Handle manual lookup Enter key
+  if (manualInput) {
+    manualInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        manualBtn?.click();
+      }
+    });
+  }
+
   // Handle manual lookup
   if (manualBtn && manualInput) {
     manualBtn.addEventListener("click", async () => {
-      const val = manualInput.value.trim();
-      if (!val) return;
+      const rawVal = manualInput.value.trim();
+      if (!rawVal) return;
 
       if (manualMsg) {
         manualMsg.style.display = "block";
-        manualMsg.textContent = "Verifying locally...";
+        manualMsg.style.color = "#a1a1aa";
+        manualMsg.textContent = "Querying on-chain registry...";
+      }
+      if (manualResult) {
+        manualResult.style.display = "none";
       }
 
       try {
         let sha256 = "";
-        let phash = "0000000000000000";
+        let phash = "";
 
-        if (/^[0-9a-fA-F]{64}$/.test(val)) {
-          // Input is already a 64-character SHA-256 hash
-          sha256 = val.toLowerCase();
-        } else if (/^https?:\/\//i.test(val) || /^data:image\//i.test(val)) {
+        const cleanVal = rawVal.replace(/^0x/i, "");
+        if (/^[0-9a-fA-F]{64}$/.test(cleanVal)) {
+          // Input is a 64-character SHA-256 hash (with or without 0x)
+          sha256 = cleanVal.toLowerCase();
+        } else if (/^https?:\/\//i.test(rawVal) || /^data:image\//i.test(rawVal)) {
           // Input is an Image URL: fetch blob and fingerprint locally
-          const resp = await fetch(val);
+          const resp = await fetch(rawVal);
           if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
           const blob = await resp.blob();
           const fp = await fingerprintImageBlob(blob);
           sha256 = fp.sha256;
           phash = fp.phash;
         } else {
-          throw new Error("Enter a valid 64-char SHA-256 hash or Image URL");
+          throw new Error("Enter a valid 64-char SHA-256 hash (e.g. 0x...) or Image URL");
         }
 
-        const res = await fetchVerdicts(sha256, phash, val, config);
+        const res = await fetchVerdicts(sha256, phash, rawVal, config);
         displayResult(res);
+        displayManualResult(res);
 
         if (manualMsg) {
           manualMsg.style.display = "none";
@@ -154,6 +239,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       } catch (err: any) {
         if (manualMsg) {
           manualMsg.style.display = "block";
+          manualMsg.style.color = "#f43f5e";
           manualMsg.textContent = `Error: ${err.message}`;
         }
       }
