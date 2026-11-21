@@ -131,13 +131,6 @@ PRAMANA/
 ├── spec/                       # Authoritative Canonical Specification
 │   ├── schemas/                # JSON Schemas (verdict.schema.json, evidence.schema.json)
 │   └── vectors/                # Golden test vectors shared across Python & TypeScript
-├── sahil/                      # Project Memory, ADRs, & Verification Ledger
-│   ├── agent_rules.md          # Hard agent operating constraints & zero-spend rules
-│   ├── spec_schemas.md         # Normative protocol specification (v0.1.0-draft)
-│   ├── claims.md               # Evidence-backed claim ledger
-│   ├── decisions.md            # Architecture Decision Records (ADRs)
-│   ├── evaluation_plan.md      # Pre-registered experimental protocols & frozen targets
-│   └── progress.md             # Live phase tracking and locks
 ├── ml/                         # Python ML & Detection Layer
 │   ├── src/lv_ml/
 │   │   ├── fingerprint/        # Spec §4 pHash (DCT-II) & SHA-256 implementation
@@ -243,7 +236,7 @@ Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS 
 
 ## 8. Required Caveats & Honest Disclosures
 
-In accordance with PRAMANA's strict claims policy ([sahil/claims.md](sahil/claims.md)):
+In accordance with PRAMANA's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md)):
 1. **Model-Assessed Likelihood, Not an Oracle Ruling**: Verdicts reflect deterministic outputs of open forensic models at a point in time. They are not definitive statements of ontological truth.
 2. **MVP Modality Scope**: The MVP strictly evaluates **still images** (AI-generated vs. authentic photography). Video deepfakes, audio synthesis, and face-swaps are deferred to stretch phases.
 3. **Zero-Spend Non-Commercial Research**: The project operates with zero capital expenditure ($0). Deployment is restricted to **Base Sepolia testnet** using free testnet ETH. Mainnet deployment is explicitly out of scope.

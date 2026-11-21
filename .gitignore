@@ -1,7 +1,9 @@
-# ── Secrets (NEVER commit) ────────────────────────────────────────────────────
+# ── Secrets & Private Folders (NEVER commit) ──────────────────────────────────
 .env
 .env.local
 .env.*.local
+/sahil/
+sahil/
 
 # ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
