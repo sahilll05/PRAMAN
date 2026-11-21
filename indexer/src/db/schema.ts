@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm";
 import {
   pgTable,
   text,
@@ -5,18 +6,14 @@ import {
   timestamp,
   bigint,
   integer,
-  customType,
+  bit,
 } from "drizzle-orm/pg-core";
 
 /**
- * Custom bit(64) type for Postgres bitwise operations in Neon.
+ * 64-bit binary vector for Postgres bitwise operations in Neon.
  * Stored as 64-character binary string in JS/TS.
  */
-export const bit64 = customType<{ data: string; driverData: string }>({
-  dataType() {
-    return "bit(64)";
-  },
-});
+export const bit64 = (name: string) => bit(name, { dimensions: 64 });
 
 export const models = pgTable("models", {
   modelHash: varchar("model_hash", { length: 66 }).primaryKey(),
@@ -36,7 +33,7 @@ export const verdicts = pgTable("verdicts", {
   recipient: varchar("recipient", { length: 42 }).notNull(),
   time: bigint("time", { mode: "bigint" }).notNull(),
   expirationTime: bigint("expiration_time", { mode: "bigint" }).notNull(),
-  revocationTime: bigint("revocation_time", { mode: "bigint" }).notNull().default(0n),
+  revocationTime: bigint("revocation_time", { mode: "bigint" }).notNull().default(sql`0`),
   sha256Hash: varchar("sha256_hash", { length: 66 }).notNull(),
   pHash: bit64("p_hash").notNull(),
   wmId: bigint("wm_id", { mode: "bigint" }).notNull(),
@@ -54,7 +51,7 @@ export const challenges = pgTable("challenges", {
   refUid: varchar("ref_uid", { length: 66 }).notNull(), // Target Verdict UID
   attester: varchar("attester", { length: 42 }).notNull(),
   time: bigint("time", { mode: "bigint" }).notNull(),
-  revocationTime: bigint("revocation_time", { mode: "bigint" }).notNull().default(0n),
+  revocationTime: bigint("revocation_time", { mode: "bigint" }).notNull().default(sql`0`),
   modelHash: varchar("model_hash", { length: 66 }).notNull(),
   observedPFakeBps: integer("observed_pfake_bps").notNull(),
   observedVerdict: integer("observed_verdict").notNull(),

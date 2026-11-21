@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
     "test": "vitest run",
-    "db:push": "drizzle-kit push",
+    "db:push": "node scripts/push.js",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
