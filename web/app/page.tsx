@@ -27,6 +27,7 @@ import { ProtectCard } from "@/components/ProtectCard";
 import { BatchCard } from "@/components/BatchCard";
 import { VerifyReceiptModal } from "@/components/VerifyReceiptModal";
 import { VerdictStatus } from "@/lib/status";
+import { LOCAL_VERDICTS } from "@/lib/local-verdicts";
 
 type AppMode = "verify" | "batch" | "protect";
 type VerifyPhase = "idle" | "hashing" | "searching" | "signing" | "done" | "error";
@@ -72,6 +73,7 @@ export default function HomePage() {
   const [isDragging, setIsDragging] = useState(false);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
   const [isEvaluating, setIsEvaluating] = useState(false);
+  const [evalError, setEvalError] = useState<string | null>(null);
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
   const [isReceiptModalOpen, setIsReceiptModalOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -80,6 +82,33 @@ export default function HomePage() {
     navigator.clipboard.writeText(text);
     setCopiedKey(key);
     setTimeout(() => setCopiedKey(null), 1800);
+  };
+
+  const handleLoadSample = (sampleType: "synthetic" | "authentic") => {
+    setEvalError(null);
+    const sample = sampleType === "synthetic" ? LOCAL_VERDICTS[0] : LOCAL_VERDICTS[1];
+    if (!sample) return;
+    setState({
+      phase: "done",
+      fileName: sampleType === "synthetic" ? "sample_flux_synthetic.jpg" : "sample_camera_authentic.jpg",
+      fileSize: 245 * 1024,
+      sha256Hex: sample.sha256Hash,
+      pHashHex: sample.pHash,
+      verdicts: [
+        {
+          uid: sample.uid,
+          verdict: sample.verdict,
+          pFakeBps: sample.pFakeBps,
+          status: sample.status,
+          badge: sample.badge,
+          attester: sample.attester,
+          time: sample.time,
+          expirationTime: sample.expirationTime,
+          modelHash: sample.modelHash,
+          evidenceHash: sample.evidenceHash,
+        },
+      ],
+    });
   };
 
   const processFile = useCallback(
@@ -205,6 +234,7 @@ export default function HomePage() {
     if (!currentFile) return;
 
     setIsEvaluating(true);
+    setEvalError(null);
     try {
       const formData = new FormData();
       formData.append("file", currentFile);
@@ -227,7 +257,7 @@ export default function HomePage() {
         }));
       }
     } catch (err: any) {
-      alert("Model evaluation failed: " + (err.message || String(err)));
+      setEvalError(err.message || String(err));
     } finally {
       setIsEvaluating(false);
     }
@@ -254,6 +284,7 @@ export default function HomePage() {
   const reset = () => {
     setState(INITIAL);
     setCurrentFile(null);
+    setEvalError(null);
     if (fileRef.current) fileRef.current.value = "";
   };
 
@@ -406,6 +437,32 @@ export default function HomePage() {
                 ? "Client-Side WebAssembly Fingerprinting · Zero Media Upload"
                 : "ECDSA P-256 Web Crypto Signature · Zero Media Upload"}
             </div>
+
+            {mode === "verify" && (
+              <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+                <span className="text-[11px] text-zinc-500">Or test with pre-attested demo:</span>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleLoadSample("synthetic");
+                  }}
+                  className="rounded-md border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800/80 hover:bg-zinc-100 dark:hover:bg-zinc-700 px-2.5 py-1 text-[11px] font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
+                >
+                  Synthetic Sample (Flux)
+                </button>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleLoadSample("authentic");
+                  }}
+                  className="rounded-md border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800/80 hover:bg-zinc-100 dark:hover:bg-zinc-700 px-2.5 py-1 text-[11px] font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
+                >
+                  Authentic Sample (Camera)
+                </button>
+              </div>
+            )}
           </div>
         )}
 
@@ -521,6 +578,18 @@ export default function HomePage() {
                     </p>
                   </div>
 
+                  {evalError && (
+                    <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-3.5 text-left space-y-1 text-xs text-amber-800 dark:text-amber-300 max-w-lg mx-auto">
+                      <div className="flex items-center gap-2 font-semibold">
+                        <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                        <span>Attester Node Required for Live Inference</span>
+                      </div>
+                      <p className="text-[11px] leading-relaxed opacity-90 pl-6">
+                        {evalError}
+                      </p>
+                    </div>
+                  )}
+
                   <div className="pt-2">
                     <button
                       type="button"
@@ -545,6 +614,26 @@ export default function HomePage() {
                   <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
                     Runs local open-weight ONNX Model A (Linear Probe) and Model B (MLP Probe) with temperature scaling and calibrated conformal sets.
                   </p>
+
+                  <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-center gap-2">
+                    <span className="text-xs text-zinc-500 dark:text-zinc-400">Or test with demo sample:</span>
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => handleLoadSample("synthetic")}
+                        className="rounded-md border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 px-3 py-1.5 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
+                      >
+                        Try Synthetic Sample
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handleLoadSample("authentic")}
+                        className="rounded-md border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 px-3 py-1.5 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
+                      >
+                        Try Authentic Sample
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <div className="space-y-4">
