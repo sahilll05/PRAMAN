@@ -63,12 +63,13 @@ export async function GET(request: NextRequest) {
   }
 
   // 1. If Neon database is configured, query PostgreSQL
-  if (process.env.NEON_DATABASE_URL) {
+  const dbUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
+  if (dbUrl) {
     try {
       const { drizzle } = await import("drizzle-orm/postgres-js");
       const postgres = (await import("postgres")).default;
 
-      const sql = postgres(process.env.NEON_DATABASE_URL, { ssl: "require", max: 1 });
+      const sql = postgres(dbUrl, { ssl: "require", max: 1 });
       const db = drizzle(sql);
 
       const { verdicts } = await import("@praman/indexer");

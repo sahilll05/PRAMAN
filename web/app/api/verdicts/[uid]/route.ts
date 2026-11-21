@@ -18,22 +18,23 @@ export async function GET(
     return NextResponse.json({ error: "Invalid UID format" }, { status: 400 });
   }
 
-  if (!process.env.NEON_DATABASE_URL) {
+  const dbUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
+  if (!dbUrl) {
     return NextResponse.json(
       {
         error: "Indexer database not configured",
-        hint: "Set NEON_DATABASE_URL environment variable to connect to Neon Postgres.",
+        hint: "Set DATABASE_URL or NEON_DATABASE_URL environment variable to connect to Postgres.",
       },
       { status: 503 }
     );
   }
 
   try {
-    // Dynamic import to avoid loading DB code when NEON_DATABASE_URL is not set
+    // Dynamic import to avoid loading DB code when database is not set
     const { drizzle } = await import("drizzle-orm/postgres-js");
     const postgres = (await import("postgres")).default;
 
-    const sql = postgres(process.env.NEON_DATABASE_URL, { ssl: "require", max: 1 });
+    const sql = postgres(dbUrl, { ssl: "require", max: 1 });
     const db = drizzle(sql);
 
     const { verdicts, challenges, canaryResults, models } = await import("@praman/indexer");

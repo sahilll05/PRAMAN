@@ -31,8 +31,25 @@ export async function POST(request: NextRequest) {
     fs.writeFileSync(tempFilePath, buffer);
 
     const repoRoot = path.resolve(process.cwd(), "..");
-    const pythonExe = path.join(repoRoot, "ml", ".venv", "Scripts", "python.exe");
+    const isWindows = process.platform === "win32";
+    const pythonExe = isWindows
+      ? path.join(repoRoot, "ml", ".venv", "Scripts", "python.exe")
+      : path.join(repoRoot, "ml", ".venv", "bin", "python");
     const scriptPath = path.join(repoRoot, "ml", "scripts", "evaluate_single_image.py");
+
+    if (!fs.existsSync(pythonExe) || !fs.existsSync(scriptPath)) {
+      try {
+        if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
+      } catch {}
+      return NextResponse.json(
+        {
+          error: "Attester Node Required for Live Inference",
+          details:
+            "Full PyTorch neural network inference requires a local attester node with PyTorch installed (`pnpm dev`). On the hosted web verifier, you can drop images to verify existing on-chain verdicts, test Protect Mode watermarking, verify signed receipts, or run client-side ELA.",
+        },
+        { status: 501 }
+      );
+    }
 
     const result = await new Promise<any>((resolve, reject) => {
       const proc = spawn(pythonExe, [scriptPath, tempFilePath], {
