@@ -12,6 +12,51 @@ import { ExtensionMessage, PramanaVerdictItem, PramanaVerifyResult } from "./typ
 
 const OVERLAY_ID = "pramana-overlay-root";
 
+/** Track the real image element when user right-clicks (handles Twitter/social overlay DIVs/SVGs). */
+let lastRightClickedImgSrc: string | null = null;
+
+document.addEventListener(
+  "contextmenu",
+  (event: MouseEvent) => {
+    lastRightClickedImgSrc = null;
+    const target = event.target as HTMLElement;
+    if (!target) return;
+
+    // 1. Direct <img>
+    if (target instanceof HTMLImageElement && target.currentSrc) {
+      lastRightClickedImgSrc = target.currentSrc;
+      return;
+    }
+
+    // 2. Element inside a tweet or media container with an <img> (Twitter overlay div)
+    const container = target.closest("article, [data-testid='tweetPhoto'], [role='article'], div");
+    if (container) {
+      const imgs = container.querySelectorAll("img");
+      for (const img of Array.from(imgs)) {
+        if (
+          img.currentSrc &&
+          !img.currentSrc.startsWith("data:image/svg") &&
+          !img.currentSrc.includes("transparent")
+        ) {
+          lastRightClickedImgSrc = img.currentSrc;
+          return;
+        }
+      }
+    }
+
+    // 3. Computed CSS background-image
+    const style = window.getComputedStyle(target);
+    if (style.backgroundImage && style.backgroundImage !== "none") {
+      const m = style.backgroundImage.match(/url\(['"]?(.*?)['"]?\)/);
+      if (m && m[1]) {
+        lastRightClickedImgSrc = m[1];
+        return;
+      }
+    }
+  },
+  true
+);
+
 /** Ensure overlay container exists in the DOM. */
 function getOrCreateRoot(): HTMLElement {
   let root = document.getElementById(OVERLAY_ID);
@@ -294,6 +339,10 @@ function createFieldRow(label: string, displayVal: string, fullVal?: string): HT
 chrome.runtime.onMessage.addListener((message: any, _sender, sendResponse) => {
   if (message.type === "PING") {
     sendResponse({ pong: true });
+    return true;
+  }
+  if (message.type === "PRAMANA_GET_TARGET_IMAGE") {
+    sendResponse({ realSrc: lastRightClickedImgSrc });
     return true;
   }
   if (message.type === "PRAMANA_FETCH_BLOB_IN_PAGE") {

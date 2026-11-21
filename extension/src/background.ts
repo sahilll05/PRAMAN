@@ -53,12 +53,20 @@ async function ensureInjected(tabId: number): Promise<boolean> {
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId !== "pramana-verify-image" || !info.srcUrl) return;
 
-  const srcUrl = info.srcUrl;
+  let srcUrl = info.srcUrl;
   const tabId = tab?.id;
 
-  // 1. Ensure content script is injected & display the loading indicator
+  // 1. Ensure content script is injected & get underlying image URL if overlay was clicked
   if (tabId) {
     await ensureInjected(tabId);
+    try {
+      const resp = await chrome.tabs.sendMessage(tabId, { type: "PRAMANA_GET_TARGET_IMAGE" });
+      if (resp?.realSrc && resp.realSrc !== srcUrl) {
+        srcUrl = resp.realSrc;
+      }
+    } catch {
+      // Ignored
+    }
     try {
       await chrome.tabs.sendMessage(tabId, {
         type: "PRAMANA_START_VERIFY",

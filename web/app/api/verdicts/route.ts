@@ -103,7 +103,8 @@ export async function GET(request: NextRequest) {
     if (sha256 && v.sha256Hash.toLowerCase().replace(/^0x/, "") === sha256) {
       return true;
     }
-    if (phash && v.pHash) {
+    // Only match pHash if non-zero (all-zero indicates blank/uninitialized image)
+    if (phash && v.pHash && phash !== "0000000000000000" && v.pHash !== "0000000000000000") {
       const dist = hammingDistance(v.pHash, phash);
       if (dist <= threshold) {
         return true;
@@ -143,7 +144,7 @@ export async function POST(request: NextRequest) {
         if (sha256 && v.sha256Hash.toLowerCase().replace(/^0x/, "") === sha256) {
           return true;
         }
-        if (phash && v.pHash) {
+        if (phash && v.pHash && phash !== "0000000000000000" && v.pHash !== "0000000000000000") {
           const dist = hammingDistance(v.pHash, phash);
           if (dist <= threshold) {
             return true;

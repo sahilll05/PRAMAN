@@ -96,18 +96,29 @@ export async function fetchVerdicts(
     const json = await response.json();
     const rawVerdicts: any[] = Array.isArray(json) ? json : json.verdicts || [];
 
-    const verdicts: PramanaVerdictItem[] = rawVerdicts.map((item) => ({
-      uid: item.uid || item.attestationUid || "",
-      refUID: item.refUID || undefined,
-      modelId: item.modelId || item.model || "unknown",
-      modelName: item.modelName || undefined,
-      score: typeof item.score === "number" ? item.score : 0,
-      label: item.label,
-      status: (item.status as VerdictStatus) || "ACTIVE",
-      attester: item.attester || "",
-      timestamp: item.timestamp || Date.now(),
-      txHash: item.txHash,
-    }));
+    const verdicts: PramanaVerdictItem[] = rawVerdicts.map((item) => {
+      const pFakePct = typeof item.pFakeBps === "number" ? item.pFakeBps / 10000 : undefined;
+      const score = typeof item.score === "number" ? item.score : (pFakePct ?? 0);
+      const label =
+        item.label ||
+        (item.verdict === 2
+          ? "LIKELY SYNTHETIC"
+          : item.verdict === 1
+          ? "LIKELY AUTHENTIC"
+          : "ABSTAIN");
+      return {
+        uid: item.uid || item.attestationUid || "",
+        refUID: item.refUID || undefined,
+        modelId: item.modelId || item.modelHash || item.model || "unknown",
+        modelName: item.modelName || (item.modelHash ? `Model (${item.modelHash.slice(0, 10)})` : undefined),
+        score,
+        label,
+        status: (item.status as VerdictStatus) || "ACTIVE",
+        attester: item.attester || "",
+        timestamp: item.timestamp || (item.time ? Number(item.time) * 1000 : Date.now()),
+        txHash: item.txHash,
+      };
+    });
 
     const status = aggregateVerdictStatus(verdicts);
 

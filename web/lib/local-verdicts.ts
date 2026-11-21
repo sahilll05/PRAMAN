@@ -41,6 +41,6 @@ export const LOCAL_VERDICTS: StoredVerdict[] = [
     modelHash: "0x1111111111111111111111111111111111111111111111111111111111111111",
     evidenceHash: "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
     sha256Hash: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    pHash: "0000000000000000",
+    pHash: "2a00000000000000",
   },
 ];
