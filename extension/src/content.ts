@@ -291,7 +291,23 @@ function createFieldRow(label: string, displayVal: string, fullVal?: string): HT
 }
 
 /** Message listener from background service worker */
-chrome.runtime.onMessage.addListener((message: ExtensionMessage) => {
+chrome.runtime.onMessage.addListener((message: any, _sender, sendResponse) => {
+  if (message.type === "PING") {
+    sendResponse({ pong: true });
+    return true;
+  }
+  if (message.type === "PRAMANA_FETCH_BLOB_IN_PAGE") {
+    (async () => {
+      try {
+        const resp = await fetch(message.srcUrl);
+        const buf = await resp.arrayBuffer();
+        sendResponse({ success: true, buffer: Array.from(new Uint8Array(buf)) });
+      } catch (err: any) {
+        sendResponse({ success: false, error: err.message });
+      }
+    })();
+    return true; // async
+  }
   if (message.type === "PRAMANA_START_VERIFY") {
     renderLoading(message.srcUrl);
   } else if (message.type === "PRAMANA_VERIFY_RESULT") {
@@ -299,4 +315,5 @@ chrome.runtime.onMessage.addListener((message: ExtensionMessage) => {
   } else if (message.type === "PRAMANA_VERIFY_ERROR") {
     renderError(message.error);
   }
+  return true;
 });

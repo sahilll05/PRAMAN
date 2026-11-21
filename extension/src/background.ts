@@ -23,6 +23,32 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+/** Ensure content script and CSS are injected in the active tab (handles tabs opened before extension load). */
+async function ensureInjected(tabId: number): Promise<boolean> {
+  try {
+    const res = await chrome.tabs.sendMessage(tabId, { type: "PING" });
+    if (res?.pong) return true;
+  } catch {
+    // Content script not yet present
+  }
+  try {
+    if (chrome.scripting) {
+      await chrome.scripting.executeScript({
+        target: { tabId },
+        files: ["content.js"],
+      });
+      await chrome.scripting.insertCSS({
+        target: { tabId },
+        files: ["content.css"],
+      });
+      return true;
+    }
+  } catch (e) {
+    console.warn("Could not inject content script:", e);
+  }
+  return false;
+}
+
 /** Listen for right-click context menu clicks. */
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId !== "pramana-verify-image" || !info.srcUrl) return;
@@ -30,8 +56,9 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   const srcUrl = info.srcUrl;
   const tabId = tab?.id;
 
-  // 1. Notify content script to display the loading indicator
+  // 1. Ensure content script is injected & display the loading indicator
   if (tabId) {
+    await ensureInjected(tabId);
     try {
       await chrome.tabs.sendMessage(tabId, {
         type: "PRAMANA_START_VERIFY",
@@ -43,12 +70,25 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   }
 
   try {
-    // 2. Fetch the image blob in the background service worker (handles cross-origin images via host_permissions)
-    const response = await fetch(srcUrl);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch image: HTTP ${response.status} ${response.statusText}`);
+    // 2. Fetch the image blob in the background service worker or in-page if blob: URL
+    let blob: Blob;
+    if (srcUrl.startsWith("blob:") && tabId) {
+      const resp = await chrome.tabs.sendMessage(tabId, {
+        type: "PRAMANA_FETCH_BLOB_IN_PAGE",
+        srcUrl,
+      });
+      if (resp?.success && resp.buffer) {
+        blob = new Blob([new Uint8Array(resp.buffer)]);
+      } else {
+        throw new Error(resp?.error || "Could not read in-page blob");
+      }
+    } else {
+      const response = await fetch(srcUrl);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch image: HTTP ${response.status} ${response.statusText}`);
+      }
+      blob = await response.blob();
     }
-    const blob = await response.blob();
 
     // 3. Compute SHA-256 and pHash locally in browser memory (zero media upload!)
     const { sha256, phash } = await fingerprintImageBlob(blob);

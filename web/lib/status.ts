@@ -166,8 +166,20 @@ export function pFakePct(bps: number): string {
   return (bps / 100).toFixed(2) + "%";
 }
 
-/** Format Unix timestamp to locale string. */
+/** Format Unix timestamp deterministically in UTC to prevent SSR/client hydration mismatches. */
 export function formatTs(ts: bigint | number | string): string {
   if (!ts || ts === 0n || ts === "0" || ts === 0) return "—";
-  return new Date(Number(ts) * 1000).toLocaleString();
+  const sec = typeof ts === "bigint" ? Number(ts) : Number(ts);
+  if (isNaN(sec) || sec <= 0) return "—";
+  const d = new Date(sec * 1000);
+  if (isNaN(d.getTime())) return "—";
+
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  const hours = String(d.getUTCHours()).padStart(2, "0");
+  const minutes = String(d.getUTCMinutes()).padStart(2, "0");
+  const seconds = String(d.getUTCSeconds()).padStart(2, "0");
+
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds} UTC`;
 }

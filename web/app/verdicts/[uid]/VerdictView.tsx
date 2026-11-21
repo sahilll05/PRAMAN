@@ -138,11 +138,11 @@ export function VerdictView({ data }: { data: VerdictViewData }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 pt-4 border-t border-zinc-100 dark:border-zinc-800 text-xs">
             <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950 p-2.5 border border-zinc-200/60 dark:border-zinc-800">
               <p className="text-zinc-400 font-mono uppercase text-[10px]">Attestation Time</p>
-              <p className="font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{formatTs(data.time)}</p>
+              <p className="font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5" suppressHydrationWarning>{formatTs(data.time)}</p>
             </div>
             <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950 p-2.5 border border-zinc-200/60 dark:border-zinc-800">
               <p className="text-zinc-400 font-mono uppercase text-[10px]">Expiration</p>
-              <p className="font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{formatTs(data.expirationTime)}</p>
+              <p className="font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5" suppressHydrationWarning>{formatTs(data.expirationTime)}</p>
             </div>
             <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950 p-2.5 border border-zinc-200/60 dark:border-zinc-800">
               <p className="text-zinc-400 font-mono uppercase text-[10px]">Attester</p>
@@ -214,7 +214,7 @@ export function VerdictView({ data }: { data: VerdictViewData }) {
                       {evt.badge}
                     </span>
                   )}
-                  <span className="text-[11px] text-zinc-400 font-mono">
+                  <span className="text-[11px] text-zinc-400 font-mono" suppressHydrationWarning>
                     {formatTs(evt.timestamp)}
                   </span>
                 </div>

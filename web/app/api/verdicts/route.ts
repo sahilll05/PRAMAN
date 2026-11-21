@@ -7,6 +7,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { LOCAL_VERDICTS } from "@/lib/local-verdicts";
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Accept",
+};
+
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 204,
+    headers: CORS_HEADERS,
+  });
+}
+
 function hammingDistance(hexA: string, hexB: string): number {
   try {
     const a = BigInt("0x" + hexA.replace(/^0x/, ""));
@@ -38,15 +51,15 @@ export async function GET(request: NextRequest) {
   const phash = rawPhash?.toLowerCase().replace(/^0x/, "");
 
   if (!sha256 && !phash) {
-    return NextResponse.json({ error: "Provide sha256 or phash query param" }, { status: 400 });
+    return NextResponse.json({ error: "Provide sha256 or phash query param" }, { status: 400, headers: CORS_HEADERS });
   }
 
   // Validate hex format
   if (sha256 && !/^[0-9a-fA-F]{64}$/.test(sha256)) {
-    return NextResponse.json({ error: "Invalid sha256 hex format (expected 64 hex characters)" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid sha256 hex format (expected 64 hex characters)" }, { status: 400, headers: CORS_HEADERS });
   }
   if (phash && !/^[0-9a-fA-F]{1,16}$/.test(phash)) {
-    return NextResponse.json({ error: "Invalid phash hex format (expected up to 16 hex characters)" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid phash hex format (expected up to 16 hex characters)" }, { status: 400, headers: CORS_HEADERS });
   }
 
   // 1. If Neon database is configured, query PostgreSQL
@@ -78,7 +91,7 @@ export async function GET(request: NextRequest) {
 
       await sql.end();
       if (results && results.length > 0) {
-        return NextResponse.json({ verdicts: results, count: results.length });
+        return NextResponse.json({ verdicts: results, count: results.length }, { headers: CORS_HEADERS });
       }
     } catch (err) {
       console.warn("Neon DB query skipped, falling back to local registry:", err);
@@ -99,7 +112,7 @@ export async function GET(request: NextRequest) {
     return false;
   });
 
-  return NextResponse.json({ verdicts: matches, count: matches.length });
+  return NextResponse.json({ verdicts: matches, count: matches.length }, { headers: CORS_HEADERS });
 }
 
 interface BatchQueryItem {
@@ -114,7 +127,7 @@ export async function POST(request: NextRequest) {
     const rawItems: BatchQueryItem[] = Array.isArray(body) ? body : body.items;
 
     if (!rawItems || !Array.isArray(rawItems) || rawItems.length === 0) {
-      return NextResponse.json({ error: "Provide a non-empty array of items to query" }, { status: 400 });
+      return NextResponse.json({ error: "Provide a non-empty array of items to query" }, { status: 400, headers: CORS_HEADERS });
     }
 
     // Limit to 50 items per batch request
@@ -149,9 +162,9 @@ export async function POST(request: NextRequest) {
       };
     });
 
-    return NextResponse.json({ count: results.length, results });
+    return NextResponse.json({ count: results.length, results }, { headers: CORS_HEADERS });
   } catch (err: any) {
-    return NextResponse.json({ error: err.message || "Invalid JSON request body" }, { status: 400 });
+    return NextResponse.json({ error: err.message || "Invalid JSON request body" }, { status: 400, headers: CORS_HEADERS });
   }
 }
 

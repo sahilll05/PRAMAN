@@ -157,7 +157,7 @@ function MetaCard({ label, value, mono }: { label: string; value: string; mono?:
   return (
     <div className="rounded-lg bg-zinc-50 dark:bg-zinc-950/70 p-2.5 border border-zinc-200/60 dark:border-zinc-800">
       <p className="text-[10px] font-mono uppercase text-zinc-400 dark:text-zinc-500">{label}</p>
-      <p className={`text-xs font-medium text-zinc-800 dark:text-zinc-200 mt-0.5 truncate ${mono ? "font-mono" : ""}`}>
+      <p className={`text-xs font-medium text-zinc-800 dark:text-zinc-200 mt-0.5 truncate ${mono ? "font-mono" : ""}`} suppressHydrationWarning>
         {value}
       </p>
     </div>
