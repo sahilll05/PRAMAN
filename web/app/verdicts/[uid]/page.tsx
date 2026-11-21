@@ -6,7 +6,7 @@ import { VerdictStatus, type VerdictBadge } from "@/lib/status";
 import { LOCAL_VERDICTS } from "@/lib/local-verdicts";
 
 export const metadata: Metadata = {
-  title: "Verdict Detail & Timeline | PRAMANA",
+  title: "Verdict Detail & Timeline | PRAMAN",
   description: "Detailed on-chain verdict assessment, history timeline, and challenge flow.",
 };
 

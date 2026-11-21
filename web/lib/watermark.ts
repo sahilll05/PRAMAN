@@ -1,5 +1,5 @@
 /**
- * web/lib/watermark.ts — PRAMANA Browser-Side Watermark Engine (Task T10.1b).
+ * web/lib/watermark.ts — PRAMAN Browser-Side Watermark Engine (Task T10.1b).
  *
  * Implements high-fidelity, imperceptible digital watermarking in pure TypeScript
  * using 8x8 block-partitioned interleaved spatial modulation (checkerboard differential)

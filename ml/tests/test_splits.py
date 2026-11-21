@@ -1,4 +1,4 @@
-"""Unit tests for dataset splitting and PramanaDataset loader (T1.1)."""
+"""Unit tests for dataset splitting and PramanDataset loader (T1.1)."""
 
 import json
 from pathlib import Path
@@ -7,7 +7,7 @@ import numpy as np
 import torch
 from PIL import Image
 
-from lv_ml.data.dataset import PramanaDataset
+from lv_ml.data.dataset import PramanDataset
 from lv_ml.data.splits import verify_split_disjointness
 
 
@@ -74,7 +74,7 @@ def test_pramana_dataset_loading(tmp_path: Path) -> None:
     with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(manifest_data, f)
 
-    ds = PramanaDataset(manifest_path)
+    ds = PramanDataset(manifest_path)
     assert len(ds) == 2
 
     tensor, label, meta = ds[0]

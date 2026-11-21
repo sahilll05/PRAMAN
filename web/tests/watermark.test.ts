@@ -11,7 +11,7 @@ import {
   bytes5ToHex,
 } from "../lib/watermark";
 
-describe("PRAMANA Browser Watermarking (Task T10.1b)", () => {
+describe("PRAMAN Browser Watermarking (Task T10.1b)", () => {
   const sampleId = 0x1a2b3c4d5en; // 40-bit ID
 
   it("packs and unpacks 40-bit payload with CRC-8 bit-exact", () => {

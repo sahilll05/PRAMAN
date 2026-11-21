@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Users, Info, Database, ShieldCheck, KeyRound } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Attesters | PRAMANA",
-  description: "Registered attester nodes on the PRAMANA protocol.",
+  title: "Attesters | PRAMAN",
+  description: "Registered attester nodes on the PRAMAN protocol.",
 };
 
 export default function AttestersPage() {
@@ -15,7 +15,7 @@ export default function AttestersPage() {
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">Registered Attesters</h1>
         <p className="text-zinc-500 dark:text-zinc-400 mt-2 text-sm leading-relaxed">
-          Allowlisted attester nodes authorized to sign and anchor verdicts on the PRAMANA Registry smart contract.
+          Allowlisted attester nodes authorized to sign and anchor verdicts on the PRAMAN Registry smart contract.
         </p>
       </div>
 

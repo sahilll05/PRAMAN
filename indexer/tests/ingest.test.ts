@@ -14,7 +14,7 @@ import {
   CHALLENGE_SCHEMA_STRING,
   CANARY_SCHEMA_STRING,
   computeSchemaUID,
-} from "@pramana/chain";
+} from "@praman/chain";
 import {
   InMemoryIndexerRepository,
   syncBlockRange,

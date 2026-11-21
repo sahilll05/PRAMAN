@@ -1,5 +1,5 @@
 /**
- * PRAMANA Status State Machine (Spec §6, Authoritative).
+ * PRAMAN Status State Machine (Spec §6, Authoritative).
  *
  * Implements the normative lifecycle transitions for on-chain Verdict attestations:
  *

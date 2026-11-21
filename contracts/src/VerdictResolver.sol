@@ -7,7 +7,7 @@ import {Registry} from "./Registry.sol";
 
 /**
  * @title VerdictResolver
- * @notice PRAMANA EAS SchemaResolver — enforces attestation rules at attest-time.
+ * @notice PRAMAN EAS SchemaResolver — enforces attestation rules at attest-time.
  * @dev    Implements spec_schemas.md §3:
  *         - Verdict rules: allowlisted attester, ACTIVE model, expiration within [now, now + MAX_TTL],
  *           valid verdict class in {0,1,2}, pFakeBps <= 10000, sha256Hash != 0, valid supersession.

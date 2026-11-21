@@ -1,12 +1,12 @@
 /**
- * PRAMANA Canary Commit-Reveal & Health Engine (Task T7.2).
+ * PRAMAN Canary Commit-Reveal & Health Engine (Task T7.2).
  *
  * Implements cryptographic commitment-reveal verification and metrics check
  * for continuous canary model health auditing per Spec §2.3 and Spec §6.
  */
 
 import { type Hex, type Hash } from "viem";
-import { type PramanaClients } from "./client.js";
+import { type PramanClients } from "./client.js";
 import { attestCanary } from "./actions.js";
 import { type CanaryData } from "./schemas.js";
 
@@ -51,7 +51,7 @@ export function isCanaryDegraded(
  * Submits CanaryResult attestation to EAS via canaryIssuer role (T7.2).
  */
 export async function publishCanaryResult(
-  clients: PramanaClients,
+  clients: PramanClients,
   canarySchemaUID: Hex,
   canaryData: CanaryData
 ): Promise<{ txHash: Hash; uid: Hex }> {

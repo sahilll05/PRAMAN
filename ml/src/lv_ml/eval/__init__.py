@@ -1,4 +1,4 @@
-"""PRAMANA ML Evaluation Modules."""
+"""PRAMAN ML Evaluation Modules."""
 
 try:
     from lv_ml.eval.benchmark import BenchmarkRunner

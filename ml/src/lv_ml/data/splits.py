@@ -1,4 +1,4 @@
-"""Split creation and verification utilities for PRAMANA (T1.1).
+"""Split creation and verification utilities for PRAMAN (T1.1).
 
 Enforces generator-disjoint splitting:
 G_train and G_test have zero generator overlap.

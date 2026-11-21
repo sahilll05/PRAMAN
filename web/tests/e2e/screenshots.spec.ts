@@ -4,7 +4,7 @@ import * as fs from "fs";
 
 const SCREENSHOT_DIR = "C:/Users/Sahil/.gemini/antigravity/brain/53895e59-d7c7-4553-90b3-24eb4bfe019f";
 
-test.describe("PRAMANA Visual Live Verification", () => {
+test.describe("PRAMAN Visual Live Verification", () => {
   test.beforeAll(() => {
     if (!fs.existsSync(SCREENSHOT_DIR)) {
       fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });

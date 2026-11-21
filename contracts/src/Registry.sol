@@ -3,7 +3,7 @@ pragma solidity ^0.8.26;
 
 /**
  * @title Registry
- * @notice PRAMANA Registry: manages model hashes, attester allowlist, canary-issuer role.
+ * @notice PRAMAN Registry: manages model hashes, attester allowlist, canary-issuer role.
  *         Skeleton — full implementation in Phase 4 (T4.1).
  * @dev    See spec_schemas.md §3 for the full spec.
  *

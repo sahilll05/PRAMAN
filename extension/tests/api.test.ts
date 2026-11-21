@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { fetchVerdicts, aggregateVerdictStatus, DEFAULT_CONFIG } from "../src/api";
-import { PramanaVerdictItem } from "../src/types";
+import { PramanVerdictItem } from "../src/types";
 
 describe("Extension API Client & Privacy Audit (T10.2, Claim C9)", () => {
   const originalFetch = globalThis.fetch;
@@ -94,7 +94,7 @@ describe("Extension API Client & Privacy Audit (T10.2, Claim C9)", () => {
   });
 
   it("correctly aggregates verdict status hierarchy per spec §6", () => {
-    const vActive: PramanaVerdictItem = {
+    const vActive: PramanVerdictItem = {
       uid: "0x1",
       modelId: "m1",
       score: 0.1,
@@ -102,7 +102,7 @@ describe("Extension API Client & Privacy Audit (T10.2, Claim C9)", () => {
       attester: "0xa",
       timestamp: 100,
     };
-    const vDegraded: PramanaVerdictItem = {
+    const vDegraded: PramanVerdictItem = {
       uid: "0x2",
       modelId: "m2",
       score: 0.9,
@@ -110,7 +110,7 @@ describe("Extension API Client & Privacy Audit (T10.2, Claim C9)", () => {
       attester: "0xb",
       timestamp: 200,
     };
-    const vRevoked: PramanaVerdictItem = {
+    const vRevoked: PramanVerdictItem = {
       uid: "0x3",
       modelId: "m3",
       score: 0.8,

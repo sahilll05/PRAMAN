@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * PRAMANA Chain CLI (T5.1).
+ * PRAMAN Chain CLI (T5.1).
  *
  * Usage:
- *   pramana-chain <command> [options]
+ *   praman-chain <command> [options]
  *
  * Commands:
  *   register-model   Register a model bundle in Registry.sol
@@ -15,7 +15,7 @@
  */
 
 import { type Hex, type Address } from "viem";
-import { createPramanaClients } from "./client.js";
+import { createPramanClients } from "./client.js";
 import {
   registerModel,
   attestVerdict,
@@ -44,7 +44,7 @@ async function main(): Promise<void> {
 
   if (!command || command === "--help" || command === "-h") {
     console.log(`
-PRAMANA Chain CLI (v0.1.0)
+PRAMAN Chain CLI (v0.1.0)
 
 Commands:
   register-model   --rpc <url> --key <privKey> --registry <addr> --model-hash <hex> --preproc-hash <hex> --uri <uri> [--spec-version <hex>]
@@ -63,7 +63,7 @@ Commands:
   const easAddress = (getArg("--eas") ?? process.env["EAS_ADDRESS"] ?? "0x5fbdb2315678afecb367f032d93f642f64180aa3") as Address;
   const registryAddress = (getArg("--registry") ?? process.env["REGISTRY_ADDRESS"] ?? "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0") as Address;
 
-  const clients = createPramanaClients({
+  const clients = createPramanClients({
     rpcUrl,
     privateKey,
     easAddress,

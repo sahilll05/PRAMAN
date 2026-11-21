@@ -1,4 +1,4 @@
-# PRAMANA — Agent Entry Point
+# PRAMAN — Agent Entry Point
 
 > **All agents: read `/sahil/agent_rules.md` first, then the files listed in its Section 0.**
 

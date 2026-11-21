@@ -1,4 +1,4 @@
-"""PRAMANA Reference Deterministic CPU Runner (spec §7.6, T1.3, T2.6).
+"""PRAMAN Reference Deterministic CPU Runner (spec §7.6, T1.3, T2.6).
 
 Executes inference strictly on CPU using ONNX Runtime (fp32) and OpenCLIP (CPU).
 Integrates Phase 2 Temperature Scaling, Mahalanobis OOD Gating, Split Conformal
@@ -33,7 +33,7 @@ from lv_ml.fingerprint.phash import compute_phash
 
 
 class ReferenceRunner:
-    """Canonical CPU ONNX Reference Runner for PRAMANA Verdicts."""
+    """Canonical CPU ONNX Reference Runner for PRAMAN Verdicts."""
 
     def __init__(
         self,

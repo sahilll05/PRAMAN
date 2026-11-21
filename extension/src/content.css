@@ -1,6 +1,6 @@
-/* extension/src/content.css — Styling for PRAMANA In-Page Floating Verdict Card */
+/* extension/src/content.css — Styling for PRAMAN In-Page Floating Verdict Card */
 
-#pramana-overlay-root {
+#praman-overlay-root {
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -11,13 +11,13 @@
   pointer-events: auto;
 }
 
-#pramana-overlay-root * {
+#praman-overlay-root * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.pramana-card {
+.praman-card {
   width: 360px;
   max-width: calc(100vw - 48px);
   background: #09090b;
@@ -27,10 +27,10 @@
   padding: 16px;
   font-size: 13px;
   line-height: 1.5;
-  animation: pramana-slide-up 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: praman-slide-up 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes pramana-slide-up {
+@keyframes praman-slide-up {
   from {
     opacity: 0;
     transform: translateY(16px);
@@ -41,7 +41,7 @@
   }
 }
 
-.pramana-header {
+.praman-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,33 +50,33 @@
   margin-bottom: 12px;
 }
 
-.pramana-brand {
+.praman-brand {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.pramana-logo-svg {
+.praman-logo-svg {
   width: 18px;
   height: 18px;
   stroke: #fafafa;
 }
 
-.pramana-title {
+.praman-title {
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.05em;
   color: #fafafa;
 }
 
-.pramana-sanskrit {
+.praman-sanskrit {
   font-size: 12px;
   color: #a1a1aa;
   font-weight: 400;
   margin-left: 2px;
 }
 
-.pramana-badge-testnet {
+.praman-badge-testnet {
   font-size: 10px;
   padding: 1px 5px;
   border-radius: 4px;
@@ -85,7 +85,7 @@
   color: #a1a1aa;
 }
 
-.pramana-close-btn {
+.praman-close-btn {
   background: transparent;
   border: none;
   color: #71717a;
@@ -97,11 +97,11 @@
   transition: color 0.15s ease;
 }
 
-.pramana-close-btn:hover {
+.praman-close-btn:hover {
   color: #fafafa;
 }
 
-.pramana-loading {
+.praman-loading {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -110,29 +110,29 @@
   font-size: 12px;
 }
 
-.pramana-spinner {
+.praman-spinner {
   width: 16px;
   height: 16px;
   border: 2px solid #27272a;
   border-top-color: #fafafa;
   border-radius: 50%;
-  animation: pramana-spin 0.8s linear infinite;
+  animation: praman-spin 0.8s linear infinite;
 }
 
-@keyframes pramana-spin {
+@keyframes praman-spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-.pramana-status-row {
+.praman-status-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
 }
 
-.pramana-verdict-badge {
+.praman-verdict-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -144,31 +144,31 @@
   text-transform: uppercase;
 }
 
-.pramana-status-active {
+.praman-status-active {
   background: #18181b;
   border: 1px solid #3f3f46;
   color: #fafafa;
 }
 
-.pramana-status-none {
+.praman-status-none {
   background: #18181b;
   border: 1px solid #27272a;
   color: #a1a1aa;
 }
 
-.pramana-status-degraded {
+.praman-status-degraded {
   background: #27272a;
   border: 1px solid #52525b;
   color: #e4e4e7;
 }
 
-.pramana-status-revoked {
+.praman-status-revoked {
   background: #1c1917;
   border: 1px solid #44403c;
   color: #d6d3d1;
 }
 
-.pramana-field-group {
+.praman-field-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -179,23 +179,23 @@
   margin-bottom: 12px;
 }
 
-.pramana-field {
+.praman-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
 }
 
-.pramana-field-label {
+.praman-field-label {
   color: #71717a;
 }
 
-.pramana-field-value {
+.praman-field-value {
   color: #e4e4e7;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-.pramana-score-bar-bg {
+.praman-score-bar-bg {
   width: 100%;
   height: 4px;
   background: #27272a;
@@ -204,18 +204,18 @@
   margin-top: 4px;
 }
 
-.pramana-score-bar-fill {
+.praman-score-bar-fill {
   height: 100%;
   background: #fafafa;
 }
 
-.pramana-actions {
+.praman-actions {
   display: flex;
   gap: 8px;
   margin-top: 12px;
 }
 
-.pramana-btn {
+.praman-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -230,27 +230,27 @@
   transition: all 0.15s ease;
 }
 
-.pramana-btn-primary {
+.praman-btn-primary {
   background: #fafafa;
   color: #09090b;
   border: 1px solid #fafafa;
 }
 
-.pramana-btn-primary:hover {
+.praman-btn-primary:hover {
   background: #e4e4e7;
 }
 
-.pramana-btn-secondary {
+.praman-btn-secondary {
   background: #18181b;
   color: #f4f4f5;
   border: 1px solid #27272a;
 }
 
-.pramana-btn-secondary:hover {
+.praman-btn-secondary:hover {
   background: #27272a;
 }
 
-.pramana-footer-disclaimer {
+.praman-footer-disclaimer {
   margin-top: 10px;
   font-size: 10px;
   color: #71717a;
@@ -259,7 +259,7 @@
   padding-top: 8px;
 }
 
-.pramana-privacy-indicator {
+.praman-privacy-indicator {
   display: flex;
   align-items: center;
   gap: 4px;

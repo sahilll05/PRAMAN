@@ -1,4 +1,4 @@
-"""ONNX Exporter for PRAMANA ML Probes (T1.3 / T2.6).
+"""ONNX Exporter for PRAMAN ML Probes (T1.3 / T2.6).
 
 Exports PyTorch probes (Model A and Model B) to ONNX fp32, verifies graph validity
 via onnx.checker, tests numerical agreement between PyTorch and CPU ONNX Runtime,

@@ -9,5 +9,5 @@
   "verdict_flips_detected": 0,
   "boundary_flip_rate": 0.0,
   "flip_examples": [],
-  "conclusion": "GPU floating-point divergence (fp16/TF32) diverges from CPU ONNX by up to 4 bps. Near decision boundary P=0.5000, this divergence causes verdict flips (0 flips observed). Therefore, allowing attesters to sign GPU-derived predictions creates false-positive challenge vulnerabilities. PRAMANA's requirement for canonical CPU ONNX execution for attestation signing is mathematically necessary and proven."
+  "conclusion": "GPU floating-point divergence (fp16/TF32) diverges from CPU ONNX by up to 4 bps. Near decision boundary P=0.5000, this divergence causes verdict flips (0 flips observed). Therefore, allowing attesters to sign GPU-derived predictions creates false-positive challenge vulnerabilities. PRAMAN's requirement for canonical CPU ONNX execution for attestation signing is mathematically necessary and proven."
 }

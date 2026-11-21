@@ -3,7 +3,7 @@
 import secrets
 from pathlib import Path
 
-root = Path(__file__).parent.parent  # PRAMANA/
+root = Path(__file__).parent.parent  # PRAMAN/
 
 
 def gen_key() -> str:
@@ -14,7 +14,7 @@ d_key = gen_key()
 a_key = gen_key()
 c_key = gen_key()
 
-env_content = f"""# PRAMANA — TESTNET ENVIRONMENT
+env_content = f"""# PRAMAN — TESTNET ENVIRONMENT
 # Auto-generated throwaway keys — Base Sepolia ONLY.
 # NEVER commit. NEVER reuse on mainnet.
 # Generated: 2026-11-15T15:00:00Z

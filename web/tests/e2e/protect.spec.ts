@@ -48,7 +48,7 @@ function createValidPng(w = 64, h = 64): Buffer {
 
 const TEST_PNG_64 = createValidPng(64, 64);
 
-test.describe("PRAMANA Protect Mode & Digital Watermarking (Tasks T10.1 & T10.1b)", () => {
+test.describe("PRAMAN Protect Mode & Digital Watermarking (Tasks T10.1 & T10.1b)", () => {
   test("embeds digital watermark and generates signed .pramana receipt locally with zero media upload", async ({
     page,
   }) => {
@@ -95,7 +95,7 @@ test.describe("PRAMANA Protect Mode & Digital Watermarking (Tasks T10.1 & T10.1b
     ).toBeVisible({ timeout: 10000 });
     await expect(page.locator("text=Locally Signed (ECDSA P-256)")).toBeVisible();
     await expect(
-      page.getByRole("button", { name: /Download .pramana Receipt/i })
+      page.getByRole("button", { name: /Download \.praman Receipt/i })
     ).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Download Watermarked Image/i })
@@ -133,12 +133,12 @@ test.describe("PRAMANA Protect Mode & Digital Watermarking (Tasks T10.1 & T10.1b
 
     // Click modal trigger
     const openModalBtn = page.getByRole("button", {
-      name: /Have a .pramana receipt\? Verify cryptographic integrity here/i,
+      name: /Have a \.praman receipt\? Verify cryptographic integrity here/i,
     });
     await openModalBtn.click();
 
     await expect(
-      page.locator("text=Verify .pramana Receipt")
+      page.locator("text=Verify .praman Receipt")
     ).toBeVisible();
 
     // Enter a mock invalid json to test failure reporting
@@ -152,6 +152,6 @@ test.describe("PRAMANA Protect Mode & Digital Watermarking (Tasks T10.1 & T10.1b
     // Close modal
     const closeBtn = page.getByRole("button", { name: "Close" });
     await closeBtn.click();
-    await expect(page.locator("text=Verify .pramana Receipt")).not.toBeVisible();
+    await expect(page.locator("text=Verify .praman Receipt")).not.toBeVisible();
   });
 });

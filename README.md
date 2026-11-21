@@ -1,4 +1,4 @@
-# PRAMANA (प्रमाण)
+# PRAMAN (प्रमाण)
 
 > **Evidence-Driven, Temporally Validated, and Challengeable AI-Generated Image Authenticity Verification**  
 > *A decentralized protocol and reference implementation deployed on Base Sepolia testnet.*
@@ -19,8 +19,8 @@ Modern generative diffusion and transformer models (e.g., Stable Diffusion 3.5, 
 2. **Epistemological Permanence Fallacy**: Treating an authenticity verdict as a static, irrevocable stamp is fundamentally flawed. A classification that appears sound today may be refuted tomorrow as generator families shift and new forensic models emerge.
 3. **Opaque, Centralized Oracles**: Proprietary APIs output unversioned probabilities without public evidence bundles, without reproducible code, and with zero recourse for affected individuals to contest incorrect labels.
 
-### The PRAMANA Solution
-**PRAMANA** rejects the concept of an unquestionable "truth oracle." Instead, it treats media authenticity as an **expiring, versioned, challengeable, and re-executable on-chain claim** built on open-weight deterministic detectors and the **Ethereum Attestation Service (EAS)** on Base Sepolia testnet.
+### The PRAMAN Solution
+**PRAMAN** rejects the concept of an unquestionable "truth oracle." Instead, it treats media authenticity as an **expiring, versioned, challengeable, and re-executable on-chain claim** built on open-weight deterministic detectors and the **Ethereum Attestation Service (EAS)** on Base Sepolia testnet.
 
 ```
                              [ User Image (Local) ]
@@ -68,7 +68,7 @@ Verdicts are formalized as revocable attestations registered in EAS with a custo
 - The web interface queries the indexer exclusively using hashes, retrieving the full attestation timeline, model versions, evidence hashes, and appeal forms without uploading pixels to any server.
 
 ### 4. Rigorous Scientific Discipline & Pre-Registered Shortcut Audit (E13)
-Benchmark datasets often contain spurious shortcuts (e.g., PNG synthetic images vs. JPEG photographic images). PRAMANA pre-registers a formal shortcut audit before reporting results:
+Benchmark datasets often contain spurious shortcuts (e.g., PNG synthetic images vs. JPEG photographic images). PRAMAN pre-registers a formal shortcut audit before reporting results:
 - A metadata-only classifier achieved an AUC of 1.0000 on raw files due to file format artifacts.
 - When applying strict **uniform equalization preprocessing** (224×224 bicubic downsampling, EXIF stripped, uniform JPEG quality 85 recompression), Model A maintained **0.9818 AUC** (vs. 0.9891 raw, $\Delta = -0.0073$) and Model B maintained **0.9911 AUC** (vs. 0.9957 raw, $\Delta = -0.0046$), proving that detection relies on deep visual-semantic features rather than container artifacts ([results/E13/metrics.json](results/E13/metrics.json)).
 
@@ -106,19 +106,19 @@ All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/Comm
 
 ## 4. Why Still Images? (Why Face-Swap Video Deepfakes Were Not Included in MVP)
 
-A frequent question is why PRAMANA focuses squarely on **generative still images** rather than video deepfakes (face swaps). This was a deliberate architectural and ethical decision frozen in ADR `D-IMAGES-FIRST`:
+A frequent question is why PRAMAN focuses squarely on **generative still images** rather than video deepfakes (face swaps). This was a deliberate architectural and ethical decision frozen in ADR `D-IMAGES-FIRST`:
 
 1. **Open-Data & Zero-Spend Constraints (No Gated Datasets)**:
    - Popular face-swap video datasets (FaceForensics++, Celeb-DF v2, DFDC) require institutional applications, academic email verification, signed agreements, and restrictive commercial terms.
-   - PRAMANA enforces a strict **Tier A open-access data policy**: only freely streamable/downloadable datasets with open redistributable licenses (such as `CC-BY-NC-SA-4.0` on CommunityForensics-Small and `CC-BY-NC-4.0` on OpenFake) were permitted. No Tier A ungated face-swap video dataset exists.
+   - PRAMAN enforces a strict **Tier A open-access data policy**: only freely streamable/downloadable datasets with open redistributable licenses (such as `CC-BY-NC-SA-4.0` on CommunityForensics-Small and `CC-BY-NC-4.0` on OpenFake) were permitted. No Tier A ungated face-swap video dataset exists.
 2. **Client-Side Privacy Guarantee (Zero Media Upload)**:
-   - PRAMANA's foundational privacy rule is that **media never leaves the user's browser**.
+   - PRAMAN's foundational privacy rule is that **media never leaves the user's browser**.
    - For still images, computing streaming SHA-256 and 64-bit DCT perceptual hashes in WebAssembly takes mere milliseconds.
    - Video face-swap detection requires multi-frame extraction, face cropping, facial landmark alignment, 3D convolutions, or spatial-temporal transformers—compute-heavy pipelines that cannot run client-side in a browser without uploading megabytes or gigabytes of sensitive video to an external server.
 3. **Severe Defamation & Biometric Harm Risks (Threat Model T14)**:
    - Video deepfake benchmarks almost exclusively feature real human faces (celebrities, politicians, or private individuals).
    - An on-chain, immutable, or publicly indexed false accusation ("this person's face is fake") creates acute legal, ethical, and reputational harms.
-   - By focusing on whole-image generative AI synthesis (e.g., Midjourney, Flux, Stable Diffusion, DALL-E), PRAMANA inspects synthetic generation artifacts without running biometrics on human faces without consent.
+   - By focusing on whole-image generative AI synthesis (e.g., Midjourney, Flux, Stable Diffusion, DALL-E), PRAMAN inspects synthetic generation artifacts without running biometrics on human faces without consent.
 4. **Foundational Protocol Rigor (Pillars First)**:
    - Establishing the mathematical core—exact perceptual hash collision bounds (pHash $T=10$), TrustMark watermarking, conformal coverage guarantees, and on-chain dispute resolvers—required a clean, deterministic modality before tackling video temporal aggregation. Video remains an explicit future stretch goal.
 
@@ -127,7 +127,7 @@ A frequent question is why PRAMANA focuses squarely on **generative still images
 ## 5. Repository Structure
 
 ```
-PRAMANA/
+PRAMAN/
 ├── spec/                       # Authoritative Canonical Specification
 │   ├── schemas/                # JSON Schemas (verdict.schema.json, evidence.schema.json)
 │   └── vectors/                # Golden test vectors shared across Python & TypeScript
@@ -163,8 +163,8 @@ PRAMANA/
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/sahilll05/PRAMANA.git
-cd PRAMANA
+git clone https://github.com/sahilll05/PRAMAN.git
+cd PRAMAN
 
 # 1. Setup ML Python virtual environment
 cd ml
@@ -236,7 +236,7 @@ Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS 
 
 ## 8. Required Caveats & Honest Disclosures
 
-In accordance with PRAMANA's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md)):
+In accordance with PRAMAN's strict claims policy (documented in [`results/evaluation_report.md`](results/evaluation_report.md)):
 1. **Model-Assessed Likelihood, Not an Oracle Ruling**: Verdicts reflect deterministic outputs of open forensic models at a point in time. They are not definitive statements of ontological truth.
 2. **MVP Modality Scope**: The MVP strictly evaluates **still images** (AI-generated vs. authentic photography). Video deepfakes, audio synthesis, and face-swaps are deferred to stretch phases.
 3. **Zero-Spend Non-Commercial Research**: The project operates with zero capital expenditure ($0). Deployment is restricted to **Base Sepolia testnet** using free testnet ETH. Mainnet deployment is explicitly out of scope.

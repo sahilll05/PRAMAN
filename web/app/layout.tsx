@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "PRAMANA — AI Image Authenticity Verifier",
+  title: "PRAMAN — AI Image Authenticity Verifier",
   description:
     "Open-protocol, on-chain verdicts for AI-generated image authenticity. Non-commercial research prototype on Base Sepolia testnet.",
   keywords: ["AI image detection", "authenticity", "blockchain", "EAS", "Base Sepolia", "open source"],
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                const stored = localStorage.getItem('pramana-theme');
+                const stored = localStorage.getItem('praman-theme') || localStorage.getItem('pramana-theme');
                 if (stored === 'light') {
                   document.documentElement.classList.remove('dark');
                 } else {

@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
       const sql = postgres(process.env.NEON_DATABASE_URL, { ssl: "require", max: 1 });
       const db = drizzle(sql);
 
-      const { verdicts } = await import("@pramana/indexer");
+      const { verdicts } = await import("@praman/indexer");
       const { eq } = await import("drizzle-orm");
 
       let results;

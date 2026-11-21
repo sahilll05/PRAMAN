@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pramana.example/spec/schemas/verdict.schema.json",
   "title": "Verdict",
-  "description": "PRAMANA on-chain verdict payload (spec §2.1 + §5). Version 0.1.0-draft. Produced by the ML layer; consumed by the chain CLI for EAS attestation.",
+  "description": "PRAMAN on-chain verdict payload (spec §2.1 + §5). Version 0.1.0-draft. Produced by the ML layer; consumed by the chain CLI for EAS attestation.",
   "type": "object",
   "required": [
     "specVersion",

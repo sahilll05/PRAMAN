@@ -1,4 +1,4 @@
-"""Unit tests for PRAMANA ML Models and CPU Reference Runner (T1.3)."""
+"""Unit tests for PRAMAN ML Models and CPU Reference Runner (T1.3)."""
 
 import tempfile
 from pathlib import Path

@@ -248,7 +248,7 @@ export function generateAuditReportHtml(
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRAMANA प्रमाण — Authenticity Audit Report</title>
+  <title>PRAMAN प्रमाण — Authenticity Audit Report</title>
   <style>
     :root {
       --bg: #09090b;
@@ -363,7 +363,7 @@ export function generateAuditReportHtml(
           <line x1="17" y1="12" x2="21" y2="12" stroke="#fafafa" stroke-width="1.5"/>
         </svg>
         <div>
-          <span class="title">PRAMANA</span>
+          <span class="title">PRAMAN</span>
           <span class="sanskrit">प्रमाण</span>
           <div style="font-size: 11px; color: var(--text-dim);">Authenticity Audit Report · Testnet v0.1.0-draft</div>
         </div>
@@ -419,7 +419,7 @@ export function generateAuditReportHtml(
     <div class="disclaimer-card">
       <div class="privacy-tag">🛡️ PRIVACY GUARANTEE (Claim C9 &amp; C14)</div>
       <div>All image fingerprinting (SHA-256 and perceptual pHash) was computed 100% locally on your device using Web Crypto and Canvas APIs. Raw image bytes never left the browser session.</div>
-      <div style="margin-top: 8px;"><strong>Forensic Limitation Disclosure:</strong> Model-assessed likelihood scores represent algorithmic assessment, not a legal or forensic ruling. An absent on-chain record does not prove authenticity — it indicates the media was not previously attested by registered nodes. See limitations at https://pramana.local/limitations.</div>
+      <div style="margin-top: 8px;"><strong>Forensic Limitation Disclosure:</strong> Model-assessed likelihood scores represent algorithmic assessment, not a legal or forensic ruling. An absent on-chain record does not prove authenticity — it indicates the media was not previously attested by registered nodes. See limitations at https://praman.local/limitations.</div>
     </div>
   </div>
 </body>
@@ -433,7 +433,7 @@ export function downloadAuditReport(items: BatchItemResult[], filename?: string)
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = filename || `pramana-audit-report-${Date.now()}.html`;
+  a.download = filename || `praman-audit-report-${Date.now()}.html`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

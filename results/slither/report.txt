@@ -1,9 +1,9 @@
-PRAMANA Smart Contracts Slither Static Analysis Report
+PRAMAN Smart Contracts Slither Static Analysis Report
 ============================================================
 
-'forge clean' running (wd: E:\Projects\Blockchain\PRAMANA\contracts)
+'forge clean' running (wd: E:\Projects\Blockchain\PRAMAN\contracts)
 'forge config --json' running
-'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: E:\Projects\Blockchain\PRAMANA\contracts)
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: E:\Projects\Blockchain\PRAMAN\contracts)
 
 INFO:Detectors:
 Detector: timestamp

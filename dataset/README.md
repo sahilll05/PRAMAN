@@ -1,4 +1,4 @@
-# Dataset Directory (PRAMANA)
+# Dataset Directory (PRAMAN)
 
 This directory is gitignored (`.gitignore`) and houses all locally downloaded data subsets, sampled parquet shards, precomputed embedding memmap arrays, and split manifests.
 

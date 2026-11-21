@@ -1,5 +1,5 @@
 {
-  "name": "@pramana/indexer",
+  "name": "@praman/indexer",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@ethereum-attestation-service/eas-sdk": "^2.7.0",
-    "@pramana/chain": "workspace:*",
+    "@praman/chain": "workspace:*",
     "drizzle-orm": "^0.33.0",
     "postgres": "^3.4.4",
     "viem": "^2.17.0",

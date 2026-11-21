@@ -14,7 +14,7 @@ import {
   ShieldCheck,
   RotateCcw,
 } from "lucide-react";
-import { verifyProtectReceipt, PramanaReceipt } from "@/lib/protect";
+import { verifyProtectReceipt, PramanReceipt } from "@/lib/protect";
 import { extractWatermark } from "@/lib/watermark";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +31,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
     tested: boolean;
     valid?: boolean;
     error?: string;
-    receipt?: PramanaReceipt;
+    receipt?: PramanReceipt;
     watermarkDetected?: { found: boolean; id?: string };
     sourceFileName?: string;
   }>({ tested: false });
@@ -93,7 +93,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
             setResult({
               tested: true,
               valid: wmRes.found,
-              error: wmRes.found ? undefined : "No PRAMANA watermark detected in this image.",
+              error: wmRes.found ? undefined : "No PRAMAN watermark detected in this image.",
               watermarkDetected: { found: wmRes.found, id: wmRes.watermarkIdHex },
               sourceFileName: file.name,
             });
@@ -142,7 +142,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
             </div>
             <div>
               <h3 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">
-                Verify .pramana Receipt
+                Verify .praman Receipt
               </h3>
               <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
                 Validate cryptographic ECDSA signature and manifest integrity client-side
@@ -202,7 +202,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".pramana,.json,image/*"
+                  accept=".praman,.pramana,.json,image/*"
                   className="sr-only"
                   onChange={(e) => {
                     const file = e.target.files?.[0];
@@ -211,7 +211,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
                 />
                 <Upload className="mx-auto h-8 w-8 text-zinc-400 mb-2.5" />
                 <p className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">
-                  Drop a .pramana receipt or image file here, or click to browse
+                  Drop a .praman receipt or image file here, or click to browse
                 </p>
                 <p className="text-[11px] text-zinc-400 mt-1.5">
                   Validates ECDSA signatures & recovers embedded watermarks locally · Zero data sent to any server
@@ -225,7 +225,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
                 <textarea
                   value={fileContent}
                   onChange={(e) => setFileContent(e.target.value)}
-                  placeholder='Paste full .pramana JSON receipt here:&#10;{&#10;  "version": "pramana-receipt-v1",&#10;  "protocol": "PRAMANA", ...&#10;}'
+                  placeholder='Paste full .praman JSON receipt here:&#10;{&#10;  "version": "praman-receipt-v1",&#10;  "protocol": "PRAMAN", ...&#10;}'
                   rows={6}
                   className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 px-3.5 py-2.5 text-xs font-mono text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400"
                 />
@@ -272,13 +272,13 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
                   ) : (
                     <>
                       <AlertTriangle className="h-4 w-4 text-rose-600 dark:text-rose-400 shrink-0" />
-                      <span>No PRAMANA Watermark Detected</span>
+                      <span>No PRAMAN Watermark Detected</span>
                     </>
                   )
                 ) : result.valid ? (
                   <>
                     <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                    <span>Valid PRAMANA Receipt — Cryptographic Signature Verified</span>
+                    <span>Valid PRAMAN Receipt — Cryptographic Signature Verified</span>
                   </>
                 ) : (
                   <>
@@ -306,7 +306,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-zinc-500">Method:</span>
-                    <span>PRAMANA Interleaved Differential Watermark</span>
+                    <span>PRAMAN Interleaved Differential Watermark</span>
                   </div>
                 </div>
               )}

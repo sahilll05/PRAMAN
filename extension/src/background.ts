@@ -1,8 +1,8 @@
 /**
- * extension/src/background.ts — Background Service Worker for PRAMANA (T10.2).
+ * extension/src/background.ts — Background Service Worker for PRAMAN (T10.2).
  *
  * Implements:
- * - Context menu item: "Verify with PRAMANA प्रमाण" on all <img> elements.
+ * - Context menu item: "Verify with PRAMAN प्रमाण" on all <img> elements.
  * - In-worker image blob fetching & local cryptographic/perceptual fingerprinting.
  * - Zero media upload indexer queries.
  * - Extension badge updates & chrome.storage state persistence.
@@ -10,14 +10,14 @@
 
 import { fetchVerdicts, getConfig } from "./api";
 import { fingerprintImageBlob } from "./fingerprint";
-import { ExtensionMessage, PramanaVerifyResult } from "./types";
+import { ExtensionMessage, PramanVerifyResult } from "./types";
 
 /** Initialize right-click context menu on extension install or update. */
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
-      id: "pramana-verify-image",
-      title: "Verify with PRAMANA प्रमाण",
+      id: "praman-verify-image",
+      title: "Verify with PRAMAN प्रमाण",
       contexts: ["image"],
     });
   });
@@ -51,7 +51,7 @@ async function ensureInjected(tabId: number): Promise<boolean> {
 
 /** Listen for right-click context menu clicks. */
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId !== "pramana-verify-image" || !info.srcUrl) return;
+  if ((info.menuItemId !== "praman-verify-image" && info.menuItemId !== "pramana-verify-image") || !info.srcUrl) return;
 
   let srcUrl = info.srcUrl;
   const tabId = tab?.id;
@@ -60,7 +60,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (tabId) {
     await ensureInjected(tabId);
     try {
-      const resp = await chrome.tabs.sendMessage(tabId, { type: "PRAMANA_GET_TARGET_IMAGE" });
+      const resp = await chrome.tabs.sendMessage(tabId, { type: "PRAMAN_GET_TARGET_IMAGE" });
       if (resp?.realSrc && resp.realSrc !== srcUrl) {
         srcUrl = resp.realSrc;
       }
@@ -69,7 +69,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     }
     try {
       await chrome.tabs.sendMessage(tabId, {
-        type: "PRAMANA_START_VERIFY",
+        type: "PRAMAN_START_VERIFY",
         srcUrl,
       } as ExtensionMessage);
     } catch {
@@ -82,7 +82,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     let blob: Blob;
     if (srcUrl.startsWith("blob:") && tabId) {
       const resp = await chrome.tabs.sendMessage(tabId, {
-        type: "PRAMANA_FETCH_BLOB_IN_PAGE",
+        type: "PRAMAN_FETCH_BLOB_IN_PAGE",
         srcUrl,
       });
       if (resp?.success && resp.buffer) {
@@ -101,7 +101,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     // 3. Compute SHA-256 and pHash locally in browser memory (zero media upload!)
     const { sha256, phash } = await fingerprintImageBlob(blob);
 
-    // 4. Query PRAMANA Indexer API with hashes only
+    // 4. Query PRAMAN Indexer API with hashes only
     const config = await getConfig();
     const result = await fetchVerdicts(sha256, phash, srcUrl, config);
 
@@ -115,7 +115,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (tabId && config.autoShowOverlay) {
       try {
         await chrome.tabs.sendMessage(tabId, {
-          type: "PRAMANA_VERIFY_RESULT",
+          type: "PRAMAN_VERIFY_RESULT",
           result,
         } as ExtensionMessage);
       } catch {
@@ -127,7 +127,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (tabId) {
       try {
         await chrome.tabs.sendMessage(tabId, {
-          type: "PRAMANA_VERIFY_ERROR",
+          type: "PRAMAN_VERIFY_ERROR",
           error: errorMsg,
           srcUrl,
         } as ExtensionMessage);
@@ -139,9 +139,9 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
 });
 
 /** Save verification result into chrome.storage.local. */
-async function saveVerificationResult(result: PramanaVerifyResult): Promise<void> {
+async function saveVerificationResult(result: PramanVerifyResult): Promise<void> {
   const data = await chrome.storage.local.get({ history: [] });
-  const history: PramanaVerifyResult[] = data.history || [];
+  const history: PramanVerifyResult[] = data.history || [];
   // Keep last 50 verifications
   const updatedHistory = [result, ...history.filter((h) => h.sha256 !== result.sha256)].slice(0, 50);
 
@@ -152,7 +152,7 @@ async function saveVerificationResult(result: PramanaVerifyResult): Promise<void
 }
 
 /** Update extension toolbar badge based on verdict result. */
-function updateExtensionBadge(result: PramanaVerifyResult): void {
+function updateExtensionBadge(result: PramanVerifyResult): void {
   if (result.found) {
     if (result.status === "ACTIVE") {
       chrome.action.setBadgeText({ text: "VER" });
@@ -175,7 +175,7 @@ function updateExtensionBadge(result: PramanaVerifyResult): void {
 
 /** Listen for messages from popup or content script. */
 chrome.runtime.onMessage.addListener((message: ExtensionMessage, _sender, sendResponse) => {
-  if (message.type === "PRAMANA_START_VERIFY" || message.type === "PRAMANA_MANUAL_VERIFY") {
+  if (message.type === "PRAMAN_START_VERIFY" || message.type === "PRAMAN_MANUAL_VERIFY") {
     // Return true for async response if needed
     return false;
   }

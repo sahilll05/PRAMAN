@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pramana.example/spec/schemas/evidence.schema.json",
   "title": "Evidence Bundle",
-  "description": "PRAMANA evidence bundle (spec §5). JSON file whose SHA-256 = evidenceHash. Must be canonicalized (sorted keys, UTF-8, no whitespace) before hashing.",
+  "description": "PRAMAN evidence bundle (spec §5). JSON file whose SHA-256 = evidenceHash. Must be canonicalized (sorted keys, UTF-8, no whitespace) before hashing.",
   "type": "object",
   "required": [
     "specVersion",

@@ -1,5 +1,5 @@
 /**
- * extension/build.js — Production Build & Bundle Script for PRAMANA Extension (T10.2).
+ * extension/build.js — Production Build & Bundle Script for PRAMAN Extension (T10.2).
  */
 
 import * as esbuild from "esbuild";
@@ -15,7 +15,7 @@ const PUBLIC_DIR = path.join(__dirname, "public");
 const SRC_DIR = path.join(__dirname, "src");
 
 async function build() {
-  console.log("🚀 Building PRAMANA Extension (Chrome MV3 + Firefox WebExtension)...");
+  console.log("🚀 Building PRAMAN Extension (Chrome MV3 + Firefox WebExtension)...");
 
   // Ensure clean dist directory
   if (fs.existsSync(DIST_DIR)) {

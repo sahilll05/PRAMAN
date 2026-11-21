@@ -44,7 +44,7 @@ function createValidPng(w = 64, h = 64, seed = 0): Buffer {
   return Buffer.concat([signature, ihdrChunk, idatChunk, iendChunk]);
 }
 
-test.describe("PRAMANA Batch Verification & Error Level Analysis (Tasks T10.3 & T10.4)", () => {
+test.describe("PRAMAN Batch Verification & Error Level Analysis (Tasks T10.3 & T10.4)", () => {
   test("Batch Verification: processes N=5 images locally with zero media upload (Claim C14)", async ({
     page,
   }) => {

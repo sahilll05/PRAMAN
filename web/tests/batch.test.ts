@@ -60,7 +60,7 @@ describe("Batch Verification & Local HTML Audit Report (T10.3, Claim C14)", () =
     expect(html).toContain("<meta charset=\"UTF-8\">");
 
     // 2. Branding & Sanskrit
-    expect(html).toContain("PRAMANA");
+    expect(html).toContain("PRAMAN");
     expect(html).toContain("प्रमाण");
     expect(html).toContain("Authenticity Audit Report");
 

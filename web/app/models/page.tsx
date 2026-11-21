@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Server, Database, Info, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Models | PRAMANA",
-  description: "Registered AI detector models on the PRAMANA registry.",
+  title: "Models | PRAMAN",
+  description: "Registered AI detector models on the PRAMAN registry.",
 };
 
 export default function ModelsPage() {
@@ -16,7 +16,7 @@ export default function ModelsPage() {
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">Detector Models</h1>
         <p className="text-zinc-500 dark:text-zinc-400 mt-2 text-sm leading-relaxed">
-          Registered AI detector models on the PRAMANA Registry smart contract.
+          Registered AI detector models on the PRAMAN Registry smart contract.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function ModelsPage() {
           status={0}
           aucBps={9891}
           eceBps={399}
-          uri="ipfs://QmPRAMANA-ModelA-v1"
+          uri="ipfs://QmPRAMAN-ModelA-v1"
           specVersion="0.1.0-draft"
           registeredBlock={105n}
         />
@@ -52,7 +52,7 @@ export default function ModelsPage() {
           status={0}
           aucBps={9957}
           eceBps={163}
-          uri="ipfs://QmPRAMANA-ModelB-v1"
+          uri="ipfs://QmPRAMAN-ModelB-v1"
           specVersion="0.1.0-draft"
           registeredBlock={106n}
         />

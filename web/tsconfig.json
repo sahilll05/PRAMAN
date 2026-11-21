@@ -17,7 +17,9 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"],
+      "@praman/chain": ["../chain/src/index.ts"],
       "@pramana/chain": ["../chain/src/index.ts"],
+      "@praman/indexer": ["../indexer/src/index.ts"],
       "@pramana/indexer": ["../indexer/src/index.ts"]
     }
   },

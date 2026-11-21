@@ -1,4 +1,4 @@
-"""CLIP Embedding Extractor for PRAMANA (T1.2).
+"""CLIP Embedding Extractor for PRAMAN (T1.2).
 
 Extracts normalized visual embeddings on GPU (fp16) and saves as
 NumPy memory-mapped arrays in dataset/embeddings/.
@@ -15,7 +15,7 @@ import open_clip
 import torch
 from torch.utils.data import DataLoader
 
-from lv_ml.data.dataset import PramanaDataset
+from lv_ml.data.dataset import PramanDataset
 
 
 class ClipEmbeddingExtractor:
@@ -57,7 +57,7 @@ class ClipEmbeddingExtractor:
         output_embeddings_path.parent.mkdir(parents=True, exist_ok=True)
         output_labels_path.parent.mkdir(parents=True, exist_ok=True)
 
-        dataset = PramanaDataset(manifest_path, transform=self.preprocess)
+        dataset = PramanDataset(manifest_path, transform=self.preprocess)
         n_samples = len(dataset)
 
         if n_samples == 0:

@@ -1,6 +1,6 @@
-# PRAMANA: Final System Evaluation Report
+# PRAMAN: Final System Evaluation Report
 
-> **Project:** PRAMANA (प्रमाण) — Living Authenticity Attestation Protocol for Visual Media  
+> **Project:** PRAMAN (प्रमाण) — Living Authenticity Attestation Protocol for Visual Media  
 > **Status:** Phase 8 Evaluation Synthesis (Pre-registered Protocols E0–E13 + T23)  
 > **Date:** 2026-11-20  
 > **Repository Commit:** `main` branch  
@@ -13,7 +13,7 @@
 
 In Indian epistemology, **प्रमाण** (*Pramāṇa*) signifies the valid means, grounds, and instruments of knowledge. Contemporary deepfake and synthetic media verification is fundamentally plagued by false certainty, centralized opacity, perceptual fragility, and temporal obsolescence ("the bit-rot of truth"). 
 
-PRAMANA addresses these systemic vulnerabilities through five core pillars:
+PRAMAN addresses these systemic vulnerabilities through five core pillars:
 1. **Client-Side Cryptographic & Perceptual Fingerprinting (N1)**: Streaming SHA-256 and 64-bit DCT perceptual hashing (pHash) executed directly in the user's browser via WebAssembly (`hash-wasm`), guaranteeing zero media transmission over the network.
 2. **Living, Updatable Attestations on EVM (N2)**: Decentralized attestation on the Ethereum Attestation Service (EAS) on Base Sepolia (`VerdictResolver.sol`), tracking the full temporal lifecycle of an assessment (Active, Challenged, Degraded, Stale, Revoked, Superseded).
 3. **Rigorous Uncertainty Quantification & Abstention (N3)**: Softmax temperature scaling, Split Conformal Prediction ($\alpha = 0.10$), and Mahalanobis Out-Of-Distribution (OOD) gating ($\tau_{OOD} = 39.10$), mathematically forcing an `ABSTAIN` verdict on un-calibrated, out-of-domain, or ambiguous inputs.
@@ -59,7 +59,7 @@ This report synthesizes all 14 empirical experiments pre-registered in `sahil/ev
 
 ### 3.2. Calibration, Abstention & Safe Failure Modes (E4)
 - Uncalibrated neural networks are notoriously overconfident. Applying temperature scaling on held-out validation sets reduced Expected Calibration Error (ECE) from 8.5% to 1.63%.
-- Under severe domain shift, prediction probabilities drift. PRAMANA implements two orthogonal safety gates:
+- Under severe domain shift, prediction probabilities drift. PRAMAN implements two orthogonal safety gates:
   1. **Mahalanobis Out-Of-Distribution (OOD) Gating**: Using regularized pooled covariance and class centroids, the OOD threshold $\tau_{OOD} = 39.10$ flags out-of-domain images and forces an `ABSTAIN` verdict.
   2. **Split Conformal Prediction**: Constructing 90% finite-sample valid prediction sets $S(x) \subseteq \{0, 1\}$. When $S(x) = \{0, 1\}$ or $\emptyset$, the system refuses to output an ambiguous binary label and marks the assessment `ABSTAIN`.
 - On OpenFake core, selective risk-coverage curves confirm that selective accuracy improves from 59.0% at 100% coverage to 67.0% at 58.4% natural coverage, proving that abstention successfully weeds out misclassifications.
@@ -67,11 +67,11 @@ This report synthesizes all 14 empirical experiments pre-registered in `sahil/ev
 ### 3.3. Determinism, Numerical Stability & The CPU ONNX Mandate (E5, E5b, T23)
 - Deterministic verification is critical for decentralized challenge resolution. Experiment E5 proved that CPU ONNX fp32 execution provides exact bit-level agreement across independent runs (0 bps difference, 0.0% mismatch).
 - Experiment E5b and T23 measured floating-point divergence between GPU fp16 / TF32 and canonical CPU ONNX fp32. Across random samples, divergence was bounded to 20 bps; across 2,440 boundary samples near $P = 0.5000$, divergence reached up to 4 bps. 
-- **Protocol Law Proven**: Because a 4–20 bps shift could cross $P = 0.5000$ and invert a binary verdict, signing GPU-derived predictions creates false-challenge vulnerabilities. PRAMANA's requirement that attestations must be signed only from canonical CPU ONNX fp32 execution completely eliminates this threat.
+- **Protocol Law Proven**: Because a 4–20 bps shift could cross $P = 0.5000$ and invert a binary verdict, signing GPU-derived predictions creates false-challenge vulnerabilities. PRAMAN's requirement that attestations must be signed only from canonical CPU ONNX fp32 execution completely eliminates this threat.
 
 ### 3.4. Adversarial Perturbation Evaluation (E10)
 - Projected Gradient Descent (PGD, $L_\infty$) white-box attacks easily bypass uncalibrated probes: at $\epsilon = 0.01$, raw ASR is 89.0%; at $\epsilon \ge 0.05$, raw ASR is 100.0%.
-- However, PRAMANA's defense layers shift adversarial evasion into safe abstention:
+- However, PRAMAN's defense layers shift adversarial evasion into safe abstention:
   - At $\epsilon = 0.01$, conformal set expansion and ensemble disagreement catch 48.5% of queries as `ABSTAIN`.
   - At $\epsilon \ge 0.05$, adversarial perturbations inevitably displace embeddings into low-density feature space, triggering the Mahalanobis OOD gate on **100.0%** of samples ($d_M \gg 39.10$) and resulting in a **0.0% evasion rate**.
 - **Honest Limitation**: No claim of adversarial robustness is made. Micro-perturbations ($\epsilon \le 0.01$) remain an acknowledged residual risk.
@@ -84,7 +84,7 @@ This report synthesizes all 14 empirical experiments pre-registered in `sahil/ev
 
 ### 3.6. Usability & Professional Fact-Checking Beta (E12)
 - Simulated trials with 3 investigative journalism and OSINT personas across 10 realistic verification workflows achieved a 96.67% overall task success rate.
-- 100% of evaluators correctly understood that PRAMANA delivers calibrated likelihood assessments rather than absolute proof.
+- 100% of evaluators correctly understood that PRAMAN delivers calibrated likelihood assessments rather than absolute proof.
 - Mean System Usability Scale (SUS) score: **87.5 / 100** (Grade A / Excellent usability).
 
 ---
@@ -110,7 +110,7 @@ This report synthesizes all 14 empirical experiments pre-registered in `sahil/ev
 
 ## 5. Explicit Limitations & Non-Commercial Notice
 
-In adherence to PRAMANA's core research philosophy, the following limitations are explicitly noted:
+In adherence to PRAMAN's core research philosophy, the following limitations are explicitly noted:
 1. **MVP Scope**: This implementation covers AI-generated and authentic **still images only**. Video deepfakes, face swaps, and audio syntheses are out of scope.
 2. **Probabilistic Assessment, Not Fact**: Outputs reflect model-assessed statistical probabilities, never absolute judicial or historical rulings.
 3. **Testnet Only**: All smart contract deployments are strictly on the **Base Sepolia testnet**. Mainnet deployment is out of scope under the zero-spend policy.

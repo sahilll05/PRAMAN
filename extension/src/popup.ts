@@ -1,10 +1,10 @@
 /**
- * extension/src/popup.ts — Action Toolbar Popup Script for PRAMANA (T10.2).
+ * extension/src/popup.ts — Action Toolbar Popup Script for PRAMAN (T10.2).
  */
 
 import { fetchVerdicts, getConfig } from "./api";
 import { fingerprintImageBlob } from "./fingerprint";
-import { PramanaVerifyResult } from "./types";
+import { PramanVerifyResult } from "./types";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const config = await getConfig();
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // Display result helper
-  function displayResult(result: PramanaVerifyResult): void {
+  function displayResult(result: PramanVerifyResult): void {
     if (!emptyState || !verifiedState) return;
     emptyState.style.display = "none";
     verifiedState.style.display = "block";
@@ -120,13 +120,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (resLink) {
         const base = config.webAppUrl || "http://localhost:3000";
         resLink.href = `${base}/?sha256=${result.sha256}`;
-        resLink.textContent = "Open in PRAMANA Web →";
+        resLink.textContent = "Open in PRAMAN Web →";
       }
     }
   }
 
   // Display result in manual lookup card helper
-  function displayManualResult(result: PramanaVerifyResult): void {
+  function displayManualResult(result: PramanVerifyResult): void {
     if (!manualResult) return;
     manualResult.style.display = "block";
 
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (manLink) {
         const base = config.webAppUrl || "http://localhost:3000";
         manLink.href = `${base}/?sha256=${result.sha256}`;
-        manLink.textContent = "Open in PRAMANA Web Verifier →";
+        manLink.textContent = "Open in PRAMAN Web Verifier →";
       }
     }
   }

@@ -1,5 +1,5 @@
 /**
- * web/lib/chain-client.ts — Read-only Viem public client for the PRAMANA web verifier (T6.3).
+ * web/lib/chain-client.ts — Read-only Viem public client for the PRAMAN web verifier (T6.3).
  *
  * Connects to Anvil (local dev) or Base Sepolia (testnet).
  * Never sends transactions or exposes private keys.
@@ -8,7 +8,7 @@
 
 import { createPublicClient, http, type PublicClient, type Chain } from "viem";
 import { baseSepolia } from "viem/chains";
-import { EAS_ABI, REGISTRY_ABI } from "@pramana/chain";
+import { EAS_ABI, REGISTRY_ABI } from "@praman/chain";
 
 /** Anvil local chain (chainId 31337) */
 const anvil: Chain = {

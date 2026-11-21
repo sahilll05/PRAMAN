@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Activity, ShieldCheck, AlertTriangle, Info, GitCommit } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Canary Health | PRAMANA",
+  title: "Canary Health | PRAMAN",
   description: "Canary evaluation batches and continuous model health tracking.",
 };
 
@@ -19,7 +19,7 @@ export default function CanaryPage() {
           Canary Evaluations & Model Health
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400 mt-2 max-w-3xl text-sm leading-relaxed">
-          PRAMANA uses ongoing canary batches (freshly synthesized, held-out images with commit-reveal labels)
+          PRAMAN uses ongoing canary batches (freshly synthesized, held-out images with commit-reveal labels)
           to measure whether detector performance has degraded against evolving generation techniques.
         </p>
       </div>

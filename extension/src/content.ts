@@ -1,16 +1,16 @@
 /**
- * extension/src/content.ts — In-Page Content Script for PRAMANA (T10.2).
+ * extension/src/content.ts — In-Page Content Script for PRAMAN (T10.2).
  *
  * Injects a minimal, non-intrusive floating verdict badge/card when the user
- * right-clicks an image and selects "Verify with PRAMANA प्रमाण".
+ * right-clicks an image and selects "Verify with PRAMAN प्रमाण".
  *
  * PRIVACY GUARANTEE (Claim C9):
  * Pure client-side UI layer. Zero user data or media is sent to third parties.
  */
 
-import { ExtensionMessage, PramanaVerdictItem, PramanaVerifyResult } from "./types";
+import { ExtensionMessage, PramanVerdictItem, PramanVerifyResult } from "./types";
 
-const OVERLAY_ID = "pramana-overlay-root";
+const OVERLAY_ID = "praman-overlay-root";
 
 /** Track the real image element when user right-clicks (handles Twitter/social overlay DIVs/SVGs). */
 let lastRightClickedImgSrc: string | null = null;
@@ -82,17 +82,17 @@ function renderLoading(srcUrl: string): void {
   root.innerHTML = "";
 
   const card = document.createElement("div");
-  card.className = "pramana-card";
+  card.className = "praman-card";
 
   // Header
   card.appendChild(createHeader());
 
   // Loading Body
   const loading = document.createElement("div");
-  loading.className = "pramana-loading";
+  loading.className = "praman-loading";
 
   const spinner = document.createElement("div");
-  spinner.className = "pramana-spinner";
+  spinner.className = "praman-spinner";
 
   const text = document.createElement("span");
   text.textContent = "Computing SHA-256 & pHash locally in browser...";
@@ -110,7 +110,7 @@ function renderError(error: string): void {
   root.innerHTML = "";
 
   const card = document.createElement("div");
-  card.className = "pramana-card";
+  card.className = "praman-card";
 
   card.appendChild(createHeader());
 
@@ -125,37 +125,37 @@ function renderError(error: string): void {
 }
 
 /** Render verification result card. */
-function renderResult(result: PramanaVerifyResult): void {
+function renderResult(result: PramanVerifyResult): void {
   const root = getOrCreateRoot();
   root.innerHTML = "";
 
   const card = document.createElement("div");
-  card.className = "pramana-card";
+  card.className = "praman-card";
 
   // 1. Header
   card.appendChild(createHeader());
 
   // 2. Status Row
   const statusRow = document.createElement("div");
-  statusRow.className = "pramana-status-row";
+  statusRow.className = "praman-status-row";
 
   const badge = document.createElement("span");
-  badge.className = "pramana-verdict-badge";
+  badge.className = "praman-verdict-badge";
 
   if (!result.found) {
-    badge.classList.add("pramana-status-none");
+    badge.classList.add("praman-status-none");
     badge.textContent = "No On-Chain Record";
   } else if (result.status === "ACTIVE") {
-    badge.classList.add("pramana-status-active");
+    badge.classList.add("praman-status-active");
     badge.textContent = "Active Attestation";
   } else if (result.status === "MODEL_DEGRADED" || result.status === "SUPERSEDED") {
-    badge.classList.add("pramana-status-degraded");
+    badge.classList.add("praman-status-degraded");
     badge.textContent = result.status.replace("_", " ");
   } else if (result.status === "REVOKED") {
-    badge.classList.add("pramana-status-revoked");
+    badge.classList.add("praman-status-revoked");
     badge.textContent = "Attestation Revoked";
   } else {
-    badge.classList.add("pramana-status-active");
+    badge.classList.add("praman-status-active");
     badge.textContent = result.status;
   }
 
@@ -171,7 +171,7 @@ function renderResult(result: PramanaVerifyResult): void {
 
   // 3. Field Group (Hashes & Model Info)
   const group = document.createElement("div");
-  group.className = "pramana-field-group";
+  group.className = "praman-field-group";
 
   // SHA-256
   const shaRow = createFieldRow(
@@ -187,7 +187,7 @@ function renderResult(result: PramanaVerifyResult): void {
 
   // Top verdict details if available
   if (result.found && result.verdicts.length > 0) {
-    const v: PramanaVerdictItem = result.verdicts[0]!;
+    const v: PramanVerdictItem = result.verdicts[0]!;
     const modelRow = createFieldRow("Model", v.modelName || v.modelId.slice(0, 10));
     group.appendChild(modelRow);
 
@@ -197,9 +197,9 @@ function renderResult(result: PramanaVerifyResult): void {
       group.appendChild(scoreRow);
 
       const scoreBarBg = document.createElement("div");
-      scoreBarBg.className = "pramana-score-bar-bg";
+      scoreBarBg.className = "praman-score-bar-bg";
       const scoreBarFill = document.createElement("div");
-      scoreBarFill.className = "pramana-score-bar-fill";
+      scoreBarFill.className = "praman-score-bar-fill";
       scoreBarFill.style.width = `${Math.min(100, Math.max(0, v.score * 100))}%`;
       scoreBarBg.appendChild(scoreBarFill);
       group.appendChild(scoreBarBg);
@@ -218,10 +218,10 @@ function renderResult(result: PramanaVerifyResult): void {
 
   // 4. Action Button
   const actions = document.createElement("div");
-  actions.className = "pramana-actions";
+  actions.className = "praman-actions";
 
   const viewLink = document.createElement("a");
-  viewLink.className = "pramana-btn pramana-btn-primary";
+  viewLink.className = "praman-btn praman-btn-primary";
   viewLink.target = "_blank";
   viewLink.rel = "noopener noreferrer";
 
@@ -231,17 +231,17 @@ function renderResult(result: PramanaVerifyResult): void {
     viewLink.textContent = "View On-Chain Record →";
   } else {
     viewLink.href = `${baseUrl}/?sha256=${result.sha256}`;
-    viewLink.textContent = "Open in PRAMANA Web →";
+    viewLink.textContent = "Open in PRAMAN Web →";
   }
   actions.appendChild(viewLink);
   card.appendChild(actions);
 
   // 5. Privacy & Limitations Disclaimers
   const footer = document.createElement("div");
-  footer.className = "pramana-footer-disclaimer";
+  footer.className = "praman-footer-disclaimer";
 
   const privacy = document.createElement("div");
-  privacy.className = "pramana-privacy-indicator";
+  privacy.className = "praman-privacy-indicator";
   privacy.innerHTML = `🛡️ <span>Image fingerprinted locally. Media never leaves browser.</span>`;
   footer.appendChild(privacy);
 
@@ -257,16 +257,16 @@ function renderResult(result: PramanaVerifyResult): void {
 /** Helper: Create card header */
 function createHeader(): HTMLElement {
   const header = document.createElement("div");
-  header.className = "pramana-header";
+  header.className = "praman-header";
 
   const brand = document.createElement("div");
-  brand.className = "pramana-brand";
+  brand.className = "praman-brand";
 
   // Minimal hairline emblem SVG
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", "0 0 24 24");
   svg.setAttribute("fill", "none");
-  svg.setAttribute("class", "pramana-logo-svg");
+  svg.setAttribute("class", "praman-logo-svg");
   svg.innerHTML = `
     <rect x="3" y="3" width="18" height="18" rx="2" stroke="#fafafa" stroke-width="1.5"/>
     <circle cx="12" cy="12" r="4" stroke="#fafafa" stroke-width="1.5"/>
@@ -277,15 +277,15 @@ function createHeader(): HTMLElement {
   `;
 
   const title = document.createElement("span");
-  title.className = "pramana-title";
-  title.textContent = "PRAMANA";
+  title.className = "praman-title";
+  title.textContent = "PRAMAN";
 
   const sanskrit = document.createElement("span");
-  sanskrit.className = "pramana-sanskrit";
+  sanskrit.className = "praman-sanskrit";
   sanskrit.textContent = "प्रमाण";
 
   const testnet = document.createElement("span");
-  testnet.className = "pramana-badge-testnet";
+  testnet.className = "praman-badge-testnet";
   testnet.textContent = "testnet";
 
   brand.appendChild(svg);
@@ -295,7 +295,7 @@ function createHeader(): HTMLElement {
   header.appendChild(brand);
 
   const closeBtn = document.createElement("button");
-  closeBtn.className = "pramana-close-btn";
+  closeBtn.className = "praman-close-btn";
   closeBtn.textContent = "✕";
   closeBtn.title = "Dismiss";
   closeBtn.onclick = dismissOverlay;
@@ -307,14 +307,14 @@ function createHeader(): HTMLElement {
 /** Helper: Create field row with optional copy */
 function createFieldRow(label: string, displayVal: string, fullVal?: string): HTMLElement {
   const row = document.createElement("div");
-  row.className = "pramana-field";
+  row.className = "praman-field";
 
   const l = document.createElement("span");
-  l.className = "pramana-field-label";
+  l.className = "praman-field-label";
   l.textContent = label;
 
   const v = document.createElement("span");
-  v.className = "pramana-field-value";
+  v.className = "praman-field-value";
   v.textContent = displayVal;
 
   if (fullVal) {
@@ -341,11 +341,11 @@ chrome.runtime.onMessage.addListener((message: any, _sender, sendResponse) => {
     sendResponse({ pong: true });
     return true;
   }
-  if (message.type === "PRAMANA_GET_TARGET_IMAGE") {
+  if (message.type === "PRAMAN_GET_TARGET_IMAGE") {
     sendResponse({ realSrc: lastRightClickedImgSrc });
     return true;
   }
-  if (message.type === "PRAMANA_FETCH_BLOB_IN_PAGE") {
+  if (message.type === "PRAMAN_FETCH_BLOB_IN_PAGE") {
     (async () => {
       try {
         const resp = await fetch(message.srcUrl);
@@ -357,11 +357,11 @@ chrome.runtime.onMessage.addListener((message: any, _sender, sendResponse) => {
     })();
     return true; // async
   }
-  if (message.type === "PRAMANA_START_VERIFY") {
+  if (message.type === "PRAMAN_START_VERIFY") {
     renderLoading(message.srcUrl);
-  } else if (message.type === "PRAMANA_VERIFY_RESULT") {
+  } else if (message.type === "PRAMAN_VERIFY_RESULT") {
     renderResult(message.result);
-  } else if (message.type === "PRAMANA_VERIFY_ERROR") {
+  } else if (message.type === "PRAMAN_VERIFY_ERROR") {
     renderError(message.error);
   }
   return true;

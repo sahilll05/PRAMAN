@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { computeFileFingerprint } from "@/lib/fingerprint";
-import { generateProtectReceipt, PramanaReceipt } from "@/lib/protect";
+import { generateProtectReceipt, PramanReceipt } from "@/lib/protect";
 import { applyWatermarkToFile } from "@/lib/watermark";
 import { StatusBadge } from "@/components/StatusBadge";
 import { VerdictCard } from "@/components/VerdictCard";
@@ -52,7 +52,7 @@ interface VerifyState {
   fileSize: number;
   error?: string;
   verdicts: LocalVerdict[];
-  receipt?: PramanaReceipt;
+  receipt?: PramanReceipt;
   watermarkedBlob?: Blob | null;
   watermarkPsnr?: number | null;
 }
@@ -109,7 +109,7 @@ export default function HomePage() {
         const fp = await computeFileFingerprint(file);
 
         if (mode === "protect") {
-          // T10.1 & T10.1b: Protect Mode — Digital Watermarking + Signed .pramana Receipt
+          // T10.1 & T10.1b: Protect Mode — Digital Watermarking + Signed .praman Receipt
           setState((s) => ({
             ...s,
             phase: "signing",
@@ -270,7 +270,7 @@ export default function HomePage() {
         <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/80 px-3.5 py-1 text-xs text-zinc-700 dark:text-zinc-300">
           <span className="font-sanskrit text-sm font-semibold text-zinc-900 dark:text-zinc-100">प्रमाण</span>
           <span className="text-zinc-400 dark:text-zinc-600">/</span>
-          <span>PRAMANA Protocol</span>
+          <span>PRAMAN Protocol</span>
           <span className="text-zinc-400 dark:text-zinc-600">/</span>
           <span className="font-mono text-[11px] text-zinc-500 dark:text-zinc-400">Base Sepolia Testnet</span>
         </div>
@@ -290,7 +290,7 @@ export default function HomePage() {
             </>
           ) : (
             <>
-              Protect your original work before publishing. Generate a cryptographically signed, timestamped <code className="font-mono text-zinc-800 dark:text-zinc-200">.pramana</code> receipt containing SHA-256, perceptual hash, and an ECDSA P-256 signature. <span className="text-zinc-900 dark:text-zinc-200 font-medium">100% client-side Web Crypto.</span>
+              Protect your original work before publishing. Generate a cryptographically signed, timestamped <code className="font-mono text-zinc-800 dark:text-zinc-200">.praman</code> receipt containing SHA-256, perceptual hash, and an ECDSA P-256 signature. <span className="text-zinc-900 dark:text-zinc-200 font-medium">100% client-side Web Crypto.</span>
             </>
           )}
         </p>
@@ -395,7 +395,7 @@ export default function HomePage() {
               <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
                 {mode === "verify"
                   ? "Drop an image to verify, or click to browse"
-                  : "Drop your original work to generate a signed .pramana receipt"}
+                  : "Drop your original work to generate a signed .praman receipt"}
               </p>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
                 PNG, JPEG, WebP (still images only)
@@ -451,7 +451,7 @@ export default function HomePage() {
           className="inline-flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-4 cursor-pointer transition-colors"
         >
           <FileCheck className="h-3.5 w-3.5" />
-          <span>Have a .pramana receipt? Verify cryptographic integrity here</span>
+          <span>Have a .praman receipt? Verify cryptographic integrity here</span>
         </button>
       </div>
 
@@ -651,6 +651,6 @@ const HOW_IT_WORKS = [
     Icon: Stamp,
     title: "Creator Protect Mode",
     description:
-      "Original media generates a downloadable, locally-signed .pramana JSON receipt using Web Crypto ECDSA P-256 to prove fingerprint existence at a timestamp.",
+      "Original media generates a downloadable, locally-signed .praman JSON receipt using Web Crypto ECDSA P-256 to prove fingerprint existence at a timestamp.",
   },
 ];

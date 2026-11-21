@@ -5,7 +5,7 @@ const TINY_PNG_BASE64 =
   "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
 const TEST_IMAGE_BUFFER = Buffer.from(TINY_PNG_BASE64, "base64");
 
-test.describe("PRAMANA Privacy Guarantee (Task T6.4, Claim C9)", () => {
+test.describe("PRAMAN Privacy Guarantee (Task T6.4, Claim C9)", () => {
   test("media never leaves browser: network inspection confirms zero media upload", async ({
     page,
   }) => {

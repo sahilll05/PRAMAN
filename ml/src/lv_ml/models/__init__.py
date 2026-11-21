@@ -1,4 +1,4 @@
-"""PRAMANA ML Models."""
+"""PRAMAN ML Models."""
 
 from lv_ml.models.probe import (
     ClipLinearProbe,

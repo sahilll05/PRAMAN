@@ -9,15 +9,15 @@
 
 ## 1. Executive Summary
 
-We evaluated the vulnerability and defense properties of PRAMANA's detection engine under white-box Projected Gradient Descent (PGD, $L_\infty$) adversarial perturbations. As pre-registered in `evaluation_plan.md`:
+We evaluated the vulnerability and defense properties of PRAMAN's detection engine under white-box Projected Gradient Descent (PGD, $L_\infty$) adversarial perturbations. As pre-registered in `evaluation_plan.md`:
 > *"Adversarial: simple white-box/transfer perturbations (PGD with small epsilon) against model A on GPU; report attack success rate. No robustness claim made."*
 
 Our findings reveal a critical structural dichotomy:
 1. **Uncalibrated Probes are Fragile**: Without defenses, raw linear probes are easily fooled by white-box gradient ascent. At $\epsilon = 0.01$, the raw Attack Success Rate (ASR) against Model A is **89.0%** (transferring to Model B at **73.0%**). At $\epsilon \ge 0.05$, raw ASR reaches **100.0%**.
-2. **Defenses Shift Evasion to Abstention**: PRAMANA's defense-in-depth architecture—specifically the **Mahalanobis Out-Of-Distribution (OOD) Gate** ($\tau_{OOD} = 39.10$) and **Split Conformal Prediction**—safely neutralizes perturbations. 
+2. **Defenses Shift Evasion to Abstention**: PRAMAN's defense-in-depth architecture—specifically the **Mahalanobis Out-Of-Distribution (OOD) Gate** ($\tau_{OOD} = 39.10$) and **Split Conformal Prediction**—safely neutralizes perturbations. 
    - At $\epsilon = 0.01$, Conformal Prediction expands prediction sets to $\{0, 1\}$, forcing a safe **48.5% ABSTAIN** rate.
    - At $\epsilon \ge 0.05$, the perturbation inevitably moves the feature representation out of the in-distribution manifold into low-density embedding regions. The Mahalanobis OOD gate rejects **100.0%** of adversarial samples ($d_M \gg 39.10$), completely suppressing fraudulent confidence ($0.0\%$ evasion success rate).
-3. **Honest Limitations (Claim C10 & Threat T1)**: PRAMANA makes **zero claims of adversarial robustness**. While large perturbations are caught by the OOD gate, micro-perturbations ($\epsilon \le 0.01$) that evade the OOD gate can still succeed in deceiving the raw probe 49% of the time. The protocol's safe failure mode (`ABSTAIN`) successfully prevents false certainty in over half the cases, but adversarial evasion remains a persistent residual risk (Threat T1).
+3. **Honest Limitations (Claim C10 & Threat T1)**: PRAMAN makes **zero claims of adversarial robustness**. While large perturbations are caught by the OOD gate, micro-perturbations ($\epsilon \le 0.01$) that evade the OOD gate can still succeed in deceiving the raw probe 49% of the time. The protocol's safe failure mode (`ABSTAIN`) successfully prevents false certainty in over half the cases, but adversarial evasion remains a persistent residual risk (Threat T1).
 
 ---
 
@@ -50,5 +50,5 @@ Our findings reveal a critical structural dichotomy:
 
 ## 4. Key Takeaways & Claim Status
 
-- **Claim C10**: *"PRAMANA does NOT claim adversarial robustness. Perturbations can alter raw probe predictions; however, calibrated abstention (conformal set expansion and Mahalanobis OOD gating) converts evasions into ABSTAIN outcomes in 48.5% to 100% of cases."* — **CONFIRMED & UPDATED WITH REAL DATA**.
+- **Claim C10**: *"PRAMAN does NOT claim adversarial robustness. Perturbations can alter raw probe predictions; however, calibrated abstention (conformal set expansion and Mahalanobis OOD gating) converts evasions into ABSTAIN outcomes in 48.5% to 100% of cases."* — **CONFIRMED & UPDATED WITH REAL DATA**.
 - **Threat T1 Residual Risk**: Confirmed as **HIGH** for imperceptible embedding shifts ($\epsilon \le 0.01$), but **MITIGATED** for larger perturbations by the geometric OOD barrier.

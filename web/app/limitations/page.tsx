@@ -3,8 +3,8 @@ import Link from "next/link";
 import { AlertTriangle, CheckCircle2, XCircle, Info, Shield, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Limitations | PRAMANA",
-  description: "Mandatory limitations and caveats for the PRAMANA AI image authenticity prototype.",
+  title: "Limitations | PRAMAN",
+  description: "Mandatory limitations and caveats for the PRAMAN AI image authenticity prototype.",
 };
 
 export default function LimitationsPage() {
@@ -19,7 +19,7 @@ export default function LimitationsPage() {
           System Limitations & Scope
         </h1>
         <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-          PRAMANA is an open research prototype. The following limitations are real and must be understood
+          PRAMAN is an open research prototype. The following limitations are real and must be understood
           before interpreting any output.
         </p>
       </div>
@@ -145,7 +145,7 @@ const LIMITATIONS = [
   {
     severity: "high" as const,
     title: "Not a ruling — model-assessed likelihood only",
-    body: "PRAMANA outputs a calibrated probability that an image is AI-generated. This is not a legal, journalistic, or authoritative ruling. Detectors can and do make mistakes. A 'LIKELY SYNTHETIC' label does not prove an image is fake.",
+    body: "PRAMAN outputs a calibrated probability that an image is AI-generated. This is not a legal, journalistic, or authoritative ruling. Detectors can and do make mistakes. A 'LIKELY SYNTHETIC' label does not prove an image is fake.",
   },
   {
     severity: "high" as const,
@@ -160,7 +160,7 @@ const LIMITATIONS = [
   {
     severity: "medium" as const,
     title: "Detectors degrade over time",
-    body: "AI image generators improve rapidly. Detectors trained on current generators will degrade when new architectures emerge. PRAMANA uses canary tests (AUC/ECE on fresh batches) to detect degradation and flip verdicts to 'STALE'. Canary frequency and freshness are maintainer-controlled in v1.",
+    body: "AI image generators improve rapidly. Detectors trained on current generators will degrade when new architectures emerge. PRAMAN uses canary tests (AUC/ECE on fresh batches) to detect degradation and flip verdicts to 'STALE'. Canary frequency and freshness are maintainer-controlled in v1.",
   },
   {
     severity: "medium" as const,
@@ -190,7 +190,7 @@ const LIMITATIONS = [
   {
     severity: "info" as const,
     title: "Media never leaves your browser",
-    body: "The PRAMANA web verifier computes SHA-256 and pHash locally using WebAssembly (hash-wasm). Image bytes are never uploaded. Only the computed fingerprints (hashes) are compared against on-chain records.",
+    body: "The PRAMAN web verifier computes SHA-256 and pHash locally using WebAssembly (hash-wasm). Image bytes are never uploaded. Only the computed fingerprints (hashes) are compared against on-chain records.",
   },
 ];
 

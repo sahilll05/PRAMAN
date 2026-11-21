@@ -66,7 +66,7 @@ export function Logo({ className = "", showSubtitle = true }: LogoProps) {
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <span className="font-bold tracking-tight text-base text-zinc-900 dark:text-zinc-100 font-sans">
-            PRAMANA
+            PRAMAN
           </span>
           <span className="text-zinc-400 dark:text-zinc-600 font-light text-sm">/</span>
           <span

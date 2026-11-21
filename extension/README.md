@@ -1,12 +1,12 @@
-# PRAMANA प्रमाण — Browser Extension (T10.2)
+# PRAMAN प्रमाण — Browser Extension (T10.2)
 > Privacy-first, zero-media-upload right-click image verifier for Chrome, Brave, Edge, and Firefox.
 
 ## Overview
-The PRAMANA Browser Extension brings decentralized media provenance directly into daily web browsing. When reading articles, browsing social media (X/Twitter, Reddit), or investigating media, right-click any image and select **"Verify with PRAMANA प्रमाण"**.
+The PRAMAN Browser Extension brings decentralized media provenance directly into daily web browsing. When reading articles, browsing social media (X/Twitter, Reddit), or investigating media, right-click any image and select **"Verify with PRAMAN प्रमाण"**.
 
 ### Privacy & Verification Architecture (Claim C9)
 - **Local Fingerprinting**: The extension computes the cryptographic SHA-256 and the canonical Spec §4 64-bit perceptual hash (pHash) **100% locally in browser memory** using Web Crypto and Canvas APIs.
-- **Zero Media Upload**: Raw image bytes **never leave your device**. Only the resulting hash strings are queried against the PRAMANA Indexer API.
+- **Zero Media Upload**: Raw image bytes **never leave your device**. Only the resulting hash strings are queried against the PRAMAN Indexer API.
 - **In-Page Floating Verdict Badge**: Displays the active on-chain attestation status (`ACTIVE`, `MODEL_DEGRADED`, `SUPERSEDED`, `REVOKED`, or `NO ON-CHAIN RECORD`), model confidence score, attester, timestamp, and a direct link to the on-chain EAS attestation record.
 - **Action Toolbar Popup**: Review your last verified image, perform manual hash/URL lookups, and configure endpoint settings.
 
@@ -22,13 +22,13 @@ The PRAMANA Browser Extension brings decentralized media provenance directly int
 2. Open your browser and navigate to `chrome://extensions` (or `brave://extensions` / `edge://extensions`).
 3. Enable **Developer mode** (toggle in the top-right corner).
 4. Click **Load unpacked** and select the directory:
-   `PRAMANA/extension/dist`
-5. The PRAMANA emblem will appear in your extensions toolbar.
+   `PRAMAN/extension/dist`
+5. The PRAMAN emblem will appear in your extensions toolbar.
 
 ### Firefox (WebExtension)
 1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
 2. Click **Load Temporary Add-on...**.
-3. Select `PRAMANA/extension/dist/manifest.json` or the packaged zip `extension/dist/pramana-extension-v0.1.0.zip`.
+3. Select `PRAMAN/extension/dist/manifest.json` or the packaged zip `extension/dist/praman-extension-v0.1.0.zip`.
 
 ---
 

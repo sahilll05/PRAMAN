@@ -2,13 +2,13 @@ import { describe, it, expect } from "vitest";
 import {
   generateProtectReceipt,
   verifyProtectReceipt,
-  PramanaReceiptSchema,
+  PramanReceiptSchema,
   createCanonicalPayload,
   bufferToBase64,
   base64ToBuffer,
 } from "../lib/protect";
 
-describe("PRAMANA Protect Mode — Cryptographic Receipts (Task T10.1, Claim C13)", () => {
+describe("PRAMAN Protect Mode — Cryptographic Receipts (Task T10.1, Claim C13)", () => {
   const sampleMedia = {
     fileName: "artist_original_artwork.png",
     fileSize: 1048576,
@@ -19,8 +19,8 @@ describe("PRAMANA Protect Mode — Cryptographic Receipts (Task T10.1, Claim C13
   it("generates a valid .pramana receipt satisfying Zod schema", async () => {
     const receipt = await generateProtectReceipt(sampleMedia);
 
-    expect(receipt.version).toBe("pramana-receipt-v1");
-    expect(receipt.protocol).toBe("PRAMANA");
+    expect(["praman-receipt-v1", "pramana-receipt-v1"]).toContain(receipt.version);
+    expect(receipt.protocol).toBe("PRAMAN");
     expect(receipt.mode).toBe("protect");
     expect(receipt.media.fileName).toBe(sampleMedia.fileName);
     expect(receipt.media.fileSize).toBe(sampleMedia.fileSize);
@@ -34,7 +34,7 @@ describe("PRAMANA Protect Mode — Cryptographic Receipts (Task T10.1, Claim C13
     expect(receipt.signature.length).toBeGreaterThan(20);
 
     // Schema validation passes
-    const parseResult = PramanaReceiptSchema.safeParse(receipt);
+    const parseResult = PramanReceiptSchema.safeParse(receipt);
     expect(parseResult.success).toBe(true);
   });
 
@@ -119,7 +119,7 @@ describe("PRAMANA Protect Mode — Cryptographic Receipts (Task T10.1, Claim C13
       { ...sampleMedia, version: "pramana-receipt-v1" },
       {
         version: "pramana-receipt-v1",
-        protocol: "PRAMANA",
+        protocol: "PRAMAN",
         mode: "protect",
         timestamp: "invalid-date",
         media: sampleMedia,

@@ -216,7 +216,7 @@ def run_experiment_e10(
         asr_raw_a = float(np.mean(adv_preds_a == y_target.cpu().numpy()))
         asr_raw_b = float(np.mean(adv_preds_b == y_target.cpu().numpy()))  # transfer ASR to Model B
 
-        # Now evaluate through PRAMANA's Unified Verdict Engine
+        # Now evaluate through PRAMAN's Unified Verdict Engine
         adv_verdicts = []
         adv_reasons = []
         is_ood_list = []

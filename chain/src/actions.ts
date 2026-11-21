@@ -16,7 +16,7 @@ import {
   type ChallengeData,
   type CanaryData,
 } from "./schemas.js";
-import type { PramanaClients } from "./client.js";
+import type { PramanClients } from "./client.js";
 
 export interface AttestVerdictOptions {
   verdictData: VerdictData;
@@ -52,7 +52,7 @@ export interface RegisterModelOptions {
  * Register a forensic model in Registry.sol (T5.1).
  */
 export async function registerModel(
-  clients: PramanaClients,
+  clients: PramanClients,
   options: RegisterModelOptions
 ): Promise<Hash> {
   if (!clients.walletClient || !clients.account) {
@@ -82,7 +82,7 @@ export async function registerModel(
  * Per spec §7.6: Must be canonical CPU ONNX path.
  */
 export async function attestVerdict(
-  clients: PramanaClients,
+  clients: PramanClients,
   options: AttestVerdictOptions
 ): Promise<{ txHash: Hash; uid: Hex }> {
   if (!clients.walletClient || !clients.account) {
@@ -139,7 +139,7 @@ export async function attestVerdict(
  * Attest a Challenge against an existing Verdict (T5.1).
  */
 export async function challengeVerdict(
-  clients: PramanaClients,
+  clients: PramanClients,
   options: ChallengeOptions
 ): Promise<{ txHash: Hash; uid: Hex }> {
   if (!clients.walletClient || !clients.account) {
@@ -195,7 +195,7 @@ export async function challengeVerdict(
  * Attest a CanaryResult to EAS (T5.1).
  */
 export async function attestCanary(
-  clients: PramanaClients,
+  clients: PramanClients,
   options: CanaryOptions
 ): Promise<{ txHash: Hash; uid: Hex }> {
   if (!clients.walletClient || !clients.account) {
@@ -251,7 +251,7 @@ export async function attestCanary(
  * Revoke an existing attestation on EAS (T5.1).
  */
 export async function revokeAttestation(
-  clients: PramanaClients,
+  clients: PramanClients,
   schemaUID: Hex,
   attestationUID: Hex
 ): Promise<Hash> {
@@ -302,7 +302,7 @@ export interface ReadAttestationResult {
  * Read and decode an attestation from EAS by UID (T5.1).
  */
 export async function readAttestation(
-  clients: PramanaClients,
+  clients: PramanClients,
   uid: Hex,
   knownSchemas?: {
     verdict?: Hex | undefined;

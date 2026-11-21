@@ -1,5 +1,5 @@
 """
-Package extension/dist into extension/dist/pramana-extension-v0.1.0.zip for sideloading / Firefox Add-on submission.
+Package extension/dist into extension/dist/praman-extension-v0.1.0.zip for sideloading / Firefox Add-on submission.
 """
 
 import os
@@ -12,7 +12,7 @@ def package():
         print("dist directory does not exist. Run build first.")
         return
 
-    zip_path = dist_dir / "pramana-extension-v0.1.0.zip"
+    zip_path = dist_dir / "praman-extension-v0.1.0.zip"
     if zip_path.exists():
         zip_path.unlink()
 

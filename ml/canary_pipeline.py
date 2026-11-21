@@ -1,5 +1,5 @@
 """
-PRAMANA Canary Pipeline with Cryptographic Commit-Reveal (Task T7.2).
+PRAMAN Canary Pipeline with Cryptographic Commit-Reveal (Task T7.2).
 
 Conforms to:
 - Spec §2.3: CanaryResult EAS Schema

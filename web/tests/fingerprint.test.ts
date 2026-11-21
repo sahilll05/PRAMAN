@@ -50,11 +50,11 @@ describe("Web Verifier Fingerprint & Golden Vectors (T6.1)", () => {
   it("verifies hash-wasm SHA-256 implementation matches standard test vectors", async () => {
     const hasher = await createSHA256();
     hasher.init();
-    hasher.update(new TextEncoder().encode("PRAMANA spec v1.0 SHA-256 test"));
+    hasher.update(new TextEncoder().encode("PRAMAN spec v1.0 SHA-256 test"));
     const digest = hasher.digest("hex");
 
-    // hashlib.sha256(b"PRAMANA spec v1.0 SHA-256 test").hexdigest()
-    const expected = "759325d925630765947f2ce94ef6d980b7a0b5119719fb001922b982e5907096";
+    // hashlib.sha256(b"PRAMAN spec v1.0 SHA-256 test").hexdigest()
+    const expected = "f47ccd4801ecfb0d0b25162774cb826e03ef93578e04dc344155fd6b736ed1e6";
     expect(digest).toBe(expected);
   });
 

@@ -174,7 +174,7 @@ def main() -> None:
 
     output = {
         "specVersion": "0.1.0-draft",
-        "description": "PRAMANA spec s4 golden test vectors for cross-language SHA-256 and pHash validation",
+        "description": "PRAMAN spec s4 golden test vectors for cross-language SHA-256 and pHash validation",
         "algorithm": "DCT-II top-left 8x8 median AC big-endian uint64",
         "count": len(patterns),
         "vectors": patterns,

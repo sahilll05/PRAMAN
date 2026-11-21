@@ -1,5 +1,5 @@
 /**
- * @pramana/chain — PRAMANA chain layer: client, EAS schemas, actions, and perceptual hashing.
+ * @praman/chain — PRAMAN chain layer: client, EAS schemas, actions, and perceptual hashing.
  */
 export const CHAIN_VERSION = "0.1.0";
 

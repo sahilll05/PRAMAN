@@ -1,5 +1,5 @@
 """
-Generate monochrome calibration emblem icons for PRAMANA extension.
+Generate monochrome calibration emblem icons for PRAMAN extension.
 Sizes: 16x16, 48x48, 128x128.
 Colors: Zinc-950 (#09090b) background, Zinc-50 (#fafafa) hairline glyph.
 """

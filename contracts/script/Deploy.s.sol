@@ -34,7 +34,7 @@ contract DeployScript is Script {
         }
 
         address deployer = vm.addr(deployerPrivateKey);
-        console.log("=== Deploying PRAMANA Protocol ===");
+        console.log("=== Deploying PRAMAN Protocol ===");
         console.log("Deployer Address:", deployer);
         console.log("Chain ID:", block.chainid);
 

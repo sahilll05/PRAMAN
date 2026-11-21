@@ -21,7 +21,7 @@ from scipy.fft import dct
 
 
 def compute_phash(image: Image.Image | bytes) -> int:
-    """Compute 64-bit perceptual hash according to PRAMANA spec §4.
+    """Compute 64-bit perceptual hash according to PRAMAN spec §4.
 
     Args:
         image: PIL Image instance or raw image bytes.

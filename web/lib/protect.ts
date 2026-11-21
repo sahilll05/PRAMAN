@@ -1,5 +1,5 @@
 /**
- * web/lib/protect.ts — PRAMANA "Protect Mode" Creator Tool (Task T10.1).
+ * web/lib/protect.ts — PRAMAN "Protect Mode" Creator Tool (Task T10.1).
  *
  * Generates and verifies client-side cryptographically signed `.pramana` receipts.
  * Uses Web Crypto API (SubtleCrypto ECDSA P-256 with SHA-256).
@@ -12,10 +12,10 @@
 
 import { z } from "zod";
 
-/** Zod schema defining the tamper-evident structure of a .pramana receipt */
-export const PramanaReceiptSchema = z.object({
-  version: z.literal("pramana-receipt-v1"),
-  protocol: z.literal("PRAMANA"),
+/** Zod schema defining the tamper-evident structure of a .praman receipt */
+export const PramanReceiptSchema = z.object({
+  version: z.enum(["praman-receipt-v1", "pramana-receipt-v1"]),
+  protocol: z.enum(["PRAMAN", "PRAMANA"]),
   mode: z.literal("protect"),
   timestamp: z.string().datetime(),
   media: z.object({
@@ -43,7 +43,9 @@ export const PramanaReceiptSchema = z.object({
   signature: z.string().min(1), // Base64 encoded ECDSA P-256 signature
 });
 
-export type PramanaReceipt = z.infer<typeof PramanaReceiptSchema>;
+export type PramanReceipt = z.infer<typeof PramanReceiptSchema>;
+export type PramanaReceipt = PramanReceipt;
+export const PramanaReceiptSchema = PramanReceiptSchema;
 
 /** Create deterministic canonical payload for signature computation */
 export function createCanonicalPayload(data: {
@@ -119,7 +121,7 @@ export async function generateProtectReceipt(params: {
   customTimestamp?: string;
   trustmarkId?: string | null;
   watermarkStatus?: "none" | "pending_v2" | "embedded";
-}): Promise<PramanaReceipt> {
+}): Promise<PramanReceipt> {
   const subtle = crypto.subtle;
   if (!subtle) {
     throw new Error("Web Crypto API (SubtleCrypto) is not available in this environment.");
@@ -138,8 +140,8 @@ export async function generateProtectReceipt(params: {
   const timestamp = params.customTimestamp ?? new Date().toISOString();
 
   const receiptData = {
-    version: "pramana-receipt-v1" as const,
-    protocol: "PRAMANA" as const,
+    version: "praman-receipt-v1" as const,
+    protocol: "PRAMAN" as const,
     mode: "protect" as const,
     timestamp,
     media: {
@@ -164,7 +166,7 @@ export async function generateProtectReceipt(params: {
 
   const signature = bufferToBase64(signatureBuffer);
 
-  const receipt: PramanaReceipt = {
+  const receipt: PramanReceipt = {
     ...receiptData,
     signer: {
       algorithm: "ECDSA",
@@ -191,9 +193,9 @@ export async function generateProtectReceipt(params: {
 export async function verifyProtectReceipt(rawReceipt: unknown): Promise<{
   valid: boolean;
   error?: string;
-  receipt?: PramanaReceipt;
+  receipt?: PramanReceipt;
 }> {
-  const parseResult = PramanaReceiptSchema.safeParse(rawReceipt);
+  const parseResult = PramanReceiptSchema.safeParse(rawReceipt);
   if (!parseResult.success) {
     return {
       valid: false,
@@ -243,7 +245,7 @@ export async function verifyProtectReceipt(rawReceipt: unknown): Promise<{
 }
 
 /** Trigger browser file download of .pramana JSON receipt */
-export function downloadReceiptFile(receipt: PramanaReceipt): void {
+export function downloadReceiptFile(receipt: PramanReceipt): void {
   if (typeof window === "undefined") return;
   const jsonStr = JSON.stringify(receipt, null, 2);
   const blob = new Blob([jsonStr], { type: "application/json" });
@@ -251,7 +253,7 @@ export function downloadReceiptFile(receipt: PramanaReceipt): void {
   const a = document.createElement("a");
   const baseName = receipt.media.fileName.replace(/\.[^/.]+$/, "");
   a.href = url;
-  a.download = `${baseName}.pramana`;
+  a.download = `${baseName}.praman`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

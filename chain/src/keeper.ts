@@ -1,5 +1,5 @@
 /**
- * PRAMANA Keeper Daemon & Re-scan Engine (Task T7.1).
+ * PRAMAN Keeper Daemon & Re-scan Engine (Task T7.1).
  *
  * Scans active and historical verdicts, detects models that have degraded or
  * verdicts that are nearing expiration or superseded by newer registered models,
@@ -12,7 +12,7 @@
  */
 
 import { type Hex, type Hash } from "viem";
-import { type PramanaClients } from "./client.js";
+import { type PramanClients } from "./client.js";
 import { attestVerdict, type AttestVerdictOptions } from "./actions.js";
 import { type VerdictData } from "./schemas.js";
 
@@ -144,7 +144,7 @@ export function evaluateVerdictNeedsRescan(
 }
 
 export interface SupersedeVerdictParams {
-  clients: PramanaClients;
+  clients: PramanClients;
   verdictSchemaUID: Hex;
   targetVerdict: CandidateVerdict;
   newVerdictData: VerdictData;
@@ -191,9 +191,9 @@ export interface KeeperCycleResult {
 /**
  * Keeper Engine class for orchestrating automated scans and supersessions.
  */
-export class PramanaKeeper {
+export class PramanKeeper {
   constructor(
-    private clients: PramanaClients,
+    private clients: PramanClients,
     private verdictSchemaUID: Hex,
     private models: Map<Hex, ActiveModelInfo> = new Map()
   ) {}
@@ -278,3 +278,5 @@ export class PramanaKeeper {
     return cycleResult;
   }
 }
+
+export const PramanaKeeper = PramanKeeper;

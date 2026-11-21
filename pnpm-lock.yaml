@@ -60,7 +60,7 @@ importers:
       '@ethereum-attestation-service/eas-sdk':
         specifier: ^2.7.0
         version: 2.10.0(bufferutil@4.2.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@pramana/chain':
+      '@praman/chain':
         specifier: workspace:*
         version: link:../chain
       drizzle-orm:
@@ -97,10 +97,10 @@ importers:
       '@ethereum-attestation-service/eas-sdk':
         specifier: ^2.7.0
         version: 2.10.0(bufferutil@4.2.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      '@pramana/chain':
+      '@praman/chain':
         specifier: workspace:*
         version: link:../chain
-      '@pramana/indexer':
+      '@praman/indexer':
         specifier: workspace:*
         version: link:../indexer
       '@radix-ui/react-dialog':

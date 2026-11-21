@@ -1,4 +1,4 @@
-# PRAMANA Smart Contract Gas Benchmarks (Claim C7)
+# PRAMAN Smart Contract Gas Benchmarks (Claim C7)
 
 > **Measured via Foundry `forge test --gas-report` (Solc 0.8.26, 200 optimizer runs) on local Anvil node.**  
 > *Target network: Base Sepolia (chainId 84532) / Base Mainnet (chainId 8453). Zero-spend testnet policy.*

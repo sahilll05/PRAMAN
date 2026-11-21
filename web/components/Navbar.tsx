@@ -47,7 +47,7 @@ export function Navbar() {
           <ThemeToggle />
 
           <a
-            href="https://github.com/sahilll05/PRAMANA"
+            href="https://github.com/sahilll05/PRAMAN"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-100 transition-colors"

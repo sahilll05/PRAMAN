@@ -209,7 +209,7 @@ def run_experiment_e12(results_dir: Path | str = "results/E12") -> dict[str, Any
         "mean_sus_score": mean_sus,
         "scenarios": SCENARIOS,
         "key_findings": [
-            "All evaluators unanimously understood that PRAMANA provides model-assessed probabilities rather than absolute truth.",
+            "All evaluators unanimously understood that PRAMAN provides model-assessed probabilities rather than absolute truth.",
             "The 'ABSTAIN' status badge was praised for eliminating false certainty on boundary and OOD media.",
             "Client-side WASM fingerprinting was cited by investigative journalists as essential for confidential source protection.",
             "Evaluator P3 noted that STALE badges effectively communicated when older verdicts should not be trusted for current reporting.",

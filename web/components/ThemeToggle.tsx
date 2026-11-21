@@ -9,7 +9,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem("pramana-theme") as "light" | "dark" | null;
+    const stored = (localStorage.getItem("praman-theme") || localStorage.getItem("pramana-theme")) as "light" | "dark" | null;
     if (stored) {
       setTheme(stored);
       if (stored === "dark") {
@@ -27,7 +27,7 @@ export function ThemeToggle() {
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    localStorage.setItem("pramana-theme", nextTheme);
+    localStorage.setItem("praman-theme", nextTheme);
 
     if (nextTheme === "dark") {
       document.documentElement.classList.add("dark");

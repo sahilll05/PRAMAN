@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "PRAMANA प्रमाण — Right-Click Image Verifier",
+  "name": "PRAMAN प्रमाण — Right-Click Image Verifier",
   "version": "0.1.0",
   "description": "Right-click any web image to verify authenticity and on-chain attestations with zero media upload. Means of Valid Knowledge.",
   "icons": {
@@ -23,7 +23,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "PRAMANA प्रमाण — Verifier",
+    "default_title": "PRAMAN प्रमाण — Verifier",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -46,7 +46,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "pramana-verifier@pramana.local",
+      "id": "praman-verifier@praman.local",
       "strict_min_version": "109.0"
     }
   }

@@ -1,4 +1,4 @@
-"""PRAMANA Model Probes for Still Image Authenticity (T1.3).
+"""PRAMAN Model Probes for Still Image Authenticity (T1.3).
 
 Model A: Single-layer linear probe on 512-dim CLIP features.
 Model B: 2-layer MLP probe with BatchNorm and GELU on 512-dim CLIP features.

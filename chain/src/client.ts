@@ -18,7 +18,7 @@ export interface ChainConfig {
   schemaRegistryAddress?: Address | undefined;
 }
 
-export interface PramanaClients {
+export interface PramanClients {
   publicClient: PublicClient;
   walletClient?: WalletClient | undefined;
   account?: Account | undefined;
@@ -26,7 +26,9 @@ export interface PramanaClients {
   registryAddress: Address;
 }
 
-export function createPramanaClients(config: ChainConfig): PramanaClients {
+export type PramanaClients = PramanClients;
+
+export function createPramanClients(config: ChainConfig): PramanClients {
   const publicClient = createPublicClient({
     transport: http(config.rpcUrl),
   });

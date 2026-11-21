@@ -266,7 +266,7 @@ def extract_embeddings_and_benchmark(
 
     env_txt_path = results_e0_dir / "env.txt"
     with open(env_txt_path, "w", encoding="utf-8") as f:
-        f.write("=== PRAMANA Experiment E0 / T1.2 Hardware & Benchmark Report ===\n")
+        f.write("=== PRAMAN Experiment E0 / T1.2 Hardware & Benchmark Report ===\n")
         f.write(f"Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"Device: {device}\n")
         if device == "cuda":

@@ -1,7 +1,7 @@
 [project]
 name = "lv-ml"
 version = "0.1.0"
-description = "PRAMANA ML layer: detectors, calibration, fingerprints, evidence builder"
+description = "PRAMAN ML layer: detectors, calibration, fingerprints, evidence builder"
 readme = "README.md"
 requires-python = ">=3.11"
 
@@ -11,6 +11,7 @@ dependencies = [
   "scikit-learn>=1.5",
   "onnx>=1.16",
   "onnxruntime>=1.18",
+  "onnxscript",
   "Pillow>=10.3",
   "numpy>=1.26",
   "opencv-python-headless>=4.9",

@@ -14,12 +14,12 @@ import {
   ImageDown,
   Sparkles,
 } from "lucide-react";
-import { PramanaReceipt, downloadReceiptFile, verifyProtectReceipt } from "@/lib/protect";
+import { PramanReceipt, downloadReceiptFile, verifyProtectReceipt } from "@/lib/protect";
 import { downloadWatermarkedImage } from "@/lib/watermark";
 import { cn } from "@/lib/utils";
 
 interface ProtectCardProps {
-  receipt: PramanaReceipt;
+  receipt: PramanReceipt;
   watermarkedBlob?: Blob | null;
   watermarkPsnr?: number | null;
   onReset: () => void;
@@ -115,7 +115,7 @@ export function ProtectCard({
           )}
         >
           <Download className="h-4 w-4" />
-          Download .pramana Receipt
+          Download .praman Receipt
         </button>
         <button
           type="button"
@@ -249,7 +249,7 @@ export function ProtectCard({
             Notice on Digital Receipts & Watermarking
           </p>
           <p className="leading-relaxed text-[11px]">
-            A <code className="font-mono text-zinc-700 dark:text-zinc-300">.pramana</code> receipt generates a locally-signed record of your media&apos;s content hash, watermark ID, and creation timestamp using Web Crypto primitives. Watermarking embeds an imperceptible high-frequency differential payload (PSNR &ge; 38 dB) into pixel channels. It provides a verifiable fingerprint, not legal proof of copyright or copyright registration. Media never leaves your browser.
+            A <code className="font-mono text-zinc-700 dark:text-zinc-300">.praman</code> receipt generates a locally-signed record of your media&apos;s content hash, watermark ID, and creation timestamp using Web Crypto primitives. Watermarking embeds an imperceptible high-frequency differential payload (PSNR &ge; 38 dB) into pixel channels. It provides a verifiable fingerprint, not legal proof of copyright or copyright registration. Media never leaves your browser.
           </p>
         </div>
       </div>

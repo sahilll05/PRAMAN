@@ -34,7 +34,7 @@ export function ChallengeModal({
 
   if (!isOpen) return null;
 
-  const cliCommand = `pramana-chain challenge \\
+  const cliCommand = `praman-chain challenge \\
   --ref ${refUid || "0x<TARGET_UID>"} \\
   --model ${modelHash || "0x<MODEL_HASH>"} \\
   --verdict ${observedVerdict} \\
@@ -206,7 +206,7 @@ export function ChallengeModal({
                 </button>
               </div>
               <p className="text-[11px] text-zinc-400 font-mono">
-                Requires @pramana/chain CLI installed with an allowlisted attester key.
+                Requires @praman/chain CLI installed with an allowlisted attester key.
               </p>
             </div>
           ) : (

@@ -1,5 +1,5 @@
 """
-PRAMANA ML layer.
+PRAMAN ML layer.
 
 Sub-packages:
   data        — dataset loaders and split manifests

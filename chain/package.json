@@ -1,5 +1,5 @@
 {
-  "name": "@pramana/chain",
+  "name": "@praman/chain",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -12,6 +12,7 @@
     }
   },
   "bin": {
+    "praman-chain": "./src/cli.js",
     "pramana-chain": "./src/cli.js"
   },
   "scripts": {

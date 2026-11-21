@@ -47,7 +47,7 @@ describe("Extension Fingerprint & Golden Vectors (T10.2, Spec §4)", () => {
 
   it("computes SHA-256 using Web Crypto SubtleCrypto bit-identically", async () => {
     const encoder = new TextEncoder();
-    const testData = encoder.encode("PRAMANA प्रमाण Testnet 2026");
+    const testData = encoder.encode("PRAMAN प्रमाण Testnet 2026");
     const hash = await computeSha256(testData);
 
     expect(hash).toHaveLength(64);

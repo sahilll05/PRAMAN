@@ -1,4 +1,4 @@
-# ml — PRAMANA ML Layer
+# ml — PRAMAN ML Layer
 
 Detectors, calibration, fingerprints, evidence builder, canary runner, evaluation scripts.
 

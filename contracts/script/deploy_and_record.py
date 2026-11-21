@@ -1,4 +1,4 @@
-"""Deploy PRAMANA contracts to local Anvil node and record deployment metadata (T4.5)."""
+"""Deploy PRAMAN contracts to local Anvil node and record deployment metadata (T4.5)."""
 
 import json
 import os

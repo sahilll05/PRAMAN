@@ -1,4 +1,4 @@
-"""PRAMANA Phase 1 Benchmark Experiments Suite (T1.5).
+"""PRAMAN Phase 1 Benchmark Experiments Suite (T1.5).
 
 Implements the frozen protocols from sahil/evaluation_plan.md:
 - E1:  In-domain sanity evaluation (CF-Small + COCO balanced test set)

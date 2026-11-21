@@ -1,13 +1,13 @@
 import { describe, it, expect, vi } from "vitest";
 import {
   evaluateVerdictNeedsRescan,
-  PramanaKeeper,
+  PramanKeeper,
   type CandidateVerdict,
   type ActiveModelInfo,
 } from "../src/keeper.js";
 import { type Hex } from "viem";
 
-describe("PRAMANA Keeper Engine (Task T7.1, Spec §6)", () => {
+describe("PRAMAN Keeper Engine (Task T7.1, Spec §6)", () => {
   const MODEL_V1_HASH: Hex = "0x1111111111111111111111111111111111111111111111111111111111111111";
   const MODEL_V2_HASH: Hex = "0x2222222222222222222222222222222222222222222222222222222222222222";
   const PREPROC_HASH: Hex = "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
@@ -156,7 +156,7 @@ describe("PRAMANA Keeper Engine (Task T7.1, Spec §6)", () => {
     } as any;
 
     const schemaUID: Hex = "0x9999999999999999999999999999999999999999999999999999999999999999";
-    const keeper = new PramanaKeeper(mockClients, schemaUID);
+    const keeper = new PramanKeeper(mockClients, schemaUID);
 
     keeper.registerModelInfo({
       modelHash: MODEL_V1_HASH,

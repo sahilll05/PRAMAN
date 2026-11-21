@@ -1,4 +1,4 @@
-# PRAMANA Red-Team Security & Threat Model Verification Report
+# PRAMAN Red-Team Security & Threat Model Verification Report
 
 > **Scope:** T8.1 (Red-Team Pass) & T8.2 (Fix Findings)  
 > **Date:** 2026-11-20  
@@ -57,4 +57,4 @@ Three operational findings were identified and patched immediately in T8.2. Smar
 
 ## 4. Conclusion
 
-All identified issues have been remediated in the codebase. The threat model mitigations for PRAMANA hold under adversarial stress.
+All identified issues have been remediated in the codebase. The threat model mitigations for PRAMAN hold under adversarial stress.

@@ -10,7 +10,7 @@
 ## 1. Context and Threat Analysis (Threat T23)
 
 In decentralized machine learning verification, on-chain dispute resolution depends on **exact algorithmic reproducibility**.
-Under PRAMANA's protocol:
+Under PRAMAN's protocol:
 - When an authorized attester publishes an attestation on Base Sepolia (`VerdictResolver.sol`), it commits to a probability `pFakeBps` (in basis points $[0, 10000]$) and a categorical verdict ($1 = \text{LIKELY\_AUTHENTIC}, 2 = \text{LIKELY\_SYNTHETIC}$).
 - A challenger can dispute this verdict by re-running the registered ONNX model artifact (`modelHash`).
 - If the re-computed probability diverges by more than the protocol tolerance $\epsilon$, or flips the binary decision boundary ($5000\text{ bps}$), the challenge is **UPHELD**, and the attester is penalized.
@@ -48,7 +48,7 @@ We evaluated 2,440 targeted samples:
 ## 4. Engineering Impact & Protocol Law
 
 1. **Theoretical Crossover Risk**: Because GPU fp16 can diverge by up to 20 bps ($0.0020$) from CPU ONNX fp32, any media item with true canonical score $P \in [0.4980, 0.5020]$ would be at risk of a sign flip ($4995\text{ bps} \leftrightarrow 5005\text{ bps}$) if evaluated on GPU.
-2. **Protocol Law Vindicated**: PRAMANA's explicit architectural mandate:
+2. **Protocol Law Vindicated**: PRAMAN's explicit architectural mandate:
    > *"Verdicts intended for on-chain signing MUST be computed exclusively via the canonical CPU ONNX fp32 path."*
    completely eliminates this threat vector. By strictly forbidding attesters from signing GPU-derived predictions, zero false challenges can be triggered due to GPU hardware divergence.
 3. **Challenge Tolerance Confirmed**: Setting $\epsilon = 50\text{ bps}$ in `VerdictResolver.sol` provides a $2.5\times$ safety margin over the worst-case cross-platform CPU variation while decisively rejecting dishonest attestations.

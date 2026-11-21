@@ -207,7 +207,7 @@ def run_experiment_t23(
             f"{max_diff_bps} bps. Near decision boundary P=0.5000, this divergence causes "
             f"verdict flips ({n_flips} flips observed). Therefore, allowing attesters to sign "
             "GPU-derived predictions creates false-positive challenge vulnerabilities. "
-            "PRAMANA's requirement for canonical CPU ONNX execution for attestation signing "
+            "PRAMAN's requirement for canonical CPU ONNX execution for attestation signing "
             "is mathematically necessary and proven."
         ),
     }

@@ -13,7 +13,7 @@ describe("Extension Manifest & Build Integrity (T10.2)", () => {
     const manifest = JSON.parse(content);
 
     expect(manifest.manifest_version).toBe(3);
-    expect(manifest.name).toContain("PRAMANA");
+    expect(manifest.name).toContain("PRAMAN");
     expect(manifest.name).toContain("प्रमाण");
     expect(manifest.version).toBe("0.1.0");
 
@@ -35,7 +35,7 @@ describe("Extension Manifest & Build Integrity (T10.2)", () => {
     expect(manifest.content_scripts[0].css).toContain("content.css");
 
     // Firefox Gecko ID
-    expect(manifest.browser_specific_settings?.gecko?.id).toBe("pramana-verifier@pramana.local");
+    expect(manifest.browser_specific_settings?.gecko?.id).toBe("praman-verifier@praman.local");
   });
 
   it("all bundled files and declared assets exist in dist with non-zero size", () => {

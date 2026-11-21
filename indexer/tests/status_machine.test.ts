@@ -12,7 +12,7 @@ import type {
   CanaryRecord,
 } from "../src/db/schema.js";
 
-describe("PRAMANA Status State Machine (Spec §6, Authoritative)", () => {
+describe("PRAMAN Status State Machine (Spec §6, Authoritative)", () => {
   const dummyVerdict: VerdictRecord = {
     uid: "0xverdict001",
     schemaUid: "0xschemaschema01",

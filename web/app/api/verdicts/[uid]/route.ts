@@ -36,7 +36,7 @@ export async function GET(
     const sql = postgres(process.env.NEON_DATABASE_URL, { ssl: "require", max: 1 });
     const db = drizzle(sql);
 
-    const { verdicts, challenges, canaryResults, models } = await import("@pramana/indexer");
+    const { verdicts, challenges, canaryResults, models } = await import("@praman/indexer");
     const { eq } = await import("drizzle-orm");
 
     const [verdict] = await db.select().from(verdicts).where(eq(verdicts.uid, uid)).limit(1);

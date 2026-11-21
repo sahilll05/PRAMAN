@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@pramana/chain", "@pramana/indexer"],
+  transpilePackages: ["@praman/chain", "@praman/indexer", "@pramana/chain", "@pramana/indexer"],
   webpack: (config) => {
     config.resolve.extensionAlias = {
       ".js": [".ts", ".tsx", ".js", ".jsx"],

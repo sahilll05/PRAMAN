@@ -1,4 +1,4 @@
-"""PyTorch Dataset loader for PRAMANA manifests (T1.1).
+"""PyTorch Dataset loader for PRAMAN manifests (T1.1).
 
 Full-image preprocessing only (MVP: still images, no face-crop pipeline).
 """
@@ -16,8 +16,8 @@ from PIL import Image
 from torch.utils.data import Dataset
 
 
-class PramanaDataset(Dataset[tuple[torch.Tensor, int, dict[str, Any]]]):
-    """Loads images from a PRAMANA split manifest with full-image preprocessing."""
+class PramanDataset(Dataset[tuple[torch.Tensor, int, dict[str, Any]]]):
+    """Loads images from a PRAMAN split manifest with full-image preprocessing."""
 
     def __init__(
         self,
@@ -51,3 +51,7 @@ class PramanaDataset(Dataset[tuple[torch.Tensor, int, dict[str, Any]]]):
 
         label = int(sample["label"])
         return tensor, label, sample
+
+
+PramanaDataset = PramanDataset
+

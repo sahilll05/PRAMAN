@@ -21,7 +21,7 @@ import {
   decodeVerdictData,
   decodeChallengeData,
   decodeCanaryData,
-} from "@pramana/chain";
+} from "@praman/chain";
 import {
   models,
   verdicts,
