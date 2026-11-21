@@ -1,0 +1,15 @@
+{
+  "chainId": 84532,
+  "network": "base-sepolia",
+  "deployer": "0xE107Cc2Ede891dB5b70D865039bf3845b24c4Aeb",
+  "easAddress": "0x4200000000000000000000000000000000000021",
+  "schemaRegistryAddress": "0x4200000000000000000000000000000000000020",
+  "registryAddress": "0x5572e50d8d83aAFD90d4B4f724c9640174E17f9D",
+  "verdictResolverAddress": "0xE4bD50E88212EeCD34977956524f8adA4B8013Ad",
+  "schemas": {
+    "verdict": "0xefd6ece3503b54ca4d4a2235eb5e855446390620a7bcf65a92d957641c72f8ae",
+    "challenge": "0x32650399e58d7240c74023f5fe8b482df30cb6b80c372300a9e15718c0de4ea9",
+    "canary": "0x4e42b547e5983c9a18959e95c90991e312e85039609cd45b0ef6794a53c9f217"
+  },
+  "deployedAt": "2026-11-22T02:51:23Z"
+}
