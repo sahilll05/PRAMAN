@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { ExternalLink, ShieldCheck, ShieldAlert, AlertCircle } from "lucide-react";
 import { StatusBadge } from "./StatusBadge";
+import { ElaModal } from "./ElaModal";
 import { verdictLabel, pFakePct, formatTs, VerdictStatus } from "@/lib/status";
 import type { VerdictBadge } from "@/lib/status";
 
@@ -19,9 +21,12 @@ interface VerdictCardProps {
     modelHash: string;
     evidenceHash: string;
   };
+  currentFile?: File | null;
+  imageSrc?: string | null;
 }
 
-export function VerdictCard({ verdict }: VerdictCardProps) {
+export function VerdictCard({ verdict, currentFile, imageSrc }: VerdictCardProps) {
+  const [isElaOpen, setIsElaOpen] = useState(false);
   const isAuthentic = verdict.verdict === 1;
   const isSynthetic = verdict.verdict === 2;
   const badge = verdict.badge as VerdictBadge;
@@ -101,27 +106,49 @@ export function VerdictCard({ verdict }: VerdictCardProps) {
           <MetaCard label="Model Hash" value={truncateHash(verdict.modelHash)} mono />
         </div>
 
-        {/* Action Link Row */}
+        {/* Action Link & ELA Row */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
           <Link
             href={`/verdicts/${verdict.uid}`}
+            prefetch={false}
             className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline"
           >
             <span>View full EAS attestation & timeline</span>
             <ExternalLink className="h-3 w-3" />
           </Link>
 
-          {verdict.evidenceHash && verdict.evidenceHash !== "0x" + "00".repeat(32) && (
-            <span className="text-[10px] font-mono text-zinc-400">
-              Evidence: {truncateHash(verdict.evidenceHash)}
-            </span>
-          )}
+          <div className="flex items-center gap-3">
+            {/* ELA Visual Explainability Inspector (T10.4) */}
+            <button
+              type="button"
+              onClick={() => setIsElaOpen(true)}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800/80 hover:bg-zinc-100 dark:hover:bg-zinc-700 text-xs font-medium text-zinc-900 dark:text-zinc-100 transition-colors shadow-sm"
+              title="Inspect JPEG re-compression error level anomalies in browser"
+            >
+              <span>🔬</span>
+              <span>Inspect Anomaly (ELA)</span>
+            </button>
+
+            {verdict.evidenceHash && verdict.evidenceHash !== "0x" + "00".repeat(32) && (
+              <span className="text-[10px] font-mono text-zinc-400">
+                Evidence: {truncateHash(verdict.evidenceHash)}
+              </span>
+            )}
+          </div>
         </div>
 
         <p className="text-[11px] text-zinc-500 dark:text-zinc-500 leading-normal">
           Model-assessed likelihood only — not a ruling. Anchored onto Base Sepolia testnet.
         </p>
       </div>
+
+      {/* ELA Modal */}
+      <ElaModal
+        isOpen={isElaOpen}
+        onClose={() => setIsElaOpen(false)}
+        imageFile={currentFile}
+        imageSrc={imageSrc}
+      />
     </div>
   );
 }

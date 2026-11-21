@@ -24,10 +24,11 @@ import { applyWatermarkToFile } from "@/lib/watermark";
 import { StatusBadge } from "@/components/StatusBadge";
 import { VerdictCard } from "@/components/VerdictCard";
 import { ProtectCard } from "@/components/ProtectCard";
+import { BatchCard } from "@/components/BatchCard";
 import { VerifyReceiptModal } from "@/components/VerifyReceiptModal";
 import { VerdictStatus } from "@/lib/status";
 
-type AppMode = "verify" | "protect";
+type AppMode = "verify" | "batch" | "protect";
 type VerifyPhase = "idle" | "hashing" | "searching" | "signing" | "done" | "error";
 
 interface LocalVerdict {
@@ -283,6 +284,10 @@ export default function HomePage() {
             <>
               In Indian epistemology, <strong className="font-sanskrit font-medium text-zinc-900 dark:text-zinc-200">प्रमाण</strong> denotes the grounds and instruments of valid knowledge. Compute streaming cryptographic fingerprints locally in your browser and verify on-chain attestations. <span className="text-zinc-900 dark:text-zinc-200 font-medium">Your media never leaves your device.</span>
             </>
+          ) : mode === "batch" ? (
+            <>
+              Verify media at scale without sacrificing privacy. Drop a ZIP archive, folder, or multi-selection of images. Hashed in parallel locally in browser memory and cross-referenced with EAS attestations. <span className="text-zinc-900 dark:text-zinc-200 font-medium">Export a self-contained HTML audit report.</span>
+            </>
           ) : (
             <>
               Protect your original work before publishing. Generate a cryptographically signed, timestamped <code className="font-mono text-zinc-800 dark:text-zinc-200">.pramana</code> receipt containing SHA-256, perceptual hash, and an ECDSA P-256 signature. <span className="text-zinc-900 dark:text-zinc-200 font-medium">100% client-side Web Crypto.</span>
@@ -308,6 +313,22 @@ export default function HomePage() {
             </button>
             <button
               type="button"
+              onClick={() => handleModeChange("batch")}
+              className={cn(
+                "flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold transition-all cursor-pointer",
+                mode === "batch"
+                  ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm border border-zinc-200/80 dark:border-zinc-700/80"
+                  : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              )}
+            >
+              <FileImage className="h-3.5 w-3.5" />
+              <span>Batch Verify</span>
+              <span className="ml-1 text-[10px] uppercase tracking-wider font-mono px-1.5 py-0.5 rounded bg-zinc-200/70 dark:bg-zinc-700/60 text-zinc-700 dark:text-zinc-300">
+                Folder / ZIP
+              </span>
+            </button>
+            <button
+              type="button"
               onClick={() => handleModeChange("protect")}
               className={cn(
                 "flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold transition-all cursor-pointer",
@@ -326,6 +347,13 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Main View: Batch Mode vs Single Dropzone */}
+      {mode === "batch" ? (
+        <div className="max-w-4xl mx-auto">
+          <BatchCard />
+        </div>
+      ) : (
+        <>
       {/* Drop Zone */}
       <div
         className={cn(
@@ -521,7 +549,12 @@ export default function HomePage() {
               ) : (
                 <div className="space-y-4">
                   {state.verdicts.map((v) => (
-                    <VerdictCard key={v.uid} verdict={v as any} />
+                    <VerdictCard
+                      key={v.uid}
+                      verdict={v as any}
+                      currentFile={currentFile}
+                      imageSrc={currentFile ? URL.createObjectURL(currentFile) : undefined}
+                    />
                   ))}
                 </div>
               )}
@@ -535,6 +568,8 @@ export default function HomePage() {
             </>
           )}
         </div>
+      )}
+      </>
       )}
 
       {/* How it works Cards */}

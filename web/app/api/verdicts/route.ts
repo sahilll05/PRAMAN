@@ -101,3 +101,57 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({ verdicts: matches, count: matches.length });
 }
+
+interface BatchQueryItem {
+  id?: string;
+  sha256?: string;
+  phash?: string;
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const rawItems: BatchQueryItem[] = Array.isArray(body) ? body : body.items;
+
+    if (!rawItems || !Array.isArray(rawItems) || rawItems.length === 0) {
+      return NextResponse.json({ error: "Provide a non-empty array of items to query" }, { status: 400 });
+    }
+
+    // Limit to 50 items per batch request
+    const items = rawItems.slice(0, 50);
+    const threshold = typeof body.threshold === "number" ? Math.max(0, Math.min(64, body.threshold)) : 10;
+
+    const results = items.map((item, index) => {
+      const sha256 = item.sha256?.toLowerCase().replace(/^0x/, "");
+      const phash = item.phash?.toLowerCase().replace(/^0x/, "");
+      const id = item.id || `item-${index}`;
+
+      const matches = LOCAL_VERDICTS.filter((v) => {
+        if (sha256 && v.sha256Hash.toLowerCase().replace(/^0x/, "") === sha256) {
+          return true;
+        }
+        if (phash && v.pHash) {
+          const dist = hammingDistance(v.pHash, phash);
+          if (dist <= threshold) {
+            return true;
+          }
+        }
+        return false;
+      });
+
+      return {
+        id,
+        sha256: sha256 || null,
+        phash: phash || null,
+        found: matches.length > 0,
+        count: matches.length,
+        verdicts: matches,
+      };
+    });
+
+    return NextResponse.json({ count: results.length, results });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message || "Invalid JSON request body" }, { status: 400 });
+  }
+}
+
