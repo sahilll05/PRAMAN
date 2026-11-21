@@ -4,7 +4,7 @@
 > *A decentralized protocol and reference implementation deployed on Base Sepolia testnet.*
 
 [![CI - Python Tests](https://img.shields.io/badge/pytest-27%20passed-brightgreen.svg)](#testing--verification)
-[![CI - TypeScript Tests](https://img.shields.io/badge/vitest-9%20passed-brightgreen.svg)](#testing--verification)
+[![CI - TypeScript Tests](https://img.shields.io/badge/vitest-59%20passed-brightgreen.svg)](#testing--verification)
 [![Smart Contracts](https://img.shields.io/badge/foundry-43%20passed-brightgreen.svg)](#smart-contracts--eas)
 [![Network](https://img.shields.io/badge/network-Base%20Sepolia%20(84532)-blue.svg)](#protocol-architecture)
 [![License](https://img.shields.io/badge/license-MIT%20%2F%20Non--Commercial-lightgrey.svg)](#ethics--licensing)
@@ -74,12 +74,13 @@ Benchmark datasets often contain spurious shortcuts (e.g., PNG synthetic images 
 
 ---
 
-## 3. Empirical Benchmark Results (Phase 1 Ground Truth)
+## 3. Empirical Benchmark Results (Complete Pre-Registered Experiments E0–E13 + T23)
 
-All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/CommunityForensics-Small](https://huggingface.co/datasets/OwensLab/CommunityForensics-Small), [ComplexDataLab/OpenFake](https://huggingface.co/datasets/ComplexDataLab/OpenFake), and [COCO val2017](https://cocodataset.org)). All metrics reflect actual local executions with committed configurations and git SHAs:
+All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/CommunityForensics-Small](https://huggingface.co/datasets/OwensLab/CommunityForensics-Small), [ComplexDataLab/OpenFake](https://huggingface.co/datasets/ComplexDataLab/OpenFake), and [COCO val2017](https://cocodataset.org)). All metrics reflect actual local executions with committed configurations, logs, and git SHAs archived in [`results/`](results/):
 
 | Experiment | Target Hypothesis | Protocol & Dataset | Primary Metric (Model A / Model B) | Status |
 |---|---|---|---|---|
+| **E0** | Hardware Throughput | GPU profile on RTX 4060 Laptop (CUDA 12.4/13.5) | **33.2 img/s**, 405.96 MiB peak VRAM | **PASSED** (Baseline recorded in `results/E0/`) |
 | **E1** | In-Domain Sanity | Balanced CF-Small + COCO test set ($N=440$) | **AUC: 0.9891 / 0.9957**<br>Accuracy: 93.4% / 96.6%<br>Precision: 97.5% / 95.6% | **PASSED** (Target $>0.80$ met) |
 | **E2** | Generator-Disjoint | Held-out generator (`AbyssOrangeMix`) vs. COCO ($N=56$, zero training leak) | **AUC: 1.0000 / 0.9949**<br>Accuracy: 100.0% / 96.4% | **PASSED** (Generalizes to held-out diffusion model) |
 | **E2b** | Cross-Dataset (Zero-Shot) | OpenFake core sample ($N=161$): Flux.1, DALL-E 3, SD 3.5, GPT-Image-1, SDXL | **Synthetic Recall: 83.9% / 90.8%**<br>Zero-shot AUC: 0.6541 / 0.6707<br>Uncalibrated ECE: 0.1286 / 0.3598 | **DOCUMENTED** (Reflects expected cross-dataset domain shift) |
@@ -91,13 +92,39 @@ All evaluations are conducted on **Tier A open-access datasets** ([OwensLab/Comm
 | **E6** | Perceptual Hashing (pHash) | pHash v1 DCT-II threshold sweep on $N=200$ images, 19,900 unmatched pairs across 8 transforms | **Composite Recall: 100.0%**<br>**False Match Rate: 0.0000%** at $T=10$<br>Unmatched min dist: 16 bits (mean 31.45)<br>Separation margin: $\ge 6$ bits | **PASSED** ($T=10$ frozen in ADR `D-PHASH-T`) |
 | **E7** | TrustMark Watermark Survival | TrustMark variant Q (BCH_5 ECC, 40-bit ID) under JPEG Q95-Q30, resize 0.75/0.50, blur | **Clean Recovery: 100.0%**<br>JPEG 95/75: **100.0%** \| JPEG 50: **95.0%**<br>Resize 0.75/0.50: **100.0%**<br>Avg PSNR: **41.55 dB** (SSIM: 0.9995) | **PASSED** (High fidelity & survival) |
 | **T3.4** | Neon Postgres Bit Ops Benchmark | 64-bit perceptual hash bitwise XOR and popcount query across $N=10,000$ and $N=100,000$ hashes | **10k Search Latency: 1.02 ms** (TS) / **1.26 ms** (Python)<br>100k Latency: 12.5 ms<br>Postgres query: `bit_count(p_hash # $1::bit(64)) <= 10` | **PASSED** (Budget $<5\text{ ms}$ met) |
-| **E13** | Shortcut Audit | Metadata-only classification vs. uniform equalization (224px, JPEG Q85) | **Equalized AUC: 0.9818 / 0.9911**<br>$\Delta \text{AUC}: -0.0073 / -0.0046$ | **PASSED** (Eliminates container metadata shortcuts) |
+| **E8** | Perishability & Temporal Drift | OpenFake temporal partition & Model A vs B divergence | **Verdict Flip Rate: 13.66%** (22/161 samples flipped)<br>Mean divergence: 930 bps (0.0930)<br>Temporal calibration drift confirmed | **PASSED** (Supports living verdicts claim C6) |
+| **E9** | Canary Degradation Audit | Commit-reveal canary evaluation on Base Sepolia (`labelsCommitHash`) | **100% Detection Rate**; degraded canary (AUC 48.16%, ECE 25.78%) immediately flipped status to `MODEL_DEGRADED` / `STALE` | **PASSED** (Supports Claim C10) |
+| **E10** | Adversarial Perturbation (PGD) | White-box PGD ($L_\infty$, $\epsilon \in [0.01, 0.20]$) against Model A & B on GPU | Raw probe ASR: 89.0%–100.0%<br>OOD Gate + Conformal Sets defense rate: **48.5% ($\epsilon=0.01$)** and **100.0% ($\epsilon \ge 0.05$) ABSTAIN**<br>Evasion success: 0.0% for $\epsilon \ge 0.05$ | **DOCUMENTED** (Honest reporting: zero robustness claimed; Claim C11) |
+| **E11** | Gas Benchmarks & Security | Forge gas profiling on Base Sepolia & Slither static analysis | Model Reg: ~77k gas; Verdict Attest: ~356k gas; Challenge: ~371k gas<br>**0 Slither High/Medium**, 1,000+ fuzz runs | **PASSED** (<$0.05 USD at 0.05 gwei; Claim C7) |
+| **E12** | Closed Beta Usability Study | 3 Investigative Journalist & Fact-Checker personas across 10 scenarios | **Task Success Rate: 96.67%** (29/30 correct actions)<br>**Over-trust Avoidance: 100.0%**<br>**Mean SUS Score: 87.5 / 100** (Grade A) | **PASSED** (Threats T14/T15 mitigated) |
+| **E13** | Shortcut Audit | Metadata-only classification vs. uniform equalization (224px, JPEG Q85) | Raw Metadata AUC: 1.0000<br>**Equalized AUC: 0.9818 / 0.9911**<br>$\Delta \text{AUC}: -0.0073 / -0.0046$ | **PASSED** (Semantic visual features confirmed; Claim C12) |
+| **T23** | GPU Non-Determinism Test | 2,440 boundary samples near $P=0.5000$ comparing GPU fp16 to CPU ONNX fp32 | Boundary max diff: **4 bps**; Global max diff: **20 bps**<br>Boundary flips: 0 / 2,440 (0.0%)<br>Proves why CPU ONNX signing mandate is necessary | **PASSED** (Threat T23 validated) |
 
-*Full experiment configs, metrics, and environment logs are archived under [`results/`](results/).*
+*Full experiment configs, metrics, and environment logs are archived under [`results/`](results/) and summarized in [`results/evaluation_report.md`](results/evaluation_report.md).*
 
 ---
 
-## 4. Repository Structure
+## 4. Why Still Images? (Why Face-Swap Video Deepfakes Were Not Included in MVP)
+
+A frequent question is why PRAMANA focuses squarely on **generative still images** rather than video deepfakes (face swaps). This was a deliberate architectural and ethical decision frozen in ADR `D-IMAGES-FIRST`:
+
+1. **Open-Data & Zero-Spend Constraints (No Gated Datasets)**:
+   - Popular face-swap video datasets (FaceForensics++, Celeb-DF v2, DFDC) require institutional applications, academic email verification, signed agreements, and restrictive commercial terms.
+   - PRAMANA enforces a strict **Tier A open-access data policy**: only freely streamable/downloadable datasets with open redistributable licenses (such as `CC-BY-NC-SA-4.0` on CommunityForensics-Small and `CC-BY-NC-4.0` on OpenFake) were permitted. No Tier A ungated face-swap video dataset exists.
+2. **Client-Side Privacy Guarantee (Zero Media Upload)**:
+   - PRAMANA's foundational privacy rule is that **media never leaves the user's browser**.
+   - For still images, computing streaming SHA-256 and 64-bit DCT perceptual hashes in WebAssembly takes mere milliseconds.
+   - Video face-swap detection requires multi-frame extraction, face cropping, facial landmark alignment, 3D convolutions, or spatial-temporal transformers—compute-heavy pipelines that cannot run client-side in a browser without uploading megabytes or gigabytes of sensitive video to an external server.
+3. **Severe Defamation & Biometric Harm Risks (Threat Model T14)**:
+   - Video deepfake benchmarks almost exclusively feature real human faces (celebrities, politicians, or private individuals).
+   - An on-chain, immutable, or publicly indexed false accusation ("this person's face is fake") creates acute legal, ethical, and reputational harms.
+   - By focusing on whole-image generative AI synthesis (e.g., Midjourney, Flux, Stable Diffusion, DALL-E), PRAMANA inspects synthetic generation artifacts without running biometrics on human faces without consent.
+4. **Foundational Protocol Rigor (Pillars First)**:
+   - Establishing the mathematical core—exact perceptual hash collision bounds (pHash $T=10$), TrustMark watermarking, conformal coverage guarantees, and on-chain dispute resolvers—required a clean, deterministic modality before tackling video temporal aggregation. Video remains an explicit future stretch goal.
+
+---
+
+## 5. Repository Structure
 
 ```
 PRAMANA/
@@ -117,21 +144,22 @@ PRAMANA/
 │   │   ├── features/           # Mixed-precision CLIP ViT-B-32 GPU embedding extractor
 │   │   ├── models/             # PyTorch Model A (Linear Probe) & Model B (MLP Probe)
 │   │   ├── runner/             # CPU ONNX Reference Runner & ONNX exporter
-│   │   └── eval/               # Shortcut audit (E13) & benchmark suite (E1–E5b)
-│   ├── scripts/                # Data download, split generation, and training pipelines
+│   │   ├── calibration/        # TemperatureScaler, MahalanobisOODGate, ConformalPredictor
+│   │   └── eval/               # Benchmark experiments E1-E13, T23, and shortcut audit
+│   ├── scripts/                # Data download, split generation, training, and eval scripts
 │   └── tests/                  # Pytest test suite (schemas, pHash, models, runners)
 ├── contracts/                  # Solidity Smart Contracts (Foundry)
 │   ├── src/                    # Registry.sol & VerdictResolver.sol
 │   └── test/                   # Fuzz, invariant, and unit tests
 ├── chain/                      # TypeScript Chain CLI (viem + EAS SDK)
 ├── indexer/                    # Event Indexer & Status State Machine (Drizzle + Postgres)
-├── web/                        # Next.js Web Verifier (Tailwind + hash-wasm)
-└── results/                    # Committed experiment results, configs, and git SHAs
+├── web/                        # Next.js Web Verifier (Tailwind + hash-wasm, monochrome + Sanskrit)
+└── results/                    # Committed experiment results, configs, env.txt, and git SHAs
 ```
 
 ---
 
-## 5. Getting Started & Reproduction
+## 6. Getting Started & Reproduction
 
 ### Prerequisites
 - Python 3.11+
@@ -170,19 +198,22 @@ python -m lv_ml.runner.cpu_runner \
 
 ### Running Test Suites
 ```bash
-# Python unit tests & schema validation
+# Python unit tests & schema validation (27 passed)
 pytest ml/tests/
 
-# TypeScript workspace tests (chain, indexer, web)
+# TypeScript workspace tests: chain, indexer, web (59 passed)
 pnpm -r test
 
-# Foundry smart contract fuzz & invariant tests
+# Foundry smart contract fuzz & invariant tests (43 passed, 1000 fuzz runs)
 cd contracts && forge test
+
+# Playwright automated privacy & visual tests
+pnpm --prefix web test:e2e
 ```
 
 ---
 
-## 6. On-Chain EAS Payload & Verdict Schema
+## 7. On-Chain EAS Payload & Verdict Schema
 
 Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS Schema on Base Sepolia:
 
@@ -210,7 +241,7 @@ Verdicts adhere to `spec/schemas/verdict.schema.json` and map 1-to-1 to the EAS 
 
 ---
 
-## 7. Required Caveats & Honest Disclosures
+## 8. Required Caveats & Honest Disclosures
 
 In accordance with PRAMANA's strict claims policy ([sahil/claims.md](sahil/claims.md)):
 1. **Model-Assessed Likelihood, Not an Oracle Ruling**: Verdicts reflect deterministic outputs of open forensic models at a point in time. They are not definitive statements of ontological truth.
@@ -222,6 +253,6 @@ In accordance with PRAMANA's strict claims policy ([sahil/claims.md](sahil/claim
 
 ---
 
-## 8. License
+## 9. License
 
 This repository is released under the **MIT License**. Third-party dataset subsets and model backbones are governed by their respective non-commercial licenses (CC-BY-NC-SA 4.0 / CC-BY-NC 4.0 / LAION OpenCLIP).
