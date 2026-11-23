@@ -82,21 +82,20 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Banner with Made by Sahil Powar */}
+        {/* Bottom Banner */}
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="text-xs text-zinc-500 dark:text-zinc-400 space-y-0.5">
             <p>
               Media never leaves your browser. Evaluated models represent calibrated statistical likelihoods, not infallible rulings.
             </p>
             <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
-              © {new Date().getFullYear()} PRAMAN Protocol. All rights reserved.
+              © {new Date().getFullYear()} PRAMAN Protocol. Open-Source under CC-BY-NC-SA-4.0.
             </p>
           </div>
 
-          {/* Creator Attribution Badge — Minimal, Crisp */}
-          <div className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 px-3.5 py-1.5 text-xs text-zinc-700 dark:text-zinc-300">
-            <span className="text-zinc-400 dark:text-zinc-500">Made by</span>
-            <span className="font-semibold text-zinc-900 dark:text-zinc-100">Sahil Powar</span>
+          <div className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 px-3.5 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 font-mono">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span>v0.1.0-draft · Base Sepolia</span>
           </div>
         </div>
       </div>
