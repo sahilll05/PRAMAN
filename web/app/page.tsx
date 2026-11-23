@@ -244,13 +244,13 @@ export default function HomePage() {
         body: formData,
       });
 
-      if (!res.ok) {
-        const errData = await res.json();
-        throw new Error(errData.details || "Inference failed");
+      const data = await res.json();
+      if (!data.success) {
+        setEvalError(data.details || data.error || "Inference requires a local attester node");
+        return;
       }
 
-      const data = await res.json();
-      if (data.success && data.verdict) {
+      if (data.verdict) {
         setState((s) => ({
           ...s,
           verdicts: [data.verdict],

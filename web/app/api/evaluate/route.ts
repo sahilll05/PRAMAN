@@ -41,14 +41,12 @@ export async function POST(request: NextRequest) {
       try {
         if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
       } catch {}
-      return NextResponse.json(
-        {
-          error: "Attester Node Required for Live Inference",
-          details:
-            "Full PyTorch neural network inference requires a local attester node with PyTorch installed (`pnpm dev`). On the hosted web verifier, you can drop images to verify existing on-chain verdicts, test Protect Mode watermarking, verify signed receipts, or run client-side ELA.",
-        },
-        { status: 501 }
-      );
+      return NextResponse.json({
+        success: false,
+        error: "Attester Node Required for Live Inference",
+        details:
+          "Full PyTorch neural network inference requires a local attester node with PyTorch installed (`pnpm dev`). On the hosted web verifier, you can drop images to verify existing on-chain verdicts, test Protect Mode watermarking, verify signed receipts, or run client-side ELA.",
+      });
     }
 
     const result = await new Promise<any>((resolve, reject) => {
