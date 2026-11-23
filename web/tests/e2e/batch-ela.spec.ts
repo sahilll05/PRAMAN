@@ -49,7 +49,7 @@ test.describe("PRAMAN Batch Verification & Error Level Analysis (Tasks T10.3 & T
     page,
   }) => {
     const uploadedMediaPayloads: Buffer[] = [];
-    const outgoingRequests: { url: string; method: string; contentType?: string } = [];
+    const outgoingRequests: Array<{ url: string; method: string; contentType?: string }> = [];
 
     // Intercept all outgoing network requests
     page.on("request", (req) => {

@@ -152,6 +152,7 @@ export function VerifyReceiptModal({ isOpen, onClose }: VerifyReceiptModalProps)
           <button
             type="button"
             onClick={onClose}
+            aria-label="Close"
             className="rounded-lg p-1.5 text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
           >
             <X className="h-4 w-4" />

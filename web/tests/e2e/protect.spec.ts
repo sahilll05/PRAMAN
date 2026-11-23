@@ -141,9 +141,15 @@ test.describe("PRAMAN Protect Mode & Digital Watermarking (Tasks T10.1 & T10.1b)
       page.locator("text=Verify .praman Receipt")
     ).toBeVisible();
 
+    // Switch to Paste JSON tab
+    await page.getByRole("button", { name: /Paste JSON/i }).click();
+
     // Enter a mock invalid json to test failure reporting
     const textarea = page.locator("textarea");
     await textarea.fill('{"invalid": true}');
+
+    // Click Verify Receipt JSON button
+    await page.getByRole("button", { name: "Verify Receipt JSON" }).click();
 
     await expect(
       page.locator("text=Invalid Receipt — Cryptographic Check Failed")
