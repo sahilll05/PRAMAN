@@ -93,9 +93,22 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 px-3.5 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 font-mono">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            <span>v0.1.0-draft · Base Sepolia</span>
+          <div className="flex flex-wrap items-center gap-2.5">
+            <div className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 px-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-300">
+              <span className="text-zinc-400 dark:text-zinc-500">Made by</span>
+              <a
+                href="https://github.com/sahilll05"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-zinc-900 dark:text-zinc-100 hover:underline"
+              >
+                Sahil Powar
+              </a>
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 px-3.5 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 font-mono">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span>v0.1.0-draft · Base Sepolia</span>
+            </div>
           </div>
         </div>
       </div>

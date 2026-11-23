@@ -324,3 +324,9 @@ In accordance with PRAMAN's strict claims policy (documented in [`results/evalua
 ## 10. License
 
 This repository is released under the **MIT License**. Third-party dataset subsets and model backbones are governed by their respective non-commercial licenses (CC-BY-NC-SA 4.0 / CC-BY-NC 4.0 / LAION OpenCLIP).
+
+---
+
+## 11. Author & Maintainer
+
+Created and developed by **Sahil Powar** ([@sahilll05](https://github.com/sahilll05)).
