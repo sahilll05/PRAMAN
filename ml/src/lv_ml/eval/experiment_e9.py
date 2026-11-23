@@ -13,11 +13,10 @@ Supports Claim C10:
 from __future__ import annotations
 
 import json
-import os
 import platform
 import time
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 import numpy as np
 import torch
@@ -65,14 +64,14 @@ class ExperimentE9Runner:
         )
         self.model.to(self.device).eval()
 
-    def run(self) -> Dict[str, Any]:
+    def run(self) -> dict[str, Any]:
         print("[E9] Running Experiment E9: Canary Commit-Reveal & Degradation Audit...")
 
         # Load held-out test split
-        with open(self.splits_dir / "balanced_test_indomain.json", "r") as f:
+        with open(self.splits_dir / "balanced_test_indomain.json") as f:
             test_samples = json.load(f)[:100]
 
-        items: List[CanaryItem] = []
+        items: list[CanaryItem] = []
         for s in test_samples:
             items.append(
                 CanaryItem(
@@ -112,13 +111,19 @@ class ExperimentE9Runner:
             predictions=clean_preds,
         )
 
-        print(f"[E9] Round 1 Result: AUC={metrics_round_1.auc_bps} bps, ECE={metrics_round_1.ece_bps} bps, Degraded={metrics_round_1.is_degraded}")
-        assert not metrics_round_1.is_degraded, "Baseline healthy batch should not trigger degradation!"
+        print(
+            f"[E9] Round 1 Result: AUC={metrics_round_1.auc_bps} bps, ECE={metrics_round_1.ece_bps} bps, Degraded={metrics_round_1.is_degraded}"
+        )
+        assert not metrics_round_1.is_degraded, (
+            "Baseline healthy batch should not trigger degradation!"
+        )
 
         # ---------------------------------------------------------
         # Round 2: Injected Degradation Canary Batch
         # ---------------------------------------------------------
-        print("\n[E9] Round 2: Preparing injected degradation canary batch (severe generator shift)...")
+        print(
+            "\n[E9] Round 2: Preparing injected degradation canary batch (severe generator shift)..."
+        )
         batch_2 = CanaryPipeline.create_batch(items)
         print(f"[E9] Round 2 Commitment Hash: {batch_2.labels_commit_hash}")
 
@@ -140,7 +145,9 @@ class ExperimentE9Runner:
             predictions=degraded_preds,
         )
 
-        print(f"[E9] Round 2 Result: AUC={metrics_round_2.auc_bps} bps, ECE={metrics_round_2.ece_bps} bps, Degraded={metrics_round_2.is_degraded}")
+        print(
+            f"[E9] Round 2 Result: AUC={metrics_round_2.auc_bps} bps, ECE={metrics_round_2.ece_bps} bps, Degraded={metrics_round_2.is_degraded}"
+        )
         assert metrics_round_2.is_degraded, "Degraded batch must trigger degradation flag!"
 
         report = {
@@ -183,7 +190,9 @@ class ExperimentE9Runner:
 
         (self.results_dir / "metrics.json").write_text(json.dumps(report, indent=2))
         (self.results_dir / "config.json").write_text(
-            json.dumps({"n_samples": 100, "thresholds": {"auc_min": 8000, "ece_max": 1500}}, indent=2)
+            json.dumps(
+                {"n_samples": 100, "thresholds": {"auc_min": 8000, "ece_max": 1500}}, indent=2
+            )
         )
         (self.results_dir / "git_sha.txt").write_text(self.git_sha)
         write_env_txt(self.results_dir / "env.txt")

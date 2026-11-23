@@ -15,15 +15,11 @@ Hardware: GPU (RTX 4060 Laptop GPU, fp16 + TF32) vs CPU ONNX Runtime (fp32).
 from __future__ import annotations
 
 import json
-import os
-import sys
-import time
 from pathlib import Path
 from typing import Any
 
 import numpy as np
 import onnxruntime as ort
-import psutil
 import torch
 
 from lv_ml.calibration.conformal import ConformalPredictor
@@ -53,11 +49,15 @@ def run_experiment_t23(
     torch.backends.cudnn.allow_tf32 = True
 
     model_a_gpu = ClipLinearProbe(in_features=512, num_classes=2).to(device).half()
-    model_a_gpu.load_state_dict(torch.load(models_dir / "model_a.pt", map_location=device, weights_only=True))
+    model_a_gpu.load_state_dict(
+        torch.load(models_dir / "model_a.pt", map_location=device, weights_only=True)
+    )
     model_a_gpu.half().eval()
 
     model_b_gpu = MlpProbe(in_features=512, hidden_dim=256, num_classes=2).to(device).half()
-    model_b_gpu.load_state_dict(torch.load(models_dir / "model_b.pt", map_location=device, weights_only=True))
+    model_b_gpu.load_state_dict(
+        torch.load(models_dir / "model_b.pt", map_location=device, weights_only=True)
+    )
     model_b_gpu.half().eval()
 
     # 2. Load ONNX CPU models (canonical reference path)
@@ -152,24 +152,30 @@ def run_experiment_t23(
             gpu_bps = int(np.clip(round(gpu_p * 10000), 0, 10000))
             gpu_verdict = 2 if gpu_p >= 0.5 else 1
 
-        cpu_results.append({
-            "p_a": cpu_p_a,
-            "p_b": cpu_p_b,
-            "p": cpu_p,
-            "bps": cpu_bps,
-            "verdict": cpu_verdict,
-        })
-        gpu_results.append({
-            "p_a": gpu_p_a,
-            "p_b": gpu_p_b,
-            "p": gpu_p,
-            "bps": gpu_bps,
-            "verdict": gpu_verdict,
-        })
+        cpu_results.append(
+            {
+                "p_a": cpu_p_a,
+                "p_b": cpu_p_b,
+                "p": cpu_p,
+                "bps": cpu_bps,
+                "verdict": cpu_verdict,
+            }
+        )
+        gpu_results.append(
+            {
+                "p_a": gpu_p_a,
+                "p_b": gpu_p_b,
+                "p": gpu_p,
+                "bps": gpu_bps,
+                "verdict": gpu_verdict,
+            }
+        )
 
     # Compute divergence metrics
     diff_bps = [abs(g["bps"] - c["bps"]) for g, c in zip(gpu_results, cpu_results, strict=True)]
-    verdict_flips = [g["verdict"] != c["verdict"] for g, c in zip(gpu_results, cpu_results, strict=True)]
+    verdict_flips = [
+        g["verdict"] != c["verdict"] for g, c in zip(gpu_results, cpu_results, strict=True)
+    ]
 
     max_diff_bps = int(np.max(diff_bps))
     mean_diff_bps = float(np.mean(diff_bps))
@@ -178,18 +184,22 @@ def run_experiment_t23(
 
     # Identify exact boundary flip cases if any
     flip_details = []
-    for idx, (g, c, flipped) in enumerate(zip(gpu_results, cpu_results, verdict_flips, strict=True)):
+    for idx, (g, c, flipped) in enumerate(
+        zip(gpu_results, cpu_results, verdict_flips, strict=True)
+    ):
         if flipped:
-            flip_details.append({
-                "sample_idx": idx,
-                "cpu_p": round(c["p"], 5),
-                "cpu_bps": c["bps"],
-                "cpu_verdict": c["verdict"],
-                "gpu_p": round(g["p"], 5),
-                "gpu_bps": g["bps"],
-                "gpu_verdict": g["verdict"],
-                "divergence_bps": abs(g["bps"] - c["bps"]),
-            })
+            flip_details.append(
+                {
+                    "sample_idx": idx,
+                    "cpu_p": round(c["p"], 5),
+                    "cpu_bps": c["bps"],
+                    "cpu_verdict": c["verdict"],
+                    "gpu_p": round(g["p"], 5),
+                    "gpu_bps": g["bps"],
+                    "gpu_verdict": g["verdict"],
+                    "divergence_bps": abs(g["bps"] - c["bps"]),
+                }
+            )
 
     output_metrics = {
         "experiment_id": "T23",

@@ -45,7 +45,7 @@ select = ["E", "F", "I", "UP", "N", "ANN", "S", "B", "C4", "T20"]
 [tool.ruff.lint.per-file-ignores]
 "scripts/*" = ["T201", "INP001", "S310", "S311", "E501", "S101", "S607", "F841", "B905"]
 "tests/*" = ["S101", "ANN"]
-"src/lv_ml/eval/*" = ["T201", "S311", "E501", "B905", "N803", "N806", "ANN401", "B007"]
+"src/lv_ml/eval/*" = ["T201", "S311", "E501", "B905", "N803", "N806", "ANN401", "B007", "S101", "F841"]
 
 
 
@@ -81,6 +81,10 @@ module = [
 ]
 ignore_missing_imports = true
 
+
+[[tool.mypy.overrides]]
+module = "lv_ml.eval.*"
+ignore_errors = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

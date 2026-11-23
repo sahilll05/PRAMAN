@@ -23,7 +23,7 @@ def compute_psnr_and_ssim(img1: Image.Image, img2: Image.Image) -> tuple[float, 
     if mse == 0.0:
         psnr = 100.0
     else:
-        psnr = 10.0 * math.log10((255.0 ** 2) / mse)
+        psnr = 10.0 * math.log10((255.0**2) / mse)
 
     # Simplified fast SSIM computation across RGB channels
     c1 = (0.01 * 255.0) ** 2
@@ -37,7 +37,7 @@ def compute_psnr_and_ssim(img1: Image.Image, img2: Image.Image) -> tuple[float, 
 
     ssim = float(
         ((2.0 * mu1 * mu2 + c1) * (2.0 * sigma12 + c2))
-        / ((mu1 ** 2 + mu2 ** 2 + c1) * (sigma1_sq + sigma2_sq + c2))
+        / ((mu1**2 + mu2**2 + c1) * (sigma1_sq + sigma2_sq + c2))
     )
 
     return psnr, ssim

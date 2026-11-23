@@ -19,7 +19,6 @@ from __future__ import annotations
 
 import json
 import os
-import sys
 import time
 from pathlib import Path
 from typing import Any
@@ -95,11 +94,15 @@ def run_experiment_e10(
 
     # 1. Load trained models
     model_a = ClipLinearProbe(in_features=512, num_classes=2).to(device)
-    model_a.load_state_dict(torch.load(models_dir / "model_a.pt", map_location=device, weights_only=True))
+    model_a.load_state_dict(
+        torch.load(models_dir / "model_a.pt", map_location=device, weights_only=True)
+    )
     model_a.eval()
 
     model_b = MlpProbe(in_features=512, hidden_dim=256, num_classes=2).to(device)
-    model_b.load_state_dict(torch.load(models_dir / "model_b.pt", map_location=device, weights_only=True))
+    model_b.load_state_dict(
+        torch.load(models_dir / "model_b.pt", map_location=device, weights_only=True)
+    )
     model_b.eval()
 
     # 2. Load calibration components
@@ -254,9 +257,8 @@ def run_experiment_e10(
 
         # Evasion Rate: fraction where adversary succeeds in getting a false confident verdict
         # (e.g. synthetic image gets verdict 1 = AUTHENTIC, or authentic image gets verdict 2 = SYNTHETIC)
-        evasion_success = (
-            ((eval_y_np == 1) & (adv_verdicts_arr == 1))
-            | ((eval_y_np == 0) & (adv_verdicts_arr == 2))
+        evasion_success = ((eval_y_np == 1) & (adv_verdicts_arr == 1)) | (
+            (eval_y_np == 0) & (adv_verdicts_arr == 2)
         )
         evasion_rate = float(np.mean(evasion_success))
 
@@ -301,25 +303,29 @@ def run_experiment_e10(
 
     # Write env.txt per GPU policy
     env_lines = [
-        f"Experiment: E10 Adversarial Perturbation",
+        "Experiment: E10 Adversarial Perturbation",
         f"Timestamp: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}",
         f"Device: {device}",
         f"PyTorch Version: {torch.__version__}",
         f"CUDA Available: {torch.cuda.is_available()}",
     ]
     if torch.cuda.is_available():
-        env_lines.extend([
-            f"GPU Device: {torch.cuda.get_device_name(0)}",
-            f"VRAM Allocated Start: {vram_start:.2f} MiB",
-            f"VRAM Peak: {vram_peak:.2f} MiB",
-        ])
+        env_lines.extend(
+            [
+                f"GPU Device: {torch.cuda.get_device_name(0)}",
+                f"VRAM Allocated Start: {vram_start:.2f} MiB",
+                f"VRAM Peak: {vram_peak:.2f} MiB",
+            ]
+        )
     ram = psutil.virtual_memory()
     disk = psutil.disk_usage(os.path.abspath(results_dir))
-    env_lines.extend([
-        f"System RAM: {ram.total / (1024**3):.2f} GB (Used: {ram.used / (1024**3):.2f} GB, {ram.percent}%)",
-        f"Disk Available on {results_dir.drive if hasattr(results_dir, 'drive') else 'Root'}: {disk.free / (1024**3):.2f} GB / {disk.total / (1024**3):.2f} GB",
-        f"Execution Time: {total_time:.2f} seconds",
-    ])
+    env_lines.extend(
+        [
+            f"System RAM: {ram.total / (1024**3):.2f} GB (Used: {ram.used / (1024**3):.2f} GB, {ram.percent}%)",
+            f"Disk Available on {results_dir.drive if hasattr(results_dir, 'drive') else 'Root'}: {disk.free / (1024**3):.2f} GB / {disk.total / (1024**3):.2f} GB",
+            f"Execution Time: {total_time:.2f} seconds",
+        ]
+    )
 
     with open(results_dir / "env.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(env_lines) + "\n")

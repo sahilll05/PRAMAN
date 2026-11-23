@@ -14,11 +14,10 @@ from __future__ import annotations
 
 import io
 import json
-import os
 import platform
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -87,7 +86,7 @@ class ExperimentE8Runner:
 
         self.extractor = ClipEmbeddingExtractor(device=self.device)
 
-    def run(self) -> Dict[str, Any]:
+    def run(self) -> dict[str, Any]:
         print("[E8] Loading OpenFake core parquet shards...")
         p0 = self.root / "dataset" / "openfake" / "core_train_0.parquet"
         p1 = self.root / "dataset" / "openfake" / "core_train_1.parquet"
@@ -139,8 +138,12 @@ class ExperimentE8Runner:
         older_indices = np.array(older_indices)
         newer_indices = np.array(newer_indices)
 
-        print(f"[E8] Older split (<=2024-01): {len(older_indices)} samples (Fake: {np.sum(y[older_indices]==1)}, Real: {np.sum(y[older_indices]==0)})")
-        print(f"[E8] Newer split (>2024-01): {len(newer_indices)} samples (Fake: {np.sum(y[newer_indices]==1)}, Real: {np.sum(y[newer_indices]==0)})")
+        print(
+            f"[E8] Older split (<=2024-01): {len(older_indices)} samples (Fake: {np.sum(y[older_indices] == 1)}, Real: {np.sum(y[older_indices] == 0)})"
+        )
+        print(
+            f"[E8] Newer split (>2024-01): {len(newer_indices)} samples (Fake: {np.sum(y[newer_indices] == 1)}, Real: {np.sum(y[newer_indices] == 0)})"
+        )
 
         # Evaluate Model A & B on Older vs Newer splits
         metrics_older_a = self._eval_model(self.model_a, X[older_indices], y[older_indices])
@@ -166,7 +169,7 @@ class ExperimentE8Runner:
         max_p_diff_bps = float(np.max(prob_diffs) * 10000)
 
         # Breakdown flip rate by generator
-        flip_by_gen: Dict[str, Any] = {}
+        flip_by_gen: dict[str, Any] = {}
         for m, pa, pb in zip(models, preds_a, preds_b):
             if m not in flip_by_gen:
                 flip_by_gen[m] = {"total": 0, "flips": 0}
@@ -214,10 +217,18 @@ class ExperimentE8Runner:
         }
 
         print("\n=== E8 Results Summary ===")
-        print(f"Older Generators (<=2024-01) -> Model A AUC: {metrics_older_a['auc']}, Model B AUC: {metrics_older_b['auc']}")
-        print(f"Newer Generators (>2024-01)  -> Model A AUC: {metrics_newer_a['auc']}, Model B AUC: {metrics_newer_b['auc']}")
-        print(f"Temporal AUC Drop: Model A: {report['temporal_split']['auc_drop_model_a']}, Model B: {report['temporal_split']['auc_drop_model_b']}")
-        print(f"Model A vs B Flip Rate: {report['flip_rate_analysis']['flip_rate_pct']}% ({mismatches}/{len(X)} samples)")
+        print(
+            f"Older Generators (<=2024-01) -> Model A AUC: {metrics_older_a['auc']}, Model B AUC: {metrics_older_b['auc']}"
+        )
+        print(
+            f"Newer Generators (>2024-01)  -> Model A AUC: {metrics_newer_a['auc']}, Model B AUC: {metrics_newer_b['auc']}"
+        )
+        print(
+            f"Temporal AUC Drop: Model A: {report['temporal_split']['auc_drop_model_a']}, Model B: {report['temporal_split']['auc_drop_model_b']}"
+        )
+        print(
+            f"Model A vs B Flip Rate: {report['flip_rate_analysis']['flip_rate_pct']}% ({mismatches}/{len(X)} samples)"
+        )
 
         (self.results_dir / "metrics.json").write_text(json.dumps(report, indent=2))
         (self.results_dir / "config.json").write_text(
@@ -228,7 +239,7 @@ class ExperimentE8Runner:
 
         return report
 
-    def _eval_model(self, model: torch.nn.Module, X: np.ndarray, y: np.ndarray) -> Dict[str, float]:
+    def _eval_model(self, model: torch.nn.Module, X: np.ndarray, y: np.ndarray) -> dict[str, float]:
         with torch.inference_mode():
             tX = torch.from_numpy(X).to(self.device)
             logits = model(tX)

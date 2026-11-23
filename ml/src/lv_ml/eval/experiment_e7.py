@@ -132,8 +132,12 @@ class ExperimentE7Runner:
         print("\n==================== [E7 Summary] ====================")
         print(f"Average PSNR: {avg_psnr:.2f} dB | Average SSIM: {avg_ssim:.4f}")
         print(f"Clean Stego Recovery Rate: {rates['clean_stego']:.2%}")
-        print(f"JPEG 95 Recovery Rate: {rates['jpeg_95']:.2%} | JPEG 75: {rates['jpeg_75']:.2%} | JPEG 50: {rates['jpeg_50']:.2%}")
-        print(f"Resize 0.75 Recovery Rate: {rates['resize_075']:.2%} | Resize 0.50: {rates['resize_050']:.2%}")
+        print(
+            f"JPEG 95 Recovery Rate: {rates['jpeg_95']:.2%} | JPEG 75: {rates['jpeg_75']:.2%} | JPEG 50: {rates['jpeg_50']:.2%}"
+        )
+        print(
+            f"Resize 0.75 Recovery Rate: {rates['resize_075']:.2%} | Resize 0.50: {rates['resize_050']:.2%}"
+        )
         print(f"Blur 1.0 Recovery Rate: {rates['blur_10']:.2%}")
 
         out_metrics = self.results_dir / "metrics.json"

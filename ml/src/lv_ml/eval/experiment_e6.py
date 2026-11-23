@@ -83,7 +83,9 @@ class ExperimentE6Runner:
                 unmatched_distances.append(hamming_distance(clean_hashes[i], clean_hashes[j]))
 
         unmatched_arr = np.array(unmatched_distances, dtype=np.int64)
-        print(f"Computed {len(unmatched_arr)} unmatched pair distances (mean={np.mean(unmatched_arr):.2f}, min={np.min(unmatched_arr)})")
+        print(
+            f"Computed {len(unmatched_arr)} unmatched pair distances (mean={np.mean(unmatched_arr):.2f}, min={np.min(unmatched_arr)})"
+        )
 
         # 3. Apply transformation suite and compute matched distances
         transforms: dict[str, list[int]] = {
@@ -99,16 +101,32 @@ class ExperimentE6Runner:
 
         for img, clean_h in zip(clean_images, clean_hashes, strict=True):
             # JPEG
-            transforms["jpeg_95"].append(hamming_distance(clean_h, compute_phash(apply_jpeg(img, 95))))
-            transforms["jpeg_75"].append(hamming_distance(clean_h, compute_phash(apply_jpeg(img, 75))))
-            transforms["jpeg_50"].append(hamming_distance(clean_h, compute_phash(apply_jpeg(img, 50))))
-            transforms["jpeg_30"].append(hamming_distance(clean_h, compute_phash(apply_jpeg(img, 30))))
+            transforms["jpeg_95"].append(
+                hamming_distance(clean_h, compute_phash(apply_jpeg(img, 95)))
+            )
+            transforms["jpeg_75"].append(
+                hamming_distance(clean_h, compute_phash(apply_jpeg(img, 75)))
+            )
+            transforms["jpeg_50"].append(
+                hamming_distance(clean_h, compute_phash(apply_jpeg(img, 50)))
+            )
+            transforms["jpeg_30"].append(
+                hamming_distance(clean_h, compute_phash(apply_jpeg(img, 30)))
+            )
             # Resize
-            transforms["resize_075"].append(hamming_distance(clean_h, compute_phash(apply_resize(img, 0.75))))
-            transforms["resize_050"].append(hamming_distance(clean_h, compute_phash(apply_resize(img, 0.50))))
+            transforms["resize_075"].append(
+                hamming_distance(clean_h, compute_phash(apply_resize(img, 0.75)))
+            )
+            transforms["resize_050"].append(
+                hamming_distance(clean_h, compute_phash(apply_resize(img, 0.50)))
+            )
             # Blur & Noise
-            transforms["blur_15"].append(hamming_distance(clean_h, compute_phash(apply_blur(img, 1.5))))
-            transforms["noise_10"].append(hamming_distance(clean_h, compute_phash(apply_noise(img, 10.0))))
+            transforms["blur_15"].append(
+                hamming_distance(clean_h, compute_phash(apply_blur(img, 1.5)))
+            )
+            transforms["noise_10"].append(
+                hamming_distance(clean_h, compute_phash(apply_noise(img, 10.0)))
+            )
 
         # 4. Sweep thresholds T from 0 to 25
         threshold_sweep: list[dict[str, Any]] = []
@@ -153,7 +171,10 @@ class ExperimentE6Runner:
                     break
 
         best_stats = threshold_sweep[best_t]
-        target_met = best_stats["composite_target_recall"] >= 0.90 and best_stats["false_match_rate"] <= 0.005
+        target_met = (
+            best_stats["composite_target_recall"] >= 0.90
+            and best_stats["false_match_rate"] <= 0.005
+        )
 
         summary = {
             "experiment": "E6",

@@ -12,8 +12,8 @@
     }
   },
   "bin": {
-    "praman-chain": "./src/cli.js",
-    "pramana-chain": "./src/cli.js"
+    "praman-chain": "./src/cli.ts",
+    "pramana-chain": "./src/cli.ts"
   },
   "scripts": {
     "build": "tsc --noEmit",

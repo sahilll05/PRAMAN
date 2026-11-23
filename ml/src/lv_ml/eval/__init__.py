@@ -3,7 +3,7 @@
 try:
     from lv_ml.eval.benchmark import BenchmarkRunner
 except (ImportError, ModuleNotFoundError):
-    BenchmarkRunner = None
+    BenchmarkRunner = None  # type: ignore[assignment, misc]
 
 try:
     from lv_ml.eval.shortcut_audit import (
